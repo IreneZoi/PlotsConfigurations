@@ -1,4 +1,6 @@
-This is the code used in SMP-21-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4
+This is the code used in SMP-21-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4. 
+
+The analysis is based on branch ```VBSjjlnu_v7``` in https://github.com/UniMiBAnalyses/PlotsConfigurations.git
 
 
 # PlotsConfigurations
@@ -6,29 +8,24 @@ Plots configuration for mkShapes, mkPlot, mkDatacards
 
 First, setup the LatinoAnalysis framework:
 
-    ```
     cmsrel CMSSW_11_1_4
-    
     cd CMSSW_11_1_4/src/
-    
-    cmsenv
-    
+    cmsenv    
     git cms-init
-    
     git clone --branch 13TeV https://github.com/latinos/setup.git LatinosSetup
-    
     # in LatinosSetup/SetupShapeOnly.sh I had to change github-addext with git clone and changed from the git@ to the https version
-    
     source LatinosSetup/SetupShapeOnly.sh
-    
     #it seems that MelaAnalytics and ZZMatrixElement in the setup are not needed? I deleted them because the next compiling step was failing on that.
-    
     scram b -j4
-    ```
+
+Download the DNN package:
+
+    git clone https://github.com/UniMiBAnalyses/NNEvaluation.git
+
 
 Download the PlotsConfigurations package anywhere, but remember to do 'cmsenv' of the CMSSW release you are using:
 
-    git clone git@github.com:latinos/PlotsConfigurations.git
+    git clone https://github.com/UniMiBAnalyses/PlotsConfigurations.git
 
 Make a copy and edit the following python file (`userConfig.py`) to specify your base directory, i.e. the directory in which your job related information will be stored:
 
