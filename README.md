@@ -35,9 +35,14 @@ change the path for were to save the log files but eos didn't work for me
   
     cd -
 
+
+Replace ```d/dvalsecc/private``` with your path in several files!
+
 Prepare your configuration, you can use the following configuration as a template (this is based on 2018 data and MC):
 
     https://github.com/latinos/PlotsConfigurations/tree/master/Configurations/ggH/Full2018
+
+In my case using the VBSjjlnu directory, v4.5
 
 Produce the histograms submitting batch jobs using HTCondor:
 
