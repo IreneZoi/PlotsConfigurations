@@ -5,14 +5,24 @@ This is the code used in SMP-21-013 and we are trying to reproduce the resutls. 
 Plots configuration for mkShapes, mkPlot, mkDatacards
 
 First, setup the LatinoAnalysis framework:
+
     ```
     cmsrel CMSSW_11_1_4
+    
     cd CMSSW_11_1_4/src/
+    
     cmsenv
+    
     git cms-init
+    
     git clone --branch 13TeV https://github.com/latinos/setup.git LatinosSetup
+    
     # in LatinosSetup/SetupShapeOnly.sh I had to change github-addext with git clone and changed from the git@ to the https version
+    
     source LatinosSetup/SetupShapeOnly.sh
+    
+    #it seems that MelaAnalytics and ZZMatrixElement in the setup are not needed? I deleted them because the next compiling step was failing on that.
+    
     scram b -j4
     ```
 
