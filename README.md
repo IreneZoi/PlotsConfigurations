@@ -1,11 +1,13 @@
+This is the code used in SMP-21-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4
+
+
 # PlotsConfigurations
 Plots configuration for mkShapes, mkPlot, mkDatacards
 
-    
 First, setup the LatinoAnalysis framework:
 
-    cmsrel CMSSW_10_6_4
-    cd CMSSW_10_6_4/src/
+    cmsrel CMSSW_11_1_4
+    cd CMSSW_11_1_4/src/
     cmsenv
     git clone --branch 13TeV https://github.com/latinos/setup.git LatinosSetup
     source LatinosSetup/SetupShapeOnly.sh
