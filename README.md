@@ -18,8 +18,10 @@ First, setup the LatinoAnalysis framework:
     #it seems that MelaAnalytics and ZZMatrixElement in the setup are not needed? I deleted them because the next compiling step was failing on that.
     scram b -j4
 
-Download the DNN package:
+Download the DNN package and install TensorFlow:
 
+    git cms-addpkg PhysicsTools/TensorFlow
+    scram b -j 8
     git clone https://github.com/UniMiBAnalyses/NNEvaluation.git
 
 
