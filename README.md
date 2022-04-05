@@ -36,19 +36,19 @@ Make a copy and edit the following python file (`userConfig.py`) to specify your
 change the path for were to save the log files but eos didn't work for me
   
     cd -
-
+Ask access to the directory  ```/eos/home-d/dvalsecc/www/VBSPlots/DNN_archive/FullRun2_v7/FullRun2_v7/```
 
 Replace ```d/dvalsecc/private``` with your path in several files!
 
-Prepare your configuration, you can use the following configuration as a template (this is based on 2018 data and MC):
+From PlotsConfigurations go to the following directory (this is based on 2018 data and MC):
 
-    https://github.com/latinos/PlotsConfigurations/tree/master/Configurations/ggH/Full2018
+    Configurations/VBSjjlnu/Full2018v7
 
 In my case using the VBSjjlnu directory, v4.5
 
 Produce the histograms submitting batch jobs using HTCondor:
 
-    mkShapesMulti.py --pycfg=configuration.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+    mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
 
 You can choose one of the following queues according to your job expected running time:
 
