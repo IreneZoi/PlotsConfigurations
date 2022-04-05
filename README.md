@@ -46,7 +46,7 @@ From PlotsConfigurations go to the following directory (this is based on 2018 da
 
 In my case using the VBSjjlnu directory, v4.5
 
-Produce the histograms submitting batch jobs using HTCondor:
+Produce the histograms submitting batch jobs using HTCondor. NB at the end of the configuration script listed below different samples can be selected.
 
     mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
 
