@@ -49,6 +49,8 @@ In my case using the VBSjjlnu directory, v4.5
 Produce the histograms submitting batch jobs using HTCondor. NB at the end of the configuration script listed below different samples can be selected.
 
     mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
+Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
 You can choose one of the following queues according to your job expected running time:
 
