@@ -52,15 +52,9 @@ Produce the histograms submitting batch jobs using HTCondor. NB at the end of th
 NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
 Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
-You can choose one of the following queues according to your job expected running time:
+Once the jobs are over, add the hists together:
 
-    espresso     = 20 minutes
-    microcentury = 1 hour
-    longlunch    = 2 hours
-    workday      = 8 hours
-    tomorrow     = 1 day
-    testmatch    = 3 days
-    nextweek     = 1 week
+     mkShapesMulti.py --pycfg=configuration.py --doHadd=1 --batchSplit=Samples,Files
 
 If some of your jobs have failed because the wall clock time have been exceeded, you can resubmit the failed ones by going into the jobs directory (the one set in `userConfig.py`), and changing the queue using the following command:
 
