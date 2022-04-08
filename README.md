@@ -52,10 +52,6 @@ Produce the histograms submitting batch jobs using HTCondor. NB at the end of th
 NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
 Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
-Once the jobs are over, add the hists together:
-
-     mkShapesMulti.py --pycfg=configuration.py --doHadd=1 --batchSplit=Samples,Files
-
 If some of your jobs have failed because the wall clock time have been exceeded, you can resubmit the failed ones by going into the jobs directory (the one set in `userConfig.py`), and changing the queue using the following command:
 
     for i in *jid; do sed -i "s/longlunch/workday/g" ${i/jid/jds}; condor_submit ${i/jid/jds}; done
