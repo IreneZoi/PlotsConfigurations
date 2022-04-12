@@ -60,6 +60,17 @@ For quick tests you can run interactively by just typing `mkShapesMulti.py --pyc
 You can also run interactively but submitting jobs in parallel with the command `mkShapesMulti.py --pycfg=configuration.py --doThreads=True`.
 
 Once all your jobs are done (you can check job status with `condor_q`), you will find a `rootFile` directory in your area containing all the histograms specified in your configuration. 
+
+If the events in a file do not pass the selections, the job will keep crashing saying someting like:
+```
+Initializing cut "res_wjetcr_mu"
+      0 events
+```
+In this case just create an empty corresponding file:
+
+    root -l
+    TFile f("plots_TAG_Wjets_res_21.root", "RECREATE")
+
 You can proceed by h-adding all the files to get a single one containing everything:
 
     mkShapesMulti.py --pycfg=configuration.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
