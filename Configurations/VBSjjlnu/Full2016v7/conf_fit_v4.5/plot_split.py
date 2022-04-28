@@ -89,7 +89,7 @@ groupPlot['VBS_ZV']  = {
                   'color': palette["Peach3"],  
                   'samples'  : VBS_ZV_samples,
                   'fill': 1001
-              
+                }
 
 
 groupPlot['VV+VVV']  = {  
