@@ -74,10 +74,11 @@ def getLegend(x1=0.5809045,y1=0.6363636,x2=0.9522613,y2=0.8020979):
   return legend
 
 operatorsfile = '../../weights_files/operators_short.json'
-basedir='/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/'
-year='Full2018v7'
-inputdir='rootFile_2018_ulsamples'
-inputfilename = 'plots_2018_ulsamples_ALL_aQGC_WMLEPWMHADjj_EWK'
+#operatorsfile = '../../weights_files/operators_test.json'
+basedir='/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/'
+year='Full2018v9'
+inputdir='rootFile_2018_ulsamples_vbsgenvars'
+inputfilename = 'plots_2018_ulsamples_vbsgenvars'
 filetype = 'aQGC_WMLEPWMHADjj_EWK'
 print( "filetype ",filetype)
 
@@ -89,12 +90,24 @@ shortoperatorsdata = json.load(jsonoperatorsfile)
 jsonoperatorsfile.close()
 
 cutdir='nominal'
-variables = ["events"] #,"eta0_vbs_Gen","eta1_vbs_Gen","pt0_vbs_Gen","pt1_vbs_Gen","mjj_vbs_Gen","deltaeta_vbs_Gen"] 
-#variables = ["m_VVgenpart","m_Jel","m_Jmu","massJ","etaJ","ptJ","ptEl","ptMu","m_jj","deltaetaVBF","eta1VBF","eta2VBF","pt1VBF","pt2VBF"] 
+variables = {}
+variables["events"] = {'xaxistitle':'events'}
+variables["mjj_vbs_Gen"] = {'xaxistitle':'m_{jj}^{VBS}'}
+variables["deltaeta_vbs_Gen"] = {'xaxistitle':'#Delta#eta_{jj}^{VBS}'}
+variables["eta0_vbs_Gen"] = {'xaxistitle':'#eta_{1}^{VBS}'}
+variables["eta1_vbs_Gen"] = {'xaxistitle':'#eta_{2}^{VBS}'}
+variables["pt0_vbs_Gen"] = {'xaxistitle':'pt_{1}^{VBS} [GeV]'}
+variables["pt1_vbs_Gen"] = {'xaxistitle':'pt_{2}^{VBS} [GeV]'}
+
 colors = ["#4292c6","#41ab5d","#ef3b2c","#17202A","#fdae61","#abd9e9","#2c7bb6"]
 linestyle = [1,2,3,4,5,6,7,8,9]
 markerstyle = [4,25,31,21,8]
 ROOT.gStyle.SetOptStat(0)
+
+completefilename=basedir+"/"+year+"/"+inputdir+"/"+inputfilename+".root"
+print("completefilename ",completefilename)
+inputfile = ROOT.TFile(completefilename,'READ')
+
 for var in variables:
   for operator in shortoperatorsdata:
     print(" operator ",operator)
@@ -122,28 +135,22 @@ for var in variables:
     hist_r = []
     for i,opweight in enumerate(shortoperatorsdata[operator]):
       print(" opweight ",opweight)
-      completefilename=basedir+"/"+year+"/"+inputdir+"/"+inputfilename+"_"+operator+"_"+opweight+".root"
-      print("completefilename ",completefilename)
-      inputfile = ROOT.TFile(completefilename,'READ')
-      #histnamepath=cutdir+"/"+var+"/histo_"+filetype+"_"+operator+"_"+opweight
-      #print("histnamepath ",histnamepath)
       for k in inputfile.GetListOfKeys():
         cut = k.ReadObj()
         if isinstance(cut, ROOT.TDirectoryFile):
             for kk in cut.GetListOfKeys():
                 histvar = kk.ReadObj()
-                if isinstance(histvar, ROOT.TDirectoryFile):
+                if isinstance(histvar, ROOT.TDirectoryFile) and histvar.GetName() == var:
                     for kkk in histvar.GetListOfKeys():
-                        hist = kkk.ReadObj()
-                        hist.SetDirectory(0)
-                        if isinstance(hist, ROOT.TH1):
-                            print(" hist ",hist)
+                        hist_tmp = kkk.ReadObj()
+                        if isinstance(hist_tmp, ROOT.TH1):                        
+                            name_tmp = hist_tmp.GetName()
+                            if operator+"_"+opweight in name_tmp:
+                              hist = hist_tmp
+                              print(hist.GetXaxis().GetTitle())  
                         else: 
-                            print("wtf?")
+                            print("the hist you want is missing so I am going to crash!")
 
-      #inputfile.cd(cutdir+"/"+var)
-      #hist = inputfile.Get("histo_"+filetype+"_"+operator+"_"+opweight)
-     
       if opweight == "0p00": histSM = hist
       hist.SetTitle(operator)
       hist.SetLineColor(ROOT.TColor.GetColor(colors[i]))                                                                                                                                                                                                                
@@ -153,7 +160,7 @@ for var in variables:
       hist.SetLineWidth(2)
       hist.SetMarkerStyle(markerstyle[i])
       hist_r.append(hist)
-      if "pt" in var: pad1.SetLogy()
+      if "pt" in var or "mjj" in var: pad1.SetLogy()
       legend.AddEntry(hist,opweight.replace("m","-").replace("p","."))
       hist.Draw("Psame")
     legend.Draw("same")
@@ -166,7 +173,7 @@ for var in variables:
         h[-1].Divide(histSM)
         h[-1].SetTitle("")
         h[-1].Draw("Psame")
-    h[0].GetXaxis().SetTitle(str(h[0].GetXaxis().GetTitle()).replace("pt","p_{T}").replace("_{El}","^{e^{-}}").replace("_{Mu}","^{#mu}"))
+    h[0].GetXaxis().SetTitle(variables[var]['xaxistitle'])
     h[0].GetXaxis().SetTitleSize(0.11)
     h[0].GetXaxis().SetLabelSize(0.11)
     h[0].GetYaxis().SetTitleSize(0.11)
