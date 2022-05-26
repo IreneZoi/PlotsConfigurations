@@ -1,6 +1,6 @@
 # PlotsConfigurations
 Plots configuration for mkShapes, mkPlot, mkDatacards
-
+-> Minimalistic setup for UL sample studies
     
 First, setup the LatinoAnalysis framework:
 
@@ -13,35 +13,31 @@ First, setup the LatinoAnalysis framework:
 
 Download the PlotsConfigurations package anywhere, but remember to do 'cmsenv' of the CMSSW release you are using:
 
-    git clone git@github.com:latinos/PlotsConfigurations.git
-
+    git clone -b VBS_UL_semilep https://github.com/IreneZoi/PlotsConfigurations.git
+NB: You need this commit in LatinoAnalysis https://github.com/IreneZoi/LatinoAnalysis/commit/e1531ef2b7cbf60390f213c14a0196353a28a8fb
 Make a copy and edit the following python file (`userConfig.py`) to specify your base directory, i.e. the directory in which your job related information will be stored:
 
     cd LatinoAnalysis/Tools/python/
     cp userConfig_TEMPLATE.py userConfig.py
     cd -
 
-Prepare your configuration, you can use the following configuration as a template (this is based on 2018 data and MC):
+Directory:
 
-    https://github.com/latinos/PlotsConfigurations/tree/master/Configurations/ggH/Full2018
+    https://github.com/IreneZoi/PlotsConfigurations/tree/VBS_UL_semilep/Configurations/VBS_UL_semilep
 
-Produce the histograms submitting batch jobs using HTCondor:
+Produce the histograms submitting batch jobs using HTCondor (change here if you wan to run on multiple files or only 1 for testing   https://github.com/IreneZoi/PlotsConfigurations/blob/7ba80ac41afa7c7b879a8177fd531556feec1c04/Configurations/VBS_UL_semilep/Full2018v9/conf_ulsamples/samples.py#L73-L74): 
 
-    mkShapesMulti.py --pycfg=configuration.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+    mkShapesMulti.py --pycfg=configuration_2018_ulsamples.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
 
-You can choose one of the following queues according to your job expected running time:
-
-    espresso     = 20 minutes
-    microcentury = 1 hour
-    longlunch    = 2 hours
-    workday      = 8 hours
-    tomorrow     = 1 day
-    testmatch    = 3 days
-    nextweek     = 1 week
 
 If some of your jobs have failed because the wall clock time have been exceeded, you can resubmit the failed ones by going into the jobs directory (the one set in `userConfig.py`), and changing the queue using the following command:
 
     for i in *jid; do sed -i "s/longlunch/workday/g" ${i/jid/jds}; condor_submit ${i/jid/jds}; done
+
+
+The operators used for this test are in https://github.com/IreneZoi/PlotsConfigurations/blob/VBS_UL_semilep/Configurations/VBS_UL_semilep/weights_files/operators_short.json with selected working points.
+
+To plot variables for different operator weights use: https://github.com/IreneZoi/PlotsConfigurations/blob/VBS_UL_semilep/Configurations/VBS_UL_semilep/scripts/plotting/plot_ULweights.py
 
 For quick tests you can run interactively by just typing `mkShapesMulti.py --pycfg=configuration.py`. Use `mkShapesMulty.py --help` for more options.
 You can also run interactively but submitting jobs in parallel with the command `mkShapesMulti.py --pycfg=configuration.py --doThreads=True`.
