@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = '2018_ulsamples_vbsgenvars'
+tag = '2018_ulsamples_vbsgenvars_fixdeta'
 direc = "conf_ulsamples"
 
 # used by mkShape to define output directory for root files

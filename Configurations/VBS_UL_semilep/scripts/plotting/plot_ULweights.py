@@ -77,8 +77,8 @@ operatorsfile = '../../weights_files/operators_short.json'
 #operatorsfile = '../../weights_files/operators_test.json'
 basedir='/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/'
 year='Full2018v9'
-inputdir='rootFile_2018_ulsamples_vbsgenvars'
-inputfilename = 'plots_2018_ulsamples_vbsgenvars'
+inputdir='rootFile_2018_ulsamples_vbsgenvars_fixdeta'
+inputfilename = 'plots_2018_ulsamples_vbsgenvars_fixdeta'
 filetype = 'aQGC_WMLEPWMHADjj_EWK'
 print( "filetype ",filetype)
 

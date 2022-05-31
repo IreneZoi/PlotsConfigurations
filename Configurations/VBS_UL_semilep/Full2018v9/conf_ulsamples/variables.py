@@ -48,7 +48,7 @@ variables['mjj_vbs_Gen'] = {   'name': 'mjj_vbs_Gen',
 #                     }
 
 variables['deltaeta_vbs_Gen'] = {   'name': 'detajj_vbs_Gen',      
-                        'range' : (20,2.5,8.5),  
+                        'range' : (40,-8.5,8.5),  
                         'xaxis' : '#Delta#eta VBS jets', 
                         'fold' : 3,
                         }   
