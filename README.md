@@ -1,4 +1,4 @@
-This is the code used in SMP-21-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4. 
+This is the code used in SMP-20-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4. 
 
 The analysis is based on branch ```VBSjjlnu_v7``` in https://github.com/UniMiBAnalyses/PlotsConfigurations.git
 
