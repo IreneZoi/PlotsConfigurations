@@ -72,7 +72,7 @@ aliases['fourj_lep_deltaphi'] = {
             'args': ("fourjet_lep_deltaphi"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]           
 }
 
@@ -81,7 +81,7 @@ aliases['fourj_met_deltaphi'] = {
             'args': ("fourjet_met_deltaphi"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }
 
@@ -90,7 +90,7 @@ aliases['fourj_lep_ptratio'] = {
             'args': ("fourjet_lep_ptratio"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }
 
@@ -99,7 +99,7 @@ aliases['fourj_pmet'] = {
             'args': ("fourjet_pmet"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }
 
@@ -109,7 +109,7 @@ aliases['lep_pmet'] = {
             'args': ("lep_pmet"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }
 
@@ -118,7 +118,7 @@ aliases['fourj_lep_ptratio'] = {
             'args': ("fourjet_lep_ptratio"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }
 
@@ -128,6 +128,6 @@ aliases['fourj_pt'] = {
             'args': ("fourjet_pt"),
             'linesToAdd' : [
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
+                '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/check_fakes/fourjet_class.cc+'
             ]  
 }

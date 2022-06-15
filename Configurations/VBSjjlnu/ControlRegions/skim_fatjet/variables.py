@@ -42,7 +42,7 @@ variables['fatjet_Zep'] = {
                         'fold' : 3,
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
                         ],
                     }  
 
@@ -113,7 +113,7 @@ variables['Jet4_Zep'] = {
                         'fold' : 3,
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
                         ],
                     }
 
@@ -139,7 +139,7 @@ variables['Lepton_Zep'] = {
                         'fold' : 3
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
                         ],
                     }                     
 
@@ -178,7 +178,7 @@ variables['mjj23'] = {
                         'fold' : 3,
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/functions.C'
                         ],
                     }    
  

@@ -102,7 +102,7 @@ variables['max_mjj'] = {
                         'fold' : 3,
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/max_mjj.cc+'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/max_mjj.cc+'
                         ],
                         'class':'MaxMjj',
                         'args': (30)  # pt min
@@ -114,7 +114,7 @@ variables['max_deta'] = {
                         'fold' : 3,
                         'linesToAdd' : [
                             'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                            '.L /afs/cern.ch/work/d/dvalsecc/private/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/max_deta.cc+'
+                            '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_10_2_0/src/PlotsConfigurations/Configurations/VBSjjlnu/ControlRegions2017/max_deta.cc+'
                         ],
                         'class':'MaxDEta',
                         'args': (30)
