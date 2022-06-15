@@ -33,7 +33,7 @@ aliases['fit_bin_res'] = {
 
 aliases['gen_analysis'] = {
     'class': 'ReweightGenLevel3d',
-    'args': ('/afs/cern.ch/work/d/dvalsecc/private/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/GenComparison/pythia_dipole_reweight/total_step1.root',
+    'args': ('/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/GenComparison/pythia_dipole_reweight/total_step1.root',
             '{}/VBSjjlnu/weights_files/ngenjets_reweight.root'.format(configurations), False),
     'linesToAdd': [
         'gSystem->Load("libLatinoAnalysisMultiDraw.so")',

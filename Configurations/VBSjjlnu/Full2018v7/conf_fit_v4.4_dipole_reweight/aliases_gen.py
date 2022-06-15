@@ -17,7 +17,7 @@ aliases['XSWeight_OTF'] ={
 
 aliases['gen_analysis'] = {
     'class': 'ReweightGenLevelFit',
-    'args': ('/afs/cern.ch/work/d/dvalsecc/private/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/GenComparison/pythia_dipole_reweight/total_step2_mjjvbstotfit.root',
+    'args': ('/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/GenComparison/pythia_dipole_reweight/total_step2_mjjvbstotfit.root',
             False),
     'linesToAdd': [
         'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
