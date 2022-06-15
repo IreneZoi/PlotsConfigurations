@@ -38,7 +38,7 @@ change the path for were to save the log files but eos didn't work for me
     cd -
 Ask access to the directory  ```/eos/home-d/dvalsecc/www/VBSPlots/DNN_archive/FullRun2_v7/FullRun2_v7/```
 
-Replace ```d/dvalsecc/private``` with your path in several files!
+Replace ```d/dvalsecc/private``` or ```i/izoi/VBSanalysis``` with your path to the CMSSW installation directory in several files!
 
 From PlotsConfigurations go to the following directory (this is based on 2018 data and MC):
 
