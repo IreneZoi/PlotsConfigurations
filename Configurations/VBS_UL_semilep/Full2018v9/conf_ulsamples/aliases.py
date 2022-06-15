@@ -3,7 +3,7 @@ import copy
 import inspect
 
 configurations = os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/"
-conf_folder = configurations +"/VBSjjlnu/Full2018v7"
+conf_folder = configurations +"/VBS_UL_semilep/Full2018v9"
 operatorfilename='../weights_files/operators_short.json'
 
 #aliases = {}
