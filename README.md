@@ -1,43 +1,56 @@
+This is the code used in SMP-20-013 and we are trying to reproduce the resutls. The code uses the Latino Framework that will be installed first and the NN https://github.com/UniMiBAnalyses/NNEvaluation that needs CMSSW_11_1_4. 
+
+The analysis is based on branch ```VBSjjlnu_v7``` in https://github.com/UniMiBAnalyses/PlotsConfigurations.git
+
+
 # PlotsConfigurations
 Plots configuration for mkShapes, mkPlot, mkDatacards
 
-    
 First, setup the LatinoAnalysis framework:
 
-    cmsrel CMSSW_10_6_4
-    cd CMSSW_10_6_4/src/
-    cmsenv
-    git clone --branch 13TeV git@github.com:latinos/setup.git LatinosSetup
+    cmsrel CMSSW_11_1_4
+    cd CMSSW_11_1_4/src/
+    cmsenv    
+    git cms-init
+    git clone --branch 13TeV https://github.com/latinos/setup.git LatinosSetup
+    # in LatinosSetup/SetupShapeOnly.sh I had to change github-addext with git clone and changed from the git@ to the https version
     source LatinosSetup/SetupShapeOnly.sh
+    #it seems that MelaAnalytics and ZZMatrixElement in the setup are not needed? I deleted them because the next compiling step was failing on that.
     scram b -j4
+
+Download the DNN package and install TensorFlow:
+
+    git cms-addpkg PhysicsTools/TensorFlow
+    scram b -j 8
+    git clone https://github.com/UniMiBAnalyses/NNEvaluation.git
+
 
 Download the PlotsConfigurations package anywhere, but remember to do 'cmsenv' of the CMSSW release you are using:
 
-    git clone git@github.com:latinos/PlotsConfigurations.git
+    git clone https://github.com/UniMiBAnalyses/PlotsConfigurations.git
 
 Make a copy and edit the following python file (`userConfig.py`) to specify your base directory, i.e. the directory in which your job related information will be stored:
 
     cd LatinoAnalysis/Tools/python/
     cp userConfig_TEMPLATE.py userConfig.py
+change the path for were to save the log files but eos didn't work for me
+  
     cd -
+Ask access to the directory  ```/eos/home-d/dvalsecc/www/VBSPlots/DNN_archive/FullRun2_v7/FullRun2_v7/```
 
-Prepare your configuration, you can use the following configuration as a template (this is based on 2018 data and MC):
+Replace ```d/dvalsecc/private``` or ```i/izoi/VBSanalysis``` with your path to the CMSSW installation directory in several files!
 
-    https://github.com/latinos/PlotsConfigurations/tree/master/Configurations/ggH/Full2018
+From PlotsConfigurations go to the following directory (this is based on 2018 data and MC):
 
-Produce the histograms submitting batch jobs using HTCondor:
+    Configurations/VBSjjlnu/Full2018v7
 
-    mkShapesMulti.py --pycfg=configuration.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+In my case using the VBSjjlnu directory, v4.5
 
-You can choose one of the following queues according to your job expected running time:
+Produce the histograms submitting batch jobs using HTCondor. NB at the end of the configuration script listed below different samples can be selected.
 
-    espresso     = 20 minutes
-    microcentury = 1 hour
-    longlunch    = 2 hours
-    workday      = 8 hours
-    tomorrow     = 1 day
-    testmatch    = 3 days
-    nextweek     = 1 week
+    mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
+Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
 If some of your jobs have failed because the wall clock time have been exceeded, you can resubmit the failed ones by going into the jobs directory (the one set in `userConfig.py`), and changing the queue using the following command:
 
@@ -47,6 +60,17 @@ For quick tests you can run interactively by just typing `mkShapesMulti.py --pyc
 You can also run interactively but submitting jobs in parallel with the command `mkShapesMulti.py --pycfg=configuration.py --doThreads=True`.
 
 Once all your jobs are done (you can check job status with `condor_q`), you will find a `rootFile` directory in your area containing all the histograms specified in your configuration. 
+
+If the events in a file do not pass the selections, the job will keep crashing saying someting like:
+```
+Initializing cut "res_wjetcr_mu"
+      0 events
+```
+In this case just create an empty corresponding file:
+
+    root -l
+    TFile f("plots_TAG_Wjets_res_21.root", "RECREATE")
+
 You can proceed by h-adding all the files to get a single one containing everything:
 
     mkShapesMulti.py --pycfg=configuration.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
