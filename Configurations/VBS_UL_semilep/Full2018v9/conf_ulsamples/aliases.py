@@ -3,7 +3,7 @@ import copy
 import inspect
 
 configurations = os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/"
-conf_folder = configurations +"/VBS_UL_semilep/Full2018v9"
+conf_folder = configurations +"/VBS_UL_semilep/Full2018v9/"
 operatorfilename='../weights_files/operators_short.json'
 
 #aliases = {}
@@ -39,7 +39,7 @@ aliases['mjj_vbs_Gen'] = {
              'args': ("mjj_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
 }
 
@@ -48,7 +48,7 @@ aliases['detajj_vbs_Gen'] = {
              'args': ("detajj_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
  }
 
@@ -57,7 +57,7 @@ aliases['pt0_vbs_Gen'] = {
              'args': ("pt0_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
 }
 
@@ -66,7 +66,7 @@ aliases['pt1_vbs_Gen'] = {
              'args': ("pt1_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
 }
 
@@ -75,7 +75,7 @@ aliases['eta0_vbs_Gen'] = {
              'args': ("eta0_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
 }
 
@@ -84,7 +84,7 @@ aliases['eta1_vbs_Gen'] = {
              'args': ("eta1_vbs_Gen"),
              'linesToAdd' : [
                  'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu//macros/vbs_gen_vars.cc+'.format(configurations)
+                 '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/vbs_gen_vars.cc+'.format(configurations)
              ]
 }
 
@@ -93,7 +93,7 @@ aliases['eta1_vbs_Gen'] = {
 #     'args': (),
 #     'linesToAdd': [
 #         'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
-#         '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/macros/mjj_max_vbs_gen.cc+'.format(configurations)
+#         '.L /afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBS_UL_semilep/macros/mjj_max_vbs_gen.cc+'.format(configurations)
 #     ]
 # }
 # vbs_vars_gen = [ 'mjj_vbs_Gen','deltaeta_vbs_Gen']
