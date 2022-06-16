@@ -70,8 +70,8 @@ XSWeightTimesBR["aQGC_WPLEPZHADjj_EWK" ]='0.1746'
 
 
 samples['aQGC_WMLEPWMHADjj_EWK']  = { 'name' :  
-                #nanoGetSampleFiles(directory_WMLEPWMHADjj,''),#run on all files 
-                nanoGetSampleFiles(directory_WMLEPWMHADjj,'1'),#run on file _1 for testing
+                nanoGetSampleFiles(directory_WMLEPWMHADjj,''),#run on all files 
+                #nanoGetSampleFiles(directory_WMLEPWMHADjj,'1'),#run on file _1 for testing
         'weight': XSWeightTimesBR['aQGC_WMLEPWMHADjj_EWK'], # +'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_VBS',
         'FilesPerJob' :15,
         'EventsPerJob' : 1000,

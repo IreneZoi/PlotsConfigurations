@@ -14,8 +14,6 @@
 #include <stdexcept>
 #include <tuple>
 
-//see https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu/Configurations/VBSjjlnu/Full2017v6s5/macros/deltaphivars_class.cc for another example
-
 using namespace std;
 
 class VBSvar_Gen : public multidraw::TTreeFunction {
