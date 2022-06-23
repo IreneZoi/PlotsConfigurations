@@ -6,6 +6,8 @@ The analysis is based on branch ```VBSjjlnu_v7``` in https://github.com/UniMiBAn
 # PlotsConfigurations
 Plots configuration for mkShapes, mkPlot, mkDatacards
 
+# Installation
+
 First, setup the LatinoAnalysis framework:
 
     cmsrel CMSSW_11_1_4
@@ -40,11 +42,14 @@ Ask access to the directory  ```/eos/home-d/dvalsecc/www/VBSPlots/DNN_archive/Fu
 
 Replace ```d/dvalsecc/private``` or ```i/izoi/VBSanalysis``` with your path to the CMSSW installation directory in several files!
 
-From PlotsConfigurations go to the following directory (this is based on 2018 data and MC):
+## Control plots
 
-    Configurations/VBSjjlnu/Full2018v7
+From PlotsConfigurations go to the following directory where year is 2016 or 2017 or 2018 and **VERSION is 7** (so far, maybe it will update tu UL VERSION 9)
 
-In my case using the VBSjjlnu directory, v4.5 and use the split version of the configuration files to have the correct splitting of the signals.
+    Configurations/VBSjjlnu/FullYEARvVERSION
+
+
+In my case using the **VBSjjlnu directory, v4.5 and use the split version of the configuration files** to have the correct splitting of the signals.
 
 Produce the histograms submitting batch jobs using HTCondor. NB at the end of the configuration script listed below different samples can be selected.
 
@@ -88,7 +93,17 @@ So: first run mkShape for Fake and Data splitting ele and mu →  this was neede
 Then merge them using the "magic" script in https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu_v7/Configurations/VBSjjlnu/scripts/sum_data_flavours.py
 Now you can proceed with producing the control plots and the rest of the analysis.
 
+## Nuisance shapes treatment for fit v4.5
 
+The output of mkShapes need to be processed to normalize some nuisance, rename and split by
+sample the PS ones and add the QGL uncertainty.
+
+- 2018  
+    -- Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
+        cd rootFile_fit_v4.5_2018_split/
+        python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
+    
+## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
 
     mkDatacards.py --pycfg configuration.py --inputFile rootFile/plots_TAG.root
