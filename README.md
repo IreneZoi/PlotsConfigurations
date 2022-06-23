@@ -95,14 +95,16 @@ Now you can proceed with producing the control plots and the rest of the analysi
 
 ## Nuisance shapes treatment for fit v4.5
 
-The output of mkShapes need to be processed to normalize some nuisance, rename and split by
-sample the PS ones and add the QGL uncertainty.
+The output of mkShapes need to be processed to normalize some nuisance, rename and split by sample the Parton Shower (PS) ones and add the QGL uncertainty.
 
 - 2018  
     -- Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
     
         cd rootFile_fit_v4.5_2018_split/
         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
+    -- extract the PS effect to be applied on other years from initial root file: 
+ 
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf samples.txt -cf cuts.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
     
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
