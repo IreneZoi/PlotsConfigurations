@@ -100,6 +100,7 @@ sample the PS ones and add the QGL uncertainty.
 
 - 2018  
     -- Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
+    
         cd rootFile_fit_v4.5_2018_split/
         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
     
