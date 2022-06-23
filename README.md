@@ -6,6 +6,8 @@ The analysis is based on branch ```VBSjjlnu_v7``` in https://github.com/UniMiBAn
 # PlotsConfigurations
 Plots configuration for mkShapes, mkPlot, mkDatacards
 
+# Installation
+
 First, setup the LatinoAnalysis framework:
 
     cmsrel CMSSW_11_1_4
@@ -40,15 +42,19 @@ Ask access to the directory  ```/eos/home-d/dvalsecc/www/VBSPlots/DNN_archive/Fu
 
 Replace ```d/dvalsecc/private``` or ```i/izoi/VBSanalysis``` with your path to the CMSSW installation directory in several files!
 
-From PlotsConfigurations go to the following directory (this is based on 2018 data and MC):
+## Control plots
 
-    Configurations/VBSjjlnu/Full2018v7
+From PlotsConfigurations go to the following directory where year is 2016 or 2017 or 2018 and **VERSION is 7** (so far, maybe it will update tu UL VERSION 9)
 
-In my case using the VBSjjlnu directory, v4.5
+    Configurations/VBSjjlnu/FullYEARvVERSION
+
+
+In my case using the **VBSjjlnu directory, v4.5 and use the split version of the configuration files** to have the correct splitting of the signals.
 
 Produce the histograms submitting batch jobs using HTCondor. NB at the end of the configuration script listed below different samples can be selected.
 
-    mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+    mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+    
 NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
 Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
@@ -81,8 +87,27 @@ The `--doNotCleanup` option is used to keep the input root files. Without this o
 You can now proceed making plots (`mkPlot.py --help` to see all available options):
 
     mkPlot.py --pycfg configuration.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+    
+Special treatment for **2017**: due to a special requirement for the electron trigger as per the recommendation on slide 22 of this talk https://indico.cern.ch/event/662751/contributions/2778365/attachments/1561439/2458438/egamma_workshop_triggerTalk.pdf
+So: first run mkShape for Fake and Data splitting ele and mu →  this was needed to apply a specific trigger only to the electrons
+Then merge them using the "magic" script in https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu_v7/Configurations/VBSjjlnu/scripts/sum_data_flavours.py
+Now you can proceed with producing the control plots and the rest of the analysis.
 
-and datacards (`mkDatacards.py --help` to see all available options):
+## Nuisance shapes treatment for fit v4.5
+
+The output of mkShapes need to be processed to normalize some nuisance, rename and split by sample the Parton Shower (PS) ones and add the QGL uncertainty.
+
+- 2018  
+    -- Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
+    
+        cd rootFile_fit_v4.5_2018_split/
+        python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
+    -- extract the PS effect to be applied on other years from initial root file: 
+ 
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf samples.txt -cf cuts.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
+    
+## Datacards
+You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
 
     mkDatacards.py --pycfg configuration.py --inputFile rootFile/plots_TAG.root
 
