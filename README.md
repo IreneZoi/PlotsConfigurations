@@ -104,8 +104,18 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
     -- extract the PS effect to be applied on other years from initial root file: 
  
-        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf samples.txt -cf cuts.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf ../samples_PS_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
     
+    -- extract also the PDF effect:
+    
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf ../samples_PDF_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
+        
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf  ../samples_PDF_extraction_accept.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
+        
+    -- Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file: 
+        
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
 
