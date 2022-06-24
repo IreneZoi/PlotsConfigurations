@@ -114,7 +114,12 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
     -- Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted): 
         
-        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -cf ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+     
+    -- Then split the PS uncertainties for each sample and W+jets bin:
+    
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_ISR -sf ../samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_FSR -sf ../samples_PS_extraction.txt
         
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
