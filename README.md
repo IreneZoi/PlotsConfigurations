@@ -108,9 +108,9 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
     
     -- extract also the PDF effect:
     
-        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -s VV DY VVV VBF-V Vg VgS ggWW -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -s ../samples_PDF_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
         
-        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -s VBS -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root ../samples_PDF_extraction_accept.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
         
     -- Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file: 
         
