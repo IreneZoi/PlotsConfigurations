@@ -121,6 +121,10 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_ISR -sf ../samples_PS_extraction.txt 
         python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_FSR -sf ../samples_PS_extraction.txt
         
+    -- Run on the QGL nuisance 
+        
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
 
