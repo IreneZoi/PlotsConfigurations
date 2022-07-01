@@ -124,6 +124,17 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
     -- Run on the QGL nuisance 
         
         mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
+        mkPlot.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+        # Then extract the shape variations
+        cd rootFile_fit_v4.5_2018_split_qglnuis/
+        python ../../scripts/QGL_morphing/rename_qglnuis_shapes.py -i plots_fit_v4.5_2018_split_qglnuis.root -o qgl_morph_shapes_2018.root --outputfile-fit plots_fit_v4.5_2018_onlyvariations.root --name 1718
+        # Hadd the main file with the onlyvariations one for qgl 
+        cd ../rootFile_fit_v4.5_2018_split/
+        hadd plots_fit_v4.5_2018_split_withqglnuis.root plots_fit_v4.5_2018_split.root ../rootFile_fit_v4.5_2018_split_qglnuis/plots_fit_v4.5_2018_onlyvariations.root
+        #Add empty fake nuisance shapes to make mkDatacard not complaining
+        python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2018_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
+    
         
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
