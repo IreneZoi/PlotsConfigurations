@@ -93,6 +93,8 @@ So: first run mkShape for Fake and Data splitting ele and mu →  this was neede
 Then merge them using the "magic" script in https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu_v7/Configurations/VBSjjlnu/scripts/sum_data_flavours.py
 Now you can proceed with producing the control plots and the rest of the analysis.
 
+        python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+
 ## Nuisance shapes treatment for fit v4.5
 
 The output of mkShapes need to be processed to normalize some nuisance, rename and split by sample the Parton Shower (PS) ones and add the QGL uncertainty.
