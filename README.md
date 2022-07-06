@@ -142,7 +142,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
 
     0) If you did not do it already, merge ele & mu data:
     
-        python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+      python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
         
     a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
     
