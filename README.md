@@ -91,9 +91,10 @@ You can now proceed making plots (`mkPlot.py --help` to see all available option
 Special treatment for **2017**: due to a special requirement for the electron trigger as per the recommendation on slide 22 of this talk https://indico.cern.ch/event/662751/contributions/2778365/attachments/1561439/2458438/egamma_workshop_triggerTalk.pdf
 So: first run mkShape for Fake and Data splitting ele and mu →  this was needed to apply a specific trigger only to the electrons
 Then merge them using the "magic" script in https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu_v7/Configurations/VBSjjlnu/scripts/sum_data_flavours.py
-Now you can proceed with producing the control plots and the rest of the analysis.
 
         python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+
+Now you can proceed with producing the control plots and the rest of the analysis. Remember that to produce the 2017 control plots you need to comment the splitted DATA part and uncomment the correct DATA part in the ```samples_split.py``` file.
 
 ## Nuisance shapes treatment for fit v4.5
 
