@@ -137,7 +137,22 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         hadd plots_fit_v4.5_2018_split_withqglnuis.root plots_fit_v4.5_2018_split.root ../rootFile_fit_v4.5_2018_split_qglnuis/plots_fit_v4.5_2018_onlyvariations.root
         #Add empty fake nuisance shapes to make mkDatacard not complaining
         python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2018_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
+
+- 2017
+    -- If you did not do it already, merge ele & mu data:
     
+        python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+        
+    -- Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
+    
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2017_split.root QCDscale
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2017_split.root QCDscale_Wjets_boost
+         
+    -- Apply PS: 
+ 
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o plots_fit_v4.5_2017_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effects_fitv4.5_2018_split.root -sf ../samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+        
+    -- Then proceed as 2018 -> what does it mean?
         
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
