@@ -198,9 +198,9 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
     
     c) ATTENTION: here instead we apply the 2018 pdf shapes to backgrounds and signals, separately
     
-        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFbkgnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_fit_v4.5_2018_split.root -sf samples_pdfbkg.txt -n pdf_weight_1718 -nr pdf_weight_16
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFbkgnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_bkg_fit_v4.5_2018.root -sf samples_pdfbkg.txt -n pdf_weight_1718 -nr pdf_weight_16
         
-        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFsignuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018/PDF_effect_fit_v4.5_2018.root -s VBS_osWW,VBS_ssWW,VBS_WZjj,VBS_WZll,VBS_ZZ -n pdf_weight_1718_accept -nr pdf_weight_16_accept
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFsignuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_bkg_fit_v4.5_2018.root -s VBS_osWW VBS_ssWW VBS_WZjj VBS_WZll VBS_ZZ -n pdf_weight_1718_accept -nr pdf_weight_16_accept
                  
     d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
         
