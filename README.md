@@ -184,6 +184,47 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         hadd plots_fit_v4.5_2017_split_withqglnuis.root plots_fit_v4.5_2017_split.root ../rootFile_fit_v4.5_2017_split_qglnuis/plots_fit_v4.5_2017_onlyvariations.root
         #Add empty fake nuisance shapes to make mkDatacard not complaining
         python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2017_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
+        
+  - 2016 (similar to 2017 but no need to merge ele and mu data, instead it will need an extra step with the PDFs)
+        
+    a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
+    
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale_Wjets_boost
+         
+    b) Apply PS: 
+ 
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fitv4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+    
+    c) ATTENTION: here instead we apply the 2018 pdf shapes to backgrounds and signals, separately
+    
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFbkgnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_fit_v4.5_2018_split.root -sf samples_pdfbkg.txt -n pdf_weight_1718 -nr pdf_weight_16
+        
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFsignuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018/PDF_effect_fit_v4.5_2018.root -s VBS_osWW,VBS_ssWW,VBS_WZjj,VBS_WZll,VBS_ZZ -n pdf_weight_1718_accept -nr pdf_weight_16_accept
+                 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+        
+        hadd plots_fit_v4.5_2016_split.root_all plots_fit_v4.5_2016_split.root plots_fit_v4.5_2016_split.root_PSnuis.root
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2016_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+     
+    e) Then split the PS uncertainties for each sample and W+jets bin:
+    
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2016_split.root_all --shape-name CMS_PS_ISR -sf ../../Full2018v7/samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2016_split.root_all --shape-name CMS_PS_FSR -sf ../../Full2018v7/samples_PS_extraction.txt
+        
+    f) Run on the QGL nuisance 
+        
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
+        mkPlot.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+        # Then extract the shape variations
+        cd rootFile_fit_v4.5_2016_split_qglnuis/
+        python ../../scripts/QGL_morphing/rename_qglnuis_shapes.py -i plots_fit_v4.5_2016_split_qglnuis.root -o qgl_morph_shapes_2016.root --outputfile-fit plots_fit_v4.5_2016_onlyvariations.root --name 16
+        # Hadd the main file with the onlyvariations one for qgl 
+        cd ../rootFile_fit_v4.5_2016_split/
+        hadd plots_fit_v4.5_2016_split_withqglnuis.root plots_fit_v4.5_2016_split.root ../rootFile_fit_v4.5_2016_split_qglnuis/plots_fit_v4.5_2016_onlyvariations.root
+        #Add empty fake nuisance shapes to make mkDatacard not complaining
+        python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2016_split.root --nuisances QGLmorph_quark_higheta_16 QGLmorph_quark_loweta_16 QGLmorph_gluon_higheta_16 QGLmorph_gluon_loweta_16
 
         
 ## Datacards
