@@ -151,7 +151,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
          
     b) Apply PS: 
  
-        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o plots_fit_v4.5_2017_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fitv4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o plots_fit_v4.5_2017_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fit_v4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
 
     Then proceed as 2018:
     
@@ -194,7 +194,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
          
     b) Apply PS: 
  
-        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fitv4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fit_v4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
     
     c) ATTENTION: here instead we apply the 2018 pdf shapes to backgrounds and signals, separately
     
