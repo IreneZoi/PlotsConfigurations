@@ -185,7 +185,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         #Add empty fake nuisance shapes to make mkDatacard not complaining
         python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2017_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
         
-  - 2016 (similar to 2017 but no need to merge ele and mu data, instead it will need an extra step with the PDFs)
+- 2016 (similar to 2017 but no need to merge ele and mu data, instead it will need an extra step with the PDFs)
         
     a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
     
