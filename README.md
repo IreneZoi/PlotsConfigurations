@@ -168,8 +168,8 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
      
     e) Then split the PS uncertainties for each sample and W+jets bin:
     
-        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root --shape-name CMS_PS_ISR -sf ../samples_PS_extraction.txt 
-        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root --shape-name CMS_PS_FSR -sf ../samples_PS_extraction.txt
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root_all --shape-name CMS_PS_ISR -sf ../../Full2018v7/samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root_all --shape-name CMS_PS_FSR -sf ../../Full2018v7/samples_PS_extraction.txt
         
     f) Run on the QGL nuisance 
         
