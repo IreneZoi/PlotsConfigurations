@@ -126,7 +126,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
     f) Run on the QGL nuisance 
         
-        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
         mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
         mkPlot.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
         # Then extract the shape variations
@@ -173,7 +173,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
     f) Run on the QGL nuisance 
         
-        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2017_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
         mkShapesMulti.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
         mkPlot.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
         # Then extract the shape variations
@@ -214,7 +214,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
     f) Run on the QGL nuisance 
         
-        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
         mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
         mkPlot.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
         # Then extract the shape variations
