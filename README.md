@@ -91,30 +91,141 @@ You can now proceed making plots (`mkPlot.py --help` to see all available option
 Special treatment for **2017**: due to a special requirement for the electron trigger as per the recommendation on slide 22 of this talk https://indico.cern.ch/event/662751/contributions/2778365/attachments/1561439/2458438/egamma_workshop_triggerTalk.pdf
 So: first run mkShape for Fake and Data splitting ele and mu →  this was needed to apply a specific trigger only to the electrons
 Then merge them using the "magic" script in https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/VBSjjlnu_v7/Configurations/VBSjjlnu/scripts/sum_data_flavours.py
-Now you can proceed with producing the control plots and the rest of the analysis.
+
+        python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+
+Now you can proceed with producing the control plots and the rest of the analysis. Remember that to produce the 2017 control plots you need to comment the splitted DATA part and uncomment the correct DATA part in the ```samples_split.py``` file.
 
 ## Nuisance shapes treatment for fit v4.5
 
 The output of mkShapes need to be processed to normalize some nuisance, rename and split by sample the Parton Shower (PS) ones and add the QGL uncertainty.
 
 - 2018  
-    -- Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
+    a) Join the QCDscale variations of the W+jets bins since there were splitted in the jobs configuration 
     
         cd rootFile_fit_v4.5_2018_split/
         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
-    -- extract the PS effect to be applied on other years from initial root file: 
+    b) extract the PS effect to be applied on other years from initial root file: 
  
         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf ../samples_PS_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
     
-    -- extract also the PDF effect:
+    c) extract also the PDF effect:
     
         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf ../samples_PDF_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
         
         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf  ../samples_PDF_extraction_accept.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
         
-    -- Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file: 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
         
-        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+     
+    e) Then split the PS uncertainties for each sample and W+jets bin:
+    
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_ISR -sf ../samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_FSR -sf ../samples_PS_extraction.txt
+        
+    f) Run on the QGL nuisance 
+        
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
+        mkPlot.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+        # Then extract the shape variations
+        cd rootFile_fit_v4.5_2018_split_qglnuis/
+        python ../../scripts/QGL_morphing/rename_qglnuis_shapes.py -i plots_fit_v4.5_2018_split_qglnuis.root -o qgl_morph_shapes_2018.root --outputfile-fit plots_fit_v4.5_2018_onlyvariations.root --name 1718
+        # Hadd the main file with the onlyvariations one for qgl 
+        cd ../rootFile_fit_v4.5_2018_split/
+        hadd plots_fit_v4.5_2018_split_withqglnuis.root plots_fit_v4.5_2018_split.root ../rootFile_fit_v4.5_2018_split_qglnuis/plots_fit_v4.5_2018_onlyvariations.root
+        #Add empty fake nuisance shapes to make mkDatacard not complaining
+        python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2018_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
+
+- 2017
+
+    0) If you did not do it already, merge ele & mu data:
+    
+      python ../../scripts/sum_data_flavours.py  -i plots_fit_v4.5_2017_split.root -y 2017
+        
+    a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
+    
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2017_split.root QCDscale
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2017_split.root QCDscale_Wjets_boost
+         
+    b) Apply PS: 
+ 
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o plots_fit_v4.5_2017_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fit_v4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+
+    Then proceed as 2018:
+    
+    c) extract also the PDF effect:
+    
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o PDF_effect_bkg_fit_v4.5_2017.root -sf ../../Full2018v7/samples_PDF_extraction.txt -cf ../../Full2018v7/cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
+        
+         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o PDF_effect_bkg_fit_v4.5_2017.root -sf  ../../Full2018v7/samples_PDF_extraction_accept.txt -cf ../../Full2018v7/cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
+        
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+        
+        hadd plots_fit_v4.5_2017_split.root_all plots_fit_v4.5_2017_split.root plots_fit_v4.5_2017_split.root_PSnuis.root
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2017_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+     
+    e) Then split the PS uncertainties for each sample and W+jets bin:
+    
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root_all --shape-name CMS_PS_ISR -sf ../../Full2018v7/samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2017_split.root_all --shape-name CMS_PS_FSR -sf ../../Full2018v7/samples_PS_extraction.txt
+        
+    f) Run on the QGL nuisance 
+        
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
+        mkPlot.py --pycfg=configuration_fit_v4.5_2017_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+        # Then extract the shape variations
+        cd rootFile_fit_v4.5_2017_split_qglnuis/
+        python ../../scripts/QGL_morphing/rename_qglnuis_shapes.py -i plots_fit_v4.5_2017_split_qglnuis.root -o qgl_morph_shapes_2017.root --outputfile-fit plots_fit_v4.5_2017_onlyvariations.root --name 1718
+        # Hadd the main file with the onlyvariations one for qgl 
+        cd ../rootFile_fit_v4.5_2017_split/
+        hadd plots_fit_v4.5_2017_split_withqglnuis.root plots_fit_v4.5_2017_split.root ../rootFile_fit_v4.5_2017_split_qglnuis/plots_fit_v4.5_2017_onlyvariations.root
+        #Add empty fake nuisance shapes to make mkDatacard not complaining
+        python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2017_split.root --nuisances QGLmorph_quark_higheta_1718 QGLmorph_quark_loweta_1718 QGLmorph_gluon_higheta_1718 QGLmorph_gluon_loweta_1718
+        
+- 2016 (similar to 2017 but no need to merge ele and mu data, instead it will need an extra step with the PDFs)
+        
+    a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
+    
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale
+         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale_Wjets_boost
+         
+    b) Apply PS: 
+ 
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fit_v4.5_2018_split.root -sf ../../Full2018v7/samples_PS_extraction.txt -n CMS_PS_FSR CMS_PS_ISR
+    
+    c) ATTENTION: here instead we apply the 2018 pdf shapes to backgrounds and signals, separately
+    
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFbkgnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_bkg_fit_v4.5_2018.root -sf samples_pdfbkg.txt -n pdf_weight_1718 -nr pdf_weight_16
+        
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFsignuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_bkg_fit_v4.5_2018.root -s VBS_osWW VBS_ssWW VBS_WZjj VBS_WZll VBS_ZZ -n pdf_weight_1718_accept -nr pdf_weight_16_accept
+                 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+        
+        hadd plots_fit_v4.5_2016_split.root_all plots_fit_v4.5_2016_split.root plots_fit_v4.5_2016_split.root_PSnuis.root
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2016_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+     
+    e) Then split the PS uncertainties for each sample and W+jets bin:
+    
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2016_split.root_all --shape-name CMS_PS_ISR -sf ../../Full2018v7/samples_PS_extraction.txt 
+        python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2016_split.root_all --shape-name CMS_PS_FSR -sf ../../Full2018v7/samples_PS_extraction.txt
+        
+    f) Run on the QGL nuisance 
+        
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
+        mkShapesMulti.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --doHadd=1 --batchSplit=Samples,Files --doNotCleanup --nThreads=10
+        mkPlot.py --pycfg=configuration_fit_v4.5_2016_split_qglnuis.py --inputFile rootFile/plots_TAG.root --showIntegralLegend 1
+        # Then extract the shape variations
+        cd rootFile_fit_v4.5_2016_split_qglnuis/
+        python ../../scripts/QGL_morphing/rename_qglnuis_shapes.py -i plots_fit_v4.5_2016_split_qglnuis.root -o qgl_morph_shapes_2016.root --outputfile-fit plots_fit_v4.5_2016_onlyvariations.root --name 16
+        # Hadd the main file with the onlyvariations one for qgl 
+        cd ../rootFile_fit_v4.5_2016_split/
+        hadd plots_fit_v4.5_2016_split_withqglnuis.root plots_fit_v4.5_2016_split.root ../rootFile_fit_v4.5_2016_split_qglnuis/plots_fit_v4.5_2016_onlyvariations.root
+        #Add empty fake nuisance shapes to make mkDatacard not complaining
+        python ../../scripts/nuisances_tools/fake_nuisance_shapes.py -i plots_fit_v4.4_2016_split.root --nuisances QGLmorph_quark_higheta_16 QGLmorph_quark_loweta_16 QGLmorph_gluon_higheta_16 QGLmorph_gluon_loweta_16
+
         
 ## Datacards
 You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
