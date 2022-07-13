@@ -228,9 +228,17 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
 
         
 ## Datacards
-You can now proceed making datacards (`mkDatacards.py --help` to see all available options):
+You can now proceed making datacards (`mkDatacards.py --help` to see all available options). Remember to use the correct nuisance in the config file. Example command:
 
     mkDatacards.py --pycfg configuration.py --inputFile rootFile/plots_TAG.root
+
+
+Let's start with the EWK only fit.
+- For 2018:
+
+    mkDatacards.py --pycfg=configuration_fit_v4.5_2018_split.py --inputFile rootFile_fit_v4.5_2018_split/plots_fit_v4.5_2018_split.root --skipMissingNuisance
+
+
 
 If you need yield tables in either .tex or .csv format, after running the FitDiagnostics method of Combine on a workspace obtained from the datacards:
 
