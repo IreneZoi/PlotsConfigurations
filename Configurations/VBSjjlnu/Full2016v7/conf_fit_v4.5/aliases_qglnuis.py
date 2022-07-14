@@ -8,7 +8,8 @@ conf_folder = configurations +"/VBSjjlnu/Full2016v7"
 #aliases = {}
 
 mc = [skey for skey in samples if skey not in ('Fake', 'DATA')]
-
+VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
+VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 
 aliases['nJets30']= {
     'expr' : 'Sum$(CleanJet_pt[CleanJetNotFat_jetIdx] >= 30)'
