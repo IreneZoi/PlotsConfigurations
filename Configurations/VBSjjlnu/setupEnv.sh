@@ -1,1 +1,0 @@
-/afs/cern.ch/user/i/izoi/run_VBS_SM.sh
