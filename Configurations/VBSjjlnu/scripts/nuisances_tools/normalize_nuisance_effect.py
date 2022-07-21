@@ -12,6 +12,7 @@ in the config file.
 parser = argparse.ArgumentParser()
 parser.add_argument("-i","--input", help="Input file", type=str)
 parser.add_argument("-c","--config", help="Config file",type=str)
+parser.add_argument("-y","--year", help="setup year, default 2018",type=str,default="2018")
 parser.add_argument("-o","--output", help="Output file",type=str)
 parser.add_argument("--dry", help="Dry run", action="store_true")
 parser.add_argument("-e","--exclude-vars", help="Exclude vars", type=str, nargs="+")
@@ -27,6 +28,8 @@ for sample, sample_conf in config.items():
     sample_conf['results'] = {}
     print ("> Working on sample: ", sample)
     for nuis in sample_conf["nuisances"]:
+        if "year" in nuis:
+            nuis = nuis.replace("year",args.year)
         sample_conf['results'][nuis] = {}
         print (">> nuisance: ", nuis)
         for phase_space, cuts in sample_conf["phase_spaces"].items():
@@ -36,7 +39,9 @@ for sample, sample_conf in config.items():
             nom, up, down = [],[],[]
             up_histos, down_histos = [],[]
             for cut in cuts:
+                print(cut+"/events/histo_"+sample+"_"+nuis)
                 h_nom  = iF.Get("{}/events/histo_{}".format(cut, sample))
+                print(cut+"/events/histo_"+sample+"_"+nuis+"Up")
                 h_up   = iF.Get("{}/events/histo_{}_{}Up".format(cut, sample, nuis))
                 h_down = iF.Get("{}/events/histo_{}_{}Down".format(cut, sample, nuis))
                 nom.append(h_nom.Integral())
