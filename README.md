@@ -115,9 +115,9 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf  ../samples_PDF_extraction_accept.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
         
-    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```: 
         
-        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2018_split.root -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -y 2018 -o ratio_normalize.json
      
     e) Then split the PS uncertainties for each sample and W+jets bin:
     
@@ -161,10 +161,10 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
          python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2017_split.root -o PDF_effect_bkg_fit_v4.5_2017.root -sf  ../../Full2018v7/samples_PDF_extraction_accept.txt -cf ../../Full2018v7/cuts_PS_extraction.txt -v ALL -n pdf_weight_1718_accept
         
-    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```: 
         
         hadd plots_fit_v4.5_2017_split.root_all plots_fit_v4.5_2017_split.root plots_fit_v4.5_2017_split.root_PSnuis.root
-        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2017_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2017_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -y 2017 -o ratio_normalize.json
      
     e) Then split the PS uncertainties for each sample and W+jets bin:
     
@@ -202,10 +202,10 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
         python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2016_split.root -o plots_fit_v4.5_2016_split.root_PDFsignuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PDF_effect_bkg_fit_v4.5_2018.root -s VBS_osWW VBS_ssWW VBS_WZjj VBS_WZll VBS_ZZ -n pdf_weight_1718_accept -nr pdf_weight_16_accept
                  
-    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file, where you should also check that the nuisances for the correct year are inserted in ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```): 
+    d) Normalize the nuisance effect between regions (mainly PS, QCD scale and PU for Wjets and top). The behaviour is described in the config file ```../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py```: 
         
         hadd plots_fit_v4.5_2016_split.root_all plots_fit_v4.5_2016_split.root plots_fit_v4.5_2016_split.root_PSnuis.root
-        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2016_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -o ratio_normalize.json
+        python ../../scripts/nuisances_tools/normalize_nuisance_effect.py -i plots_fit_v4.5_2016_split.root_all -c ../../scripts/nuisances_tools/nuisance_norm_conf_v4.5.py -y 2016 -o ratio_normalize.json
      
     e) Then split the PS uncertainties for each sample and W+jets bin:
     
