@@ -238,7 +238,7 @@ Let's start with the EWK only fit.
 
     mkDatacards.py --pycfg=configuration_fit_v4.5_2018_split.py --inputFile rootFile_fit_v4.5_2018_split/plots_fit_v4.5_2018_split.root --skipMissingNuisance
 
-
+You also need to install combine following instructions in http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
 
 If you need yield tables in either .tex or .csv format, after running the FitDiagnostics method of Combine on a workspace obtained from the datacards:
 
