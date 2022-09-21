@@ -133,21 +133,23 @@ DataTrig = {
 
 DY_photon_filter = '( !(Sum$(PhotonGen_isPrompt==1 && PhotonGen_pt>15 && abs(PhotonGen_eta)<2.6) > 0 && Sum$(LeptonGen_isPrompt==1 && LeptonGen_pt>15)>=2) )'
 
-samples['DY'] = {    'name'   :   nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50') #Don't use LO(_ext0)! DYMVA Training!
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_ext2')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-10to50-LO_ext1')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-70to100')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-100to200')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-200to400')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-400to600')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-600to800')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-800to1200')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-1200to2500')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-2500toInf')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-100to200')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-200to400')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-400to600')
-                                  + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-600toInf'),
+samples['DY'] = {    'name'   :   
+                                  # nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50') #Don't use LO(_ext0)! DYMVA Training!
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_ext2')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-10to50-LO_ext1')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-70to100')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-100to200')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-200to400')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-400to600')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-600to800')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-800to1200')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-1200to2500')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-50_HT-2500toInf')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-100to200')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-200to400')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-400to600')
+                                  # + nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-600toInf'),
+                                  nanoGetSampleFiles(directory_bkg,'DYJetsToLL_M-4to50_HT-600toInf__part0'),
                        'weight' : XSWeight+'*'+SFweight+'*'+GenLepMatch+'*'+METFilter_MC + '*' + DY_photon_filter +'*btagSF_corr_DY',# missing ewkNLOW
                        'FilesPerJob' : 6,
                        'EventsPerJob' : 70000,
@@ -308,8 +310,9 @@ samples['VVV']  = {  'name'   :   nanoGetSampleFiles(directory_bkg,'ZZZ')
 #                   }
 
 samples['VBF-V_dipole']  = {  'name'   :  
-                                    nanoGetSampleFiles(directory_bkg,'EWK_LNuJJ_herwig') +
-                                  nanoGetSampleFiles(directory_bkg,'EWK_LLJJ_herwig'),
+                                  # nanoGetSampleFiles(directory_bkg,'EWK_LNuJJ_herwig') +
+                                  # nanoGetSampleFiles(directory_bkg,'EWK_LLJJ_herwig'),
+                                  nanoGetSampleFiles(directory_bkg,'EWK_LLJJ_herwig__part0'),
                     'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_Vg_VgS_VBFV',
                     'FilesPerJob' : 8,
                     'EventsPerJob' : 70000,
@@ -491,9 +494,10 @@ samples['VBS_ssWW']  = { 'name' :
        'EventsPerJob' : 70000,
 }
 
-samples['VBS_osWW']  = { 'name' :  
-              nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-              nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil'),
+samples['VBS_osWW']  = { 'name' :
+              nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil__part0'),
+              # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
+              # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil'),
        'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_VBS_dipoleRecoil',
        'FilesPerJob' :5,
        'EventsPerJob' : 70000,
@@ -582,10 +586,9 @@ samples['VV_ZZ']  = { 'name' :
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["VBS_osWW_aQGC"]
-#signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
+signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
 
 #samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
-#samples = {key:v for key,v in samples.items() if key in ["VBS_osWW"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
-#samples = {key:v for key,v in samples.items() if key in ["VBF-V_dipole"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
+samples = {key:v for key,v in samples.items() if key in ["VBF-V_dipole"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 

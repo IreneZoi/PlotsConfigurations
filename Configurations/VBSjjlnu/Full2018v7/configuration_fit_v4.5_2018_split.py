@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split'
+tag = 'fit_v4.5_2018_split_PSUncFromDavide'
 direc = "conf_fit_v4.5"
 
 # used by mkShape to define output directory for root files
@@ -19,10 +19,11 @@ cutsFile = direc +'/cuts.py'
 
 # file with list of samples
 samplesFile = direc+'/samples_split.py' 
-#samplesFile = direc+'/samples.py'
+#samplesFile = direc+'/samples_quick.py'
 
 #t file with list of samples
-plotFile = direc+'/plot.py' 
+#plotFile = direc+'/plot_split.py' #irene made
+plotFile = direc+'/plot.py' #irene made
 
 # luminosity to normalize to (in 1/fb)
 lumi = 59.74
@@ -41,7 +42,8 @@ structureFile = direc+'/structure_split.py'
 
 
 # nuisances file for mkDatacards and for mkShape
-# nuisancesFile = direc+'/nuisances.py'
+#nuisancesFile = direc+'/nuisances.py'
+#nuisancesFile = direc+'/nuisances_debug.py'
 nuisancesFile = direc + '/nuisances_datacard_split.py'
 
 

@@ -81,34 +81,34 @@ for m in ["morphUp", "morphDown"]:
                 'blind': { c:[0.6,1] for c in cuts if "_sig_" in c} ,
         }
         #qgl
-        # variables['vbs_0_qgl_res_'+mtype] = {  'name': 'vbs_0_qgl_res_'+mtype,
-        #                         'range': (26,-0.04,1.),
-        #                         'xaxis': 'Qgl VBS 0 jet'+mtype,
-        #                         'fold': 3,
-        #                         'cuts': res_cuts
-        #                 }
+        variables['vbs_0_qgl_res_'+mtype] = {  'name': 'vbs_0_qgl_res_'+mtype,
+                                'range': (26,-0.04,1.),
+                                'xaxis': 'Qgl VBS 0 jet'+mtype,
+                                'fold': 3,
+                                'cuts': res_cuts
+                        }
 
-        # variables['vjet_0_qgl_res_'+mtype] = {  'name': 'vjet_0_qgl_res_'+mtype,
-        #                         'range': (26,-0.04,1.),
-        #                         'xaxis': 'Qgl Vjet 0 jet'+mtype,
-        #                         'fold': 3,
-        #                         'cuts': res_cuts
-        #                 }
+        variables['vjet_0_qgl_res_'+mtype] = {  'name': 'vjet_0_qgl_res_'+mtype,
+                                'range': (26,-0.04,1.),
+                                'xaxis': 'Qgl Vjet 0 jet'+mtype,
+                                'fold': 3,
+                                'cuts': res_cuts
+                        }
 
-        # variables['vjet_1_qgl_res_'+mtype] = {  'name': 'vjet_1_qgl_res_' +mtype,
-        #                         'range': (26,-0.04,1.),
-        #                         'xaxis': 'Qgl Vjet 1 jet'+mtype,
-        #                         'fold': 3,
-        #                         'cuts': res_cuts
-        #                 }
+        variables['vjet_1_qgl_res_'+mtype] = {  'name': 'vjet_1_qgl_res_' +mtype,
+                                'range': (26,-0.04,1.),
+                                'xaxis': 'Qgl Vjet 1 jet'+mtype,
+                                'fold': 3,
+                                'cuts': res_cuts
+                        }
 
-        # variables['vbs_0_qgl_boost_'+mtype] = {  'name': 'vbs_0_qgl_boost_' +mtype,
-        #                         'range': (26,-0.04,1.),
-        #                         'xaxis': 'Qgl VBS 0 jet'+mtype,
-        #                         'fold': 3,
-        #                         'cuts': boost_cuts
-        #                 }
-        
+        variables['vbs_0_qgl_boost_'+mtype] = {  'name': 'vbs_0_qgl_boost_' +mtype,
+                                'range': (26,-0.04,1.),
+                                'xaxis': 'Qgl VBS 0 jet'+mtype,
+                                'fold': 3,
+                                'cuts': boost_cuts
+                        }
+
 
 ##################### 
 

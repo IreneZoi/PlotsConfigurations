@@ -1,7 +1,8 @@
 from pprint import pprint
 # # # name of samples here must match keys in samples.py 
 
-mc =["DY", "top", "VV", "VVV", "VBF-V", "VBF-V_dipole", "Vg", "VgS", "VBS", "ggWW","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples
+#mc =["DY", "top", "VV", "VVV", "VBF-V", "VBF-V_dipole", "Vg", "VgS", "VBS", "ggWW","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples
+mc =["DY", "top", "VV", "VVV", "VBF-V", "VBF-V_dipole", "Vg", "VgS", "VBS", "ggWW","VBS_dipoleRecoil"] + wjets_all_bins
 
 
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",
@@ -93,6 +94,7 @@ nuisances['fake_syst_mu']  = {
                 'cuts': phase_spaces_tot_mu
                }
 
+'''
 nuisances['fake_ele']  = {
                 'name'  : 'CMS_fake_ele_2018',
                 'kind'  : 'weight',
@@ -133,9 +135,9 @@ nuisances['fake_mu_stat']  = {
                              },
                 'cuts':  phase_spaces_tot_mu
 }
-
+'''
 # ##### Btag nuisances
-
+'''
 for shift in ['jes', 'lf', 'hf', 'hfstats1', 'hfstats2', 'lfstats1', 'lfstats2', 'cferr1', 'cferr2']:
     btag_syst = ['(btagSF%sup)/(btagSF)' % shift, '(btagSF%sdown)/(btagSF)' % shift]
 
@@ -149,9 +151,9 @@ for shift in ['jes', 'lf', 'hf', 'hfstats1', 'hfstats2', 'lfstats1', 'lfstats2',
         'type': 'shape',
         'samples': dict((skey, btag_syst) for skey in mc)
     }
-
+'''
 # # ##### Trigger Efficiency
-
+'''
 trig_syst = ['( SingleLepton_trigEff_corrected_up / SingleLepton_trigEff_corrected )*(SingleLepton_trigEff_corrected>0.02) + (SingleLepton_trigEff_corrected<=0.02)', 
             '(SingleLepton_trigEff_corrected_down/SingleLepton_trigEff_corrected)']
 
@@ -161,7 +163,7 @@ nuisances['trigg']  = {
                 'type'  : 'shape',
                 'samples' :  dict((skey, trig_syst) for skey in mc)
 }
-
+'''
 
 # # ##### Electron Efficiency and energy scale
 
@@ -176,7 +178,7 @@ mu_id_syst_do = '(abs(Lepton_pdgId[0]) == 13)*(Lepton_tightMuon_'+muWP+'_TotSF'+
 
 id_syst_ele = [ ele_id_syst_up, ele_id_syst_do ]
 id_syst_mu = [ mu_id_syst_up, mu_id_syst_do ]
-
+'''
 nuisances['eff_e']  = {
                 'name'  : 'CMS_eff_e_2018',
                 'kind'  : 'weight',
@@ -210,11 +212,11 @@ for wjbin in wjets_all_bins:
                     'folderUp' : directory_wjets_bins[wjbin]+'_ElepTup',
                     'folderDown' : directory_wjets_bins[wjbin]+'_ElepTdo',
     }
-
+'''
 
 # # ##### Muon Efficiency and energy scale
 
-
+'''
 nuisances['eff_m']  = {
                 'name'  : 'CMS_eff_m_2018',
                 'kind'  : 'weight',
@@ -247,10 +249,10 @@ for wjbin in wjets_all_bins:
                 'folderUp' : directory_wjets_bins[wjbin]+'_MupTup',
                 'folderDown' : directory_wjets_bins[wjbin]+'_MupTdo',
 }
-
+'''
 ##################
 # PU jet id
-
+'''
 nuisances['JetPUID_sf']  = {
                 'name'  : 'CMS_jetpuid_2018',
                 'kind'  : 'weight',
@@ -258,14 +260,14 @@ nuisances['JetPUID_sf']  = {
                 'samples'  : dict((skey, ['PUJetIdSF_up/PUJetIdSF','PUJetIdSF_down/PUJetIdSF']) for skey in mc ),
 }
 
-
+'''
 # ##### Jet energy scale
 
 ##### Jet energy scale
 jes_systs = ['JESAbsolute','JESAbsolute_2018','JESBBEC1','JESBBEC1_2018','JESEC2',
             'JESEC2_2018','JESFlavorQCD','JESHF','JESHF_2018','JESRelativeBal',
             'JESRelativeSample_2018']
-
+'''
 for js in jes_systs:
     nuisances[js]  = {
                     'name': 'CMS_j_scale_'+js,
@@ -279,8 +281,9 @@ for js in jes_systs:
                     'AsLnN'      : '1',
                     
     }
-
+    '''
     ### Only total variation for fatjetJES
+'''
     nuisances['fatjet' +js]  = {
                     'name': 'CMS_fj_scale_'+js,
                         'kind': 'suffix',
@@ -293,9 +296,10 @@ for js in jes_systs:
                         'folderDown' : directory_mc+'_fatjetJESdo',
                         'AsLnN'      : '1',
     }
-
+    '''
 
 ##### Jet energy resolution
+'''
 nuisances['JER'] = {
                 'name': 'CMS_res_j_2018',
                 'kind': 'suffix',
@@ -320,8 +324,9 @@ nuisances['fatjetJER'] = {
                 'folderDown' : directory_mc+'_fatjetJERdo',
                 'AsLnN'      : '1',
 }
-
+'''
 ######################
+'''
 for wjbinres in wjets_res_bins:
     for js in jes_systs:\
         # Only ak4 jets for resolved bins
@@ -347,9 +352,10 @@ for wjbinres in wjets_res_bins:
             'folderDown' : directory_wjets_bins[wjbinres]+'_JERdo',
             'AsLnN'      : '1',
     }
-
+'''
 ############################3
 #### Boosted bins
+'''
 for wjbinboost in wjets_boost_bins:
     for js in jes_systs:
         nuisances[js+"_"+wjbinboost]  = {
@@ -400,8 +406,9 @@ for wjbinboost in wjets_boost_bins:
             'folderDown' : directory_wjets_bins[wjbinboost]+'_fatjetJERdo',
             'AsLnN'      : '1',
     }
-
+'''
 # # ##### MET energy scale
+'''
 nuisances['MET']  = {
                 'name'  : 'CMS_scale_met_2018',
                 'kind'  : 'suffix',
@@ -426,11 +433,12 @@ for wjbin in wjets_all_bins:
                 'folderDown' : directory_wjets_bins[wjbin]+'_METdo',
                 'AsLnN'      : '1',
     }
-
+'''
 ##################################
 ######## Fatjet uncertainties
 
 # Wtagging uncertainties enters also resolved region
+'''
 fatjet_eff = ['BoostedWtagSF_up/BoostedWtagSF_nominal', 'BoostedWtagSF_down/BoostedWtagSF_nominal']
 nuisances['Wtagging_eff'] = {
                 'name': 'CMS_fatjet_tau21eff_2018',
@@ -536,7 +544,7 @@ nuisances['TopPtRew'] = {
 #             'type': 'shape',
 #             'samples': dict((skey, ['1.','1.']) for skey in mc),
 #         }
-
+'''
 
 # ######################
 # # Theory nuisance
@@ -545,7 +553,7 @@ nuisances['TopPtRew'] = {
 import json, os
 #VBS_pdf_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.3/pdf_normcorr_VBS.json"))
 nuis_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5/nuisance_incl_norm_factors_2018.json"))
-
+'''
 for sample in mc :
     if sample in ["ggWW"] + wjets_all_bins +  VBS_samples + VV_samples : continue
     nuisances['QCD_scale_'+sample] = {
@@ -564,7 +572,6 @@ nuisances['QCD_scale_VBS'] = {
             #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_samples }
         }
-
 
 nuisances['QCD_scale_VV_accept'] = {
             'name'  : 'QCDscale_VV_accept',
@@ -586,12 +593,13 @@ nuisances['QCD_scale_Wjets'] = {
             'type'  : 'shape',
             'samples'  :  { sample: ["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for sample in wjets_all_bins }
         }
-
+'''
 
 # #
 # # PS and UE
 # # #
 # #### USE this for producing shapes
+'''
 nuisances['PS_ISR']  = {
                 'name'  : 'CMS_PS_ISR',
                 'kind'  : 'weight',
@@ -610,19 +618,6 @@ nuisances['PS_FSR']  = {
                          'PSWeight[1] * {}'.format(nuis_factors[s]["PS_FSR"][1]) ] for s in mc if s not in wjets_all_bins}
             }
 
-print " ----------------------------------------------------------------- "
-print " -------------------------   debug PS_FSR ------------------------ "
-print " ----------------------------------------------------------------- "
-for  s in mc :
-    if s not in wjets_all_bins:
-        print " s ",s
-        print " nuis_factors[s] ",nuis_factors[s]
-        print ' nuis_factors[s]["PS_FSR"][0] ',nuis_factors[s]["PS_FSR"][0]
-        print 'PSWeight[3] * {}'.format(nuis_factors[s]["PS_FSR"][0])
-        print ' nuis_factors[s]["PS_FSR"][1] ',nuis_factors[s]["PS_FSR"][1]
-        print 'PSWeight[1] * {}'.format(nuis_factors[s]["PS_FSR"][1])
-print " ----------------------------------------------------------------- "
-
 nuisances['PS_ISR_wjets']  = {
                 'name'  : 'CMS_PS_ISR',
                 'kind'  : 'weight',
@@ -640,7 +635,7 @@ nuisances['PS_FSR_wjets']  = {
                     s : ['PSWeight[3]',
                          'PSWeight[1]' ] for s in wjets_all_bins}
             }
-
+'''
         
 # wjets_bins = []
 # for ir in range(1,11):
@@ -673,7 +668,7 @@ nuisances['PS_FSR_wjets']  = {
 
 
 ##############
-
+'''
 nuisances['PU']  = {
                 'name'  : 'CMS_PU_2018',
                 'kind'  : 'weight',
@@ -711,7 +706,7 @@ nuisances['pdf_weight_accept'] = {
     #                "VBS_dipoleRecoil": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
     'samples': { k : [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ] for k in VBS_samples+VV_samples}
 }
-
+'''
 # An overall 1.5% UE uncertainty will cover all the UEup/UEdo variations
 # And we don't observe any dependency of UE variations on njet
 nuisances['UE']  = {
@@ -793,6 +788,7 @@ nuisances['UE']  = {
 
 
 # ## Use the following if you want to apply the automatic combine MC stat nuisances.
+'''
 nuisances['stat']  = {
               'type'  : 'auto',
               'maxPoiss'  : '10',
@@ -801,7 +797,7 @@ nuisances['stat']  = {
               #  nuisance ['includeSignal'] =  Include MC stat nuisances on signal processes (1=True, 0=False)
               'samples' : {}
              }
-
+'''
 
 for n in nuisances.values():
     n['skipCMS'] = 1

@@ -60,10 +60,11 @@ structure['VVV']  = {
                   'isData'   : 0 
               }
 
-# structure['VBF-V']  = {  
-#                   'isSignal' : 0,
-#                   'isData'   : 0 
-#               }
+#irene uncommented for datacard
+structure['VBF-V']  = {  
+                   'isSignal' : 0,
+                   'isData'   : 0 
+               }
 
 structure['VBF-V_dipole']  = {  
                   'isSignal' : 0,
@@ -85,10 +86,11 @@ structure['VgS']  = {
                   'isData'   : 0 
               }
 
-# structure['VBS']  = { 
-#                   'isSignal' : 1,
-#                   'isData'   : 0 
-#               }
+#irene uncommented for datacard
+structure['VBS']  = { 
+                   'isSignal' : 1,
+                   'isData'   : 0 
+               }
 
 structure['VBS_dipoleRecoil']  = { 
                   'isSignal' : 1,

@@ -24,16 +24,17 @@ variables['DNNoutput_res_v1'] = {
     # 'blind': { c:[0.6,1] for c in cuts if "_sig_" in c},
 }
 
+'''
 variables['DNNoutput_res_v2'] = {
     'name': 'DNNoutput_resolved_v1',
     'range': ([i*0.04 for i in range(20) ] + [0.8+0.025*i for i in range(9)],),
     'xaxis': 'DNN resolved',
     'fold': 3 ,
     'cuts':  res_cuts,
-    'divideByBinWidth': True, 
+Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5/variables_weights.py    'divideByBinWidth': True, 
     # 'blind': { c:[0.6,1] for c in cuts if "_sig_" in c},
 }
-
+'''
 
 variables['DNNoutput_boost'] = {
     'name': 'DNNoutput_boosted',
@@ -44,6 +45,7 @@ variables['DNNoutput_boost'] = {
     'divideByBinWidth': True,
     # 'blind': { c:[0.6,1] for c in cuts if "_sig_" in c} ,
 }
+
 #####################
 #Fit variables
 
@@ -255,7 +257,12 @@ variables['deltaeta_vjet'] = {   'name': 'deltaeta_vjet',
                         'cuts': [c for c in sig_cuts if "res" in c]
                         }   
 
-
+# variables['Mww'] = {   'name': 'Mww',      
+#                         'range' : (30,0,5000),  
+#                         'xaxis' : 'Mww', 
+#                         'fold' : 3,
+#                          #'blind': [1000,2000]
+#                         }
 # variables['run_info_boost'] = {
 #     'tree':  {"run":"run","lumi":"luminosityBlock","event":"event", "DNN":"DNNoutput_boosted"},
 #     'cuts' : ['boost_sig_ele', 'boost_sig_mu']
@@ -269,3 +276,5 @@ variables['deltaeta_vjet'] = {   'name': 'deltaeta_vjet',
 
 variables = {k:v for k,v in variables.items() if k in ["events", "DNNoutput_res_v1", "DNNoutput_boost", "fit_bins_res","fit_bins_boost"]}
 # variables = {k:v for k,v in variables.items() if k in ["mjj_vbs"]}
+#variables = {k:v for k,v in variables.items() if k in ["events"]}
+#variables = {k:v for k,v in variables.items() if k in ["events", "DNNoutput_res_v1", "DNNoutput_boost", "fit_bins_res","fit_bins_boost","w_lep_pt"]}

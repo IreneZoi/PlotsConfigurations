@@ -582,10 +582,9 @@ samples['VV_ZZ']  = { 'name' :
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["VBS_osWW_aQGC"]
-#signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
+signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
 
 #samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
-#samples = {key:v for key,v in samples.items() if key in ["VBS_osWW"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
-#samples = {key:v for key,v in samples.items() if key in ["VBF-V_dipole"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
+samples = {key:v for key,v in samples.items() if key in ["VBS_osWW"]} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 

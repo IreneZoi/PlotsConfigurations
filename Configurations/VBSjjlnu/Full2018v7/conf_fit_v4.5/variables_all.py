@@ -12,7 +12,12 @@ variables['events']  = {   'name': '1',
                         }
 
 ########################
-
+# variables['Mww'] = {   'name': 'Mww',      
+#                         'range' : (60,0,5000),  
+#                         'xaxis' : 'Mww', 
+#                         'fold' : 3,
+#                          #'blind': [1000,2000]
+#                         }
 
 variables['DNNoutput_res_v1'] = {
     'name': 'DNNoutput_resolved_v1',
@@ -34,7 +39,7 @@ variables['DNNoutput_res_v2'] = {
     'blind': { c:[0.6,1] for c in cuts if "_sig_" in c},
 }
 
-
+'''
 variables['DNNoutput_boost'] = {
     'name': 'DNNoutput_boosted',
     'range': ([0., 0.05, 0.1, 0.15, 0.20, 0.25, 0.3, 0.35, 0.4, 0.55, 0.7, 0.85, 1.],),
@@ -44,6 +49,7 @@ variables['DNNoutput_boost'] = {
     'divideByBinWidth': True,
     'blind': { c:[0.6,1] for c in cuts if "_sig_" in c} ,
 }
+'''
 #####################
 #Fit variables
 
