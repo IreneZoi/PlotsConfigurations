@@ -234,9 +234,11 @@ You can now proceed making datacards (`mkDatacards.py --help` to see all availab
 
 
 Let's start with the EWK only fit.
+Be sure the correct nuisance configuration is in the config file. In this case it should be `nuisances_datacard_split.py` and it should have the correct exclusion set at the end of the file, so the lines here https://github.com/UniMiBAnalyses/PlotsConfigurations/blob/b35ac085ce0f5374e3d2ca24b938fc7d94666669/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5/nuisances_datacard_split.py#L926-L927 . 
+
 - For 2018:
 
-    mkDatacards.py --pycfg=configuration_fit_v4.5_2018_split.py --inputFile rootFile_fit_v4.5_2018_split/plots_fit_v4.5_2018_split.root --skipMissingNuisance
+        mkDatacards.py --pycfg=configuration_fit_v4.5_2018_split.py --inputFile rootFile_fit_v4.5_2018_split_minimalvar/plots_fit_v4.5_2018_split_withqglnuis.root --skipMissingNuisance
 
 You also need to install combine following instructions in http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
 
