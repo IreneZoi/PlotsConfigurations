@@ -105,10 +105,12 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
     
         cd rootFile_fit_v4.5_2018_split/
         python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2018_split.root QCDscale
-    b) extract the PS effect to be applied on other years from initial root file: 
- 
-        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PS_effect_fit_v4.5_2018_split.root -sf ../samples_PS_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
-    
+    b - extra) The PS ISR and FSR for VBF-V_dipole (Herwig) are taken from Davide, that took them from VBF-V (Pythia)
+        
+        python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i /eos/user/i/izoi/VBS_SM_WV_semilep_SM/fromDavide/plots_fit_v4.5_2018_split.root_fromDavide_withFSRandISR -o PS_effect_fit_v4.5_2018_split_VBF-V_dipole.root -s VBF-V_dipole -cf ../cuts_PS_extraction.txt -v ALL -n CMS_PS_ISR CMS_PS_FSR
+        python ../../scripts/nuisances_tools/apply_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o plots_fit_v4.5_2018_split.root_PSnuis.root --nuisance-effect ../../Full2018v7/rootFile_fit_v4.5_2018_split/PS_effect_fit_v4.5_2018_split_VBF-V_dipole.root -sf VBF-V_dipole -n CMS_PS_FSR CMS_PS_ISR
+        hadd plots_fit_v4.5_2018_split_minimalvar.root_all plots_fit_v4.5_2018_split_minimalvar.root plots_fit_v4.5_2018_split.root_PSnuis.root
+   
     c) extract also the PDF effect:
     
         python ../../scripts/nuisances_tools/extract_nuisances_effect.py -i plots_fit_v4.5_2018_split.root -o PDF_effect_bkg_fit_v4.5_2018.root -sf ../samples_PDF_extraction.txt -cf ../cuts_PS_extraction.txt -v ALL -n pdf_weight_1718
@@ -123,7 +125,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
     
         python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_ISR -sf ../samples_PS_extraction.txt 
         python ../../scripts/nuisances_tools/rename_shape_root.py -i plots_fit_v4.5_2018_split.root --shape-name CMS_PS_FSR -sf ../samples_PS_extraction.txt
-        
+            
     f) Run on the QGL nuisance 
         
         mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split_qglnuis.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
