@@ -242,7 +242,8 @@ Be sure the correct nuisance configuration is in the config file. In this case i
 
         mkDatacards.py --pycfg=configuration_fit_v4.5_2018_split.py --inputFile rootFile_fit_v4.5_2018_split_minimalvar/plots_fit_v4.5_2018_split_withqglnuis.root --skipMissingNuisance
 
-You also need to install combine following instructions in http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/
+You also need to install combine following instructions in http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/ and CombineHarvester ```git clone https://github.com/cms-analysis/CombineHarvester.git CombineHarvester```. Yes, you will have a different CMSSW version for combine (10_2_13) and so you will need to have the appropriate and different environment for the combine part wrt the previous part.
+
 
 If you need yield tables in either .tex or .csv format, after running the FitDiagnostics method of Combine on a workspace obtained from the datacards:
 
