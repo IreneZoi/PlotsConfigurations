@@ -189,7 +189,7 @@ The output of mkShapes need to be processed to normalize some nuisance, rename a
         
 - 2016 (similar to 2017 but no need to merge ele and mu data, instead it will need an extra step with the PDFs)
         
-    a) Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
+    a) NOT NEEDED! Join the QCDscale and QCDscale_Wjets_boost that was not split in bins variations of the W+jets bins since there were splitted in the jobs configuration     
     
          python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale
          python ../../scripts/nuisances_tools/join_systematic_samples.py plots_fit_v4.5_2016_split.root QCDscale_Wjets_boost
