@@ -244,6 +244,14 @@ Be sure the correct nuisance configuration is in the config file. In this case i
 
 You also need to install combine following instructions in http://cms-analysis.github.io/HiggsAnalysis-CombinedLimit/ and CombineHarvester ```git clone https://github.com/cms-analysis/CombineHarvester.git CombineHarvester```. Yes, you will have a different CMSSW version for combine (10_2_13) and so you will need to have the appropriate and different environment for the combine part wrt the previous part.
 
+Some nuisances have been added later (ie only included in nuisances.py) and are not included in the produced files. It is necessary to follow the following steps to produce and include them:
+    1) In the config file use nuisance_datacard_split & change the name of output dir
+    2) In nuisance_datacard_split select only the nuisances that are needed
+    3) in samples_split select only the needed shapes
+    4) run mkShapes as before
+    5) hadd the files as before
+    6) remove the nominal shapes from the file you just produced with the delete_nominal_shapes.py script
+    7) hadd the files with the new nuisances and the one you originally produced
 
 If you need yield tables in either .tex or .csv format, after running the FitDiagnostics method of Combine on a workspace obtained from the datacards:
 
