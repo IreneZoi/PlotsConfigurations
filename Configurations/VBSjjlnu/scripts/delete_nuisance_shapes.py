@@ -18,8 +18,10 @@ f = R.TFile(args.input, "UPDATE")
 #     samples.append("Wjets_res_"+str(ir))
 # for ir in range(1,8):
 #     samples.append("Wjets_boost_"+str(ir))
-
-
+VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
+#VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
+samples = ['VBF-V_dipole']
+# samples = args.sample
     #f.ls()
 for k in f.GetListOfKeys():
     #print(k)
@@ -33,7 +35,9 @@ for k in f.GetListOfKeys():
 
         for nuisance_name in args.nuisances:
             #Delete boh up and down
-            R.gDirectory.Delete("histo_" + args.sample + "_"+nuisance_name+"*;*")
+            for sample in samples:
+                print (sample)
+                R.gDirectory.Delete("histo_" + sample + "_"+nuisance_name+"*;*")
                    
         R.gDirectory.Cd("../")
 

@@ -250,7 +250,7 @@ for datac in config:
 
    
     if args.process == "workspace":
-        print("DONE")
+        print("workspace DONE")
     elif args.process == "significance":
         significance(datac)    
     elif args.process == "fit_and_pulls_mcasimov":
