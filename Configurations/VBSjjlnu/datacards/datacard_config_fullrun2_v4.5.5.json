@@ -3,15 +3,15 @@
         "datacard_name": "run2_all",
         "folders": [
           {
-            "basedir": "Full2016v7/datacards_fit_v4.5_2016_Dipole_split_v6", 
+            "basedir": "Full2016v7/datacards_fit_v4.5_2016_split_complete_Dipole_v6_mu", 
             "name": 2016
           },
           {
-            "basedir": "Full2017v7/datacards_fit_v4.5_2017_Dipole_split_v5", 
+            "basedir": "Full2017v7/datacards_fit_v4.5_2017_split_complete_Dipole_v5_mu", 
             "name": 2017
           },
           {
-            "basedir": "Full2018v7/datacards_fit_v4.5_2018_Dipole_split_v5", 
+            "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_redoVBSpdf_Dipole_v5_mu", 
             "name": 2018
           }
         ], 
@@ -175,11 +175,11 @@
           "name": 2016
         },
         {
-          "basedir": "Full2017v7/datacards_fit_v4.5_2017_Dipole_split_v5_xs", 
+          "basedir": "Full2017v7/ datacards_fit_v4.5_2017_split_mimimalvar_Dipole_v5_mu_xs", 
           "name": 2017
         },
         {
-          "basedir": "Full2018v7/datacards_fit_v4.5_2018_Dipole_split_v5_xs", 
+          "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_allshapes_Dipole_v5_mu_xs", 
           "name": 2018
         }
       ], 

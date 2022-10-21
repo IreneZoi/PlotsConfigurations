@@ -2,15 +2,15 @@
   {
     "folders": [
       {
-        "basedir": "Full2016v7/datacards_fit_v4.5_2016_Dipole_split_v6", 
+        "basedir": "Full2016v7/datacards_fit_v4.5_2016_split_complete_Dipole_v6_mu", 
         "name": 2016
       }, 
       {
-        "basedir": "Full2017v7/datacards_fit_v4.5_2017_Dipole_split_v5", 
+        "basedir": "Full2017v7/datacards_fit_v4.5_2017_split_complete_Dipole_v5_mu", 
         "name": 2017
       }, 
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_Dipole_split_v5", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_redoVBSpdf_Dipole_v5_mu", 
         "name": 2018
       }
     ], 
@@ -24,6 +24,26 @@
         "var": "DNNoutput_res_v1", 
         "cut": "res_sig_ele", 
         "name": "res_sig_ele"
+      },
+      {
+        "name": "res_wjet_mu",
+        "var": "fit_bins_res", 
+        "cut": "res_wjetcr_mu"
+      },
+      {
+          "name": "res_wjet_ele",
+          "var": "fit_bins_res", 
+          "cut": "res_wjetcr_ele"
+      },
+      {
+        "name": "res_top_mu",
+        "var": "events", 
+        "cut": "res_topcr_mu"
+      },
+      { 
+        "name": "res_top_ele",
+        "var": "events", 
+        "cut": "res_topcr_ele"
       }
     ], 
     "datacard_name": "run2_res_DNNoutput_res_v1"
@@ -31,15 +51,15 @@
   {
     "folders": [
       {
-        "basedir": "Full2016v7/datacards_fit_v4.5_2016_Dipole_split_v6", 
+        "basedir": "Full2016v7/datacards_fit_v4.5_2016_split_complete_Dipole_v6_mu", 
         "name": 2016
       }, 
       {
-        "basedir": "Full2017v7/datacards_fit_v4.5_2017_Dipole_split_v5", 
+        "basedir": "Full2017v7/datacards_fit_v4.5_2017_split_complete_Dipole_v5_mu", 
         "name": 2017
       }, 
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_Dipole_split_v5", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_redoVBSpdf_Dipole_v5_mu", 
         "name": 2018
       }
     ], 
@@ -53,7 +73,28 @@
         "var": "DNNoutput_boost", 
         "cut": "boost_sig_ele", 
         "name": "boost_sig_ele"
-      }
+      },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      },
+      { 
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      },
+      {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    },
+    {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    }
+
     ], 
     "datacard_name": "run2_boost_DNNoutput_boost"
   }
