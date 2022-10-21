@@ -812,14 +812,16 @@ for n in nuisances.values():
 
 # Customization to redo the QCDscales
 #nuisances = {k:v for k,v in nuisances.items() if 'QCD_scale' in k or k == "pdf_weight"} #if 'PS' in k or 'QCD' in k
+#nuisances = {k:v for k,v in nuisances.items() if 'PS' in k } #
+#nuisances = {k:v for k,v in nuisances.items() if 'QCD_scale' in k } #if 'PS' in k or 'QCD' in k
 
 # Customization for mu fit with QCDscale normalization included
-# exclude = ["QCD_scale_VBS_WV_accept","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight_accept"]
-# nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
+exclude = ["QCD_scale_VBS_WV_accept","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight_accept"]
+nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
 
 # Customization for mu fit with QCDscale normalization excluded
-exclude = ["QCD_scale_VBS_WV_full","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight"]
-nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
+# exclude = ["QCD_scale_VBS_WV_full","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight"]
+# nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
 
 
 # print ' '.join(nname for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))

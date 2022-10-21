@@ -134,9 +134,16 @@ structure['DATA']  = {
               }
 
 
+# It seems that this is needed for 2016 comparing the rate parameters that I can reproduce with what is in the full run 2 datacard from Davide /eos/user/d/dvalsecc/www/VBSPlots/FullRun2/datacards/datacards_combined/fullrun2_fit_v4.5.5/run2_all/combined_run2_all.txt
+for sample in structure.keys():
+    if sample.find("Fake") != -1:
+        # Correct the luminosity
+        structure[sample]['scaleSampleForDatacard'] = 36.33/35.867
 
-
+# It seems that this is not needed anymore for 2016 comparing the rate parameters that I can reproduce with what is in the full run 2 datacard from Davide /eos/user/d/dvalsecc/www/VBSPlots/FullRun2/datacards/datacards_combined/fullrun2_fit_v4.5.5/run2_all/combined_run2_all.txt
+'''
 for sample in structure.values():
     if sample['isData'] != 1:
         # Correct the luminosity
         sample['scaleSampleForDatacard'] = 36.33/35.867
+'''

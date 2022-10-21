@@ -1,7 +1,7 @@
 # example of configuration file
 treeName= 'Events'
 
-tag = 'fit_v4.5_2016_split'
+tag = 'fit_v4.5_2016_split_complete'
 direc = 'conf_fit_v4.5'
 
 # used by mkShape to define output directory for root files
@@ -32,7 +32,7 @@ lumi = 36.33
 outputDirPlots = 'plot_'+tag 
 # used by mkDatacards to define output directory for datacards
 
-outputDirDatacard = 'datacards_' +tag + "_Dipole_v6_xs"
+outputDirDatacard = 'datacards_' +tag + "_Dipole_v6_mu"
 
 # structure file for datacard
 structureFile = direc+'/structure_split.py'
