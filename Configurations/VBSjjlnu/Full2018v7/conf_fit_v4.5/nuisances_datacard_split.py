@@ -921,6 +921,7 @@ for n in nuisances.values():
  
 # Customization to redo the QCDscales
 #nuisances = {k:v for k,v in nuisances.items() if 'QCD_scale' in k or k == "pdf_weight"} #if 'PS' in k or 'QCD' in k
+#nuisances = {k:v for k,v in nuisances.items() if k == "pdf_weight"} #if 'PS' in k or 'QCD' in k
 
 # Customization for mu fit with QCDscale normalization included for ewq-only ("split") fit
 exclude = ["QCD_scale_VBS_WV_accept","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight_accept"]
