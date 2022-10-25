@@ -39,6 +39,7 @@ for s in args.samples:
                                         ") | do: ", h_do.Integral(), " (" , corr_do, ") |"
             output[s][n] = (corr_up, corr_do)
         except:
+            print " nuisance ",n," not found!"
             continue
          
 print "------------------------------"
