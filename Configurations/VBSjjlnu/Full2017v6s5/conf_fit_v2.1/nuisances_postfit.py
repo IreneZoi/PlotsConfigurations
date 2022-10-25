@@ -1,3 +1,0 @@
-nuisances = {
-    'dummy': {}
-}
