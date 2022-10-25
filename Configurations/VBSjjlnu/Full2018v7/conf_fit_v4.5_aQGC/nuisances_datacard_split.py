@@ -552,6 +552,8 @@ for jtype in ["quark", "gluon"]:
 
 import json, os
 #VBS_pdf_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.3/pdf_normcorr_VBS.json"))
+# the nuis factors are derived using inclusive selections, as in this configuration: https://github.com/UniMiBAnalyses/PlotsConfigurations/tree/VBSjjlnu_v7/Configurations/VBSjjlnu/Full2018v7/conf_incl_nuis_norm and the corrisponding conf_incl_nuis_norm_aQGC for EFT samples
+# then the json is created with `python ../../scripts/nuisances_tools/extract_nuisance_norm.py -i plots_incl_nuis_norm_2018_aQGC.root  -s quad_cT0  sm_lin_quad_cT0 -n CMS_PU_2018 PS_FSR PS_ISR -c inclusive -o nuisance_incl_norm_factors_2018_aQGC_T0.json`
 nuis_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5_aQGC/nuisance_incl_norm_factors_2018.json"))
 
 
