@@ -126,15 +126,22 @@ structure['VBS_WZjj']  = {
               }
 
 
-structure['quad_cT0']  = {  
+ # Structure for aqgc
+
+structure['sm'] = {
                   'isSignal' : 1,
                   'isData'   : 0 
               }
 
-structure['sm_lin_quad_cT0']  = {  
-                  'isSignal' : 1,
-                  'isData'   : 0 
-              }
+#### EFT ###
+structure['quad_cT0'] = {
+                 'isSignal' : 1,
+                 'isData'   : 0
+                 }
+structure['sm_lin_quad_cT0'] = {
+                 'isSignal' : 1,
+                 'isData'   : 0
+                 }
 
 # data
 

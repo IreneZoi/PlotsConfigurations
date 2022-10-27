@@ -19,6 +19,13 @@ variables['Mww'] = {   'name': 'Mww',
                          #'blind': [1000,2000]
                         }
 
+variables['Mww_binzv'] = {   'name': 'Mww',      
+                        'range' : ([200.,300.,400.,500.,600., 700.,800.,900., 1000., 1250., 1500., 2000., 2500.],), #variable range  
+                        'xaxis' : 'Mww', 
+                        'fold' : 3,
+                         #'blind': [1000,2000]
+                        }
+
 variables['DNNoutput_res_v1'] = {
     'name': 'DNNoutput_resolved_v1',
     'range': (25,0.,1),
