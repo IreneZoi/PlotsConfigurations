@@ -608,8 +608,8 @@ samples['quad_cT0']  = { 'name' :
                 nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC') + #VBS_osWW
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC') + #VBS_ssWW
                 nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC') + #VBS_ssWW
-                nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC') + #VBS_WZjj
-                nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC'),  #VBS_WZjj
+                nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC')  + #VBS_WZjj
+                nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC'),   #VBS_WZjj
        'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch + '*' + quadReweight_cT0,
        'FilesPerJob' :5,
        'EventsPerJob' : 70000,
@@ -671,8 +671,8 @@ samples['sm'] ={ # should not use dipole recoil for aqgc SM part
             nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J') + #VBS_ssWW
             nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J') + #VBS_osWW
             nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu') + #VBS_osWW
-            nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J',) + #VBS_WZjj
-            nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J',),  #VBS_WZjj
+            nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J')  + #VBS_WZjj
+            nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J'),  #VBS_WZjj
        'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_VBS',
        'FilesPerJob' :5,
        'EventsPerJob' : 70000,
@@ -681,7 +681,7 @@ samples['sm'] ={ # should not use dipole recoil for aqgc SM part
 
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"]
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
 

@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split_aQGC'
+tag = 'fit_v4.5_2018_split_aQGC_cT0'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
@@ -19,7 +19,7 @@ cutsFile = direc +'/cuts.py'
 
 # file with list of samples
 samplesFile = direc+'/samples_split_withAQGC.py' 
-#samplesFile = direc+'/samples_quick.py'
+#samplesFile = direc+'/samples_test.py'
 
 #t file with list of samples
 plotFile = direc+'/plot_split.py' #irene made
@@ -41,8 +41,8 @@ structureFile = direc+'/structure_split.py'
 
 
 # nuisances file for mkDatacards and for mkShape
-#nuisancesFile = direc+'/nuisances.py'
-nuisancesFile = direc + '/nuisances_datacard_split.py'
+nuisancesFile = direc+'/nuisances.py'
+#nuisancesFile = direc + '/nuisances_datacard_split.py'
 
 
 customizeScript = direc + '/customize.py'
