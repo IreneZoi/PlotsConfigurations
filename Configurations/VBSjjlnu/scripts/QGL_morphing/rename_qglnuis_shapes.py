@@ -14,10 +14,11 @@ iF = R.TFile.Open(args.inputfile, "READ")
 oF = R.TFile.Open(args.outputfile,"RECREATE")
 oFF = R.TFile.Open(args.outputfile_fit,"UPDATE")
 
-# samples= ['VBS','DY','top','VV','VVV','Vg','VgS', 'VBF-V','ggWW'] # 'VBS_dipoleRecoil'
+samples= ['DY','top','VV','VVV','Vg','VgS', 'VBF-V_dipole','ggWW'] # 'VBS_dipoleRecoil'
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
-samples =  VBS_samples + VV_samples #+['VBF-V_dipole',"VBS_dipoleRecoil"] +
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
+samples =  VBS_samples + VV_samples + VBS_aQGC_samples #+['VBF-V_dipole',"VBS_dipoleRecoil"] +
 wjets_bins = {"res":[], "boost":[]}
 # for ir in range(1,22):
 #     wjets_bins["res"].append("Wjets_res_"+str(ir))
@@ -61,6 +62,7 @@ for cut in iF.GetListOfKeys():
                         print ("{}/{}_{}/histo_{}".format(cut.GetName(), var, mtyp, sample ))
                         hup = iF.Get("{}/{}_{}/histo_{}".format(cut.GetName(), var, mtyp, sample ))   
                         hdo = iF.Get("{}/{}_{}/histo_{}".format(cut.GetName(), var, mtyp, sample ))
+                        print (" m ",m," sample ",sample, " jtype ",jtype," jeta ", jeta, "args.name ",args.name)
                         if m == "morphUp":
                             hup.SetName("histo_{}_QGLmorph_{}_{}_{}Up".format(sample, jtype,jeta, args.name))
                         elif m == "morphDown":

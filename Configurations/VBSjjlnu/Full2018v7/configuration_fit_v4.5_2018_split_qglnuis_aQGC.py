@@ -2,11 +2,11 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split_qglnuis_aQGC_cT0'
+tag = 'fit_v4.5_2018_split_qglnuis_aQGC_cT0_allvar'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
 
 # file with TTree aliases
 aliasesFile = direc+'/aliases_qglnuis.py'
@@ -18,7 +18,7 @@ variablesFile = direc+'/variables_qglnuis.py'
 cutsFile = direc +'/cuts.py' 
 
 # file with list of samples
-samplesFile = direc+'/samples_split.py' 
+samplesFile = direc+'/samples_split_withAQGC.py' 
 #samplesFile = direc+'/samples.py'
 
 #t file with list of samples

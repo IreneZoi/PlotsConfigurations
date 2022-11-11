@@ -13,19 +13,6 @@ variables['events']  = {   'name': '1',
                         }
 
 ########################
-variables['Mww'] = {   'name': 'Mww',      
-                        'range' : (60,0,5000),  
-                        'xaxis' : 'Mww', 
-                        'fold' : 3,
-                         #'blind': [1000,2000]
-                        }
-
-variables['Mww_binzv'] = {   'name': 'Mww',      
-                        'range' : ([200.,300.,400.,500.,600., 700.,800.,900., 1000., 1250., 1500., 2000., 2500.],), #variable range  
-                        'xaxis' : 'Mww', 
-                        'fold' : 3,
-                         #'blind': [1000,2000]
-                        }
 
 
 variables['DNNoutput_res_v1'] = {
@@ -157,3 +144,27 @@ variables['vbs_0_qgl_boost'] = {  'name': 'vbs_0_qgl_boost',
                 }
 
 # #############
+
+#EFT
+
+########################
+variables['Mww'] = {   'name': 'Mww',      
+                        'range' : (60,0,5000),  
+                        'xaxis' : 'Mww', 
+                        'fold' : 3,
+                         #'blind': [1000,2000]
+                        }
+
+variables['Mww_binzv'] = {   'name': 'Mww',      
+                        'range' : ([200.,300.,400.,500.,600., 700.,800.,900., 1000., 1250., 1500., 2000., 2500.],), #variable range  
+                        'xaxis' : 'Mww', 
+                        'fold' : 3,
+                         #'blind': [1000,2000]
+                        }
+
+variables['mjj_vbs'] = {   'name': 'mjj_vbs',      
+                        'range' : (25,500,3500) , 
+                        'xaxis' : 'M_{jj} VBS', 
+                        'fold' : 3,
+                        #'blind':  { c: [1500,3000] for c in cuts if 'sig' in c} ,
+                    }

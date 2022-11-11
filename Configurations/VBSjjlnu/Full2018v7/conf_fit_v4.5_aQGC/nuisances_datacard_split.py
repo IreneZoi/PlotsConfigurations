@@ -6,7 +6,7 @@ VBS_WV_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj"]
 VBS_ZV_samples = ["VBS_WZll", "VBS_ZZ"]
 VV_WV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj"]
 VV_ZV_samples = ["VV_WZll", "VV_ZZ"]
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"]
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0","sm"]
 
 mc =["DY", "top", "VV", "VVV",  "VBF-V_dipole", "Vg", "VgS",  "ggWW","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples + VBS_aQGC_samples
 #"VBF-V","VBS",

@@ -300,6 +300,7 @@ samples['VVV']  = {  'name'   :   nanoGetSampleFiles(directory_bkg,'ZZZ')
  ############## VBF-V ########
 
 # samples['VBF-V']  = {  'name'   :  
+#samples['VBF-V_dipole']  = {  'name'   :    #irene's attempted trick in order not to rename stuff
 #                                     nanoGetSampleFiles(directory_bkg,'WLNuJJ_EWK') +
 #                                   nanoGetSampleFiles(directory_bkg,'EWKZ2Jets_ZToLL_M-50'),
 #                     'weight' : XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_Vg_VgS_VBFV',
@@ -579,6 +580,7 @@ samples['VV_ZZ']  = { 'name' :
 # same implementation as Matteo https://github.com/mpresill/PlotsConfigurations/blob/matteo/Configurations/VBS_ZV/2018_Jul22/samples.py
 # samples name are crucial!! And you can run on 1 operator at the time!!
 # to understand the weight numbering scheme https://github.com/singh-ramanpreet/VBS-customNanoAODProduction/blob/main/NanoAODProduction/data/initrwgt_aQGC17.header#L152
+# line 152 is like zero, where this weight part starts in the document linked above. Example for cTO: the SM value is at line 187 => line 187 - line 152 = 35 => sm_cT0 = 'LHEReweightingWeight[35]'. The largest variations of +/- 2 are at line 221 & 220: 221(0) -152 = 69(8).
 # calculation for weights and coefficients as in http://cms.cern.ch/iCMS/jsp/openfile.jsp?tp=draft&files=AN2020_204_v6.pdf
 # but for k = 2 
 # also, xsec saved in the samples are wrong and Jay updated them -> samples need to be rescaled by xsec_Jay/xsec_mcm
@@ -673,7 +675,7 @@ samples['sm'] ={ # should not use dipole recoil for aqgc SM part
             nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu') + #VBS_osWW
             nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J')  + #VBS_WZjj
             nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J'),  #VBS_WZjj
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*btagSF_corr_VBS',
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch, #+'*btagSF_corr_VBS',
        'FilesPerJob' :5,
        'EventsPerJob' : 70000,
 }
@@ -685,6 +687,6 @@ VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
 
-#samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
+#samples = {   key:v for key,v in samples.items() if key == 'VBF-V_dipole'}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
-
+#samples = {   key:v for key,v in samples.items() if key == 'sm'}

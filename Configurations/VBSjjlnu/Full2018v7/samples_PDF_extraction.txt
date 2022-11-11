@@ -4,7 +4,7 @@ VBS_WZjj
 VBS_WZll
 VBS_ZZ
 DY
-VBF-V
+VBF-V_dipole
 VV_osWW
 VV_ssWW
 VV_WZjj
