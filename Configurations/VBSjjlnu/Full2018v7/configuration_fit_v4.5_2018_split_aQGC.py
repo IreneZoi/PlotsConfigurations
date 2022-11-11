@@ -6,7 +6,7 @@ tag = 'fit_v4.5_2018_split_aQGC_cT0'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
 
 # file with TTree aliases
 aliasesFile = direc+'/aliases.py'

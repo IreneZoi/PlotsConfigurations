@@ -6,7 +6,7 @@ tag = 'incl_nuis_norm_2018_aQGC_cTO'
 direc = "conf_incl_nuis_norm_aQGC"
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
 
 # file with TTree aliases
 aliasesFile = direc+'/aliases.py'
