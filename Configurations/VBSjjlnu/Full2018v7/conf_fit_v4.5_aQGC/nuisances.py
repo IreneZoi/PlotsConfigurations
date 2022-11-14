@@ -544,7 +544,7 @@ nuisances['TopPtRew'] = {
 
 import json, os
 #VBS_pdf_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.3/pdf_normcorr_VBS.json"))
-nuis_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5/nuisance_incl_norm_factors_2018.json"))
+nuis_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4" + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/conf_fit_v4.5_aQGC/nuisance_incl_norm_factors_2018.json"))
 
 for sample in mc :
     if sample in ["ggWW"] + wjets_all_bins +  VBS_samples + VV_samples : continue
@@ -796,6 +796,7 @@ for n in nuisances.values():
    
 
 # nuisances = {k:v for k,v in nuisances.items() if k in ['detavbs_residual', 'zlep_residual']} #if 'PS' in k or 'QCD' in k
+# nuisances = {k:v for k,v in nuisances.items() if 'PS' in k } 
 
 
 # print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))
