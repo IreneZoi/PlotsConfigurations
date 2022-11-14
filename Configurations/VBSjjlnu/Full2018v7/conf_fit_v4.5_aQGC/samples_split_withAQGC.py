@@ -687,6 +687,6 @@ VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
 
-#samples = {   key:v for key,v in samples.items() if key == 'VBF-V_dipole'}
+samples = {   key:v for key,v in samples.items() if key not in VBS_samples}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {   key:v for key,v in samples.items() if key == 'sm'}
