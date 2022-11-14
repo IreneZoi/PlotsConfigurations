@@ -44,7 +44,7 @@ elif  'cern' in SITE :
 directory_bkg    = treeBaseDir + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
 directory_mc    = treeBaseDir +  'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
 directory_signal = treeBaseDir_SMP + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
-directory_signalIZ = os.path.join(treeBaseDir_SMP ,  mcProductionIZ , mcSteps)
+directory_signalIZ = os.path.join(treeBaseDir_SMP ,  'Fall2017_102X_nAODv7_Full2017v7/' , mcSteps)
 
 
 ################################################
