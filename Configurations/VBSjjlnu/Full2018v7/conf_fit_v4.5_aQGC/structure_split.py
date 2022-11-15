@@ -89,15 +89,15 @@ structure['VgS']  = {
                   'isData'   : 0 
               }
 
-structure['VBS_WZll']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0 
-              }
+# structure['VBS_WZll']  = {  
+#                   'isSignal' : 0,
+#                   'isData'   : 0 
+#               }
 
-structure['VBS_ZZ']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0 
-              }
+# structure['VBS_ZZ']  = {  
+#                   'isSignal' : 0,
+#                   'isData'   : 0 
+#               }
 
 
 # structure['VBS']  = { 
@@ -110,26 +110,26 @@ structure['VBS_ZZ']  = {
 #                   'isData'   : 0 
 #               }
 
-structure['VBS_osWW']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0 
-              }
+# structure['VBS_osWW']  = {  
+#                   'isSignal' : 0,
+#                   'isData'   : 0 
+#               }
 
-structure['VBS_ssWW']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0 
-              }
+# structure['VBS_ssWW']  = {  
+#                   'isSignal' : 0,
+#                   'isData'   : 0 
+#               }
 
-structure['VBS_WZjj']  = {  
-                  'isSignal' : 0,
-                  'isData'   : 0 
-              }
+# structure['VBS_WZjj']  = {  
+#                   'isSignal' : 0,
+#                   'isData'   : 0 
+#               }
 
 
  # Structure for aqgc
 
 structure['sm'] = {
-                  'isSignal' : 1,
+                  'isSignal' : 0,
                   'isData'   : 0 
               }
 

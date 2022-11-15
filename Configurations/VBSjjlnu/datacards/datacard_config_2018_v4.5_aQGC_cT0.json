@@ -3,29 +3,29 @@
     "datacard_name": "2018_all_split_Dipole_v4.5",
     "folders": [
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS", 
         "name": 2018
       }
     ], 
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "Mww_binzv", 
         "cut": "res_sig_mu"
       },
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "Mww_binzv", 
           "cut": "res_sig_ele"
       },
       {
           "name": "boost_sig_mu",
-          "var": "Mww", 
+          "var": "Mww_binzv", 
           "cut": "boost_sig_mu"
       },
       {
           "name": "boost_sig_ele",
-          "var": "Mww", 
+          "var": "Mww_binzv", 
           "cut": "boost_sig_ele"
       },
 
@@ -87,12 +87,12 @@
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "Mww_binzv", 
         "cut": "res_sig_mu"
       },
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "Mww_binzv", 
           "cut": "res_sig_ele"
       },
 
@@ -131,7 +131,7 @@
     "phase_spaces": [
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "Mww_binzv", 
           "cut": "res_sig_ele"
       },
       {
@@ -158,7 +158,7 @@
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "Mww_binzv", 
         "cut": "res_sig_mu"
       },
       {
