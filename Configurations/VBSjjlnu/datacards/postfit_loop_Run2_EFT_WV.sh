@@ -18,7 +18,7 @@ Date2018=8June2022_2018
 # datacards & workspaces are created in Davide's adapted code - step 0 (done in analysis setup)
 DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/2018_fit_v4.5.5_aQGC_cT0/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5
 
-
+# source postfit_loop_Run2_EFT_WV.sh boost boost_sig_ele Mww_binzv
 Category=$1 #boost
 CUT=$2 #boost_sig_ele
 PLOTVAR=$3 #Mww_binzv
