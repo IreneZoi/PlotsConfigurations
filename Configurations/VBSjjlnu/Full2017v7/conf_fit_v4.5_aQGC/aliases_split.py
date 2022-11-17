@@ -387,7 +387,7 @@ aliases['QCDscale_normalized'] = {
                 'gSystem->Load("libLatinoAnalysisMultiDraw.so")',
                 '.L {}/VBSjjlnu/macros/QCDscale_normalize.cc+'.format(configurations)
             ] ,
-            'samples':['VBS','VBS_dipoleRecoil','VV'] + VBS_samples + VV_samples      
+            'samples':['VBS','VBS_dipoleRecoil','VV'] + VBS_samples + VV_samples + VBS_aQGC_samples     
 }
 
 aliases['PDFweight_normalized'] = {

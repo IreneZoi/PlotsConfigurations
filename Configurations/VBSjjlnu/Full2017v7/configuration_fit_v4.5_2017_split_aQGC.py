@@ -2,14 +2,14 @@
 treeName= 'Events'
 
 
-tag = 'incl_nuis_norm_2017_aQGC_cT0'
-direc = "conf_incl_nuis_norm_aQGC"
+tag = 'fit_v4.5_2017_split_aQGC_cTO_noaQGCsyst'
+direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
-outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag
 
 # file with TTree aliases
-aliasesFile = direc+'/aliases.py'
+aliasesFile = direc+'/aliases_split.py'
 
 # file with list of variables
 variablesFile = direc+'/variables.py'
@@ -18,11 +18,11 @@ variablesFile = direc+'/variables.py'
 cutsFile = direc +'/cuts.py' 
 
 # file with list of samples
-samplesFile = direc+'/samples.py' 
+samplesFile = direc+'/samples_split_aQGC.py' 
 #samplesFile = direc+'/samples.py'
 
 #t file with list of samples
-plotFile = direc+'/plot.py' 
+plotFile = direc+'/plot_split.py' 
 
 # luminosity to normalize to (in 1/fb)
 lumi = 41.5
@@ -30,20 +30,18 @@ lumi = 41.5
 # used by mkPlot to define output directory for plots
 # different from "outputDir" to do things more tidy
 #outputDirPlots = 'plot_'+tag +"_rescaled/detajpt_ext"
-outputDirPlots = 'plot_'+tag + "/"
+outputDirPlots = 'plot_'+tag 
 
 # used by mkDatacards to define output directory for datacards
 #outputDirDatacard = 'datacards_'+tag 
-#outputDirDatacard = 'datacards_'+tag + "/Wjets_njets"
-outputDirDatacard = 'datacards_'+tag + "_v1"
+outputDirDatacard = 'datacards_'+tag +"_Dipole_v5_mu"
 
 # structure file for datacard
-structureFile = direc+'/structure.py'
+structureFile = direc+'/structure_split.py'
 
 
 # nuisances file for mkDatacards and for mkShape
-# nuisancesFile = direc+'/nuisances_reduced.py'
-#nuisancesFile = direc+'/nuisances_datacard_join.py'
-nuisancesFile = direc + '/nuisances.py'
+#nuisancesFile = direc+'/nuisances_datacard_split.py'
+nuisancesFile = direc+'/nuisances.py'
 
 customizeScript = direc + "/customize.py"
