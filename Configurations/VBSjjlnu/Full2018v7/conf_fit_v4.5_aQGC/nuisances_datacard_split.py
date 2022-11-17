@@ -8,7 +8,7 @@ VV_WV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj"]
 VV_ZV_samples = ["VV_WZll", "VV_ZZ"]
 VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0","sm"]
 
-mc =["DY", "top", "VV", "VVV",  "VBF-V_dipole", "Vg", "VgS",  "ggWW","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples + VBS_aQGC_samples
+mc =["DY", "top", "VV", "VVV",  "VBF-V_dipole", "Vg", "VgS",  "ggWW"] + wjets_all_bins + VV_samples + VBS_aQGC_samples
 #"VBF-V","VBS",
 
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",
@@ -558,7 +558,7 @@ nuis_factors = json.load(open("/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4
 
 
 for sample in mc :
-    if sample in ["ggWW","VBS","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples : continue
+    if sample in ["ggWW","VBS","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples + VBS_aQGC_samples: continue
     nuisances['QCD_scale_'+sample] = {
         'name'  : 'QCDscale_'+sample,
         'kind'  : 'weight',
@@ -567,56 +567,14 @@ for sample in mc :
     }
 
 #Correlate all signal samples
-nuisances['QCD_scale_VBS_WV_accept'] = {
-            'name'  : 'QCDscale_VBS_WV_accept',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            # 'samples'  :  { "VBS": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"],
-            #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_WV_samples }
-        }
-
-nuisances['QCD_scale_VBS_ZV_accept'] = {
-            'name'  : 'QCDscale_VBS_ZV_accept',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            # 'samples'  :  { "VBS": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"],
-            #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_ZV_samples }
-        }
-
-### Adding also normalization effect for ZV component
-# nuisances['QCD_scale_VBS_ZV_norm'] = {
-#             'name'  : 'QCDscale_VBS_ZV',
-#             'kind'  : 'weight',
-#             'type'  : 'lnN',
-#             # 'samples'  :  { "VBS": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"],
-#             #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
-#             'samples': { k: "1.007/0.986" for k in VBS_ZV_samples }
-#         }
-
-# Adding also the non-normalized 
-nuisances['QCD_scale_VBS_WV_full'] = {
-            'name'  : 'QCDscale_VBS_WV',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_WV_samples }
-        }
-
-nuisances['QCD_scale_VBS_ZV_full'] = {
-            'name'  : 'QCDscale_VBS_ZV',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_ZV_samples }
-        }
-
-# nuisances['QCD_scale_VV_accept'] = {
-#             'name'  : 'QCDscale_VV_accept',
+# nuisances['QCD_scale_signal'] = {
+#             'name'  : 'QCDscale_signal',
 #             'kind'  : 'weight',
 #             'type'  : 'shape',
-#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VV_samples }
+#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_aQGC_samples }
 #         }
 
+# VV samples
 nuisances['QCD_scale_QCD_WV_accept'] = {
             'name'  : 'QCDscale_QCD_WV_accept',
             'kind'  : 'weight',
@@ -696,6 +654,7 @@ nuisances['QCD_scale_Wjets'] = {
 # # #
 for sample in mc:
     if sample in VBS_samples + VV_samples + ["VBS","VBS_dipoleRecoil"] : continue
+    #note we want it for aQGC!!
     nuisances['PS_ISR_'+sample]  = {
                     'name'  : 'CMS_PS_ISR_'+sample,
                     'kind'  : 'weight',
@@ -714,39 +673,6 @@ for sample in mc:
                 }
 
 
-nuisances['PS_ISR_VBS_WV']  = {
-                    'name'  : 'CMS_PS_ISR_VBS_WV',
-                    'kind'  : 'weight',
-                    'type'  : 'shape',
-                    'samples'  : {
-                        sample : ['PSWeight[2]', 'PSWeight[0]'] for sample in VBS_WV_samples
-                    }
-                }
-nuisances['PS_FSR_VBS_WV']  = {
-                'name'  : 'CMS_PS_FSR_VBS_WV',
-                'kind'  : 'weight',
-                'type'  : 'shape',
-                'samples'  : {
-                    sample :  ['PSWeight[3]', 'PSWeight[1]'] for sample in VBS_WV_samples
-                }
-            }
-
-nuisances['PS_ISR_VBS_ZV']  = {
-                    'name'  : 'CMS_PS_ISR_VBS_ZV',
-                    'kind'  : 'weight',
-                    'type'  : 'shape',
-                    'samples'  : {
-                        sample : ['PSWeight[2]', 'PSWeight[0]'] for sample in VBS_ZV_samples
-                    }
-                }
-nuisances['PS_FSR_VBS_ZV']  = {
-                'name'  : 'CMS_PS_FSR_VBS_ZV',
-                'kind'  : 'weight',
-                'type'  : 'shape',
-                'samples'  : {
-                    sample :  ['PSWeight[3]', 'PSWeight[1]'] for sample in VBS_ZV_samples
-                }
-            }
 
 # When VV is a background all the PS is correlated
 
@@ -809,14 +735,14 @@ nuisances['pdf_weight'] = { # --> Now save also the normalization one for the si
     'AsLnN':  '1'
 }
 
-nuisances['pdf_weight_accept'] = {
-    'name'  : 'pdf_weight_1718_accept',
-    'kind'  : 'weight_envelope',
-    'type'  : 'shape',
-    # 'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ],
-    #                "VBS_dipoleRecoil": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
-    'samples': { k : [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ] for k in VBS_samples}
-}
+# nuisances['pdf_weight_accept'] = {
+#     'name'  : 'pdf_weight_1718_accept',
+#     'kind'  : 'weight_envelope',
+#     'type'  : 'shape',
+#     # 'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ],
+#     #                "VBS_dipoleRecoil": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
+#     'samples': { k : [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ] for k in VBS_samples}
+# }
 
 
 # An overall 1.5% UE uncertainty will cover all the UEup/UEdo variations

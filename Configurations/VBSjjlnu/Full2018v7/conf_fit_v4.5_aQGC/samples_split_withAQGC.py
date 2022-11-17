@@ -669,12 +669,12 @@ addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPa
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 samples['sm'] ={ # should not use dipole recoil for aqgc SM part
-  'name' :  nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J') + #VBS_ssWW
-            nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J') + #VBS_ssWW
-            nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J') + #VBS_osWW
-            nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu') + #VBS_osWW
-            nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J')  + #VBS_WZjj
-            nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J'),  #VBS_WZjj
+  'name' :  nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J') + #VBS_ssWW
+            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J') + #VBS_ssWW
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J') + #VBS_osWW
+            nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu') + #VBS_osWW
+            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J')  + #VBS_WZjj
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J'),  #VBS_WZjj
        'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch, #+'*btagSF_corr_VBS',
        'FilesPerJob' :5,
        'EventsPerJob' : 70000,
@@ -686,7 +686,7 @@ VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 
-
-samples = {   key:v for key,v in samples.items() if key not in VBS_samples}
+#samples = {key:v for key,v in samples.items() if key in VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
+#samples = {   key:v for key,v in samples.items() if key not in VBS_samples}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {   key:v for key,v in samples.items() if key == 'sm'}
