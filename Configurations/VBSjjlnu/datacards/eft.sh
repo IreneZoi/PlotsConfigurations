@@ -3,7 +3,7 @@
 
     ### launch it like: 
     ### sh eft.sh /eos/user/m/mpresill/CMS/VBS/VBS_ZV/DatacardsEFT/YearsCombination_8June2022/combined_boosted_bVeto.txt cT0 boosted_bVeto 
-
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 fullAll 0.02 2018
 
 datacard=$1
 operator=$2
@@ -79,7 +79,7 @@ python drawLS.py \
     ##3. backup the plot to webpage
 #mkdir -p /eos/user/m/mpresill/www/VBS/EFTlimits/
 #cp /eos/user/m/mpresill/www/VBS/EFTlimits/index.php /eos/user/m/mpresill/www/VBS/EFTlimits/.
-cp  LS_k_${operator}.png /eos/user/m/mpresill/www/VBS/EFTlimits/${operator}_${region}_${year}.png
+# cp  LS_k_${operator}.png /eos/user/m/mpresill/www/VBS/EFTlimits/${operator}_${region}_${year}.png
 
     #######################################
     #     run  for two operators a time:  #

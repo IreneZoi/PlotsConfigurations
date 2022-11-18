@@ -567,12 +567,12 @@ for sample in mc :
     }
 
 #Correlate all signal samples
-# nuisances['QCD_scale_signal'] = {
-#             'name'  : 'QCDscale_signal',
-#             'kind'  : 'weight',
-#             'type'  : 'shape',
-#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_aQGC_samples }
-#         }
+nuisances['QCD_scale_signal'] = {
+            'name'  : 'QCDscale_signal',
+            'kind'  : 'weight',
+            'type'  : 'shape',
+            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_samples }
+        }
 
 # VV samples
 nuisances['QCD_scale_QCD_WV_accept'] = {

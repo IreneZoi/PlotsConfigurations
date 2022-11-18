@@ -3,7 +3,7 @@
     "datacard_name": "2018_all_split_Dipole_v4.5",
     "folders": [
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/", 
         "name": 2018
       }
     ], 

@@ -2,12 +2,12 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split_aQGC_cT0'
+tag = 'fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
-#outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
-outputDir = 'rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
+#outputDir = 'rootFile_'+tag 
 
 # file with TTree aliases
 aliasesFile = direc+'/aliases.py'
@@ -35,7 +35,7 @@ outputDirPlots = 'plot_'+tag
 
 # used by mkDatacards to define output directory for datacards
 #outputDirDatacard = 'datacards_'+tag 
-outputDirDatacard = 'datacards_'+tag+'_NoVBS'
+outputDirDatacard = 'datacards_'+tag
 
 # structure file for datacard
 structureFile = direc+'/structure_split.py'
@@ -43,7 +43,8 @@ structureFile = direc+'/structure_split.py'
 
 # nuisances file for mkDatacards and for mkShape
 #nuisancesFile = direc+'/nuisances.py'
-nuisancesFile = direc + '/nuisances_datacard_split.py'
+#nuisancesFile = direc+'/nuisances_aQGC.py' #aqgc files have a different directory than SM files and so a different path is needed for the nuisance. this was a quick fix
+nuisancesFile = direc + '/nuisances_datacard_split.py' # to make datacard you need to skip VBS samples!
 
 
 customizeScript = direc + '/customize.py'
