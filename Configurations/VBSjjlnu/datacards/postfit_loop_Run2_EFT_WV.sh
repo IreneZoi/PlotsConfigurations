@@ -16,9 +16,9 @@ Date2017=29May2022_2017
 Date2018=8June2022_2018
 
 # datacards & workspaces are created in Davide's adapted code - step 0 (done in analysis setup)
-DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/2018_fit_v4.5.5_aQGC_cT0_full/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5
+DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/2018_fit_v4.5.5_aQGC_cT0_full/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5
 
-# source postfit_loop_Run2_EFT_WV.sh boost boost_sig_ele Mww_binzv
+# source postfit_loop_Run2_EFT_WV.sh boostonly boost_sig_ele Mww_binzv
 Category=$1 #boost
 CUT=$2 #boost_sig_ele
 PLOTVAR=$3 #Mww_binzv
@@ -43,8 +43,10 @@ echo "${DATACARD_FIT}"
 # combine -M FitDiagnostics ${DATACARD_FIT}.root \
 #       --out 2018_fit_v4.5.5_aQGC_cT0_full/ \
 #       -t -1 --toysFreq --rMin -10 \
+#       -n ${Category}_${PLOTVAR} \
 #       --saveNormalizations --saveWithUncertainties \
 #       --expectSignal 1 --cminDefaultMinimizerStrategy 0 --robustFit=1
+
 
 DatacardPATH=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/ #2018_fit_v4.5.5_aQGC_cT0/2018_all_split_Dipole_v4.5/
 
@@ -58,7 +60,7 @@ DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsC
 
 # ->->->->->->->    step - 2a: make fit (done in datacard setup)
 
-# text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
+#text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
 
 ##############################################
 ##                                           #
@@ -73,51 +75,50 @@ DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsC
 # PostFitShapesFromWorkspace \
 #     -d ${DatacardPATHpartial}/datacard.txt \
 #     -w ${DatacardPATHpartial}/datacard.root \
-#     -o output_histograms_2018_EFT_WV_cT0.root \
+#     -o output_histograms_2018_EFT_WV_cT0_${CUT}.root \
 #     --postfit --sampling \
-#     -f 2018_fit_v4.5.5_aQGC_cT0/fitDiagnosticsTest.root:fit_s \
+#     -f 2018_fit_v4.5.5_aQGC_cT0_full/fitDiagnostics${Category}_${PLOTVAR}.root:fit_s \
 #     --total-shapes
 
 #    This below with the whole workspace would work only if I had the same variables fitted for all cuts, but I do not so I have to select only cuts with the same variable (as done above)
 #    -w ${DatacardPATH}/combined_2018_all_split_Dipole_v4.5_aQGC_cT0.root \
 #    -d ${DatacardPATH}/combined_2018_all_split_Dipole_v4.5_aQGC_cT0.txt \
 
-# maybe
-# clean up local plotter folder
-#rm -r plot_combined/*
 
 ###################################################################
         ###      uncomment for postfit  ######
 
+
 # ->->->->->->->    step - 2c: make the postfit (done in analysis setup)
 
-# mkPostFitCombinedPlot.py \
-#   --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0.root \
-#   --outputFile output_postfit_2018_EFT_WV_cT0.root \
-#   --kind P \
-#   --cutName ${CUT} \
-#   --variable ${PLOTVAR} \
-#   --structureFile ../Full2018v7/conf_fit_v4.5_aQGC/structure_split.py \
-#   --plotFile ../Full2018v7/conf_fit_v4.5_aQGC/plot_split.py \
-#   --lumiText '57/fb' 
+# #    create the folders where to backup files
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/${PLOTVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/${PLOTVAR}
+
+# clean local folder
+rm -r plot_combined/*
+
+mkPostFitCombinedPlot.py \
+  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0_${CUT}.root \
+  --outputFile output_postfit_2018_EFT_WV_cT0_${CUT}.root \
+  --kind P \
+  --cutName ${CUT} \
+  --variable ${PLOTVAR} \
+  --structureFile ../Full2018v7/conf_fit_v4.5_aQGC/structure_split.py \
+  --plotFile ../Full2018v7/conf_fit_v4.5_aQGC/plot_split.py \
+  --lumiText '57/fb' 
  
 # ->->->->->->->    step - 2d: make the postfit plot (done in analysis setup)
 
-# mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_2018_EFT_WV_cT0.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
+mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_2018_EFT_WV_cT0.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-# ###### FIXMEEEEEEE - I need my own paths!!!
-# #    create the folders where to backup files
-#mkdir -p /eos/user/m/mpresill/www/VBS/postfit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}
-#mkdir -p /eos/user/m/mpresill/www/VBS/prefit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}
-#cp /eos/user/m/mpresill/www/VBS/2017_v7/index.php /eos/user/m/mpresill/www/VBS/postfit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}/.
-#cp /eos/user/m/mpresill/www/VBS/2017_v7/index.php /eos/user/m/mpresill/www/VBS/prefit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}/.
-#
-#cp -r plot_combined/*png /eos/user/m/mpresill/www/VBS/postfit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}/.
-# 
-#    # backup to AN folder
-#cp -r plot_combined/*png /eos/user/m/mpresill/CMS/VBS/VBS_ZV/AN/Run2_postfit_${Category}_${CUT}_${PLOTVAR}.png
-#
-
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/${PLOTVAR}/
 
 
 ###################################################################
@@ -126,8 +127,8 @@ DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsC
 # ->->->->->->->    step - 2e: make the prefit (done in analysis setup)
 
 mkPostFitCombinedPlot.py \
-  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0.root \
-  --outputFile output_prefit_2018_EFT_WV_cT0.root \
+  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0_${CUT}.root \
+  --outputFile output_prefit_2018_EFT_WV_cT0_${CUT}.root \
   --kind p \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
@@ -136,15 +137,11 @@ mkPostFitCombinedPlot.py \
   --lumiText '57/fb' 
 
 #     # clean up local plotter folder
-# rm -r plot_combined/*
+rm -r plot_combined/*
 
 # ->->->->->->->    step - 2f: make the prefit plot (done in analysis setup)
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_2018_EFT_WV_cT0.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/${PLOTVAR}/
 
-# ###### FIXMEEEEEEE - I need my own paths!!!
-# cp -r plot_combined/*png /eos/user/m/mpresill/www/VBS/prefit/PlotsVBS_ZV_Run2_${Date2016}_${Date2017}_${Date2018}/${Category}/${CUT}/${PLOTVAR}/.
-
-    # backup to AN folder
-#cp -r plot_combined/*png /eos/user/m/mpresill/CMS/VBS/VBS_ZV/AN/Run2_prefit_${Category}_${CUT}_${PLOTVAR}.png

@@ -74,13 +74,53 @@
       }
     ]
   },
-
+  { 
+    "datacard_name": "2018_boost_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [ 
+      {
+          "name": "boost_sig_mu",
+          "var": "Mww_binzv", 
+          "cut": "boost_sig_mu"
+      },
+      {
+          "name": "boost_sig_ele",
+          "var": "Mww_binzv", 
+          "cut": "boost_sig_ele"
+      },
+      {
+          "name": "boost_wjet_mu",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_mu"
+      },
+      {
+          "name": "boost_wjet_ele",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_ele"
+      },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      },
+      { 
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      }
+    ]
+  },
 
   { 
     "datacard_name": "2018_res_split_Dipole_v4.5",
     "folders": [
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/", 
         "name": 2018
       }
     ], 
@@ -124,7 +164,7 @@
     "datacard_name": "2018_res_ele_split_Dipole_v4.5",
     "folders": [
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/", 
         "name": 2018
       }
     ], 
@@ -151,7 +191,7 @@
     "datacard_name": "2018_res_mu_split_Dipole_v4.5",
     "folders": [
       {
-        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_minimalvar_Dipole_v5_xs", 
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/", 
         "name": 2018
       }
     ], 
