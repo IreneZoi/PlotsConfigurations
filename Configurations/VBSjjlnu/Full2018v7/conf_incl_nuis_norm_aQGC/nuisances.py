@@ -4,8 +4,8 @@
 #mc =["DY", "top",  "Wjets_HT", "VV", "VVV", "VBF-V", "Vg", "VgS", "VBS", "ggWW"]
 # mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 # mc_sep =  ["VBS", "VV"]
-mc = ["quad_cT0","sm_lin_quad_cT0","sm"]
-
+#mc = ["quad_cT0","sm_lin_quad_cT0","sm"]
+mc = ["quad_cT2","sm_lin_quad_cT2","sm"]
 def getSamplesWithout(samples, samples_to_remove):
     return [m for m in samples if m not in samples_to_remove]
 
