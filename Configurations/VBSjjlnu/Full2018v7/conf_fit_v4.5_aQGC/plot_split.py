@@ -327,19 +327,34 @@ groupPlot['sm']  = {
 #  
 
 
-plot['quad_cT0']  = {
+# plot['quad_cT0']  = {
+#                     'color': colors["kCyan"]+1, 
+#                     'isSignal' : 1,
+#                     'isData'   : 0,
+#                     'scale'    : 1.   
+#                 }
+# #
+# plot['sm_lin_quad_cT0']  = {
+#                    'color': colors["kCyan"]+2, 
+#                    'isSignal' : 1,
+#                    'isData'   : 0,
+#                    'scale'    : 1.   
+#                }
+
+plot['quad_cT2']  = {
                     'color': colors["kCyan"]+1, 
                     'isSignal' : 1,
                     'isData'   : 0,
                     'scale'    : 1.   
                 }
 #
-plot['sm_lin_quad_cT0']  = {
+plot['sm_lin_quad_cT2']  = {
                    'color': colors["kCyan"]+2, 
                    'isSignal' : 1,
                    'isData'   : 0,
                    'scale'    : 1.   
                }
+
 
 plot['sm']  = {
                    'color': colors["kCyan"]+3, 

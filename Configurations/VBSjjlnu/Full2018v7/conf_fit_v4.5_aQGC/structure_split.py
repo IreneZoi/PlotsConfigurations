@@ -134,11 +134,20 @@ structure['sm'] = {
               }
 
 #### EFT ###
-structure['quad_cT0'] = {
+# structure['quad_cT0'] = {
+#                  'isSignal' : 1,
+#                  'isData'   : 0
+#                  }
+# structure['sm_lin_quad_cT0'] = {
+#                  'isSignal' : 1,
+#                  'isData'   : 0
+#                  }
+
+structure['quad_cT2'] = {
                  'isSignal' : 1,
                  'isData'   : 0
                  }
-structure['sm_lin_quad_cT0'] = {
+structure['sm_lin_quad_cT2'] = {
                  'isSignal' : 1,
                  'isData'   : 0
                  }
