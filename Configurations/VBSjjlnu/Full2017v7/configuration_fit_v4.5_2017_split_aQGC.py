@@ -2,6 +2,7 @@
 treeName= 'Events'
 
 
+#tag = 'fit_v4.5_2017_split_aQGC_cTO_ONLYaQGCsyst'
 tag = 'fit_v4.5_2017_split_aQGC_cTO_noaQGCsyst'
 direc = "conf_fit_v4.5_aQGC"
 
@@ -43,5 +44,6 @@ structureFile = direc+'/structure_split.py'
 # nuisances file for mkDatacards and for mkShape
 #nuisancesFile = direc+'/nuisances_datacard_split.py'
 nuisancesFile = direc+'/nuisances.py'
+#nuisancesFile = direc+'/nuisances_aQGC.py'
 
 customizeScript = direc + "/customize.py"
