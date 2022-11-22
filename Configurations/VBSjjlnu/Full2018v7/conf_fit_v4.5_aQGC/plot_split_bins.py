@@ -67,11 +67,62 @@ jetbin_detabins = [3,3,2]
 wjets_palette = ['#DF7000', '#FF8A00','#FFA133','#F7C307','#FFE200','#FFEC57']
 
 
-wjets_bins = []
-for ir in range(1,22):
-    wjets_bins.append("Wjets_res_"+str(ir))
-for ir in range(1,8):
-    wjets_bins.append("Wjets_boost_"+str(ir))
+# wjets_bins = []
+# for ir in range(1,22):
+#     wjets_bins.append("Wjets_res_"+str(ir))
+# for ir in range(1,8):
+#     wjets_bins.append("Wjets_boost_"+str(ir))
+
+
+wjets_res_palette = ['#093316','#006400', '#008000',  '#32CD32','#00FF00', '#ADFF2F', '#FFFF00', '#FFC800', '#FF9D00', '#FF7700', '#FF3300','#FF003C', '#006400', '#008000',  '#32CD32','#00FF00', '#ADFF2F','#DF7000', '#FF8A00','#FFA133','#F7C307','#FFE200'  ]
+wjets_boost_palette = ['#FFF59D', '#FFEE58', '#FFD54F', '#FFB300', '#FF8F00', '#F57C00', '#E65100','#BF360C']
+
+wjets_res_bins = []
+wjets_boost_bins = []
+
+
+for i in range(1, 22):
+  wjbin = "Wjets_res_{}".format(i)
+  wjets_res_bins.append(wjbin)
+for i in range(1, 8):
+  wjbin = "Wjets_boost_{}".format(i)
+  wjets_boost_bins.append(wjbin)
+
+wjets_all_bins = wjets_res_bins + wjets_boost_bins
+
+# for i,wjbin in enumerate(wjets_res_bins):
+#           groupPlot[wjbin] = {
+#                           'nameHR': wjbin,
+#                           'isSignal' : 0,
+#                           'color' : wjets_res_palette[i],
+#                           'samples' : wjbin,
+#                           'fill' : 1001,              
+#           }
+for i,wjbin in enumerate(wjets_boost_bins):
+          groupPlot[wjbin] = {
+                          'nameHR': wjbin,
+                          'isSignal' : 0,
+                          'color' : wjets_boost_palette[i],
+                          'samples' : wjbin,
+                          'fill' : 1001,              
+          }
+          
+# for i,wjbin in enumerate(wjets_res_bins):
+# 	plot[wjbin] =  {   
+#                     'color': colors['kAzure']-1,
+#                     'isSignal' : 0,
+#                     'isData'   : 0, 
+#                     'scale'    : 1.0,
+#                                       }
+for i,wjbin in enumerate(wjets_boost_bins):
+	plot[wjbin] =  {   
+                    'color': colors['kAzure']-1,
+                    'isSignal' : 0,
+                    'isData'   : 0, 
+                    'scale'    : 1.0,
+                                      }
+
+
 
 #irene added from 2016 plot split
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
@@ -136,13 +187,13 @@ groupPlot['top']  = {
 
 
 
-groupPlot["Wjets"]  = {  
-                        'nameHR' : 'W+Jets',
-                        'isSignal' : 0,
-                        'color':   palette["Yellow"],
-                        'samples'  : wjets_bins,
-                        'fill': 1001
-                }
+# groupPlot["Wjets"]  = {  
+#                         'nameHR' : 'W+Jets',
+#                         'isSignal' : 0,
+#                         'color':   palette["Yellow"],
+#                         'samples'  : wjets_bins,
+#                         'fill': 1001
+#                 }
 
 #irene commented because missing in 2016 plot split
 # groupPlot['VBS']  = {  
@@ -250,13 +301,13 @@ plot['top'] = {
 #                  'scale'    : 1.0 
 #                  }
 
-for wjetbin in wjets_bins:
-    plot[wjetbin] = {   
-                    'color': colors['kAzure']-1,
-                    'isSignal' : 0,
-                    'isData'   : 0, 
-                    'scale'    : 1.0 
-                    }
+# for wjetbin in wjets_bins:
+#     plot[wjetbin] = {   
+#                     'color': colors['kAzure']-1,
+#                     'isSignal' : 0,
+#                     'isData'   : 0, 
+#                     'scale'    : 1.0 
+#                     }
 #irene
 # plot['VBS_dipoleRecoil']  = {
 #                   'color': colors["kCyan"]+1, 
@@ -344,33 +395,33 @@ groupPlot['sm']  = {
 #  
 
 
-# plot['quad_cT0']  = {
-#                     'color': colors["kCyan"]+1, 
-#                     'isSignal' : 1,
-#                     'isData'   : 0,
-#                     'scale'    : 1.   
-#                 }
-# #
-# plot['sm_lin_quad_cT0']  = {
-#                    'color': colors["kCyan"]+2, 
-#                    'isSignal' : 1,
-#                    'isData'   : 0,
-#                    'scale'    : 1.   
-#                }
-
-plot['quad_cT2']  = {
+plot['quad_cT0']  = {
                     'color': colors["kCyan"]+1, 
                     'isSignal' : 1,
                     'isData'   : 0,
                     'scale'    : 1.   
                 }
 #
-plot['sm_lin_quad_cT2']  = {
+plot['sm_lin_quad_cT0']  = {
                    'color': colors["kCyan"]+2, 
                    'isSignal' : 1,
                    'isData'   : 0,
                    'scale'    : 1.   
                }
+
+# plot['quad_cT2']  = {
+#                     'color': colors["kCyan"]+1, 
+#                     'isSignal' : 1,
+#                     'isData'   : 0,
+#                     'scale'    : 1.   
+#                 }
+# #
+# plot['sm_lin_quad_cT2']  = {
+#                    'color': colors["kCyan"]+2, 
+#                    'isSignal' : 1,
+#                    'isData'   : 0,
+#                    'scale'    : 1.   
+#                }
 
 
 plot['sm']  = {

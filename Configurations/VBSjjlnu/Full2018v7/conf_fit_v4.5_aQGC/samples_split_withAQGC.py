@@ -761,10 +761,12 @@ VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
-VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2"] #,'sm']
+VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2",'sm']
 
-samples = {key:v for key,v in samples.items() if key in VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
-# to make datacard you need to skip VBS samples
-#samples = {   key:v for key,v in samples.items() if key not in VBS_samples}
+#samples = {key:v for key,v in samples.items() if key in VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {   key:v for key,v in samples.items() if key == 'sm'}
+
+################################################
+# ---------->        to make datacard you need to skip VBS samples
+samples = {   key:v for key,v in samples.items() if key not in VBS_samples and 'cT0' not in key}
