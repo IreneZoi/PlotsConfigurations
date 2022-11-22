@@ -1,11 +1,14 @@
 #!bin/bash 
 startdir=$(pwd)
 yeardir=Full2017v7/
-basedir=rootFile_fit_v4.5_2017_split_minimalvar/
-filetag=plots_fit_v4.5_2017_split_minimalvar_ALL
+basedir=/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_cT2/
+filetag=plots_fit_v4.5_2018_split_aQGC_cT2_ALL
 missingsamples=(
-Wjets_boost.51 )
-filedir=${startdir}/${yeardir}/${basedir}
+sm_lin_quad_cT2.21
+
+ )
+filedir=${basedir}
+#filedir=${startdir}/${yeardir}/${basedir}
 echo $filedir
 
 for sample in ${missingsamples[*]}; do

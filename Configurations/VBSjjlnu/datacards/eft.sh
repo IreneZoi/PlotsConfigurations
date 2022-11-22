@@ -4,6 +4,10 @@
     ### launch it like: 
     ### sh eft.sh /eos/user/m/mpresill/CMS/VBS/VBS_ZV/DatacardsEFT/YearsCombination_8June2022/combined_boosted_bVeto.txt cT0 boosted_bVeto 
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 fullAll 0.02 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 boostonly 0.02 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT2_full/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT2 boostonly 0.1 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT2_full_vbsmjj/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT2 boostonly_vbsmjj 0.1 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_MwwDav/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 boostonly_MwwDav 0.02 2018
 
 datacard=$1
 operator=$2
@@ -16,9 +20,9 @@ year=$5
    # create rootfit workspace from datacard
 
 #step1
-# text2workspace.py  ${datacard} \
+# text2workspace.py  "${datacard}" \
 #    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
-#    -o model_test.root \
+#    -o model_test_${operator}_${region}.root \
 #    --X-allow-no-signal \
 #    --PO  addDim8 \
 #    --PO eftOperators=${operator}  #cT0,cT1,cT2,cT5,cT6,cT7,cT8,cT9
@@ -51,7 +55,7 @@ year=$5
    #################################################################
    #1. fit 
    # ,k_cT1,k_cT5,k_cT6,k_cT7,k_cT8,k_cT9,  \
-combine -M MultiDimFit model_test.root \
+combine -M MultiDimFit model_test_${operator}_${region}.root \
    -m 125 -t -1 \
    --redefineSignalPOIs k_${operator} \
    --freezeParameters r,k_${operator} \

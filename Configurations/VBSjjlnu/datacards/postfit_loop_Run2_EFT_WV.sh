@@ -15,10 +15,15 @@ Date2016=23May2022_2016
 Date2017=29May2022_2017
 Date2018=8June2022_2018
 
+datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_vbsmjj/ #MwwDav/ #vbsmjj/
+datacardDir2=datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ 
+operator=cT0
 # datacards & workspaces are created in Davide's adapted code - step 0 (done in analysis setup)
-DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/2018_fit_v4.5.5_aQGC_cT0_full/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5
+DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/${datacardDir}/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5
 
 # source postfit_loop_Run2_EFT_WV.sh boostonly boost_sig_ele Mww_binzv
+# source postfit_loop_Run2_EFT_WV.sh boostonly boost_sig_ele mjj_vbs
+# source postfit_loop_Run2_EFT_WV.sh boostonly boost_sig_ele Mww
 Category=$1 #boost
 CUT=$2 #boost_sig_ele
 PLOTVAR=$3 #Mww_binzv
@@ -38,10 +43,10 @@ echo "${DATACARD_FIT}"
 
 # text2workspace.py ${DATACARD_FIT}.txt -o ${DATACARD_FIT}.root
 
-# ->->->->->->->    step - 1b: make fit (done in datacard setup)
+# # ->->->->->->->    step - 1b: make fit (done in datacard setup)
 
 # combine -M FitDiagnostics ${DATACARD_FIT}.root \
-#       --out 2018_fit_v4.5.5_aQGC_cT0_full/ \
+#       --out ${datacardDir}/ \
 #       -t -1 --toysFreq --rMin -10 \
 #       -n ${Category}_${PLOTVAR} \
 #       --saveNormalizations --saveWithUncertainties \
@@ -56,28 +61,28 @@ DatacardPATH=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigur
     #
     #
 
-DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/${CUT}/${PLOTVAR}/
+DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2018v7/${datacardDir2}/${CUT}/${PLOTVAR}/
 
 # ->->->->->->->    step - 2a: make fit (done in datacard setup)
 
-#text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
+# text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
 
-##############################################
-##                                           #
-##         pre / post-fit      plotting      #
-##         (mjj, DNN, any var.)              #
-##                                           #
-##############################################
-#
-# ->->->->->->->    step - 2b: as the description below says: get post fit shapes from workspace (done in datacard setup)
+# ##############################################
+# ##                                           #
+# ##         pre / post-fit      plotting      #
+# ##         (mjj, DNN, any var.)              #
+# ##                                           #
+# ##############################################
+# #
+# # ->->->->->->->    step - 2b: as the description below says: get post fit shapes from workspace (done in datacard setup)
 
-#########PostfitfromWorkspace
-# PostFitShapesFromWorkspace \
+# ########PostfitfromWorkspace
+#  PostFitShapesFromWorkspace \
 #     -d ${DatacardPATHpartial}/datacard.txt \
 #     -w ${DatacardPATHpartial}/datacard.root \
-#     -o output_histograms_2018_EFT_WV_cT0_${CUT}.root \
+#     -o output_histograms_2018_EFT_WV_${operator}_${CUT}.root \
 #     --postfit --sampling \
-#     -f 2018_fit_v4.5.5_aQGC_cT0_full/fitDiagnostics${Category}_${PLOTVAR}.root:fit_s \
+#     -f ${datacardDir}/fitDiagnostics${Category}_${PLOTVAR}.root:fit_s \
 #     --total-shapes
 
 #    This below with the whole workspace would work only if I had the same variables fitted for all cuts, but I do not so I have to select only cuts with the same variable (as done above)
@@ -92,21 +97,21 @@ DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsC
 # ->->->->->->->    step - 2c: make the postfit (done in analysis setup)
 
 # #    create the folders where to backup files
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/${PLOTVAR}
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/${PLOTVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${operator}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${operator}/${Category}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${operator}/${Category}/${CUT}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${operator}/${Category}/${CUT}/${PLOTVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${operator}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${operator}/${Category}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${operator}/${Category}/${CUT}/
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${operator}/${Category}/${CUT}/${PLOTVAR}
 
 # clean local folder
 rm -r plot_combined/*
 
 mkPostFitCombinedPlot.py \
-  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0_${CUT}.root \
-  --outputFile output_postfit_2018_EFT_WV_cT0_${CUT}.root \
+  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_${operator}_${CUT}.root \
+  --outputFile output_postfit_2018_EFT_WV_${operator}_${CUT}.root \
   --kind P \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
@@ -116,9 +121,9 @@ mkPostFitCombinedPlot.py \
  
 # ->->->->->->->    step - 2d: make the postfit plot (done in analysis setup)
 
-mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_2018_EFT_WV_cT0.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
+mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_2018_EFT_WV_${operator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${Category}/${CUT}/${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018/${operator}/${Category}/${CUT}/${PLOTVAR}/
 
 
 ###################################################################
@@ -127,13 +132,13 @@ cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_2018
 # ->->->->->->->    step - 2e: make the prefit (done in analysis setup)
 
 mkPostFitCombinedPlot.py \
-  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_cT0_${CUT}.root \
-  --outputFile output_prefit_2018_EFT_WV_cT0_${CUT}.root \
+  --inputFilePostFitShapesFromWorkspace output_histograms_2018_EFT_WV_${operator}_${CUT}.root \
+  --outputFile output_prefit_2018_EFT_WV_${operator}_${CUT}.root \
   --kind p \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
   --structureFile ../Full2018v7/conf_fit_v4.5_aQGC/structure_split.py \
-  --plotFile ../Full2018v7/conf_fit_v4.5_aQGC/plot_split.py \
+  --plotFile ../Full2018v7/conf_fit_v4.5_aQGC/plot_split_bins.py \
   --lumiText '57/fb' 
 
 #     # clean up local plotter folder
@@ -141,7 +146,7 @@ rm -r plot_combined/*
 
 # ->->->->->->->    step - 2f: make the prefit plot (done in analysis setup)
 
-mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_2018_EFT_WV_cT0.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
+mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_2018_EFT_WV_${operator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${Category}/${CUT}/${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_2018/${operator}/${Category}/${CUT}/${PLOTVAR}/
 
