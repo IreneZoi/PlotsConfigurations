@@ -129,7 +129,7 @@ structure['VgS']  = {
  # Structure for aqgc
 
 structure['sm'] = {
-                  'isSignal' : 0,
+                  'isSignal' : 1,
                   'isData'   : 0 
               }
 
