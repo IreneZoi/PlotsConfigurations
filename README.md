@@ -55,7 +55,7 @@ Produce the histograms submitting batch jobs using HTCondor. NB at the end of th
 
     mkShapesMulti.py --pycfg=configuration_fit_v4.5_2018_split.py --doBatch=1 --batchSplit=Samples,Files --batchQueue=longlunch
     
-NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard.
+NB: check that the correct nuisance file is selected! The une with ```_datacard``` should be used with mkDatacard or when producing some special nuisances only.
 Also the QGL stuff should be produced separately with ```configuration_fit_v4.5_2018_qglnuis.py```
 
 If some of your jobs have failed because the wall clock time have been exceeded, you can resubmit the failed ones by going into the jobs directory (the one set in `userConfig.py`), and changing the queue using the following command:
