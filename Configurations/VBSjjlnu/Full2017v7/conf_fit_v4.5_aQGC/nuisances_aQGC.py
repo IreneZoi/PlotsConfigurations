@@ -517,13 +517,22 @@ for sample in mc :
         'samples'  :  { sample: ["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
     }
 
-for k in VBS_aQGC_samples:
-    nuisances['QCD_scale_'+k] = {
+nuisances['QCD_scale_signal'] = {
             'name'  : 'QCDscale_signal',
             'kind'  : 'weight',
             'type'  : 'shape',
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] }
+            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_samples }
         }
+
+
+
+# for k in VBS_aQGC_samples:
+#     nuisances['QCD_scale_'+k] = {
+#             'name'  : 'QCDscale_'+k,
+#             'kind'  : 'weight',
+#             'type'  : 'shape',
+#             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
+#         }
 
 # for k in VBS_aQGC_samples:
 #     nuisances['QCD_scale_'+k] = {
@@ -534,22 +543,22 @@ for k in VBS_aQGC_samples:
 #         }
 
 #Correlate all signal samples
-nuisances['QCD_scale_VBS'] = {
-            'name'  : 'QCDscale_VBS_accept',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            # 'samples'  :  { "VBS": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"],
-            #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_samples }
-        }
+# nuisances['QCD_scale_VBS'] = {
+#             'name'  : 'QCDscale_VBS_accept',
+#             'kind'  : 'weight',
+#             'type'  : 'shape',
+#             # 'samples'  :  { "VBS": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"],
+#             #                 "VBS_dipoleRecoil": ["QCDscale_normalized[0]", "QCDscale_normalized[8]"], }
+#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VBS_samples }
+#         }
 
 
-nuisances['QCD_scale_VV_accept'] = {
-            'name'  : 'QCDscale_VV_accept',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VV_samples }
-        }
+# nuisances['QCD_scale_VV_accept'] = {
+#             'name'  : 'QCDscale_VV_accept',
+#             'kind'  : 'weight',
+#             'type'  : 'shape',
+#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VV_samples }
+#         }
 
 nuisances['QCD_scale_VV'] = {
             'name'  : 'QCDscale_VV',
@@ -619,21 +628,21 @@ nuisances['PU_wjets']  = {
 
 ######## PDF uncertainty
 nuisances['pdf_weight'] = {
-    'name'  : 'pdf_weight_1718',
+    'name'  : 'pdf_1718',
     'kind'  : 'weight_envelope',
     'type'  : 'shape',
     'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["VBS","VBS_dipoleRecoil" "top","Wjets_boost"]+wjets_res_bins},
     'AsLnN':  '1'
 }
 
-nuisances['pdf_weight_accept'] = {
-    'name'  : 'pdf_weight_1718_accept',
-    'kind'  : 'weight_envelope',
-    'type'  : 'shape',
-    # 'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ],
-    #                "VBS_dipoleRecoil": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
-    'samples': { k : [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ] for k in VBS_samples+VV_samples}
-}
+# nuisances['pdf_weight_accept'] = {
+#     'name'  : 'pdf_1718_accept',
+#     'kind'  : 'weight_envelope',
+#     'type'  : 'shape',
+#     # 'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ],
+#     #                "VBS_dipoleRecoil": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
+#     'samples': { k : [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ] for k in VBS_samples+VV_samples}
+# }
 
 # An overall 1.5% UE uncertainty will cover all the UEup/UEdo variations
 # And we don't observe any dependency of UE variations on njet
@@ -718,7 +727,7 @@ for n in nuisances.values():
 
 
 # nuisances = {k:v for k,v in nuisances.items() if "JES" in k } #if 'PS' in k or 'QCD' in k
-nuisances = {k:v for k,v in nuisances.items() if "stat" in k or "btag" in k or "trig" in k or "eff_e" in k or "electronpt" in k or "eff_m" in k or "muonpt" in k or "JetPUID_sf" in k or "JER" in k or "MET" in k or "tagging" in k or "fatjetJM" in k in k or 'JESAbsolute' in k or 'JESAbsolute_2018' in k or 'JESBBEC1' in k or 'JESBBEC1_2018' in k or 'JESEC2' in k or 'JESEC2_2018' in k or 'JESFlavorQCD' in k or 'JESHF' in k or 'JESHF_2018' in k or 'JESRelativeBal' in k or 'JESRelativeSample_2018'} 
-
-print " _____________________ NUISANCES ______________________"
-print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))
+# nuisances = {k:v for k,v in nuisances.items() if "stat" in k or "btag" in k or "trig" in k or "eff_e" in k or "electronpt" in k or "eff_m" in k or "muonpt" in k or "JetPUID_sf" in k or "JER" in k or "MET" in k or "tagging" in k or "fatjetJM" in k in k or 'JESAbsolute' in k or 'JESAbsolute_2018' in k or 'JESBBEC1' in k or 'JESBBEC1_2018' in k or 'JESEC2' in k or 'JESEC2_2018' in k or 'JESFlavorQCD' in k or 'JESHF' in k or 'JESHF_2018' in k or 'JESRelativeBal' in k or 'JESRelativeSample_2018'} 
+nuisances = {k:v for k,v in nuisances.items() if "QCDscale" in k}
+# print " _____________________ NUISANCES ______________________"
+# print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))

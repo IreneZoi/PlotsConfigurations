@@ -535,7 +535,6 @@ nuisances['TopPtRew'] = {
 }
 
 ###########################################
-
 for jtype in ["quark", "gluon"]:
       for  jeta in ["higheta", "loweta"]:
         nuisances['QGLmorphing_{}_{}'.format(jtype, jeta)]  = {
@@ -567,21 +566,31 @@ for sample in mc :
     }
 
 #Correlate all signal samples
-nuisances['QCD_scale_signal'] = {
+# nuisances['QCD_scale_signal'] = {
+#             'name'  : 'QCDscale_signal',
+#             'kind'  : 'weight',
+#             'type'  : 'shape',
+#             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_samples }
+#         }
+
+for k in VBS_aQGC_samples:
+    nuisances['QCDscale_signal'] = {
+    # nuisances['QCD_scale_signal'] = {
             'name'  : 'QCDscale_signal',
             'kind'  : 'weight',
             'type'  : 'shape',
-            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_samples }
+            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
         }
 
+
 # VV samples
-nuisances['QCD_scale_QCD_WV_accept'] = {
-            'name'  : 'QCDscale_QCD_WV_accept',
-            'kind'  : 'weight',
-            'type'  : 'shape',
-            # 'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VV_WV_samples } --> It was wrong in 4.5.3
-            'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VV_WV_samples }
-        }
+# nuisances['QCD_scale_QCD_WV_accept'] = {
+#             'name'  : 'QCDscale_QCD_WV_accept',
+#             'kind'  : 'weight',
+#             'type'  : 'shape',
+#             # 'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VV_WV_samples } --> It was wrong in 4.5.3
+#             'samples': { k:["QCDscale_normalized[0]", "QCDscale_normalized[8]"] for k in VV_WV_samples }
+#         }
 
 nuisances['QCD_scale_QCD_WV_full'] = {
             'name'  : 'QCDscale_QCD_WV',
@@ -720,7 +729,7 @@ nuisances['PU']  = {
 ######## PDF uncertainty
 # --> How it was in fit 4.5.3
 # nuisances['pdf_weight'] = {
-#     'name'  : 'pdf_weight_1718',
+#     'name'  : 'pdf_1718',
 #     'kind'  : 'weight_envelope',
 #     'type'  : 'shape',
 #     'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["VBS", "VBS_dipoleRecoil", "top"]+wjets_all_bins+VBS_samples},
@@ -728,7 +737,7 @@ nuisances['PU']  = {
 # }
 
 nuisances['pdf_weight'] = { # --> Now save also the normalization one for the signal
-    'name'  : 'pdf_weight_1718',
+    'name'  : 'pdf_1718',
     'kind'  : 'weight_envelope',
     'type'  : 'shape',
     'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["top"]+wjets_all_bins},
@@ -736,7 +745,7 @@ nuisances['pdf_weight'] = { # --> Now save also the normalization one for the si
 }
 
 # nuisances['pdf_weight_accept'] = {
-#     'name'  : 'pdf_weight_1718_accept',
+#     'name'  : 'pdf_1718_accept',
 #     'kind'  : 'weight_envelope',
 #     'type'  : 'shape',
 #     # 'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ],
@@ -846,7 +855,9 @@ for n in nuisances.values():
 ## Customizations
 
 # Customization to redo the QCDscales
-#nuisances = {k:v for k,v in nuisances.items() if 'QCD_scale' in k or k == "pdf_weight" or 'PS' in k}
+#nuisances = {k:v for k,v in nuisances.items() if 'QCD_scale_signal' in k} # or k == "pdf_weight" or 'PS' in k}
+#nuisances = {k:v for k,v in nuisances.items() if 'PS' in k}
+
 
 # Customization for mu fit with QCDscale normalization included
 #exclude = ["QCD_scale_VBS_WV_accept","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight_accept"]
@@ -855,6 +866,6 @@ for n in nuisances.values():
 # exclude = ["QCD_scale_VBS_WV_full","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight"]
 # nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
 
-
+#nuisances = {k:v for k,v in nuisances.items() if 'QGLmorphing' not in k}
 # print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))
 # print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))
