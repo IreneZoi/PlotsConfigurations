@@ -564,14 +564,14 @@ nuisances['QCD_scale_Wjets'] = {
 
 ####### PDF uncertainty
 # nuisances['pdf_weight'] = {
-#     'name'  : 'pdf_weight_16',
+#     'name'  : 'pdf_16',
 #     'kind'  : 'weight_envelope',
 #     'type'  : 'shape',
 #     'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["VBS", "VV", "top","Wjets_boost"]},
 #     'AsLnN':  '1'
 # }
 # nuisances['pdf_weight_VBS'] = {
-#     'name'  : 'pdf_weight_16_accept',
+#     'name'  : 'pdf_16_accept',
 #     'kind'  : 'weight_envelope',
 #     'type'  : 'shape',
 #     'samples' :  { "VBS": [ 'Alt$(PDFweight_normalized['+str(i)+'], 1.)' for i in range(0,103) ]}
