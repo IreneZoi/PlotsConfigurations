@@ -392,7 +392,7 @@ samples['Fake'] = {
   'FilesPerJob' : 45
 }
 
-# #### Fakes
+#### Fakes
 # samples['Fake_ele'] = {
 #   'name': [],
 #   'weight': METFilter_DATA+'*'+ fake_weight_corrected,
@@ -667,5 +667,6 @@ VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 
-samples = {key:v for key,v in samples.items() if key not in  VBS_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
-#samples = {   key:v for key,v in samples.items() if key not in VBS_samples}
+samples = {key:v for key,v in samples.items() if key not in  VBS_samples} # and "Fake" not in key} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
+#samples = {key:v for key,v in samples.items() if "DATA" in key or "Fake" in key}
+#samples = {key:v for key,v in samples.items() if key in  VBS_aQGC_samples}

@@ -12,7 +12,7 @@ mc = [skey for skey in samples if skey not in ('Fake', 'DATA')]
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
-VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2"]#,'sm']
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 ####################
 
 aliases['nJets30']= {

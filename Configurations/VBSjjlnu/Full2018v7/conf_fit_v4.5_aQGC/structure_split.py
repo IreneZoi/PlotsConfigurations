@@ -126,7 +126,7 @@ structure['VgS']  = {
 #               }
 
 
- # Structure for aqgc
+# Structure for aqgc
 
 structure['sm'] = {
                   'isSignal' : 1,
@@ -134,23 +134,23 @@ structure['sm'] = {
               }
 
 #### EFT ###
-# structure['quad_cT0'] = {
-#                  'isSignal' : 1,
-#                  'isData'   : 0
-#                  }
-# structure['sm_lin_quad_cT0'] = {
-#                  'isSignal' : 1,
-#                  'isData'   : 0
-#                  }
+structure['quad_cT0'] = {
+                 'isSignal' : 1,
+                 'isData'   : 0
+                 }
+structure['sm_lin_quad_cT0'] = {
+                 'isSignal' : 1,
+                 'isData'   : 0
+                 }
 
-structure['quad_cT2'] = {
-                 'isSignal' : 1,
-                 'isData'   : 0
-                 }
-structure['sm_lin_quad_cT2'] = {
-                 'isSignal' : 1,
-                 'isData'   : 0
-                 }
+# structure['quad_cT2'] = {
+#                  'isSignal' : 1,
+#                  'isData'   : 0
+#                  }
+# structure['sm_lin_quad_cT2'] = {
+#                  'isSignal' : 1,
+#                  'isData'   : 0
+#                  }
 
 # data
 

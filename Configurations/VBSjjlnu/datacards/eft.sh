@@ -8,7 +8,11 @@
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT2_full/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT2 boostonly 0.1 2018
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT2_full_vbsmjj/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT2 boostonly_vbsmjj 0.1 2018
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_MwwDav/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 boostonly_MwwDav 0.02 2018
-
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_DNN/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 all_DNN 0.02 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_Mww20/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 all_Mww20 0.02 2018
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_DNN/run2_all/combined_run2_all.txt cT0 all_DNN 0.02 Run2
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_DNN/run2_boost/combined_run2_boost_postfitRateParam2017.txt cT0 boost_DNN_rateparam2017 0.04 Run2
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_Mww/run2_boost/combined_run2_boost.txt cT0 boost_Mww 0.04 Run2
 datacard=$1
 operator=$2
 region=$3
@@ -20,12 +24,13 @@ year=$5
    # create rootfit workspace from datacard
 
 #step1
-# text2workspace.py  "${datacard}" \
-#    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
-#    -o model_test_${operator}_${region}.root \
-#    --X-allow-no-signal \
-#    --PO  addDim8 \
-#    --PO eftOperators=${operator}  #cT0,cT1,cT2,cT5,cT6,cT7,cT8,cT9
+text2workspace.py  "${datacard}" \
+   -v 2 \
+   -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
+   -o model_test_${operator}_${region}.root \
+   --X-allow-no-signal \
+   --PO  addDim8 \
+   --PO eftOperators=${operator}  #cT0,cT1,cT2,cT5,cT6,cT7,cT8,cT9
 
 
 
@@ -81,9 +86,11 @@ combine -M MultiDimFit model_test_${operator}_${region}.root \
 python drawLS.py \
         higgsCombine${2}_${3}.MultiDimFit.mH125.root k_${operator} ${year} ${region}
     ##3. backup the plot to webpage
-#mkdir -p /eos/user/m/mpresill/www/VBS/EFTlimits/
-#cp /eos/user/m/mpresill/www/VBS/EFTlimits/index.php /eos/user/m/mpresill/www/VBS/EFTlimits/.
-# cp  LS_k_${operator}.png /eos/user/m/mpresill/www/VBS/EFTlimits/${operator}_${region}_${year}.png
+   outdir=${year}_${region}
+   mkdir ${outdir}
+   mv LS_k_${operator}.* ${outdir}/
+   mv model_test_${operator}_${region}.root ${outdir}/
+   mv higgsCombine${operator}_${region}.MultiDimFit.mH125.root ${outdir}/
 
     #######################################
     #     run  for two operators a time:  #

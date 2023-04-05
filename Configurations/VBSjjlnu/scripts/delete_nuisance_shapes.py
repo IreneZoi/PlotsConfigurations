@@ -20,9 +20,10 @@ f = R.TFile(args.input, "UPDATE")
 #     samples.append("Wjets_boost_"+str(ir))
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
-#samples = ['VBF-V_dipole']
+samples = ['VBF-V_dipole']
 VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
-samples = VV_samples + VBS_samples + VBS_aQGC_samples #args.sample
+#samples = VV_samples + VBS_samples + VBS_aQGC_samples #args.sample
+#samples = VBS_aQGC_samples
     #f.ls()
 for k in f.GetListOfKeys():
     #print(k)

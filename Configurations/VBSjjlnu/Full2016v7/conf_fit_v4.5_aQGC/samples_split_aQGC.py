@@ -766,5 +766,5 @@ VBS_aQGC_cT0_samples = ['sm','quad_cT0','sm_lin_quad_cT0']
 VBS_aQGC_cT2_samples = ['sm','quad_cT2','sm_lin_quad_cT2']
 
 
-samples = {   key:v for key,v in samples.items() if key not in VBS_samples + VBS_aQGC_cT2_samples}
-#samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_cT0_samples }
+samples = {   key:v for key,v in samples.items() if key not in VBS_samples + VBS_aQGC_cT2_samples } #and 'Fake' not in key}
+#samples = {   key:v for key,v in samples.items() if 'sm' == key} # in VBS_aQGC_cT0_samples }

@@ -12,8 +12,10 @@ parser.add_argument("-ev","--exclude-vars", help="Exclude vars", type=str, nargs
 parser.add_argument("-ec","--exclude-cuts", help="Exclude cuts", type=str, nargs="+")
 args = parser.parse_args()
 
-samples= ['VBF-V_dipole']
-#samples= ['VBS','VBS_dipoleRecoil','DY','top','VV','VVV','Vg','VgS', 'VBF-V_dipole','ggWW']
+#samples= ['VBF-V_dipole']
+samples_aQGC = ['sm','quad_cT0','sm_lin_quad_cT0']
+
+samples = samples_aQGC + ['VBS','VBS_dipoleRecoil','DY','top','VV','VVV','Vg','VgS', 'VBF-V_dipole','ggWW']
 # wjets_bins = []
 # for ir in range(1,22):
 #     wjets_bins.append("Wjets_res_"+str(ir))

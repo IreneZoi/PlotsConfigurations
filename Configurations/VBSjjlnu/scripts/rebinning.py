@@ -6,11 +6,11 @@ import pandas as pd
 import array
 
 #Run with python -m rebinning, should be place in cofniguration folder
-FILE ='/eos/home-a/ahakimi/www/ZV_analysis/rootFile_03Nov22_2018_testbinning/plots_VBS_ZV_03Nov22_2018_testbinning.root' #mkshape root output to rebin
-CUT="Resolved_SR_bVeto" # cut to rebin
-VARIABLE="DNNoutput_pruned_bVeto_fine_binning" # variable to rebin
-SAMPLE="VBS_ZV" #Sample taht should have equal yields in new bins (usually signal)
-NEWFILE='rebin.root' # name of the rebinned file
+FILE ='/eos/user/i/izoi/VBS_SM_WV_semilep_aQG/plots_fit_v4.5_2018_split_aQGC_cT0_ALL_sm.0.root' #mkshape root output to rebin
+CUT="res_sig_ele" # cut to rebin
+VARIABLE="Mww" # variable to rebin
+SAMPLE="sm" #Sample taht should have equal yields in new bins (usually signal)
+NEWFILE='rebin_test.root' # name of the rebinned file
 PLOT_ORIGINAL=False #if you want to plot the original histogram (might be buggy)
 PLOT_REBIN=False # if you want to plot the rebinned histo (might be buggy)
 MAX=20 # max number of bins to test
@@ -22,7 +22,9 @@ def rebin(FILE, CUT, VARIABLE, SAMPLE, NEWFILE, nbins, PLOT_ORIGINAL, PLOT_REBIN
     #rebin FILE and save content in NEWFILE
     print("Making a copy of the original root file\n")
     shutil.copyfile(FILE, NEWFILE)
+    os.system('ls -ltr '+NEWFILE)
     f= R.TFile.Open(NEWFILE, "UPDATE")
+    print(" CUT ",CUT, " VARIABLE ",VARIABLE)
     tree=f.Get(CUT+'/'+VARIABLE)
     hist_names=[]
     for k in tree.GetListOfKeys(): # get all SAMPLE related histos
