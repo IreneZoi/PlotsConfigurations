@@ -4,8 +4,28 @@
 #mc =["DY", "top",  "Wjets_HT", "VV", "VVV", "VBF-V", "Vg", "VgS", "VBS", "ggWW"]
 # mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 # mc_sep =  ["VBS", "VV"]
-#mc = ["quad_cT0","sm_lin_quad_cT0","sm"]
-mc = ["quad_cT2","sm_lin_quad_cT2","sm"]
+mc = ["sm",
+    "quad_cT0","sm_lin_quad_cT0",
+    "quad_cT1","sm_lin_quad_cT1",
+    "quad_cT2","sm_lin_quad_cT2",
+    "quad_cT3","sm_lin_quad_cT3",
+    "quad_cT4","sm_lin_quad_cT4",
+    "quad_cT5","sm_lin_quad_cT5",
+    "quad_cT6","sm_lin_quad_cT6",
+    "quad_cT7","sm_lin_quad_cT7",
+    "quad_cT8","sm_lin_quad_cT8",
+    "quad_cT9","sm_lin_quad_cT9",
+    "quad_cS0","sm_lin_quad_cS0",
+    "quad_cS1","sm_lin_quad_cS1",
+    "quad_cM0","sm_lin_quad_cM0",
+    "quad_cM1","sm_lin_quad_cM1",
+    "quad_cM2","sm_lin_quad_cM2",
+    "quad_cM3","sm_lin_quad_cM3",
+    "quad_cM4","sm_lin_quad_cM4",
+    "quad_cM5","sm_lin_quad_cM5",
+    "quad_cM7","sm_lin_quad_cM7"
+    ]
+#mc = ["quad_cT2","sm_lin_quad_cT2","sm"]
 def getSamplesWithout(samples, samples_to_remove):
     return [m for m in samples if m not in samples_to_remove]
 
