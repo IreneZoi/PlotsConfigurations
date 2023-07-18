@@ -591,6 +591,7 @@ samples['VV_ZZ']  = { 'name' :
 quadReweight_cT0 = "( 0.5* (1/(2)) * (1/(2)) * ( LHEReweightingWeight[890] + LHEReweightingWeight[810] - 2 * LHEReweightingWeight[850]))"
 LinReweight_cT0 = "( 0.5* (1/(2)) * ( LHEReweightingWeight[890] - LHEReweightingWeight[810] ))"
 sm_cT0 = "( LHEReweightingWeight[850] )"
+LinQuadReweight_cT0 = '('+LinReweight_cT0+' + '+quadReweight_cT0+')'
 
 #default coupling, quadratic EFT
 samples['quad_cT0']  = { 'name' :  
@@ -625,21 +626,24 @@ samples['sm_lin_quad_cT0'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpTo2J_WmToLNu','1') #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J','1') #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT0 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT0 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
 
+'''
 ############     -----------------             FT2          -----------------    ############
 
 quadReweight_cT2 = "( 0.5* (1/(4)) * (1/(4)) * ( LHEReweightingWeight[1052] + LHEReweightingWeight[972] - 2 * LHEReweightingWeight[1012]))"
 LinReweight_cT2 = "( 0.5* (1/(4)) * ( LHEReweightingWeight[1052] - LHEReweightingWeight[972] ))"
 sm_cT2 = "( LHEReweightingWeight[1012] )"
-
+LinQuadReweight_cT2 = '('+LinReweight_cT2+' + '+quadReweight_cT2+')'
 #default coupling, quadratic EFT
 samples['quad_cT2']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -673,12 +677,12 @@ samples['sm_lin_quad_cT2'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu','1') #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J','1')  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT2 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT2 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -690,7 +694,7 @@ addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 quadReweight_cT1 = "( 0.5* (1/(2)) * (1/(2)) * ( LHEReweightingWeight[971] + LHEReweightingWeight[891] - 2 * LHEReweightingWeight[931]))"
 LinReweight_cT1 = "( 0.5* (1/(2)) * ( LHEReweightingWeight[971] - LHEReweightingWeight[891] ))"
 sm_cT1 = "( LHEReweightingWeight[931] )"
-
+LinQuadReweight_cT1 = '('+LinReweight_cT1+' + '+quadReweight_cT1+')'
 #default coupling, quadratic EFT
 samples['quad_cT1']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -724,12 +728,12 @@ samples['sm_lin_quad_cT1'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J','1')  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT1 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT1 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -740,7 +744,7 @@ addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 quadReweight_cT5 = "( 0.5* (1/(8)) * (1/(8)) * ( LHEReweightingWeight[1295] + LHEReweightingWeight[1215] - 2 * LHEReweightingWeight[1255]))"
 LinReweight_cT5 = "( 0.5* (1/(8)) * ( LHEReweightingWeight[1295] - LHEReweightingWeight[1215] ))"
 sm_cT5 = "( LHEReweightingWeight[1255] )"
-
+LinQuadReweight_cT5 = '('+LinReweight_cT5+' + '+quadReweight_cT5+')'
 #default coupling, quadratic EFT
 samples['quad_cT5']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -774,12 +778,12 @@ samples['sm_lin_quad_cT5'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J','1')  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT5 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT5 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -790,7 +794,7 @@ addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 quadReweight_cT6 = "( 0.5* (1/(8)) * (1/(8)) * ( LHEReweightingWeight[1376] + LHEReweightingWeight[1296] - 2 * LHEReweightingWeight[1336]))"
 LinReweight_cT6 = "( 0.5* (1/(8)) * ( LHEReweightingWeight[1376] - LHEReweightingWeight[1296] ))"
 sm_cT6 = "( LHEReweightingWeight[1336] )"
-
+LinQuadReweight_cT6 = '('+LinReweight_cT6+' + '+quadReweight_cT6+')'
 #default coupling, quadratic EFT
 samples['quad_cT6']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -824,12 +828,12 @@ samples['sm_lin_quad_cT6'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1' #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J','1')  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -841,7 +845,7 @@ addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 quadReweight_cT7 = "( 0.5* (1/(16)) * (1/(16)) * ( LHEReweightingWeight[1457] + LHEReweightingWeight[1377] - 2 * LHEReweightingWeight[1417]))"
 LinReweight_cT7 = "( 0.5* (1/(16)) * ( LHEReweightingWeight[1457] - LHEReweightingWeight[1377] ))"
 sm_cT7 = "( LHEReweightingWeight[1417] )"
-
+LinQuadReweight_cT7 = '('+LinReweight_cT7+' + '+quadReweight_cT7+')'
 #default coupling, quadratic EFT
 samples['quad_cT7']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -875,12 +879,12 @@ samples['sm_lin_quad_cT7'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu','1') #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J','1') #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT7 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT7 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -891,7 +895,7 @@ addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 quadReweight_cT8 = "( 0.5* (1/(20)) * (1/(20)) * ( LHEReweightingWeight[1538] + LHEReweightingWeight[1458] - 2 * LHEReweightingWeight[1498]))"
 LinReweight_cT8 = "( 0.5* (1/(20)) * ( LHEReweightingWeight[1538] - LHEReweightingWeight[1458] ))"
 sm_cT8 = "( LHEReweightingWeight[1498] )"
-
+LinQuadReweight_cT8 = '('+LinReweight_cT8+' + '+quadReweight_cT8+')'
 #default coupling, quadratic EFT
 samples['quad_cT8']  = { 'name' :  
                 nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
@@ -925,12 +929,12 @@ samples['sm_lin_quad_cT8'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J' ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J','1' ) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J','1')  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT8 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT8 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
@@ -946,7 +950,7 @@ addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 ############     -----------------              FM4          -----------------    ############
 ############     -----------------              FM5          -----------------    ############
 ############     -----------------              FM7          -----------------    ############
-
+'''
 
 ############     -----------------             sm          -----------------    ############
 
@@ -967,7 +971,7 @@ VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"]
 
 #samples = {key:v for key,v in samples.items() if 'quad_cT0' == key} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
