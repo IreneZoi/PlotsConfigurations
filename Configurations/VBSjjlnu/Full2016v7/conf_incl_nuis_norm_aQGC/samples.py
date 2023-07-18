@@ -35,6 +35,7 @@ elif  'cern' in SITE :
 directory_bkg    = treeBaseDir + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 directory_mc    = treeBaseDir + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 directory_signal = treeBaseDir_SMP + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
+directory_signalIZ = treeBaseDir_SMP + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 
 ################################################
 ############ NUMBER OF LEPTONS #################
@@ -644,10 +645,10 @@ addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J','1') #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1' #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1') #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J','1')  #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT6 ) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT6 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
 
@@ -1268,4 +1269,4 @@ samples['sm'] ={ # should not use dipole recoil for aqgc SM part
        'EventsPerJob' : 70000,
 }
 
-samples = {   key:v for key,v in samples.items() if key in ['sm','quad_cT0','sm_lin_quad_cT0','quad_cT0','sm_lin_quad_cT2']}
+samples = {   key:v for key,v in samples.items() if key in ['sm','quad_cT0','sm_lin_quad_cT0']}

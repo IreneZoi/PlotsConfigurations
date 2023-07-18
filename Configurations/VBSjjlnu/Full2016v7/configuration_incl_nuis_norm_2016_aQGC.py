@@ -2,11 +2,11 @@
 treeName= 'Events'
 
 
-tag = 'incl_nuis_norm_2016_aQGC'
+tag = 'incl_nuis_norm_2016_aQGC_cT0_eboliv2'
 direc = "conf_incl_nuis_norm_aQGC"
 
 # used by mkShape to define output directory for root files
-outputDir = 'rootFile_'+tag 
+outputDir = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_'+tag 
 
 # file with TTree aliases
 aliasesFile = direc+'/aliases.py'

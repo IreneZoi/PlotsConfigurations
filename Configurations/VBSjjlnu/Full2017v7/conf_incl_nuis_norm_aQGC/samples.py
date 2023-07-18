@@ -603,10 +603,10 @@ addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J','1') #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu','1')  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1' #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1') #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J','1')  #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' LinQuadReweight_cT6 ) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT6 ) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT6 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
 
