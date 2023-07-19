@@ -25,7 +25,7 @@ mc = ["sm",
     "quad_cM5","sm_lin_quad_cM5",
     "quad_cM7","sm_lin_quad_cM7"
     ]
-#mc = ["quad_cT2","sm_lin_quad_cT2","sm"]
+
 def getSamplesWithout(samples, samples_to_remove):
     return [m for m in samples if m not in samples_to_remove]
 

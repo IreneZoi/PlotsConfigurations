@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'incl_nuis_norm_2018_aQGC_cTO_eboliv2'
+tag = 'incl_nuis_norm_2018_aQGC_cT0_eboliv2'
 direc = "conf_incl_nuis_norm_aQGC"
 
 # used by mkShape to define output directory for root files
