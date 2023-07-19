@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis'
+tag = 'fit_v4.5_2018_split_aQGC_cT0_eboliv2'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files
@@ -43,8 +43,8 @@ structureFile = direc+'/structure_split.py'
 
 # nuisances file for mkDatacards and for mkShape
 #nuisancesFile = direc+'/nuisances.py'
-#nuisancesFile = direc+'/nuisances_aQGC.py' #aqgc files have a different directory than SM files and so a different path is needed for the nuisance. this was a quick fix
-nuisancesFile = direc + '/nuisances_datacard_split.py' # to make datacard you need to skip VBS samples!
+nuisancesFile = direc+'/nuisances_aQGC.py' #aqgc files have a different directory than SM files and so a different path is needed for the nuisance. this was a quick fix
+# nuisancesFile = direc + '/nuisances_datacard_split.py' # to make datacard you need to skip VBS samples!
 
 
 customizeScript = direc + '/customize.py'

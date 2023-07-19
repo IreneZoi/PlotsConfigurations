@@ -67,6 +67,25 @@ nuisances['PU']  = {
                 'AsLnN'      : '1',
 }
 
+# #
+# # PS and UE
+# # #
+nuisances['PS_ISR']  = {
+                'name'  : 'PS_ISR',
+                'skipCMS' : 1,
+                'kind'  : 'weight',
+                'type'  : 'shape',
+                'samples'  : dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc) # if skey)
+            }
+
+nuisances['PS_FSR']  = {
+                'name'  : 'PS_FSR',
+                'skipCMS' : 1,
+                'kind'  : 'weight',
+                'type'  : 'shape',
+                'samples'  : dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc ) #if skey)
+            }
+
 for i in range(0,103):
     nuisances['pdf_weight_'+str(i)] = {
         'name'  : 'pdf_weight_'+str(i),

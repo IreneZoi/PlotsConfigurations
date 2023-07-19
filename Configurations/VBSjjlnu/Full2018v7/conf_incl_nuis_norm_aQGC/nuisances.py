@@ -67,7 +67,7 @@ nuisances['PS_ISR']  = {
                 'skipCMS' : 1,
                 'kind'  : 'weight',
                 'type'  : 'shape',
-                'samples'  : dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc if skey)
+                'samples'  : dict((skey, ['PSWeight[2]', 'PSWeight[0]']) for skey in mc) # if skey)
             }
 
 nuisances['PS_FSR']  = {
@@ -75,7 +75,7 @@ nuisances['PS_FSR']  = {
                 'skipCMS' : 1,
                 'kind'  : 'weight',
                 'type'  : 'shape',
-                'samples'  : dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc if skey)
+                'samples'  : dict((skey, ['PSWeight[3]', 'PSWeight[1]']) for skey in mc ) #if skey)
             }
 
 

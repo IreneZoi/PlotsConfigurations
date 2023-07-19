@@ -1461,7 +1461,7 @@ VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"]
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0","sm"]
 
 #samples = {key:v for key,v in samples.items() if 'quad_cT0' == key} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
@@ -1469,4 +1469,5 @@ VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"]
 
 ################################################
 # ---------->        to make datacard you need to skip VBS samples and other operators!!
-samples = {   key:v for key,v in samples.items() if key not in VBS_samples and 'cT2' not in key and 'cT1' not in key}
+# samples = {   key:v for key,v in samples.items() if key not in VBS_samples and 'cT2' not in key and 'cT1' not in key}
+samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
