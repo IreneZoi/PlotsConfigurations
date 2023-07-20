@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2017_split_aQGC_cTO_fixSM'
+tag = 'fit_v4.5_2017_split_aQGC_cT0_eboliv2'
 #tag = 'fit_v4.5_2017_split_aQGC_cTO_noaQGCsyst'
 direc = "conf_fit_v4.5_aQGC"
 
