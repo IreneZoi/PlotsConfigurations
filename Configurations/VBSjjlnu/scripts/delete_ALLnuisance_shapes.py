@@ -22,7 +22,7 @@ VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VBS_signals = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj"]
 #samples = ['VBF-V_dipole']
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0"] #,'sm']
+VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 #samples = VV_samples + VBS_samples + VBS_aQGC_samples #args.sample
 samples = VBS_aQGC_samples
     #f.ls()

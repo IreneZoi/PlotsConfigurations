@@ -1,9 +1,9 @@
 #!bin/bash 
 startdir=$(pwd)
 basedir=/afs/cern.ch/work/i/izoi/VBSanalysis/logs/jobs/
-jobsname=mkShapes__fit_v4.5_2016_split_qglnuis_aQGC_cT0__ALL/
+jobsname=mkShapes__fit_v4.5_2018_split_aQGC_cT0_eboliv2_pdfweight__ALL/
 missingsamples=(
-sm.18 sm.28
+sm_lin_quad_cT0.53 sm_lin_quad_cT0.135 sm_lin_quad_cT0.218 sm_lin_quad_cT0.298 sm.1 sm.59 sm.103 
 )
 startdir=$(pwd)
 echo "${startdir}"
