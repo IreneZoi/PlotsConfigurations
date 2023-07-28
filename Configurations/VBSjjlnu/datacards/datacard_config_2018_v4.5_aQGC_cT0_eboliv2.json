@@ -1,0 +1,238 @@
+[
+  { 
+    "datacard_name": "2018_all_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [
+      {
+        "name": "res_sig_mu",
+        "var": "mjj_vbs", 
+        "cut": "res_sig_mu"
+      },
+      {
+          "name": "res_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "res_sig_ele"
+      },
+      {
+          "name": "boost_sig_mu",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_mu"
+      },
+      {
+          "name": "boost_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_ele"
+      },
+
+
+      {
+        "name": "res_wjet_mu",
+        "var": "fit_bins_res", 
+        "cut": "res_wjetcr_mu"
+      },
+      {
+          "name": "res_wjet_ele",
+          "var": "fit_bins_res", 
+          "cut": "res_wjetcr_ele"
+      },
+      {
+          "name": "boost_wjet_mu",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_mu"
+      },
+      {
+          "name": "boost_wjet_ele",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_ele"
+      },
+      
+
+      {
+        "name": "res_top_mu",
+        "var": "events", 
+        "cut": "res_topcr_mu"
+      },
+      { 
+        "name": "res_top_ele",
+        "var": "events", 
+        "cut": "res_topcr_ele"
+      },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      },
+      { 
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      }
+    ]
+  },
+  { 
+    "datacard_name": "2018_boost_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [ 
+      {
+          "name": "boost_sig_mu",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_mu"
+      },
+      {
+          "name": "boost_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_ele"
+      },
+      {
+          "name": "boost_wjet_mu",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_mu"
+      },
+      {
+          "name": "boost_wjet_ele",
+          "var": "fit_bins_boost", 
+          "cut": "boost_wjetcr_ele"
+      },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      },
+      { 
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      }
+    ]
+  },
+  { 
+    "datacard_name": "2018_sig_boost_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [ 
+      {
+          "name": "boost_sig_mu",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_mu"
+      },
+      {
+          "name": "boost_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "boost_sig_ele"
+      }
+    ]
+    },
+  { 
+    "datacard_name": "2018_res_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [
+      {
+        "name": "res_sig_mu",
+        "var": "mjj_vbs", 
+        "cut": "res_sig_mu"
+      },
+      {
+          "name": "res_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "res_sig_ele"
+      },
+
+      {
+        "name": "res_wjet_mu",
+        "var": "fit_bins_res", 
+        "cut": "res_wjetcr_mu"
+      },
+      {
+          "name": "res_wjet_ele",
+          "var": "fit_bins_res", 
+          "cut": "res_wjetcr_ele"
+      },
+
+      {
+        "name": "res_top_mu",
+        "var": "events", 
+        "cut": "res_topcr_mu"
+      },
+      { 
+        "name": "res_top_ele",
+        "var": "events", 
+        "cut": "res_topcr_ele"
+      }
+    ]
+  },
+
+  { 
+    "datacard_name": "2018_res_ele_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [
+      {
+          "name": "res_sig_ele",
+          "var": "mjj_vbs", 
+          "cut": "res_sig_ele"
+      },
+      {
+          "name": "res_wjet_ele",
+          "var": "fit_bins_res", 
+          "cut": "res_wjetcr_ele"
+      },
+      { 
+        "name": "res_top_ele",
+        "var": "events", 
+        "cut": "res_topcr_ele"
+      }
+    ]
+  },
+
+  { 
+    "datacard_name": "2018_res_mu_split_Dipole_v4.5",
+    "folders": [
+      {
+        "basedir": "Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2/", 
+        "name": 2018
+      }
+    ], 
+    "phase_spaces": [
+      {
+        "name": "res_sig_mu",
+        "var": "mjj_vbs", 
+        "cut": "res_sig_mu"
+      },
+      {
+        "name": "res_wjet_mu",
+        "var": "fit_bins_res", 
+        "cut": "res_wjetcr_mu"
+      },
+      
+      {
+        "name": "res_top_mu",
+        "var": "events", 
+        "cut": "res_topcr_mu"
+      }
+    ]
+  }
+  
+]
