@@ -10,22 +10,22 @@
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "DNNoutput_res_v1", 
         "cut": "res_sig_mu"
       },
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_res_v1", 
           "cut": "res_sig_ele"
       },
       {
           "name": "boost_sig_mu",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_mu"
       },
       {
           "name": "boost_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_ele"
       },
 
@@ -85,12 +85,12 @@
     "phase_spaces": [ 
       {
           "name": "boost_sig_mu",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_mu"
       },
       {
           "name": "boost_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_ele"
       },
       {
@@ -126,12 +126,12 @@
     "phase_spaces": [ 
       {
           "name": "boost_sig_mu",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_mu"
       },
       {
           "name": "boost_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_boost", 
           "cut": "boost_sig_ele"
       }
     ]
@@ -147,12 +147,12 @@
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "DNNoutput_res_v1", 
         "cut": "res_sig_mu"
       },
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_res_v1", 
           "cut": "res_sig_ele"
       },
 
@@ -191,7 +191,7 @@
     "phase_spaces": [
       {
           "name": "res_sig_ele",
-          "var": "Mww", 
+          "var": "DNNoutput_res_v1", 
           "cut": "res_sig_ele"
       },
       {
@@ -218,7 +218,7 @@
     "phase_spaces": [
       {
         "name": "res_sig_mu",
-        "var": "Mww", 
+        "var": "DNNoutput_res_v1", 
         "cut": "res_sig_mu"
       },
       {
