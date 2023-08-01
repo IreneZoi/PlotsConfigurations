@@ -19,12 +19,12 @@ variables['Mww'] = {   'name': 'Mww',
                          #'blind': [1000,2000]
                         }
 
-variables['Mww_20'] = {   'name': 'Mww',      
-                        'range' : (20,0,5000),  
-                        'xaxis' : 'Mww', 
-                        'fold' : 3,
-                         #'blind': [1000,2000]
-                        }
+# variables['Mww_20'] = {   'name': 'Mww',      
+#                         'range' : (20,0,5000),  
+#                         'xaxis' : 'Mww', 
+#                         'fold' : 3,
+#                          #'blind': [1000,2000]
+#                         }
 
 variables['Mww_binzv'] = {   'name': 'Mww',      
                         'range' : ([200.,300.,400.,500.,600., 700.,800.,900., 1000., 1250., 1500., 2000., 2500.],), #variable range  
