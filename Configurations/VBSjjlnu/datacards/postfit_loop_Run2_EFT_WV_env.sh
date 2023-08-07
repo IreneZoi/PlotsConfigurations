@@ -18,12 +18,13 @@ SRVAR=$5
 
 
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_DNN
-datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR}
+# datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_MwwDav
+datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR} # eboliv2
 # datacardDir=fullrun2_fit_v4.5.5_aQGC_cT0_DNN #MwwDav/ #vbsmjj/ #DNN/
-#datacardDir2=Full2081v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ #Mww20/
+# datacardDir2=Full2081v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ #Mww20/
 #datacardDir2=Full2016v7/datacards_fit_v4.5_2016_split_aQGC_cT0/ #Mww20/
 # datacardDir2=Full2017v7/datacards_fit_v4.5_2017_split_aQGC_cTO_fixSM/
-datacardDir2=Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2
+datacardDir2=Full2018v7/datacards_fit_v4.5_2018_split_aQGC_cT0_eboliv2 # eboliv2
 #datacardDir2=datacards_fit_v4.5_2018_split_aQGC_cT0_DNN/ #Mww20/ 
 operator=cT0
 basis=eboliv2
@@ -37,7 +38,7 @@ echo full operator "$fulloperator"
 ######################   ------ step 0 required !! -----------
 # datacards & workspaces are created in Davide's adapted code - step 0 (done in analysis setup)
 #DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/${datacardDir}/run2_boost/combined_run2_boost_postfitRateParam2017 #2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5
-DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/${datacardDir}/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5
+DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/${datacardDir}/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5
 
 # source postfit_loop_Run2_EFT_WV_env.sh boostonly boost_sig_ele Mww_binzv
 # source postfit_loop_Run2_EFT_WV_env.sh boostonly boost_sig_ele mjj_vbs
@@ -157,13 +158,13 @@ cd datacards
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}/${PLOTVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/
 mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}
-mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}/${PLOTVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
 
 # # clean local folder
 rm -r plot_combined/*
@@ -182,7 +183,7 @@ mkPostFitCombinedPlot.py \
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}/${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/
 
 
 # ###################################################################
@@ -207,5 +208,17 @@ rm -r plot_combined/*
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/${SRVAR}/${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/
 
+outdir=Postfit_${YEAR}_${fulloperator}_${Category}_${CUT}_SRvar${SRVAR}_PlotVar${PLOTVAR}
+echo output directory: $outdir
+mkdir $outdir
+mv variables_combined.py $outdir
+mv structure_combined.py $outdir
+mv plot_combined.py $outdir
+mv cuts_combined.py $outdir
+mv configuration_combined.py $outdir
+mv output_prefit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root $outdir
+mv output_postfit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root $outdir
+mv output_histograms_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root $outdir
+mv higgsCombine${Category}_${PLOTVAR}.FitDiagnostics.mH120.root $outdir
