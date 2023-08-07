@@ -2,7 +2,7 @@
 # # # name of samples here must match keys in samples.py 
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
-mc =["DY", "top", "VV", "VVV", "VBF-V","VBF-V_dipole", "Vg", "VgS", "VBS","VBS_dipoleRecoil","ggWW", "Wjets_boost"] + wjets_res_bins + VBS_samples + VV_samples + VBS_aQGC_samples
+mc =["DY", "top", "VV", "VVV", "VBF-V","VBF-V_dipole", "Vg", "VgS", "VBS","sm_dipole","ggWW", "Wjets_boost"] + wjets_res_bins + VBS_samples + VV_samples + VBS_aQGC_samples
 
 
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",

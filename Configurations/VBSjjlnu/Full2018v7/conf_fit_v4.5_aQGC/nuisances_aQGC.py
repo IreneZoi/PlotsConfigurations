@@ -1,7 +1,7 @@
 from pprint import pprint
 # # # name of samples here must match keys in samples.py 
 
-mc =["DY", "top", "VV", "VVV", "VBF-V", "VBF-V_dipole", "Vg", "VgS", "VBS", "ggWW","VBS_dipoleRecoil"] + wjets_all_bins + VBS_samples + VV_samples + VBS_aQGC_samples
+mc =["DY", "top", "VV", "VVV", "VBF-V", "VBF-V_dipole", "Vg", "VgS", "VBS", "ggWW",'sm_dipole'] + wjets_all_bins + VBS_samples + VV_samples + VBS_aQGC_samples
 
 
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",

@@ -572,6 +572,62 @@ samples['VV_ZZ']  = { 'name' :
         'EventsPerJob' : 70000,
 }
 
+###########################################
+#############  SM  SIGNALS  ###############
+###########################################
+
+
+xsweight_new_WpToLNu_WmTo2J='3.21'
+xsweight_mcm_WpToLNu_WmTo2J='17.99'
+xsweight_new_WpTo2J_WmToLNu='3.205'
+xsweight_mcm_WpTo2J_WmToLNu='17.91'
+xsweight_new_WpToLNu_WpTo2J='0.7297'
+xsweight_mcm_WpToLNu_WpTo2J='3.453'
+xsweight_new_WmToLNu_WmTo2J='0.08887'
+xsweight_mcm_WmToLNu_WmTo2J='0.5065'
+xsweight_new_WmToLNu_ZTo2J='0.1383'
+xsweight_mcm_WmToLNu_ZTo2J='0.7416'
+xsweight_new_WpToLNu_ZTo2J='0.3992'
+xsweight_mcm_WpToLNu_ZTo2J='1.896'
+
+############     -----------------             sm          -----------------    ############
+
+samples['sm'] ={ # should not use dipole recoil for aqgc SM part
+  'name' :  nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J') + #VBS_ssWW
+            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J') + #VBS_ssWW
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J') + #VBS_osWW
+            nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu') + #VBS_osWW
+            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J')  + #VBS_WZjj
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J'),  #VBS_WZjj
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch, #+'*btagSF_corr_VBS',
+       'FilesPerJob' :5,
+       'EventsPerJob' : 70000,
+}
+addSampleWeight(samples,'sm','WpToLNu_WmTo2J',      xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm','WpTo2J_WmToLNu',      xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
+addSampleWeight(samples,'sm','WpToLNu_WpTo2J',      xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J ) #VBS_ssWW
+addSampleWeight(samples,'sm','WmToLNu_WmTo2J',      xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
+addSampleWeight(samples,'sm','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J ) #VBS_WZjj
+addSampleWeight(samples,'sm','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
+
+############     ----------------- sm VBS ewk with dipole recoil -----------------    ############
+samples['sm_dipole']  = { 'name' :  
+               nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',) + 
+               nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
+               nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
+               nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
+               nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
+               nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+       'FilesPerJob' :15,
+       'EventsPerJob' : 70000,
+}
+addSampleWeight(samples,'sm_dipole','WpToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_dipole','WpTo2J_WmToLNu_dipoleRecoil',      xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
+addSampleWeight(samples,'sm_dipole','WpToLNu_WpTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J ) #VBS_ssWW
+addSampleWeight(samples,'sm_dipole','WmToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
+addSampleWeight(samples,'sm_dipole','WmToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J ) #VBS_WZjj
+addSampleWeight(samples,'sm_dipole','WpToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 
 ##############################################################################################
@@ -626,16 +682,16 @@ samples['sm_lin_quad_cT0'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WpTo2J_WmToLNu','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT0 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT0 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT0 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J) #VBS_WZjj
 
 
 ############     -----------------             FT2          -----------------    ############
@@ -677,16 +733,16 @@ samples['sm_lin_quad_cT2'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT2 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT2 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT2 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT2','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT2','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 
 ############     -----------------              FT1          -----------------    ############
@@ -728,16 +784,16 @@ samples['sm_lin_quad_cT1'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT1 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT1 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT1 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FT5          -----------------    ############
 
@@ -778,16 +834,16 @@ samples['sm_lin_quad_cT5'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT5 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT5 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT5 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT5','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT5','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FT6          -----------------    ############
 
@@ -828,16 +884,16 @@ samples['sm_lin_quad_cT6'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT6 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' +  LinQuadReweight_cT6 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * ' + LinQuadReweight_cT6 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT6','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 
 ############     -----------------              FT7          -----------------    ############
@@ -879,16 +935,16 @@ samples['sm_lin_quad_cT7'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu','1') #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT7 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J','1') #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J','1') #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT7 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ LinQuadReweight_cT7 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT7','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FT8          -----------------    ############
 
@@ -929,16 +985,16 @@ samples['sm_lin_quad_cT8'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT8 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT8 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT8 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT8','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT8','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FT9          -----------------    ############
 
@@ -979,16 +1035,16 @@ samples['sm_lin_quad_cT9'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT9 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT9','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cT9 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cT9','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cT9','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cT9 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cT9 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT9 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cT9 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT9','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cT9','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 
 ############     -----------------              FS0          -----------------    ############
@@ -1030,16 +1086,16 @@ samples['sm_lin_quad_cS0'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cS0 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cS0','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cS0 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cS0','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cS0','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cS0 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cS0 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cS0 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cS0 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cS0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cS0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FS1          -----------------    ############
 quadReweight_cS1 = "( 0.5* (1/(30)) * (1/(30)) * ( LHEReweightingWeight[161] + LHEReweightingWeight[81] - 2 * LHEReweightingWeight[121]))"
@@ -1080,16 +1136,16 @@ samples['sm_lin_quad_cS1'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cS1 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cS1','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cS1 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cS1','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cS1','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cS1 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cS1 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cS1 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cS1 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cS1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cS1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM0          -----------------    ############
 quadReweight_cM0 = "( 0.5* (1/(36)) * (1/(36)) * ( LHEReweightingWeight[323] + LHEReweightingWeight[243] - 2 * LHEReweightingWeight[283]))"
@@ -1130,16 +1186,16 @@ samples['sm_lin_quad_cM0'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM0 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM0','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM0 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM0','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM0','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM0 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM0 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM0 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM0 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM0','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM0','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM1          -----------------    ############
 quadReweight_cM1 = "( 0.5* (1/(28)) * (1/(28)) * ( LHEReweightingWeight[404] + LHEReweightingWeight[324] - 2 * LHEReweightingWeight[364]))"
@@ -1180,16 +1236,16 @@ samples['sm_lin_quad_cM1'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM1 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM1','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM1 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM1','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM1','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM1 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM1 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM1 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM1 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM1','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM1','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 
 ############     -----------------              FM2          -----------------    ############
@@ -1231,16 +1287,16 @@ samples['sm_lin_quad_cM2'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM2 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM2','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM2 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM2','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM2','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM2 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM2 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM2 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM2 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM2','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM2','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM3          -----------------    ############
 quadReweight_cM3 = "( 0.5* (1/(80)) * (1/(80)) * ( LHEReweightingWeight[566] + LHEReweightingWeight[486] - 2 * LHEReweightingWeight[526]))"
@@ -1281,16 +1337,16 @@ samples['sm_lin_quad_cM3'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM3 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM3','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM3 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM3','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM3','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM3 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM3 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM3 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM3 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM3','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM3','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM4          -----------------    ############
 quadReweight_cM4 = "( 0.5* (1/(80)) * (1/(80)) * ( LHEReweightingWeight[647] + LHEReweightingWeight[567] - 2 * LHEReweightingWeight[607]))"
@@ -1331,16 +1387,16 @@ samples['sm_lin_quad_cM4'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM4 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM4','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM4 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM4','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM4','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM4 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM4 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM4 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM4 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM4','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM4','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM5          -----------------    ############
 quadReweight_cM5 = "( 0.5* (1/(160)) * (1/(160)) * ( LHEReweightingWeight[728] + LHEReweightingWeight[648] - 2 * LHEReweightingWeight[688]))"
@@ -1381,16 +1437,16 @@ samples['sm_lin_quad_cM5'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM5 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM5','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM5 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM5','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM5','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM5 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM5 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM5 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM5 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM5','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM5','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     -----------------              FM7          -----------------    ############
 quadReweight_cM7 = "( 0.5* (1/(80)) * (1/(80)) * ( LHEReweightingWeight[809] + LHEReweightingWeight[729] - 2 * LHEReweightingWeight[769]))"
@@ -1431,30 +1487,18 @@ samples['sm_lin_quad_cM7'] = {
 }
 addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM7 ) #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM7','WpTo2J_WmToLNu_aQGC_eboliv2', LinQuadReweight_cM7 ) #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WmTo2J','1') #VBS_osWW
-addSampleWeight(samples,'sm_lin_quad_cM7','WpTo2J_WmToLNu','1')  #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WmTo2J',xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
+addSampleWeight(samples,'sm_lin_quad_cM7','WpTo2J_WmToLNu', xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
 addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WpTo2J_aQGC_eboliv2', LinQuadReweight_cM7 ) #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_WmTo2J_aQGC_eboliv2', LinQuadReweight_cM7 ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WpTo2J','1' ) #VBS_ssWW
-addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_WmTo2J','1')  #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_WpTo2J', xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J) #VBS_ssWW
+addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_WmTo2J',xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
 addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM7 ) #VBS_WZjj
 addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_ZTo2J_aQGC_eboliv2', '(Sum$(abs(GenPart_pdgId)==6)==0) * ' + LinQuadReweight_cM7 ) #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #VBS_WZjj
-addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)')  #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM7','WmToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J) #VBS_WZjj
+addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
-############     -----------------             sm          -----------------    ############
 
-samples['sm'] ={ # should not use dipole recoil for aqgc SM part
-  'name' :  nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J') + #VBS_ssWW
-            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J') + #VBS_ssWW
-            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J') + #VBS_osWW
-            nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu') + #VBS_osWW
-            nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J')  + #VBS_WZjj
-            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J'),  #VBS_WZjj
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch, #+'*btagSF_corr_VBS',
-       'FilesPerJob' :5,
-       'EventsPerJob' : 70000,
-}
 
 
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
@@ -1475,4 +1519,5 @@ for op in operators_to_exclude:
    full_operators_name_to_exclude.append("quad_"+op)
    full_operators_name_to_exclude.append("sm_lin_quad_"+op)
 samples = {   key:v for key,v in samples.items() if key not in VBS_samples and key not in full_operators_name_to_exclude} #'cT2' not in key and 'cT1' not in key}
+# samples = {   key:v for key,v in samples.items() if key == 'sm_dipole'}
 # samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}

@@ -1,7 +1,7 @@
 # # nuisances
 from pprint import pprint
 # # name of samples here must match keys in samples.py 
-mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS", "VBS_dipoleRecoil","VBF-V", "VBF-V_dipole", "ggWW","Wjets_boost"] + wjets_res_bins + VV_samples
+mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS", "sm_dipole","VBF-V", "VBF-V_dipole", "ggWW","Wjets_boost"] + wjets_res_bins + VV_samples
 VBS_aQGC_all_samples = ['sm','quad_cT0','sm_lin_quad_cT0','quad_cT2','sm_lin_quad_cT2']
 #mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 #mc_sep =  ["VBS", "VV"]
