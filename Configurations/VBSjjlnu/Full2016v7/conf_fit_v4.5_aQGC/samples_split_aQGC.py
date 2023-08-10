@@ -1504,9 +1504,9 @@ addSampleWeight(samples,'sm_lin_quad_cM7','WpToLNu_ZTo2J',      '(Sum$(abs(GenPa
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 VBS_aQGC_all_samples = ['sm','quad_cT0','sm_lin_quad_cT0','quad_cT2','sm_lin_quad_cT2']
-VBS_aQGC_cT0_samples = ['sm','quad_cT0','sm_lin_quad_cT0']
+VBS_aQGC_samples = ['sm','quad_cT0','sm_lin_quad_cT0']
 VBS_aQGC_cT2_samples = ['sm','quad_cT2','sm_lin_quad_cT2']
 
 
-samples = {   key:v for key,v in samples.items() if key not in VBS_samples + VBS_aQGC_cT2_samples } #and 'Fake' not in key}
-#samples = {   key:v for key,v in samples.items() if 'sm' == key} # in VBS_aQGC_cT0_samples }
+#samples = {   key:v for key,v in samples.items() if key not in VBS_samples + VBS_aQGC_cT2_samples } #and 'Fake' not in key}
+samples = {   key:v for key,v in samples.items() if  key in VBS_aQGC_samples }

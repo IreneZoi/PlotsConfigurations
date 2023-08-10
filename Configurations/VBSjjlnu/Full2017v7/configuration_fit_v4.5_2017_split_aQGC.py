@@ -42,8 +42,8 @@ structureFile = direc+'/structure_split.py'
 
 
 # nuisances file for mkDatacards and for mkShape
-nuisancesFile = direc+'/nuisances_datacard_split.py'
+# nuisancesFile = direc+'/nuisances_datacard_split.py'
 #nuisancesFile = direc+'/nuisances.py'
-#nuisancesFile = direc+'/nuisances_aQGC.py'
+nuisancesFile = direc+'/nuisances_aQGC.py'
 
 customizeScript = direc + "/customize.py"
