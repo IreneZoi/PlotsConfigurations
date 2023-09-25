@@ -193,8 +193,8 @@ mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fullop
 cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
 mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
 cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
 #mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
 
 mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/
@@ -205,8 +205,8 @@ mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fullope
 cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
 mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
 cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# mkdir -p /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# cp       /eos/user/i/izoi/www/index.php /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
 #mkdir -p /eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
 
 
@@ -227,7 +227,7 @@ mkPostFitCombinedPlot.py \
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
 
 
 # ###################################################################
@@ -252,7 +252,7 @@ rm -r plot_combined/*
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/
+cp -r plot_combined/*png /eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
 
 outdir=Postfit_${YEAR}_${fulloperator}_${Category}_${CUT}_SRvar${SRVAR}_PlotVar${PLOTVAR}/
 echo output directory: $outdir
