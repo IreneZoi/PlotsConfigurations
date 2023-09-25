@@ -1507,6 +1507,16 @@ VBS_aQGC_all_samples = ['sm','quad_cT0','sm_lin_quad_cT0','quad_cT2','sm_lin_qua
 VBS_aQGC_samples = ['sm','quad_cT0','sm_lin_quad_cT0']
 VBS_aQGC_cT2_samples = ['sm','quad_cT2','sm_lin_quad_cT2']
 
+################################################                                                                                                                     
+# ---------->        to make datacard you need to skip VBS samples and other operators!!                                                                             
+operators_to_exclude = ["cT1", "cT2", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
+full_operators_name_to_exclude = []
+for op in operators_to_exclude:
+   full_operators_name_to_exclude.append("quad_"+op)
+   full_operators_name_to_exclude.append("sm_lin_quad_"+op)
+full_operators_name_to_exclude.append("sm_dipole")
+samples = {   key:v for key,v in samples.items() if key not in VBS_samples and key not in full_operators_name_to_exclude} #'cT2' not in key and 'cT1' not in key}    
+
 
 #samples = {   key:v for key,v in samples.items() if key not in VBS_samples + VBS_aQGC_cT2_samples } #and 'Fake' not in key}
 samples = {   key:v for key,v in samples.items() if  key in VBS_aQGC_samples }
