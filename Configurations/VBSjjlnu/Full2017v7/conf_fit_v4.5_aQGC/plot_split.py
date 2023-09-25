@@ -73,64 +73,69 @@ for ir in range(1,22):
 for ir in range(1,8):
     wjets_bins.append("Wjets_boost_"+str(ir))
 
+VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
+VBS_WV_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj"]
+VBS_ZV_samples = ["VBS_WZll", "VBS_ZZ"]
+VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
+VV_WV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj"]
+VV_ZV_samples = ["VV_WZll", "VV_ZZ"]
+
+
+groupPlot['VV+VVV']  = {  
+                  'nameHR' : 'VV+VVV',
+                  'isSignal' : 0,
+                  'color': palette["Pink"], #palette["Peach3"],  
+                  'samples'  : ['VVV', 'VV', 'ggWW'],
+                  'fill': 1001
+              }
 
 
 
-# groupPlot['VV+VVV']  = {  
-#                   'nameHR' : 'VV+VVV',
-#                   'isSignal' : 0,
-#                   'color': palette["Pink"], #palette["Peach3"],  
-#                   'samples'  : ['VVV', 'VV', 'ggWW'],
-#                   'fill': 1001
-#               }
+groupPlot['DY']  = {  
+                  'nameHR' : "DY",
+                  'isSignal' : 0,
+                  'color'    : palette["GreenDarker"],
+                  'samples'  : ['DY'],
+                  'fill': 1001
+              }
 
-
-
-# groupPlot['DY']  = {  
-#                   'nameHR' : "DY",
-#                   'isSignal' : 0,
-#                   'color'    : palette["GreenDarker"],
-#                   'samples'  : ['DY'],
-#                   'fill': 1001
-#               }
-
-# groupPlot['Others']  = {  
-#                 'nameHR' : "VBF-V + V#gamma",
-#                 'isSignal' : 0,
-#                 'color':palette["GreenLighter"],# palette["Green5"],    #Green2
-#                 'samples'  : ['VBF-V_dipole', 'Vg','VgS', ],
-#                 'fill': 1001
-#             }
+groupPlot['Others']  = {  
+                'nameHR' : "VBF-V + V#gamma",
+                'isSignal' : 0,
+                'color':palette["GreenLighter"],# palette["Green5"],    #Green2
+                'samples'  : ['VBF-V_dipole', 'Vg','VgS', ],
+                'fill': 1001
+            }
 
 
 
 
-# groupPlot['Fake']  = {  
-#                 'nameHR' : "Non-prompt",
-#                 'isSignal' : 0,
-#                 'color': palette["LightBlue"],   
-#                 'samples'  : ['Fake'],
-#                 'fill': 1001
-#             }
+groupPlot['Fake']  = {  
+                'nameHR' : "Non-prompt",
+                'isSignal' : 0,
+                'color': palette["LightBlue"],   
+                'samples'  : ['Fake'],
+                'fill': 1001
+            }
 
 
-# groupPlot['top']  = {  
-#                  'nameHR' : 'top',
-#                  'isSignal' : 0,
-#                  'color':  palette["MediumBlue"], #palette["MediumBlue2"],  
-#                  'samples'  : ['top'],
-#                  'fill': 1001
-#              }
+groupPlot['top']  = {  
+                 'nameHR' : 'top',
+                 'isSignal' : 0,
+                 'color':  palette["MediumBlue"], #palette["MediumBlue2"],  
+                 'samples'  : ['top'],
+                 'fill': 1001
+             }
 
 
 
-# groupPlot["Wjets"]  = {  
-#                         'nameHR' : 'W+Jets',
-#                         'isSignal' : 0,
-#                         'color':   palette["Yellow"],
-#                         'samples'  : wjets_bins,
-#                         'fill': 1001
-#                 }
+groupPlot["Wjets"]  = {  
+                        'nameHR' : 'W+Jets',
+                        'isSignal' : 0,
+                        'color':   palette["Yellow"],
+                        'samples'  : wjets_bins,
+                        'fill': 1001
+                }
 
 
 
@@ -250,22 +255,29 @@ plot['DATA']  = {
 
 ##### EFT stuff
 
-#groupPlot['sm_lin_quad_cT2']  = {
-#                 'nameHR' : 'SM+Linear+Quadratic FT2',
-#                 'isSignal' : 2,
-#                 'color': colors["kBlue"]+4,
-#                 'samples'  : ['sm_lin_quad_cT2'],
-#                 'fill': 1001
-#              }
+groupPlot['sm_lin_quad_cT0']  = {
+                'nameHR' : 'SM+Linear+Quadratic FT0',
+                'isSignal' : 1,
+                'color': colors["kBlue"]+4,
+                'samples'  : ['sm_lin_quad_cT0'],
+                'fill': 1001
+             }
 #
 groupPlot['quad_cT0']  = {
                  'nameHR' : 'Quadratic FT0',
-                 'isSignal' : 2,
+                 'isSignal' : 1,
                  'color': colors["kBlue"]+1,
                  'samples'  : ['quad_cT0'],
                  'fill': 1001
               }
 
+groupPlot['sm']  = {
+                   'color': colors["kCyan"]+3, 
+                   'nameHR' : 'VBS WV',
+                   'isSignal' : 1,
+                   'samples'  : ['sm'],
+                   'fill': 1001
+               }
 
 # keys here must match keys in samples.py    
 #

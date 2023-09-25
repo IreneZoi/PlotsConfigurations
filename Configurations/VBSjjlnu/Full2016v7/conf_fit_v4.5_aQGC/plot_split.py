@@ -253,13 +253,13 @@ plot['top'] = {
 #                  'scale'    : 1.0 
 #                  }
 
-# for wjetbin in wjets_bins:
-#     plot[wjetbin] = {   
-#                     'color': colors['kAzure']-1,
-#                     'isSignal' : 0,
-#                     'isData'   : 0, 
-#                     'scale'    : 1.0 
-#                     }
+for wjetbin in wjets_bins:
+    plot[wjetbin] = {   
+                    'color': colors['kAzure']-1,
+                    'isSignal' : 0,
+                    'isData'   : 0, 
+                    'scale'    : 1.0 
+                    }
 
 # for s in VBS_ZV_samples:
 #     plot[s]  = {
