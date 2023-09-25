@@ -6,9 +6,9 @@ VBS_WV_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj"]
 VBS_ZV_samples = ["VBS_WZll", "VBS_ZZ"]
 VV_WV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj"]
 VV_ZV_samples = ["VV_WZll", "VV_ZZ"]
-VBS_aQGC_all_samples = ["sm",'quad_cT0','sm_lin_quad_cT0','quad_cT2','sm_lin_quad_cT2']
+VBS_aQGC_samples = ["sm",'quad_cT0','sm_lin_quad_cT0'] #,'quad_cT2','sm_lin_quad_cT2']
 # # name of samples here must match keys in samples.py 
-mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS_dipoleRecoil", "VBF-V_dipole", "ggWW","Wjets_boost"] + wjets_res_bins + VBS_aQGC_all_samples + VV_samples
+mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS_dipoleRecoil", "VBF-V_dipole", "ggWW","Wjets_boost"] + wjets_res_bins + VBS_aQGC_samples + VV_samples
 #mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 #mc_sep =  ["VBS", "VV"]
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",
@@ -587,8 +587,8 @@ for sample in mc :
     }
 
 #Correlate all signal samples
-nuisances['QCD_scale_signal'] = {
-            'name'  : 'QCDscale_signal',
+nuisances['QCD_scale_EWK_WV'] = {
+            'name'  : 'QCDscale_EWK_WV',
             'kind'  : 'weight',
             'type'  : 'shape',
             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_all_samples }
@@ -891,5 +891,5 @@ for n in nuisances.values():
 # exclude = ["QCD_scale_VBS_WV_full","QCD_scale_VBS_ZV_accept", "QCD_scale_QCD_WV_accept", "pdf_weight"]
 # nuisances = {k:v for k,v in nuisances.items() if k not in exclude}
 
-nuisances = {k:v for k,v in nuisances.items() if 'QGLmorphing' not in k}
+# nuisances = {k:v for k,v in nuisances.items() if 'QGLmorphing' not in k}
 # print ' '.join(nname for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))

@@ -517,8 +517,8 @@ for sample in mc :
         'samples'  :  { sample: ["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
     }
 
-nuisances['QCD_scale_signal'] = {
-            'name'  : 'QCDscale_signal',
+nuisances['QCD_scale_EWK_WV'] = {
+            'name'  : 'QCDscale_EWK_WV',
             'kind'  : 'weight',
             'type'  : 'shape',
             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_samples }

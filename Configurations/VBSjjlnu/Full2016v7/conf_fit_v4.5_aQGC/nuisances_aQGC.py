@@ -2,7 +2,7 @@
 from pprint import pprint
 # # name of samples here must match keys in samples.py 
 mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS", "sm_dipole","VBF-V", "VBF-V_dipole", "ggWW","Wjets_boost"] + wjets_res_bins + VV_samples
-VBS_aQGC_all_samples = ['sm','quad_cT0','sm_lin_quad_cT0','quad_cT2','sm_lin_quad_cT2']
+VBS_aQGC_all_samples = ['sm','quad_cT0','sm_lin_quad_cT0'] #,'quad_cT2','sm_lin_quad_cT2']
 #mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 #mc_sep =  ["VBS", "VV"]
 phasespaces = ["res_wjetcr_ele","res_wjetcr_mu" ,"boost_wjetcr_ele" ,"boost_wjetcr_mu",
@@ -571,7 +571,7 @@ nuisances['TopPtRew'] = {
 # qcdscale_variations = ['LHEScaleWeight[0]', 'LHEScaleWeight[1]', 'LHEScaleWeight[3]', 'LHEScaleWeight[Length$(LHEScaleWeight)-4]', 'LHEScaleWeight[Length$(LHEScaleWeight)-2]', 'LHEScaleWeight[Length$(LHEScaleWeight)-1]']
 import json, os
 # VBS_pdf_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.3/pdf_normcorr_VBS.json"))
-nuis_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.5/nuisance_incl_norm_factors_2016.json"))
+nuis_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.5_aQGC/nuisance_incl_norm_factors_2016.json"))
 
 for sample in mc :
     if sample in ["ggWW", "Wjets_boost"] + wjets_res_bins + VBS_samples + VV_samples + VBS_aQGC_all_samples : continue
@@ -583,8 +583,8 @@ for sample in mc :
     }
 
 #Correlate all signal samples
-nuisances['QCD_scale_signal'] = {
-            'name'  : 'QCDscale_signal',
+nuisances['QCD_scale_EWK_WV'] = {
+            'name'  : 'QCDscale_EWK_WV',
             'kind'  : 'weight',
             'type'  : 'shape',
             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] for k in VBS_aQGC_all_samples }

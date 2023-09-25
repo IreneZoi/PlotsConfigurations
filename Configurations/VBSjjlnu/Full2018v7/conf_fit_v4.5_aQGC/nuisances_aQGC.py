@@ -565,8 +565,8 @@ for sample in mc :
 #         }
 variations = ['LHEScaleWeight[0]', 'LHEScaleWeight[1]', 'LHEScaleWeight[3]', 'LHEScaleWeight[Length$(LHEScaleWeight)-4]', 'LHEScaleWeight[Length$(LHEScaleWeight)-2]', 'LHEScaleWeight[Length$(LHEScaleWeight)-1]']
 for sample in VBS_aQGC_samples:
-    nuisances['QCDscale_signal'] = {
-            'name'  : 'QCDscale_signal',
+    nuisances['QCDscale_EWK_WV'] = {
+            'name'  : 'QCDscale_EWK_WV',
             'kind': 'weight_envelope',
             'type'  : 'shape',
             'samples'  :  { sample: variations },
@@ -705,8 +705,8 @@ nuisances['pdf_weight'] = {
     'name'  : 'pdf_1718',
     'kind'  : 'weight_envelope',
     'type'  : 'shape',
-    #'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["VBS", "top"]+wjets_all_bins+VBS_samples},
-    'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,32)] for s in VBS_aQGC_samples}, # eboliv2 attempt from Irene
+    'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,103)] for s in mc if s not in ["VBS", "top"]+wjets_all_bins+VBS_samples},
+    # 'samples' :  { s: [' Alt$(LHEPdfWeight['+str(i)+'], 1.)' for i in range(0,32)] for s in VBS_aQGC_samples}, # eboliv2 attempt from Irene
     'AsLnN':  '1'
 }
 
@@ -824,7 +824,7 @@ for n in nuisances.values():
 #for k,v in nuisances.items():
 #     nuisances = {k:v for n in nuisance_redoing if n in k}
 #nuisances = {k:v for k,v in nuisances.items() if "stat" in k or "btag" in k or "trig" in k or "eff_e" in k or "electronpt" in k or "eff_m" in k or "muonpt" in k or "JetPUID_sf" in k or "JER" in k or "MET" in k or "tagging" in k or "fatjetJM" in k in k or 'JESAbsolute' in k or 'JESAbsolute_2018' in k or 'JESBBEC1' in k or 'JESBBEC1_2018' in k or 'JESEC2' in k or 'JESEC2_2018' in k or 'JESFlavorQCD' in k or 'JESHF' in k or 'JESHF_2018' in k or 'JESRelativeBal' in k or 'JESRelativeSample_2018'} 
-nuisances = {k:v for k,v in nuisances.items() if "pdf_weight" not in k} 
+# nuisances = {k:v for k,v in nuisances.items() if "pdf_weight" in k} 
 
 #nuisances = {k:v for k,v in nuisances.items() if }
 print " _____________________ NUISANCES ______________________"
