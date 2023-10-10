@@ -81,7 +81,7 @@ echo "${DATACARD_FIT}"
 
 # ->->->->->->->    step - 1a: prepare workspace (done in datacard setup) - here use ALL CATEGORIES to have the proper fit
 
-text2workspace.py ${DATACARD_FIT}.txt -o ${DATACARD_FIT}.root
+# text2workspace.py ${DATACARD_FIT}.txt -o ${DATACARD_FIT}.root
 
 # # ->->->->->->->    step - 1b: make fit (done in datacard setup)
 # blind

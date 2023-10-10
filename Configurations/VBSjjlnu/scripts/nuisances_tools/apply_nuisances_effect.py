@@ -58,10 +58,17 @@ for cut in nF.GetListOfKeys():
                     try:
                         h_up = h_nom.Clone("histo_{}_{}Up".format(sample, nuis_rename))
                         h_do = h_nom.Clone("histo_{}_{}Down".format(sample, nuis_rename))
-                        
-                        eff_up = nF.Get("{}/{}/histo_{}_{}Up".format(cut.GetName(), var.GetName(), sample, nuis ))
-                        eff_do = nF.Get("{}/{}/histo_{}_{}Down".format(cut.GetName(), var.GetName(),  sample, nuis ))
-                        
+
+                        if nuis.find("pdf") != -1:
+                            print (" special treatment for pdf!")
+                            eff_up = nF.Get("{}/{}/histo_{}_{}Up".format(cut.GetName(), var.GetName(), 'sm_dipole', nuis ))
+                            eff_do = nF.Get("{}/{}/histo_{}_{}Down".format(cut.GetName(), var.GetName(),  'sm_dipole', nuis ))
+                            print ("{}/{}/histo_{}_{}Down".format(cut.GetName(), var.GetName(),  'sm_dipole', nuis ))
+                        else:
+                            eff_up = nF.Get("{}/{}/histo_{}_{}Up".format(cut.GetName(), var.GetName(), sample, nuis ))
+                            eff_do = nF.Get("{}/{}/histo_{}_{}Down".format(cut.GetName(), var.GetName(),  sample, nuis ))
+                        print (" h_up ",h_up," h_do ",h_do)
+                        print(" eff_up ",eff_up," eff_do ",eff_do)
                         h_up.Multiply(eff_up)
                         h_do.Multiply(eff_do)
 

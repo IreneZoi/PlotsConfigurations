@@ -138,19 +138,19 @@ def postfit_plot(datac):
 
     log.info("Plotting")
     year = datac["datacard_name"].split("_")[-1]
-    plotFile = ""
-    if "top" in datac["datacard_name"] and "res" in datac["datacard_name"]:
-        plotFile = "plot_top_res.py"
-    if "top" in datac["datacard_name"] and "boost" in datac["datacard_name"]:
-        plotFile = "plot_top_boost.py"
-    if "wjet" in datac["datacard_name"] and "res" in datac["datacard_name"]:
-        plotFile = "plot_wjets_res.py"
-    if "wjet" in datac["datacard_name"] and "boost" in datac["datacard_name"]:
-        plotFile = "plot_wjets_boost.py"
-    if plotFile == "" and "res" in datac["datacard_name"]:
-        plotFile = "plot_wjets_res.py"
-    if plotFile == "" and "boost" in datac["datacard_name"]:
-        plotFile = "plot_wjets_boost.py"
+    plotFile = "../Full2018v7/conf_fit_v4.5_aQGC/plot_split.py"
+    # if "top" in datac["datacard_name"] and "res" in datac["datacard_name"]:
+    #     plotFile = "plot_top_res.py"
+    # if "top" in datac["datacard_name"] and "boost" in datac["datacard_name"]:
+    #     plotFile = "plot_top_boost.py"
+    # if "wjet" in datac["datacard_name"] and "res" in datac["datacard_name"]:
+    #     plotFile = "plot_wjets_res.py"
+    # if "wjet" in datac["datacard_name"] and "boost" in datac["datacard_name"]:
+    #     plotFile = "plot_wjets_boost.py"
+    # if plotFile == "" and "res" in datac["datacard_name"]:
+    #     plotFile = "plot_wjets_res.py"
+    # if plotFile == "" and "boost" in datac["datacard_name"]:
+    #     plotFile = "plot_wjets_boost.py"
 
     
     if "bin1" in datac["datacard_name"]: plotFile = "plot_wjets_wlepbin1.py"
@@ -163,7 +163,7 @@ def postfit_plot(datac):
 
     cmd = [ """mkPostFitCombinedPlot.py --inputFilePostFitShapesFromWorkspace  ../../../datacards/{0}/output_postfit.root \\
            --outputFile postfit_shapes.root --kind P --cutName combined  \\
-           --variable {1} --structureFile ../../../Full2018v7/conf_fit_v4.5/structure_split.py \\
+           --variable {1} --structureFile ../../../Full2018v7/conf_fit_v4.5_aQGC/structure_split.py \\
            --plotFile ../../{2} --lumiText "137/fb" """.format(datac["outputdir"], datac["phase_spaces"][0]["var"], plotFile),
 
            """mkPlot.py --pycfg=configuration_combined.py --inputFile=postfit_shapes.root  --showRelativeRatio \\
@@ -200,8 +200,8 @@ def postfit_plot_onlyplot(datac):
     log.info("Plotting")
     cmd = [ 
 
-           """mkPlot.py --pycfg=configuration_combined.py --inputFile=postfit_shapes_new.root  --showRelativeRatio \\
-            --minLogC 10 --maxLogC 1e2 --minLogCratio 10 --maxLogCratio 1e2  --plotNormalizedDistributions """ #--showIntegralLegend=1
+           """mkPlot.py --pycfg=configuration_combined.py --inputFile=postfit_shapes.root  --showRelativeRatio \\
+            --minLogC 10 --maxLogC 1e2 --minLogCratio 10 --maxLogCratio 1e2  --plotNormalizedDistributions --showIntegralLegend=1""" 
     ]
 
     for c in cmd:  log.debug(cmd)

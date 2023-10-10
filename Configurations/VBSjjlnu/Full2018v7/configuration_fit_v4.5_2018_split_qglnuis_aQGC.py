@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'fit_v4.5_2018_split_qglnuis_aQGC_cT0_allvar'
+tag = 'fit_v4.5_2018_split_qglnuis_aQGC_cT0_eboliv2'
 direc = "conf_fit_v4.5_aQGC"
 
 # used by mkShape to define output directory for root files

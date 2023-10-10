@@ -10,9 +10,11 @@
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_MwwDav/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 boostonly_MwwDav 0.02 2018
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_DNN/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 all_DNN 0.02 2018
     ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_full_Mww20/2018_boost_split_Dipole_v4.5/combined_2018_boost_split_Dipole_v4.5.txt cT0 all_Mww20 0.02 2018
-    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_DNN/run2_all/combined_run2_all.txt cT0 all_DNN 0.02 Run2
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_full_DNN/run2_all/combined_run2_all.txt cT0 all_DNN_eboliv2 0.04 Run2
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_DNN/run2_boost/combined_run2_boost_postfitRateParam2017.txt cT0 boost_DNN_rateparam2017 0.04 Run2
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_Mww/run2_boost/combined_run2_boost.txt cT0 boost_Mww 0.04 Run2
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_full_mjj_vbs/run2_all/combined_run2_all.txt cT0 all_mjj_vbs 1 Run2
+
 datacard=$1
 operator=$2
 region=$3
@@ -22,6 +24,7 @@ year=$5
 #step 0
 #rm -rf model_test.root
    # create rootfit workspace from datacard
+ulimit -s unlimited
 
 #step1
 text2workspace.py  "${datacard}" \
@@ -60,13 +63,15 @@ text2workspace.py  "${datacard}" \
    #################################################################
    #1. fit 
    # ,k_cT1,k_cT5,k_cT6,k_cT7,k_cT8,k_cT9,  \
+
+   #step 2
 combine -M MultiDimFit model_test_${operator}_${region}.root \
    -m 125 -t -1 \
    --redefineSignalPOIs k_${operator} \
    --freezeParameters r,k_${operator} \
    --setParameters r=1 \
    --setParameterRanges k_${operator}=-${range},${range} \
-   --verbose -1 \
+   --verbose 2 \
    -n ${2}_${3} \
    --algo=grid --points 500 --robustFit=1 \
    --alignEdges=1 --setRobustFitTolerance=0.1 \
@@ -83,16 +88,18 @@ combine -M MultiDimFit model_test_${operator}_${region}.root \
 
 
     ##2b. plot the profile likelihood obtained: do this with python plotter
+
+   # step 3
 python drawLS.py \
         higgsCombine${2}_${3}.MultiDimFit.mH125.root k_${operator} ${year} ${region}
-    ##3. backup the plot to webpage
-   outdir=${year}_${region}
-   mkdir ${outdir}
-   mv LS_k_${operator}.* ${outdir}/
-   mv model_test_${operator}_${region}.root ${outdir}/
-   mv higgsCombine${operator}_${region}.MultiDimFit.mH125.root ${outdir}/
 
-    #######################################
-    #     run  for two operators a time:  #
-    ####################################### 
+
+    ##3. backup the plot to webpage
+   # step 4
+   # outdir=${year}_${region}
+   # mkdir ${outdir}
+   # mv LS_k_${operator}.* ${outdir}/
+   # mv model_test_${operator}_${region}.root ${outdir}/
+   # mv higgsCombine${operator}_${region}.MultiDimFit.mH125.root ${outdir}/
+
 

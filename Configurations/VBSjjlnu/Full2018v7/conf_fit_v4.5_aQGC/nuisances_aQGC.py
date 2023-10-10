@@ -556,23 +556,23 @@ for sample in mc :
     }
 
 
-# for k in VBS_aQGC_samples:
-#     nuisances['QCDscale_signal'] = {
-#             'name'  : 'QCDscale_signal',
-#             'kind'  : 'weight',
-#             'type'  : 'shape',
-#             'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
-#         }
-variations = ['LHEScaleWeight[0]', 'LHEScaleWeight[1]', 'LHEScaleWeight[3]', 'LHEScaleWeight[Length$(LHEScaleWeight)-4]', 'LHEScaleWeight[Length$(LHEScaleWeight)-2]', 'LHEScaleWeight[Length$(LHEScaleWeight)-1]']
-for sample in VBS_aQGC_samples:
+for k in VBS_aQGC_samples:
     nuisances['QCDscale_EWK_WV'] = {
             'name'  : 'QCDscale_EWK_WV',
-            'kind': 'weight_envelope',
+            'kind'  : 'weight',
             'type'  : 'shape',
-            'samples'  :  { sample: variations },
-           # 'group' : 'theory',
-	        #'AsLnN': '1'    ##
-    }
+            'samples': { k:["LHEScaleWeight[0]", "LHEScaleWeight[8]"] }
+        }
+# variations = ['LHEScaleWeight[0]', 'LHEScaleWeight[1]', 'LHEScaleWeight[3]', 'LHEScaleWeight[Length$(LHEScaleWeight)-4]', 'LHEScaleWeight[Length$(LHEScaleWeight)-2]', 'LHEScaleWeight[Length$(LHEScaleWeight)-1]']
+# for sample in VBS_aQGC_samples:
+#     nuisances['QCDscale_EWK_WV'] = {
+#             'name'  : 'QCDscale_EWK_WV',
+#             'kind': 'weight_envelope',
+#             'type'  : 'shape',
+#             'samples'  :  { sample: variations },
+#            # 'group' : 'theory',
+# 	        #'AsLnN': '1'    ##
+#     }
 
 #Correlate all signal samples
 # nuisances['QCD_scale_VBS'] = {
@@ -826,6 +826,6 @@ for n in nuisances.values():
 #nuisances = {k:v for k,v in nuisances.items() if "stat" in k or "btag" in k or "trig" in k or "eff_e" in k or "electronpt" in k or "eff_m" in k or "muonpt" in k or "JetPUID_sf" in k or "JER" in k or "MET" in k or "tagging" in k or "fatjetJM" in k in k or 'JESAbsolute' in k or 'JESAbsolute_2018' in k or 'JESBBEC1' in k or 'JESBBEC1_2018' in k or 'JESEC2' in k or 'JESEC2_2018' in k or 'JESFlavorQCD' in k or 'JESHF' in k or 'JESHF_2018' in k or 'JESRelativeBal' in k or 'JESRelativeSample_2018'} 
 # nuisances = {k:v for k,v in nuisances.items() if "pdf_weight" in k} 
 
-#nuisances = {k:v for k,v in nuisances.items() if }
+nuisances = {} #{k:v for k,v in nuisances.items() if "QCDscale" in k }
 print " _____________________ NUISANCES ______________________"
 print ' '.join(nuis['name'] for nname, nuis in nuisances.iteritems() if nname not in ('lumi', 'stat'))

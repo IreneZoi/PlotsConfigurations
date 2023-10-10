@@ -1,7 +1,7 @@
 # example of configuration file
 treeName= 'Events'
 
-tag = 'fit_v4.5_2016_split_aQGC_cT0'
+tag = 'fit_v4.5_2016_split_aQGC_cT0_eboliv2'
 direc = 'conf_fit_v4.5_aQGC'
 
 # used by mkShape to define output directory for root files
@@ -41,6 +41,6 @@ structureFile = direc+'/structure_split.py'
 # nuisances file for mkDatacards and for mkShape
 nuisancesFile = direc+'/nuisances_datacard_split.py'
 #nuisancesFile = direc+'/nuisances.py'
-#nuisancesFile = direc+'/nuisances_aQGC.py'
+# nuisancesFile = direc+'/nuisances_aQGC.py'
 
 customizeScript = direc + '/customize.py'

@@ -575,7 +575,7 @@ for ir in range(1,8):
 # qcdscale_variations = ['LHEScaleWeight[0]', 'LHEScaleWeight[1]', 'LHEScaleWeight[3]', 'LHEScaleWeight[Length$(LHEScaleWeight)-4]', 'LHEScaleWeight[Length$(LHEScaleWeight)-2]', 'LHEScaleWeight[Length$(LHEScaleWeight)-1]']
 import json, os
 # VBS_pdf_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.3/pdf_normcorr_VBS.json"))
-nuis_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.5/nuisance_incl_norm_factors_2016.json"))
+nuis_factors = json.load(open(os.getenv("CMSSW_BASE") + "/src/PlotsConfigurations/Configurations/VBSjjlnu/Full2016v7/conf_fit_v4.5_aQGC/nuisance_incl_norm_factors_2016.json"))
 
 for sample in mc :
     if sample in ["ggWW","VBS","VBS_dipoleRecoil","Wjets_boost"] + wjets_res_bins + VBS_samples + VV_samples : continue
@@ -661,7 +661,7 @@ nuisances['QCD_scale_Wjets'] = {
 ## PS nuisance taken from 2018 effect, split by sample
 
 # ### Propagated from 2018 effect, split by sample
-samples_PS = ['top','DY','VV','VVV','Vg','VgS','VBF-V_dipole','ggWW'] + wjets_bins #VBS_dipoleRecoil
+samples_PS = ['top','DY','VV','VVV','Vg','VgS','VBF-V_dipole','ggWW'] + wjets_bins + VBS_aQGC_samples #VBS_dipoleRecoil
 
 
 for sample in samples_PS:
@@ -686,22 +686,22 @@ for sample in samples_PS:
 
 
 
-nuisances['PS_ISR_VBS_WV']  = {
-                    'name'  : 'CMS_PS_ISR_VBS_WV',
-                    'kind'  : 'weight',
-                    'type'  : 'shape',
-                    'samples'  : {
-                        sample : ['PSWeight[2]', 'PSWeight[0]'] for sample in VBS_WV_samples
-                    }
-                }
-nuisances['PS_FSR_VBS_WV']  = {
-                'name'  : 'CMS_PS_FSR_VBS_WV',
-                'kind'  : 'weight',
-                'type'  : 'shape',
-                'samples'  : {
-                    sample :  ['PSWeight[3]', 'PSWeight[1]'] for sample in VBS_WV_samples
-                }
-            }
+# nuisances['PS_ISR_VBS_WV']  = {
+#                     'name'  : 'CMS_PS_ISR_VBS_WV',
+#                     'kind'  : 'weight',
+#                     'type'  : 'shape',
+#                     'samples'  : {
+#                         sample : ['PSWeight[2]', 'PSWeight[0]'] for sample in VBS_WV_samples
+#                     }
+#                 }
+# nuisances['PS_FSR_VBS_WV']  = {
+#                 'name'  : 'CMS_PS_FSR_VBS_WV',
+#                 'kind'  : 'weight',
+#                 'type'  : 'shape',
+#                 'samples'  : {
+#                     sample :  ['PSWeight[3]', 'PSWeight[1]'] for sample in VBS_WV_samples
+#                 }
+#             }
 
 nuisances['PS_ISR_VBS_ZV']  = {
                     'name'  : 'CMS_PS_ISR_VBS_ZV',

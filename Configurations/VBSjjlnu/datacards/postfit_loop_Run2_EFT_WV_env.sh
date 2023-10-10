@@ -16,21 +16,21 @@ PLOTVAR=$3 #Mww_binzv
 YEAR=$4
 SRVAR=$5
 DOFIT=$6
-LABEL=$7
+operator=$7
 
 
 
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_DNN
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_MwwDav
 #datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR} # eboliv2
-datacardDir=fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR}
+datacardDir=fullrun2_fit_v4.5.5_aQGC_${operator}_eboliv2_full_${SRVAR}
 # datacardDir=fullrun2_fit_v4.5.5_aQGC_cT0_DNN #MwwDav/ #vbsmjj/ #DNN/
 # datacardDir2=Full2081v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ #Mww20/
 #datacardDir2=Full2016v7/datacards_fit_v4.5_2016_split_aQGC_cT0/ #Mww20/
 # datacardDir2=Full2017v7/datacards_fit_v4.5_2017_split_aQGC_cTO_fixSM/
-datacardDir2=Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_cT0_eboliv2 # eboliv2
+datacardDir2=Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_${operator}_eboliv2 # eboliv2
 #datacardDir2=datacards_fit_v4.5_2018_split_aQGC_cT0_DNN/ #Mww20/ 
-operator=cT0
+
 basis=eboliv2
 fulloperator=$operator
 if [[ $basis -eq eboliv2 ]]
@@ -56,7 +56,7 @@ DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigur
 # source postfit_loop_Run2_EFT_WV_env.sh boostonly_run2 boost_wjetcr_ele DNNoutput_boost 2016
 # source postfit_loop_Run2_EFT_WV_env.sh boostonly_run2_rateparam2017 boost_wjetcr_ele DNNoutput_boost 2017
 # source postfit_loop_Run2_EFT_WV_env.sh run2_all boost_wjetcr_ele fit_bins_boost 2018 DNN false
-# source postfit_loop_Run2_EFT_WV_env.sh run2_all boost_wjetcr_ele deltaeta_vbs 2018 DNN false
+# source postfit_loop_Run2_EFT_WV_env.sh run2_all boost_wjetcr_ele deltaeta_vbs 2018 DNN false cT0
 
 
 LUMI=0
