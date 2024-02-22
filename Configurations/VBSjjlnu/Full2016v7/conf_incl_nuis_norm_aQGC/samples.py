@@ -592,6 +592,7 @@ samples['sm_lin_quad_cT2'] = {  'name':
 quadReweight_cT3 = "( 0.5* (1/(4.0)) * (1/(4.0)) * ( LHEReweightingWeight[1133] + LHEReweightingWeight[1053] - 2 * LHEReweightingWeight[1093]))"
 LinReweight_cT3 = "( 0.5* (1/(4.0)) * ( LHEReweightingWeight[1133] - LHEReweightingWeight[1053] ))"
 sm_cT3 = "( LHEReweightingWeight[1093] )"
+LinQuadReweight_cT3 = '('+LinReweight_cT3+' + '+quadReweight_cT3+')'
 SMLinQuadReweight_cT3 = "("+ sm_cT3 + " + " +LinQuadReweight_cT3+")"
 
 samples['quad_cT3']  = { 'name' :  
@@ -641,6 +642,7 @@ samples['sm_lin_quad_cT3'] = {  'name':
 quadReweight_cT4 = "( 0.5* (1/(4.0)) * (1/(4.0)) * ( LHEReweightingWeight[1214] + LHEReweightingWeight[1134] - 2 * LHEReweightingWeight[1174]))"
 LinReweight_cT4 = "( 0.5* (1/(4.0)) * ( LHEReweightingWeight[1214] - LHEReweightingWeight[1134] ))"
 sm_cT4 = "( LHEReweightingWeight[1174] )"
+LinQuadReweight_cT4 = '('+LinReweight_cT4+' + '+quadReweight_cT4+')'
 SMLinQuadReweight_cT4 = "("+ sm_cT4 + " + " +LinQuadReweight_cT4+")"
 
 samples['quad_cT4']  = { 'name' :  
