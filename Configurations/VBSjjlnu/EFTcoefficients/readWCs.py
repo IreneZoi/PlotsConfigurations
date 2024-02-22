@@ -58,6 +58,7 @@ def calculate_quadratic_function(filename,op,WC):
         print('quadReweight_{4} = "( 0.5* (1/({0})) * (1/({0})) * ( LHEReweightingWeight[{1}] + LHEReweightingWeight[{2}] - 2 * LHEReweightingWeight[{3}]))"'.format(WC,LHEwPLUS,LHEwMINUS,LHEwZERO,op.replace("F","c")))
         print('LinReweight_{4} = "( 0.5* (1/({0})) * ( LHEReweightingWeight[{1}] - LHEReweightingWeight[{2}] ))"'.format(WC,LHEwPLUS,LHEwMINUS,LHEwZERO,op.replace("F","c")))
         print('sm_{4} = "( LHEReweightingWeight[{3}] )"'.format(WC,LHEwPLUS,LHEwMINUS,LHEwZERO,op.replace("F","c")))
+        print('SMLinQuadReweight_{0} = "("+ sm_{0} + " + " +LinQuadReweight_{0}+")"'.format(op.replace("F","c")))
     else:
         print('wilson coefficient'+WC+'not found for the operator'+op)
 
