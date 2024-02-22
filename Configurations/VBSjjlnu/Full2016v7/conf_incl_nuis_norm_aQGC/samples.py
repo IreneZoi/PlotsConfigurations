@@ -566,7 +566,7 @@ samples['quad_cT2']  = { 'name' :
        'EventsPerJob' : 70000,
 }
 
-# # SM + lin + quad 
+# SM + lin + quad 
 samples['sm_lin_quad_cT2'] = {  'name':
             # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') #VBS_osWW
             # +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2') #VBS_osWW
@@ -587,8 +587,104 @@ samples['sm_lin_quad_cT2'] = {  'name':
    'EventsPerJob' : 70000,
 }
 
+############     -----------------              FT3          -----------------    ############
 
-# ############     -----------------              FT5          -----------------    ############
+quadReweight_cT3 = "( 0.5* (1/(4.0)) * (1/(4.0)) * ( LHEReweightingWeight[1133] + LHEReweightingWeight[1053] - 2 * LHEReweightingWeight[1093]))"
+LinReweight_cT3 = "( 0.5* (1/(4.0)) * ( LHEReweightingWeight[1133] - LHEReweightingWeight[1053] ))"
+sm_cT3 = "( LHEReweightingWeight[1093] )"
+SMLinQuadReweight_cT3 = "("+ sm_cT3 + " + " +LinQuadReweight_cT3+")"
+
+samples['quad_cT3']  = { 'name' :  
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
+                # nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2') + #VBS_osWW
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2') + #VBS_ssWW
+                # nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2') + #VBS_ssWW
+                # nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2')  + #VBS_WZjj
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2'),  #VBS_WZjj
+                
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2_official')  #VBS_WZjj
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2_official'),  #VBS_WZjj
+ 
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch + '*' + quadReweight_cT3,
+       'FilesPerJob' :5,
+       'EventsPerJob' : 70000,
+}
+
+# SM + lin + quad 
+samples['sm_lin_quad_cT3'] = {  'name':
+            # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') #VBS_osWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2') #VBS_osWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2') #VBS_ssWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2') #VBS_ssWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2')  #VBS_WZjj
+            # +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2')  #VBS_WZjj
+            
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2_official')  #VBS_WZjj
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2_official'),  #VBS_WZjj
+ 
+   'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*'+SMLinQuadReweight_cT3,
+   'FilesPerJob': 10,
+   'EventsPerJob' : 70000,
+}
+
+
+############     -----------------              FT4          -----------------    ############
+
+quadReweight_cT4 = "( 0.5* (1/(4.0)) * (1/(4.0)) * ( LHEReweightingWeight[1214] + LHEReweightingWeight[1134] - 2 * LHEReweightingWeight[1174]))"
+LinReweight_cT4 = "( 0.5* (1/(4.0)) * ( LHEReweightingWeight[1214] - LHEReweightingWeight[1134] ))"
+sm_cT4 = "( LHEReweightingWeight[1174] )"
+SMLinQuadReweight_cT4 = "("+ sm_cT4 + " + " +LinQuadReweight_cT4+")"
+
+samples['quad_cT4']  = { 'name' :  
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') + #VBS_osWW
+                # nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2') + #VBS_osWW
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2') + #VBS_ssWW
+                # nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2') + #VBS_ssWW
+                # nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2')  + #VBS_WZjj
+                # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2'),  #VBS_WZjj
+                
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2_official')  #VBS_WZjj
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2_official'),  #VBS_WZjj
+ 
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch + '*' + quadReweight_cT4,
+       'FilesPerJob' :5,
+       'EventsPerJob' : 70000,
+}
+
+# SM + lin + quad 
+samples['sm_lin_quad_cT4'] = {  'name':
+            # nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2') #VBS_osWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2') #VBS_osWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2') #VBS_ssWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2') #VBS_ssWW
+            # +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2')  #VBS_WZjj
+            # +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2')  #VBS_WZjj
+            
+            nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2_official') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2_official') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2_official')  #VBS_WZjj
+            +nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2_official'),  #VBS_WZjj
+ 
+   'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch+'*'+SMLinQuadReweight_cT4,
+   'FilesPerJob': 10,
+   'EventsPerJob' : 70000,
+}
+
+############     -----------------              FT5          -----------------    ############
 
 quadReweight_cT5 = "( 0.5* (1/(8)) * (1/(8)) * ( LHEReweightingWeight[1295] + LHEReweightingWeight[1215] - 2 * LHEReweightingWeight[1255]))"
 LinReweight_cT5 = "( 0.5* (1/(8)) * ( LHEReweightingWeight[1295] - LHEReweightingWeight[1215] ))"
