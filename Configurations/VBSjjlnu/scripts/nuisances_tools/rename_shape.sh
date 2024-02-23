@@ -1,0 +1,27 @@
+#!/bin/bash
+years=(2016)
+#samples=(quad_cT0 sm_lin_quad_cT0 sm)
+# samples=(sm_dipole)
+samples=(VV_ZZ VV_osWW VV_ssWW VV_WZjj VV_WZll)
+
+
+
+for year in ${years[*]}; do
+    echo " plotting ${year}"
+    for sample in ${samples[*]}; do
+        echo " plotting ${sample}"        
+
+        python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0/plots_fit_v4.5_${year}_split_nosignals_withPSnuisVBF-V_withPDFnuis_withQGL.root --shape-name QCDscale_VV -s  ${sample} --rename QCDscale_QCD_VV
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_official/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_official_withBKG_GiacomoTest2_addingNuis.root --shape-name QCDscale_VV -s  ${sample} --rename QCDscale_QCD_VV
+
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV0Var -s ${sample} --rename QCDscale_EWK_WVV0Var
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV1Var -s ${sample} --rename QCDscale_EWK_WVV1Var
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV2Var -s ${sample} --rename QCDscale_EWK_WVV2Var
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV3Var -s ${sample} --rename QCDscale_EWK_WVV3Var
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV4Var -s ${sample} --rename QCDscale_EWK_WVV4Var
+        # python rename_shape_root.py  -i /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_${year}_split_aQGC_cT0_eboliv2/plots_fit_v4.5_${year}_split_aQGC_cT0_eboliv2_withBKG.root --shape-name QCDscale_signalV5Var -s ${sample} --rename QCDscale_EWK_WVV5Var
+
+    done
+
+done
+
