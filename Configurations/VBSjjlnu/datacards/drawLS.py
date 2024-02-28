@@ -30,8 +30,9 @@ n_data = 0
 _file1 = ROOT.TFile.Open(str(sys.argv[1]), "READ")
 operator = str(sys.argv[2])                                 # cT0
 year = str(sys.argv[3])                                     # Run2
-region = str(sys.argv[4])                                   # combined_boosted
-
+region = str(sys.argv[4])# combined_boosted
+var = str(sys.argv[5])
+isEboli = str(sys.argv[6])
 
 limit = _file1.Get("limit")
 
@@ -275,11 +276,12 @@ print " (observed) data at minimum:   ", data_min_x, "\n"
 
 #   print " significance data at 0:   ", sqrt(graphScanData.Eval(0)), "\n"
 #   print " significance MC   at 0:   ", sqrt(graphScan    .Eval(0)), "\n"
-  
-  
-cc.SaveAs("LS_" + str(operator) + ".png")
+fulloperator =   str(operator)
+if (isEboli == "true" ): fulloperator = fulloperator+"_eboliv2"
+pngName = "CIplots/LS_" + str(fulloperator) + "_" +str(region)+ "_" + str(year) + "_" + str(var)
+cc.SaveAs( pngName+ ".png")
 
-outfile = ROOT.TFile.Open(operator+ "_" +str(region)+ ".root" ,"RECREATE")
+outfile = ROOT.TFile.Open("CIplots/root/"+fulloperator+ "_" +str(region)+ ".root" ,"RECREATE")
 outfile.cd()
 line1.Write()
 line2.Write()
@@ -292,14 +294,14 @@ outfile.Close()
 s2down=0
 s2up=0
 
-outfileR = ROOT.TFile.Open(operator+ "_" +str(region)+ ".root" ,"READ")
+outfileR = ROOT.TFile.Open("CIplots/root/"+fulloperator+ "_" +str(region)+ ".root" ,"READ")
 gr = outfileR.Get("Graph;1")
 func = ROOT.TF1("func", myfunc, -1000, 1000, 0)
 s2down=func.GetX(3.84,-1000,0)
 s2up=func.GetX(3.84,0,1000)
 print " -2sigma (expected) :", s2down, "\n"
 print " +2sigma (expected) :", s2up, "\n"
-CIs=operator+"    "+year+"    "+region+"    "+str(s2down)+"    "+str(s2up)
+CIs=fulloperator+"    "+year+"    "+region+"    "+str(s2down)+"    "+str(s2up)
 print CIs
 gr.Clear()
 outfileR.Close()

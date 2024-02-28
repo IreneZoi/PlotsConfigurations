@@ -14,23 +14,40 @@
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_DNN/run2_boost/combined_run2_boost_postfitRateParam2017.txt cT0 boost_DNN_rateparam2017 0.04 Run2
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_Mww/run2_boost/combined_run2_boost.txt cT0 boost_Mww 0.04 Run2
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_full_mjj_vbs/run2_all/combined_run2_all.txt cT0 all_mjj_vbs 1 Run2
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_DNN/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 all_DNN 0.04 2018
+    ### source eft.sh 2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_MwwRebinned/2018_all_split_Dipole_v4.5/combined_2018_all_split_Dipole_v4.5.txt cT0 all_MwwRebinned 0.04 2018 Mww_rebinned_GiacomoTest true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official_JETuncShape_Mww/run2_boost/combined_run2_boost.txt cT0 all_Mww_JETuncShape 0.04 Run2 Mww_JETuncShape true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official/run2_boost/combined_run2_boost.txt cT0 all_Mww 0.04 Run2 Mww true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official_testSM_Mww_binzv/run2_boost/combined_run2_boost.txt cT0 boost_Mww_binzv_testSM 0.2 Run2 Mww_binzv true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official_allButFj_Mww_binzv/2017_boost/combined_2017_boost.txt cT0 boost_Mww_binzv_allButFj 0.2 2017 Mww_binzv true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT1_eboliv2_official_noVVandVVVjetunc_Mww_binzv/2017_boost/combined_2017_boost.txt cT1 boost_Mww_binzv 0.2 2017 Mww_binzv true
+
 
 datacard=$1
 operator=$2
 region=$3
 range=$4
 year=$5
+var=$6
+isEboli=$7
 
 #step 0
 #rm -rf model_test.root
    # create rootfit workspace from datacard
 ulimit -s unlimited
 
+if [ -f "${datacard}" ]; then
+  echo "Found ${datacard}"
+else
+   echo "The file ${datacard} does not exist!!"
+   exit 1
+fi
+
 #step1
 text2workspace.py  "${datacard}" \
    -v 2 \
    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
-   -o model_test_${operator}_${region}.root \
+   -o models/model_test_${operator}_${region}.root \
    --X-allow-no-signal \
    --PO  addDim8 \
    --PO eftOperators=${operator}  #cT0,cT1,cT2,cT5,cT6,cT7,cT8,cT9
@@ -65,7 +82,7 @@ text2workspace.py  "${datacard}" \
    # ,k_cT1,k_cT5,k_cT6,k_cT7,k_cT8,k_cT9,  \
 
    #step 2
-combine -M MultiDimFit model_test_${operator}_${region}.root \
+combine -M MultiDimFit models/model_test_${operator}_${region}.root \
    -m 125 -t -1 \
    --redefineSignalPOIs k_${operator} \
    --freezeParameters r,k_${operator} \
@@ -73,7 +90,7 @@ combine -M MultiDimFit model_test_${operator}_${region}.root \
    --setParameterRanges k_${operator}=-${range},${range} \
    --verbose 2 \
    -n ${2}_${3} \
-   --algo=grid --points 500 --robustFit=1 \
+   --algo=grid --points 50 --robustFit=1 \
    --alignEdges=1 --setRobustFitTolerance=0.1 \
    --cminDefaultMinimizerTolerance 0.1 --cminDefaultMinimizerStrategy=1 \
    --X-rtd=MINIMIZER_analytic --X-rtd MINIMIZER_MaxCalls=99999999999999 \
@@ -91,9 +108,9 @@ combine -M MultiDimFit model_test_${operator}_${region}.root \
 
    # step 3
 python drawLS.py \
-        higgsCombine${2}_${3}.MultiDimFit.mH125.root k_${operator} ${year} ${region}
+        higgsCombine${2}_${3}.MultiDimFit.mH125.root k_${operator} ${year} ${region} ${var} ${isEboli}
 
-
+mv higgsCombine${2}_${3}.MultiDimFit.mH125.root CIplots/combine/
     ##3. backup the plot to webpage
    # step 4
    # outdir=${year}_${region}
