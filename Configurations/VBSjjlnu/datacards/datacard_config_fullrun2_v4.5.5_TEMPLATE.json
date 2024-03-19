@@ -1,0 +1,489 @@
+[
+  { 
+        "datacard_name": "run2_all",
+        "folders": [
+          {
+            "basedir": "Full2016v7/{DATACARD2016}/", 
+            "name": 2016
+          },
+          {
+            "basedir": "Full2017v7/{DATACARD2017}/", 
+            "name": 2017
+          },
+          {
+            "basedir": "Full2018v7/{DATACARD2018}/", 
+            "name": 2018
+          }
+        ], 
+        "phase_spaces": [
+          {
+            "name": "res_sig_mu",
+            "var": "{RES_VAR}", 
+            "cut": "res_sig_mu"
+          },
+          {
+              "name": "res_sig_ele",
+              "var": "{RES_VAR}", 
+              "cut": "res_sig_ele"
+          },
+          {
+              "name": "boost_sig_mu",
+              "var": "{RES_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+
+          {
+            "name": "res_wjet_mu",
+            "var": "fit_bins_res", 
+            "cut": "res_wjetcr_mu"
+          },
+          {
+              "name": "res_wjet_ele",
+              "var": "fit_bins_res", 
+              "cut": "res_wjetcr_ele"
+          },
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          },
+          
+
+          {
+            "name": "res_top_mu",
+            "var": "events", 
+            "cut": "res_topcr_mu"
+          },
+          { 
+            "name": "res_top_ele",
+            "var": "events", 
+            "cut": "res_topcr_ele"
+          },
+          {
+            "name": "boost_top_mu",
+            "var": "events", 
+            "cut": "boost_topcr_mu"
+          },
+          { 
+            "name": "boost_top_ele",
+            "var": "events", 
+            "cut": "boost_topcr_ele"
+          }
+        ]
+      },
+      { 
+        "datacard_name": "run2_boost",
+        "folders": [
+          {
+            "basedir": "Full2016v7/{DATACARD2016}/", 
+            "name": 2016
+          },
+          {
+            "basedir": "Full2017v7/{DATACARD2017}/", 
+            "name": 2017
+          },
+          {
+            "basedir": "Full2018v7/{DATACARD2018}/", 
+            "name": 2018
+          }
+        ], 
+        "phase_spaces": [
+          {
+              "name": "boost_sig_mu",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          },
+          
+          {
+            "name": "boost_top_mu",
+            "var": "events", 
+            "cut": "boost_topcr_mu"
+          },
+          { 
+            "name": "boost_top_ele",
+            "var": "events", 
+            "cut": "boost_topcr_ele"
+          }
+        ]
+      },
+      { 
+        "datacard_name": "run2_boost_notop",
+        "folders": [
+          {
+            "basedir": "Full2016v7/{DATACARD2016}/", 
+            "name": 2016
+          },
+          {
+            "basedir": "Full2017v7/{DATACARD2017}/", 
+            "name": 2017
+          },
+          {
+            "basedir": "Full2018v7/{DATACARD2018}/", 
+            "name": 2018
+          }
+        ], 
+        "phase_spaces": [
+          {
+              "name": "boost_sig_mu",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          }
+        ]
+      },  
+{ 
+  "datacard_name": "2016_boost",
+  "folders": [
+  {
+        "basedir": "Full2016v7/{DATACARD2016}/", 
+        "name": 2016
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    },
+      {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      },
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }, 
+      {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      }
+    ]
+    
+  },
+  { 
+  "datacard_name": "2017_boost",
+  "folders": [
+  {
+        "basedir": "Full2017v7/{DATACARD2017}/", 
+        "name": 2017
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    },
+      {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      },
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }, 
+      {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      }
+    ]
+  },
+  { 
+  "datacard_name": "2018_boost",
+  "folders": [
+  {
+        "basedir": "Full2018v7/{DATACARD2018}/", 
+        "name": 2018
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    },
+      {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+      },
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }, 
+      {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    },
+      {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+      }
+    ] 
+  },
+  { 
+  "datacard_name": "2018_boost_sigonly",
+  "folders": [
+  {
+        "basedir": "Full2018v7/{DATACARD2018}/", 
+        "name": 2018
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }
+    ] 
+  },
+  { 
+  "datacard_name": "2016_boost_sigonly",
+  "folders": [
+  {
+        "basedir": "Full2016v7/{DATACARD2016}/", 
+        "name": 2016
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }
+    ] 
+  },
+  { 
+  "datacard_name": "2017_boost_sigonly",
+  "folders": [
+  {
+        "basedir": "Full2017v7/{DATACARD2017}/", 
+        "name": 2017
+  }
+  ], 
+    "phase_spaces": [
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_ele", 
+        "name": "boost_sig_ele"
+      }, 
+      {
+        "var": "{BOOST_VAR}", 
+        "cut": "boost_sig_mu", 
+        "name": "boost_sig_mu"
+      }
+    ] 
+  },
+  { 
+  "datacard_name": "2018_boost_wjetsonly",
+  "folders": [
+  {
+        "basedir": "Full2018v7/{DATACARD2018}/", 
+        "name": 2018
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    }, 
+    {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    }
+    ] 
+  },
+  { 
+  "datacard_name": "2018_boost_toponly",
+  "folders": [
+  {
+        "basedir": "Full2018v7/{DATACARD2018}/", 
+        "name": 2018
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+    },
+    {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+    }
+    ] 
+  },
+  { 
+  "datacard_name": "2017_boost_wjetsonly",
+  "folders": [
+  {
+        "basedir": "Full2017v7/{DATACARD2017}/", 
+        "name": 2017
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    }, 
+    {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    }
+    ] 
+  },
+  { 
+  "datacard_name": "2017_boost_toponly",
+  "folders": [
+  {
+        "basedir": "Full2017v7/{DATACARD2017}/", 
+        "name": 2017
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+    },
+    {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+    }
+    ] 
+  },
+  { 
+  "datacard_name": "2016_boost_wjetsonly",
+  "folders": [
+  {
+        "basedir": "Full2016v7/{DATACARD2016}/", 
+        "name": 2016
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_wjet_ele",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_ele"
+    }, 
+    {
+        "name": "boost_wjet_mu",
+        "var": "fit_bins_boost", 
+        "cut": "boost_wjetcr_mu"
+    }
+    ] 
+  },
+  { 
+  "datacard_name": "2018_boost_toponly",
+  "folders": [
+  {
+        "basedir": "Full2018v7/{DATACARD2018}/", 
+        "name": 2018
+  }
+  ], 
+    "phase_spaces": [
+    {
+        "name": "boost_top_ele",
+        "var": "events", 
+        "cut": "boost_topcr_ele"
+    },
+    {
+        "name": "boost_top_mu",
+        "var": "events", 
+        "cut": "boost_topcr_mu"
+    }
+    ] 
+  }       
+]
