@@ -611,99 +611,18 @@ samples['VV_ZZ']  = { 'name' :
 # addSampleWeight(samples,'sm','WpToLNu_ZTo2J',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ############     ----------------- sm VBS ewk with dipole recoil -----------------    ############
-samples['sm']  = { 'name' :  
-               nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',) + 
-               nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :1,
-       'EventsPerJob' : 7000000,
-}
-# addSampleWeight(samples,'sm_dipole','WpToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
-# addSampleWeight(samples,'sm_dipole','WpTo2J_WmToLNu_dipoleRecoil',      xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
-# addSampleWeight(samples,'sm_dipole','WpToLNu_WpTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J ) #VBS_ssWW
-# addSampleWeight(samples,'sm_dipole','WmToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
-# addSampleWeight(samples,'sm_dipole','WmToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J ) #VBS_WZjj
-# addSampleWeight(samples,'sm_dipole','WpToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
+# samples['sm']  = { 'name' :  
+#                nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',) + 
+#                nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
+#                nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
+#                nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
+#                nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
+#                nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
+#        'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+#        'FilesPerJob' :1,
+#        'EventsPerJob' : 7000000,
+# }
 
-#### ----- SM dipole  single components
-samples['sm_dipole_WmToLNu_ZTo2J']  = { 'name' :  
-               nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-
-samples['sm_dipole_WpToLNu_ZTo2J']  = { 'name' :  
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',),
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-
-samples['sm_dipole_WpToLNu_WpTo2J']  = { 'name' :  
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil'),
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-samples['sm_dipole_WmToLNu_WmTo2J']  = { 'name' :  
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil'),
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-samples['sm_dipole_WpToLNu_WmTo2J']  = { 'name' :  
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil'),
-               # nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-samples['sm_dipole_WpTo2J_WmToLNu']  = { 'name' :  
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_ZTo2J_dipoleRecoil',),  
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_ZTo2J_dipoleRecoil',) +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WpTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WmToLNu_WmTo2J_dipoleRecoil') +
-               # nanoGetSampleFiles(directory_signal,'WpToLNu_WmTo2J_dipoleRecoil') +
-               nanoGetSampleFiles(directory_signal,'WpTo2J_WmToLNu_dipoleRecoil') ,
-       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-       'FilesPerJob' :15,
-       'EventsPerJob' : 70000,
-}
-# addSampleWeight(samples,'sm_dipole_WpToLNu_WmTo2J','WpToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WmTo2J+' / '+xsweight_mcm_WpToLNu_WmTo2J ) #VBS_osWW
-# addSampleWeight(samples,'sm_dipole_WpTo2J_WmToLNu','WpTo2J_WmToLNu_dipoleRecoil',      xsweight_new_WpTo2J_WmToLNu+' / '+xsweight_mcm_WpTo2J_WmToLNu)  #VBS_osWW
-# addSampleWeight(samples,'sm_dipole_WpToLNu_WpTo2J','WpToLNu_WpTo2J_dipoleRecoil',      xsweight_new_WpToLNu_WpTo2J+' / '+xsweight_mcm_WpToLNu_WpTo2J ) #VBS_ssWW
-# addSampleWeight(samples,'sm_dipole_WmToLNu_WmTo2J','WmToLNu_WmTo2J_dipoleRecoil',      xsweight_new_WmToLNu_WmTo2J+' / '+xsweight_mcm_WmToLNu_WmTo2J)  #VBS_ssWW
-addSampleWeight(samples,'sm_dipole_WmToLNu_ZTo2J','WmToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #  * '+ xsweight_new_WmToLNu_ZTo2J+' / '+xsweight_mcm_WmToLNu_ZTo2J ) #VBS_WZjj
-addSampleWeight(samples,'sm_dipole_WpToLNu_ZTo2J','WpToLNu_ZTo2J_dipoleRecoil',      '(Sum$(abs(GenPart_pdgId)==6)==0)') #  * '+ xsweight_new_WpToLNu_ZTo2J+' / '+xsweight_mcm_WpToLNu_ZTo2J)  #VBS_WZjj
 
 ##############################################################################################
 #########      aQGC samples !!!!!!!!!!!!!
@@ -727,6 +646,20 @@ LinReweight_cT0 = "( 0.5* (1/(0.1)) * ( LHEReweightingWeight[852] - LHEReweighti
 sm_cT0 = "( LHEReweightingWeight[850] )"
 LinQuadReweight_cT0 = '('+LinReweight_cT0+' + '+quadReweight_cT0+')'
 SMLinQuadReweight_cT0 = '('+ sm_cT0+' + '+LinQuadReweight_cT0+')' 
+
+#default coupling, quadratic EFT
+samples['sm']  = { 'name' :  
+                nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WmTo2J_aQGC_eboliv2_official') + #VBS_osWW
+                nanoGetSampleFiles(directory_signalIZ,'WpTo2J_WmToLNu_aQGC_eboliv2_official') + #VBS_osWW
+                nanoGetSampleFiles(directory_signalIZ,'WpToLNu_WpTo2J_aQGC_eboliv2_official') + #VBS_ssWW
+                nanoGetSampleFiles(directory_signalIZ,'WmToLNu_WmTo2J_aQGC_eboliv2_official') + #VBS_ssWW
+                nanoGetSampleFiles(directory_signalIZ,'WmToLNu_ZTo2J_aQGC_eboliv2_official')  + #VBS_WZjj
+                nanoGetSampleFiles(directory_signalIZ,'WpToLNu_ZTo2J_aQGC_eboliv2_official'),   #VBS_WZjj
+
+       'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch + '*' + sm_cT0,
+       'FilesPerJob' :5,
+       'EventsPerJob' : 70000,
+}
 
 #default coupling, quadratic EFT
 samples['quad_cT0']  = { 'name' :  
@@ -1640,7 +1573,7 @@ VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
 #VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
 signal_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
-VBS_aQGC_samples = ["quad_cT1","sm_lin_quad_cT1","sm"]
+VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2","sm"]
 # sm_samples = ["sm_FT0_WmToLNu_ZTo2J", "sm_FT0_WpToLNu_ZTo2J","sm_FT0_WpToLNu_WpTo2J","sm_FT0_WmToLNu_WmTo2J","sm_FT0_WpToLNu_WmTo2J","sm_FT0_WpTo2J_WmToLNu","sm_dipole_WmToLNu_ZTo2J", "sm_dipole_WpToLNu_ZTo2J","sm_dipole_WpToLNu_WpTo2J","sm_dipole_WmToLNu_WmTo2J","sm_dipole_WpToLNu_WmTo2J","sm_dipole_WpTo2J_WmToLNu"]
 #samples = {key:v for key,v in samples.items() if 'quad_cT0' == key} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
 #samples = {key:v for key,v in samples.items() if key in VBS_samples+VV_samples+VBS_aQGC_samples} #, "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]}
@@ -1648,16 +1581,17 @@ VBS_aQGC_samples = ["quad_cT1","sm_lin_quad_cT1","sm"]
 
 ################################################
 # ---------->        to make datacard you need to skip VBS samples and other operators!!
-operators_to_exclude = ["cT0", "cT2", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
+operators_to_exclude = ["cT0", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
 full_operators_name_to_exclude = []
 for op in operators_to_exclude:
    full_operators_name_to_exclude.append("quad_"+op)
    full_operators_name_to_exclude.append("sm_lin_quad_"+op)
 # full_operators_name_to_exclude.append("sm_dipole")
 # test_weights=['sm_all','sm_FT0','sm_weights','sm_noweights']
-# samples = {   key:v for key,v in samples.items() if key  == 'quad_cT0' or key == "sm_lin_quad_cT0"}
+# samples = {   key:v for key,v in samples.items() if key  == 'DY'}
 # samples = {   key:v for key,v in samples.items() if key in test_weights}
-# samples = {   key:v for key,v in samples.items() if key not in VBS_samples and key not in full_operators_name_to_exclude and key not in sm_samples and key != 'sm'} #'cT2' not in key and 'cT1' not in key}
+# samples = {   key:v for key,v in samples.items() if key == "sm_lin_quad_cT0"}
+# samples = {   key:v for key,v in samples.items() if key not in VBS_samples and key not in full_operators_name_to_exclude} #'cT2' not in key and 'cT1' not in key}
 # samples = {   key:v for key,v in samples.items() if key == 'sm_dipole'}
 samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
 # samples = {   key:v for key,v in samples.items() if key in sm_samples }
