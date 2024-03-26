@@ -130,11 +130,20 @@ nuisances['electronpt']  = {
                 'type'  : 'shape',
                 'mapUp': 'ElepTup',
                 'mapDown': 'ElepTdo',
-                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+ wjets_all_bins),
+                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+ wjets_all_bins +VBS_aQGC_all_samples),
                 'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_ElepTup',
                 'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_ElepTdo',
 }
-
+nuisances['electronpt']  = {
+                'name'  : 'CMS_scale_e_2018',
+                'kind'  : 'suffix',
+                'type'  : 'shape',
+                'mapUp': 'ElepTup',
+                'mapDown': 'ElepTdo',
+                'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_ElepTup',
+                'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_ElepTdo',
+}
 
 for wjbin in wjets_all_bins:
     nuisances['electronpt_'+wjbin]  = {
@@ -165,11 +174,21 @@ nuisances['muonpt']  = {
                 'type'  : 'shape',
                 'mapUp': 'MupTup',
                 'mapDown': 'MupTdo',
-                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins),
+                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                 'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_MupTup',
                 'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_MupTdo',
 }
 
+nuisances['muonpt']  = {
+                'name'  : 'CMS_scale_m_2018',
+                'kind'  : 'suffix',
+                'type'  : 'shape',
+                'mapUp': 'MupTup',
+                'mapDown': 'MupTdo',
+                'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_MupTup',
+                'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_MupTdo',
+}
 for wjbin in wjets_all_bins:
     nuisances['muonpt_'+wjbin]  = {
                 'name'  : 'CMS_scale_m_2018',
@@ -207,9 +226,22 @@ for js in jes_systs:
                     'type': 'shape',
                     'mapUp': js+'up',
                     'mapDown': js+'do',
-                    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins),
+                    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                     'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_JESup',
                     'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_JESdo',
+                    'AsLnN'      : '1',
+                    
+    }
+    
+    nuisances[js]  = {
+                    'name': 'CMS_j_scale_'+js,
+                    'kind': 'suffix',
+                    'type': 'shape',
+                    'mapUp': js+'up',
+                    'mapDown': js+'do',
+                    'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                    'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_JESup',
+                    'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_JESdo',
                     'AsLnN'      : '1',
                     
     }
@@ -221,9 +253,21 @@ for js in jes_systs:
                         'type': 'shape',
                         'mapUp': 'fatjet' + js+'up',
                         'mapDown': 'fatjet' + js+'do',
-                        'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins),
+                        'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                         'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJESup',
                         'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJESdo',
+                        'AsLnN'      : '1',
+    }
+    
+    nuisances['fatjet' +js]  = {
+                    'name': 'CMS_fj_scale_'+js,
+                        'kind': 'suffix',
+                        'type': 'shape',
+                        'mapUp': 'fatjet' + js+'up',
+                        'mapDown': 'fatjet' + js+'do',
+                        'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                        'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJESup',
+                        'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJESdo',
                         'AsLnN'      : '1',
     }
 
@@ -235,9 +279,21 @@ nuisances['JER'] = {
                 'type': 'shape',
                 'mapUp': 'JERup',
                 'mapDown': 'JERdo',
-                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins),
+                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                 'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_JERup',
                 'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_JERdo',
+                'AsLnN'      : '1',
+}
+
+nuisances['JER'] = {
+                'name': 'CMS_res_j_2018',
+                'kind': 'suffix',
+                'type': 'shape',
+                'mapUp': 'JERup',
+                'mapDown': 'JERdo',
+                'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_JERup',
+                'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_JERdo',
                 'AsLnN'      : '1',
 }
 
@@ -247,9 +303,21 @@ nuisances['fatjetJER'] = {
                 'type': 'shape',
                 'mapUp': 'fatjetJERup',
                 'mapDown': 'fatjetJERdo',
-                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "ggWW"]+wjets_all_bins),
+                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                 'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJERup',
                 'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJERdo',
+                'AsLnN'      : '1',
+}
+
+nuisances['fatjetJER'] = {
+                'name': 'CMS_fatjet_res_2018',
+                'kind': 'suffix',
+                'type': 'shape',
+                'mapUp': 'fatjetJERup',
+                'mapDown': 'fatjetJERdo',
+                'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJERup',
+                'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJERdo',
                 'AsLnN'      : '1',
 }
 
@@ -338,9 +406,20 @@ nuisances['MET']  = {
                 'type'  : 'shape',
                 'mapUp':   'METup',
                 'mapDown': 'METdo', 
-                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins),
+                'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ['Vg', 'VgS', "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
                 'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_METup',
                 'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_METdo',
+                'AsLnN'      : '1',
+}
+nuisances['MET']  = {
+                'name'  : 'CMS_scale_met_2018',
+                'kind'  : 'suffix',
+                'type'  : 'shape',
+                'mapUp':   'METup',
+                'mapDown': 'METdo', 
+                'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+                'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_METup',
+                'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_METdo',
                 'AsLnN'      : '1',
 }
 
@@ -384,9 +463,22 @@ nuisances['fatjetJMR']  = {
     'type': 'shape',
     'mapUp': 'fatjetJMRup',
     'mapDown': 'fatjetJMRdo',
-    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "ggWW"]+wjets_all_bins),
+    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "ggWW"]+wjets_all_bins+VBS_aQGC_all_samples),
     'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJMRup',
     'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJMRdo',
+    'AsLnN'      : '1',
+
+}
+
+nuisances['fatjetJMR']  = {
+    'name': 'CMS_fatjet_jmr_2018',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'fatjetJMRup',
+    'mapDown': 'fatjetJMRdo',
+    'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+    'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJMRup',
+    'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJMRdo',
     'AsLnN'      : '1',
 
 }
@@ -397,9 +489,21 @@ nuisances['fatjetJMS']  = {
     'type': 'shape',
     'mapUp': 'fatjetJMSup',
     'mapDown': 'fatjetJMSdo',
-    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "VV", "ggWW"]+wjets_all_bins + VV_samples),
+    'samples': dict((skey, ['1.','1.']) for skey in mc if skey not in ["Vg","VgS", "VV", "ggWW"]+wjets_all_bins + VV_samples+ VBS_aQGC_all_samples),
     'folderUp' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJMSup',
     'folderDown' : 'root://eoscms.cern.ch/'+directory_mc+'_fatjetJMSdo',
+    'AsLnN'      : '1',
+}
+
+nuisances['fatjetJMS']  = {
+    'name': 'CMS_fatjet_jms_2018',
+    'kind': 'suffix',
+    'type': 'shape',
+    'mapUp': 'fatjetJMSup',
+    'mapDown': 'fatjetJMSdo',
+    'samples': dict((skey, ['1.','1.']) for skey in VBS_aQGC_all_samples),
+    'folderUp' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJMSup',
+    'folderDown' : 'root://eoscms.cern.ch/'+directory_signalIZ+'_fatjetJMSdo',
     'AsLnN'      : '1',
 }
 
@@ -506,7 +610,7 @@ nuisances['PS_FSR']  = {
 
 ##############
 
-nuisances['PU_wjets']  = {
+nuisances['PU']  = {
                 'name'  : 'CMS_PU_2018',
                 'kind'  : 'weight',
                 'type'  : 'shape',
