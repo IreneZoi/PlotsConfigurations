@@ -20,3 +20,6 @@ datacards/Postfit_*/
 PostFitPlots/DavidePostfit/
 datacards/*_combined.py
 *_combined.py
+datacard_config_*
+../VBS_UL_semilep/
+../../.vscode/
