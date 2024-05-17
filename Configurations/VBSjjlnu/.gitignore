@@ -18,3 +18,5 @@ script_preparation_hadd.sh
 *.html
 datacards/Postfit_*/
 PostFitPlots/DavidePostfit/
+datacards/*_combined.py
+*_combined.py
