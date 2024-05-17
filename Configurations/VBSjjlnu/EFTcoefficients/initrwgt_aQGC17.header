@@ -1,0 +1,1793 @@
+<weightgroup name="Central scale variation" combine="envelope">
+<weight id="1" MUR="1.0" MUF="1.0" PDF="320900" >  </weight>
+<weight id="2" MUR="0.5" MUF="0.5" PDF="320900" > MUR=0.5 MUF=0.5  </weight>
+<weight id="3" MUR="0.5" MUF="0.5" DYN_SCALE="1" PDF="320900" > MUR=0.5 MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight id="4" MUR="0.5" MUF="0.5" DYN_SCALE="2" PDF="320900" > MUR=0.5 MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight id="5" MUR="0.5" MUF="0.5" DYN_SCALE="3" PDF="320900" > MUR=0.5 MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight id="6" MUR="0.5" MUF="0.5" DYN_SCALE="4" PDF="320900" > MUR=0.5 MUF=0.5 dyn_scale_choice=sqrts  </weight>
+<weight id="7" MUR="0.5" MUF="1.0" PDF="320900" > MUR=0.5  </weight>
+<weight id="8" MUR="0.5" MUF="1.0" DYN_SCALE="1" PDF="320900" > MUR=0.5 dyn_scale_choice=sum pt  </weight>
+<weight id="9" MUR="0.5" MUF="1.0" DYN_SCALE="2" PDF="320900" > MUR=0.5 dyn_scale_choice=HT  </weight>
+<weight id="10" MUR="0.5" MUF="1.0" DYN_SCALE="3" PDF="320900" > MUR=0.5 dyn_scale_choice=HT/2  </weight>
+<weight id="11" MUR="0.5" MUF="1.0" DYN_SCALE="4" PDF="320900" > MUR=0.5 dyn_scale_choice=sqrts  </weight>
+<weight id="12" MUR="0.5" MUF="2.0" PDF="320900" > MUR=0.5 MUF=2.0  </weight>
+<weight id="13" MUR="0.5" MUF="2.0" DYN_SCALE="1" PDF="320900" > MUR=0.5 MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight id="14" MUR="0.5" MUF="2.0" DYN_SCALE="2" PDF="320900" > MUR=0.5 MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight id="15" MUR="0.5" MUF="2.0" DYN_SCALE="3" PDF="320900" > MUR=0.5 MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight id="16" MUR="0.5" MUF="2.0" DYN_SCALE="4" PDF="320900" > MUR=0.5 MUF=2.0 dyn_scale_choice=sqrts  </weight>
+<weight id="17" MUR="1.0" MUF="0.5" PDF="320900" > MUF=0.5  </weight>
+<weight id="18" MUR="1.0" MUF="0.5" DYN_SCALE="1" PDF="320900" > MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight id="19" MUR="1.0" MUF="0.5" DYN_SCALE="2" PDF="320900" > MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight id="20" MUR="1.0" MUF="0.5" DYN_SCALE="3" PDF="320900" > MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight id="21" MUR="1.0" MUF="0.5" DYN_SCALE="4" PDF="320900" > MUF=0.5 dyn_scale_choice=sqrts  </weight>
+<weight id="22" MUR="1.0" MUF="1.0" DYN_SCALE="1" PDF="320900" > dyn_scale_choice=sum pt  </weight>
+<weight id="23" MUR="1.0" MUF="1.0" DYN_SCALE="2" PDF="320900" > dyn_scale_choice=HT  </weight>
+<weight id="24" MUR="1.0" MUF="1.0" DYN_SCALE="3" PDF="320900" > dyn_scale_choice=HT/2  </weight>
+<weight id="25" MUR="1.0" MUF="1.0" DYN_SCALE="4" PDF="320900" > dyn_scale_choice=sqrts  </weight>
+<weight id="26" MUR="1.0" MUF="2.0" PDF="320900" > MUF=2.0  </weight>
+<weight id="27" MUR="1.0" MUF="2.0" DYN_SCALE="1" PDF="320900" > MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight id="28" MUR="1.0" MUF="2.0" DYN_SCALE="2" PDF="320900" > MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight id="29" MUR="1.0" MUF="2.0" DYN_SCALE="3" PDF="320900" > MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight id="30" MUR="1.0" MUF="2.0" DYN_SCALE="4" PDF="320900" > MUF=2.0 dyn_scale_choice=sqrts  </weight>
+<weight id="31" MUR="2.0" MUF="0.5" PDF="320900" > MUR=2.0 MUF=0.5  </weight>
+<weight id="32" MUR="2.0" MUF="0.5" DYN_SCALE="1" PDF="320900" > MUR=2.0 MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight id="33" MUR="2.0" MUF="0.5" DYN_SCALE="2" PDF="320900" > MUR=2.0 MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight id="34" MUR="2.0" MUF="0.5" DYN_SCALE="3" PDF="320900" > MUR=2.0 MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight id="35" MUR="2.0" MUF="0.5" DYN_SCALE="4" PDF="320900" > MUR=2.0 MUF=0.5 dyn_scale_choice=sqrts  </weight>
+<weight id="36" MUR="2.0" MUF="1.0" PDF="320900" > MUR=2.0  </weight>
+<weight id="37" MUR="2.0" MUF="1.0" DYN_SCALE="1" PDF="320900" > MUR=2.0 dyn_scale_choice=sum pt  </weight>
+<weight id="38" MUR="2.0" MUF="1.0" DYN_SCALE="2" PDF="320900" > MUR=2.0 dyn_scale_choice=HT  </weight>
+<weight id="39" MUR="2.0" MUF="1.0" DYN_SCALE="3" PDF="320900" > MUR=2.0 dyn_scale_choice=HT/2  </weight>
+<weight id="40" MUR="2.0" MUF="1.0" DYN_SCALE="4" PDF="320900" > MUR=2.0 dyn_scale_choice=sqrts  </weight>
+<weight id="41" MUR="2.0" MUF="2.0" PDF="320900" > MUR=2.0 MUF=2.0  </weight>
+<weight id="42" MUR="2.0" MUF="2.0" DYN_SCALE="1" PDF="320900" > MUR=2.0 MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight id="43" MUR="2.0" MUF="2.0" DYN_SCALE="2" PDF="320900" > MUR=2.0 MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight id="44" MUR="2.0" MUF="2.0" DYN_SCALE="3" PDF="320900" > MUR=2.0 MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight id="45" MUR="2.0" MUF="2.0" DYN_SCALE="4" PDF="320900" > MUR=2.0 MUF=2.0 dyn_scale_choice=sqrts  </weight>
+</weightgroup>  # scale
+<weightgroup name="NNPDF31_nnlo_as_0118_nf_4" combine="replicas"> # 320900: NNPDF3.1 NNLO global fit, nf=4. mem=0 ; average on replicas; mem=1-100 ; PDF replicas
+<weight id="46" MUR="1.0" MUF="1.0" PDF="320900" >  </weight>
+<weight id="47" MUR="1.0" MUF="1.0" PDF="320901" > PDF=320900 MemberID=1 </weight>
+<weight id="48" MUR="1.0" MUF="1.0" PDF="320902" > PDF=320900 MemberID=2 </weight>
+<weight id="49" MUR="1.0" MUF="1.0" PDF="320903" > PDF=320900 MemberID=3 </weight>
+<weight id="50" MUR="1.0" MUF="1.0" PDF="320904" > PDF=320900 MemberID=4 </weight>
+<weight id="51" MUR="1.0" MUF="1.0" PDF="320905" > PDF=320900 MemberID=5 </weight>
+<weight id="52" MUR="1.0" MUF="1.0" PDF="320906" > PDF=320900 MemberID=6 </weight>
+<weight id="53" MUR="1.0" MUF="1.0" PDF="320907" > PDF=320900 MemberID=7 </weight>
+<weight id="54" MUR="1.0" MUF="1.0" PDF="320908" > PDF=320900 MemberID=8 </weight>
+<weight id="55" MUR="1.0" MUF="1.0" PDF="320909" > PDF=320900 MemberID=9 </weight>
+<weight id="56" MUR="1.0" MUF="1.0" PDF="320910" > PDF=320900 MemberID=10 </weight>
+<weight id="57" MUR="1.0" MUF="1.0" PDF="320911" > PDF=320900 MemberID=11 </weight>
+<weight id="58" MUR="1.0" MUF="1.0" PDF="320912" > PDF=320900 MemberID=12 </weight>
+<weight id="59" MUR="1.0" MUF="1.0" PDF="320913" > PDF=320900 MemberID=13 </weight>
+<weight id="60" MUR="1.0" MUF="1.0" PDF="320914" > PDF=320900 MemberID=14 </weight>
+<weight id="61" MUR="1.0" MUF="1.0" PDF="320915" > PDF=320900 MemberID=15 </weight>
+<weight id="62" MUR="1.0" MUF="1.0" PDF="320916" > PDF=320900 MemberID=16 </weight>
+<weight id="63" MUR="1.0" MUF="1.0" PDF="320917" > PDF=320900 MemberID=17 </weight>
+<weight id="64" MUR="1.0" MUF="1.0" PDF="320918" > PDF=320900 MemberID=18 </weight>
+<weight id="65" MUR="1.0" MUF="1.0" PDF="320919" > PDF=320900 MemberID=19 </weight>
+<weight id="66" MUR="1.0" MUF="1.0" PDF="320920" > PDF=320900 MemberID=20 </weight>
+<weight id="67" MUR="1.0" MUF="1.0" PDF="320921" > PDF=320900 MemberID=21 </weight>
+<weight id="68" MUR="1.0" MUF="1.0" PDF="320922" > PDF=320900 MemberID=22 </weight>
+<weight id="69" MUR="1.0" MUF="1.0" PDF="320923" > PDF=320900 MemberID=23 </weight>
+<weight id="70" MUR="1.0" MUF="1.0" PDF="320924" > PDF=320900 MemberID=24 </weight>
+<weight id="71" MUR="1.0" MUF="1.0" PDF="320925" > PDF=320900 MemberID=25 </weight>
+<weight id="72" MUR="1.0" MUF="1.0" PDF="320926" > PDF=320900 MemberID=26 </weight>
+<weight id="73" MUR="1.0" MUF="1.0" PDF="320927" > PDF=320900 MemberID=27 </weight>
+<weight id="74" MUR="1.0" MUF="1.0" PDF="320928" > PDF=320900 MemberID=28 </weight>
+<weight id="75" MUR="1.0" MUF="1.0" PDF="320929" > PDF=320900 MemberID=29 </weight>
+<weight id="76" MUR="1.0" MUF="1.0" PDF="320930" > PDF=320900 MemberID=30 </weight>
+<weight id="77" MUR="1.0" MUF="1.0" PDF="320931" > PDF=320900 MemberID=31 </weight>
+<weight id="78" MUR="1.0" MUF="1.0" PDF="320932" > PDF=320900 MemberID=32 </weight>
+<weight id="79" MUR="1.0" MUF="1.0" PDF="320933" > PDF=320900 MemberID=33 </weight>
+<weight id="80" MUR="1.0" MUF="1.0" PDF="320934" > PDF=320900 MemberID=34 </weight>
+<weight id="81" MUR="1.0" MUF="1.0" PDF="320935" > PDF=320900 MemberID=35 </weight>
+<weight id="82" MUR="1.0" MUF="1.0" PDF="320936" > PDF=320900 MemberID=36 </weight>
+<weight id="83" MUR="1.0" MUF="1.0" PDF="320937" > PDF=320900 MemberID=37 </weight>
+<weight id="84" MUR="1.0" MUF="1.0" PDF="320938" > PDF=320900 MemberID=38 </weight>
+<weight id="85" MUR="1.0" MUF="1.0" PDF="320939" > PDF=320900 MemberID=39 </weight>
+<weight id="86" MUR="1.0" MUF="1.0" PDF="320940" > PDF=320900 MemberID=40 </weight>
+<weight id="87" MUR="1.0" MUF="1.0" PDF="320941" > PDF=320900 MemberID=41 </weight>
+<weight id="88" MUR="1.0" MUF="1.0" PDF="320942" > PDF=320900 MemberID=42 </weight>
+<weight id="89" MUR="1.0" MUF="1.0" PDF="320943" > PDF=320900 MemberID=43 </weight>
+<weight id="90" MUR="1.0" MUF="1.0" PDF="320944" > PDF=320900 MemberID=44 </weight>
+<weight id="91" MUR="1.0" MUF="1.0" PDF="320945" > PDF=320900 MemberID=45 </weight>
+<weight id="92" MUR="1.0" MUF="1.0" PDF="320946" > PDF=320900 MemberID=46 </weight>
+<weight id="93" MUR="1.0" MUF="1.0" PDF="320947" > PDF=320900 MemberID=47 </weight>
+<weight id="94" MUR="1.0" MUF="1.0" PDF="320948" > PDF=320900 MemberID=48 </weight>
+<weight id="95" MUR="1.0" MUF="1.0" PDF="320949" > PDF=320900 MemberID=49 </weight>
+<weight id="96" MUR="1.0" MUF="1.0" PDF="320950" > PDF=320900 MemberID=50 </weight>
+<weight id="97" MUR="1.0" MUF="1.0" PDF="320951" > PDF=320900 MemberID=51 </weight>
+<weight id="98" MUR="1.0" MUF="1.0" PDF="320952" > PDF=320900 MemberID=52 </weight>
+<weight id="99" MUR="1.0" MUF="1.0" PDF="320953" > PDF=320900 MemberID=53 </weight>
+<weight id="100" MUR="1.0" MUF="1.0" PDF="320954" > PDF=320900 MemberID=54 </weight>
+<weight id="101" MUR="1.0" MUF="1.0" PDF="320955" > PDF=320900 MemberID=55 </weight>
+<weight id="102" MUR="1.0" MUF="1.0" PDF="320956" > PDF=320900 MemberID=56 </weight>
+<weight id="103" MUR="1.0" MUF="1.0" PDF="320957" > PDF=320900 MemberID=57 </weight>
+<weight id="104" MUR="1.0" MUF="1.0" PDF="320958" > PDF=320900 MemberID=58 </weight>
+<weight id="105" MUR="1.0" MUF="1.0" PDF="320959" > PDF=320900 MemberID=59 </weight>
+<weight id="106" MUR="1.0" MUF="1.0" PDF="320960" > PDF=320900 MemberID=60 </weight>
+<weight id="107" MUR="1.0" MUF="1.0" PDF="320961" > PDF=320900 MemberID=61 </weight>
+<weight id="108" MUR="1.0" MUF="1.0" PDF="320962" > PDF=320900 MemberID=62 </weight>
+<weight id="109" MUR="1.0" MUF="1.0" PDF="320963" > PDF=320900 MemberID=63 </weight>
+<weight id="110" MUR="1.0" MUF="1.0" PDF="320964" > PDF=320900 MemberID=64 </weight>
+<weight id="111" MUR="1.0" MUF="1.0" PDF="320965" > PDF=320900 MemberID=65 </weight>
+<weight id="112" MUR="1.0" MUF="1.0" PDF="320966" > PDF=320900 MemberID=66 </weight>
+<weight id="113" MUR="1.0" MUF="1.0" PDF="320967" > PDF=320900 MemberID=67 </weight>
+<weight id="114" MUR="1.0" MUF="1.0" PDF="320968" > PDF=320900 MemberID=68 </weight>
+<weight id="115" MUR="1.0" MUF="1.0" PDF="320969" > PDF=320900 MemberID=69 </weight>
+<weight id="116" MUR="1.0" MUF="1.0" PDF="320970" > PDF=320900 MemberID=70 </weight>
+<weight id="117" MUR="1.0" MUF="1.0" PDF="320971" > PDF=320900 MemberID=71 </weight>
+<weight id="118" MUR="1.0" MUF="1.0" PDF="320972" > PDF=320900 MemberID=72 </weight>
+<weight id="119" MUR="1.0" MUF="1.0" PDF="320973" > PDF=320900 MemberID=73 </weight>
+<weight id="120" MUR="1.0" MUF="1.0" PDF="320974" > PDF=320900 MemberID=74 </weight>
+<weight id="121" MUR="1.0" MUF="1.0" PDF="320975" > PDF=320900 MemberID=75 </weight>
+<weight id="122" MUR="1.0" MUF="1.0" PDF="320976" > PDF=320900 MemberID=76 </weight>
+<weight id="123" MUR="1.0" MUF="1.0" PDF="320977" > PDF=320900 MemberID=77 </weight>
+<weight id="124" MUR="1.0" MUF="1.0" PDF="320978" > PDF=320900 MemberID=78 </weight>
+<weight id="125" MUR="1.0" MUF="1.0" PDF="320979" > PDF=320900 MemberID=79 </weight>
+<weight id="126" MUR="1.0" MUF="1.0" PDF="320980" > PDF=320900 MemberID=80 </weight>
+<weight id="127" MUR="1.0" MUF="1.0" PDF="320981" > PDF=320900 MemberID=81 </weight>
+<weight id="128" MUR="1.0" MUF="1.0" PDF="320982" > PDF=320900 MemberID=82 </weight>
+<weight id="129" MUR="1.0" MUF="1.0" PDF="320983" > PDF=320900 MemberID=83 </weight>
+<weight id="130" MUR="1.0" MUF="1.0" PDF="320984" > PDF=320900 MemberID=84 </weight>
+<weight id="131" MUR="1.0" MUF="1.0" PDF="320985" > PDF=320900 MemberID=85 </weight>
+<weight id="132" MUR="1.0" MUF="1.0" PDF="320986" > PDF=320900 MemberID=86 </weight>
+<weight id="133" MUR="1.0" MUF="1.0" PDF="320987" > PDF=320900 MemberID=87 </weight>
+<weight id="134" MUR="1.0" MUF="1.0" PDF="320988" > PDF=320900 MemberID=88 </weight>
+<weight id="135" MUR="1.0" MUF="1.0" PDF="320989" > PDF=320900 MemberID=89 </weight>
+<weight id="136" MUR="1.0" MUF="1.0" PDF="320990" > PDF=320900 MemberID=90 </weight>
+<weight id="137" MUR="1.0" MUF="1.0" PDF="320991" > PDF=320900 MemberID=91 </weight>
+<weight id="138" MUR="1.0" MUF="1.0" PDF="320992" > PDF=320900 MemberID=92 </weight>
+<weight id="139" MUR="1.0" MUF="1.0" PDF="320993" > PDF=320900 MemberID=93 </weight>
+<weight id="140" MUR="1.0" MUF="1.0" PDF="320994" > PDF=320900 MemberID=94 </weight>
+<weight id="141" MUR="1.0" MUF="1.0" PDF="320995" > PDF=320900 MemberID=95 </weight>
+<weight id="142" MUR="1.0" MUF="1.0" PDF="320996" > PDF=320900 MemberID=96 </weight>
+<weight id="143" MUR="1.0" MUF="1.0" PDF="320997" > PDF=320900 MemberID=97 </weight>
+<weight id="144" MUR="1.0" MUF="1.0" PDF="320998" > PDF=320900 MemberID=98 </weight>
+<weight id="145" MUR="1.0" MUF="1.0" PDF="320999" > PDF=320900 MemberID=99 </weight>
+<weight id="146" MUR="1.0" MUF="1.0" PDF="321000" > PDF=320900 MemberID=100 </weight>
+</weightgroup>
+<weightgroup name="mg_reweighting">
+<weight id="ft1_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft1_m0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -2e-14 # orig: 0.0 </weight>
+<weight id="ft1_0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 2e-14 # orig: 0.0 </weight>
+<weight id="ft1_m0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -4e-14 # orig: 0.0 </weight>
+<weight id="ft1_0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 4e-14 # orig: 0.0 </weight>
+<weight id="ft1_m0p06">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -6e-14 # orig: 0.0 </weight>
+<weight id="ft1_0p06">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 6e-14 # orig: 0.0 </weight>
+<weight id="ft1_m0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -8e-14 # orig: 0.0 </weight>
+<weight id="ft1_0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 8e-14 # orig: 0.0 </weight>
+<weight id="ft1_m0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.2e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.2e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.4e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.4e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.8e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.8e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -2e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 2e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -3e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 3e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -5e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 5e-13 # orig: 0.0 </weight>
+<weight id="ft1_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -7e-13 # orig: 0.0 </weight>
+<weight id="ft1_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 7e-13 # orig: 0.0 </weight>
+<weight id="ft1_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1e-12 # orig: 0.0 </weight>
+<weight id="ft1_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1e-12 # orig: 0.0 </weight>
+<weight id="ft1_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft1_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft1_m1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.4e-12 # orig: 0.0 </weight>
+<weight id="ft1_1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.4e-12 # orig: 0.0 </weight>
+<weight id="ft1_m1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -1.8e-12 # orig: 0.0 </weight>
+<weight id="ft1_1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 1.8e-12 # orig: 0.0 </weight>
+<weight id="ft1_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 -2e-12 # orig: 0.0 </weight>
+<weight id="ft1_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 12 2e-12 # orig: 0.0 </weight>
+<weight id="ft0_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p02">set param_card anoinputs 11 -2e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p02">set param_card anoinputs 11 2e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p04">set param_card anoinputs 11 -4e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p04">set param_card anoinputs 11 4e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p06">set param_card anoinputs 11 -6e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p06">set param_card anoinputs 11 6e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p08">set param_card anoinputs 11 -8e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p08">set param_card anoinputs 11 8e-14 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p1">set param_card anoinputs 11 -1e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p1">set param_card anoinputs 11 1e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p12">set param_card anoinputs 11 -1.2e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p12">set param_card anoinputs 11 1.2e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p14">set param_card anoinputs 11 -1.4e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p14">set param_card anoinputs 11 1.4e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p18">set param_card anoinputs 11 -1.8e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p18">set param_card anoinputs 11 1.8e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p2">set param_card anoinputs 11 -2e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p2">set param_card anoinputs 11 2e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p3">set param_card anoinputs 11 -3e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p3">set param_card anoinputs 11 3e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p5">set param_card anoinputs 11 -5e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p5">set param_card anoinputs 11 5e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m0p7">set param_card anoinputs 11 -7e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_0p7">set param_card anoinputs 11 7e-13 # orig: 6.5e-12 </weight>
+<weight id="ft0_m1p0">set param_card anoinputs 11 -1e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_1p0">set param_card anoinputs 11 1e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_m1p2">set param_card anoinputs 11 -1.2e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_1p2">set param_card anoinputs 11 1.2e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_m1p4">set param_card anoinputs 11 -1.4e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_1p4">set param_card anoinputs 11 1.4e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_m1p8">set param_card anoinputs 11 -1.8e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_1p8">set param_card anoinputs 11 1.8e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_m2p0">set param_card anoinputs 11 -2e-12 # orig: 6.5e-12 </weight>
+<weight id="ft0_2p0">set param_card anoinputs 11 2e-12 # orig: 6.5e-12 </weight>
+<weight id="ft2_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft2_m0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -2e-14 # orig: 0.0 </weight>
+<weight id="ft2_0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 2e-14 # orig: 0.0 </weight>
+<weight id="ft2_m0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -4e-14 # orig: 0.0 </weight>
+<weight id="ft2_0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 4e-14 # orig: 0.0 </weight>
+<weight id="ft2_m0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -8e-14 # orig: 0.0 </weight>
+<weight id="ft2_0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 8e-14 # orig: 0.0 </weight>
+<weight id="ft2_m0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -1.4e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 1.4e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -2e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 2e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p26">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -2.6e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p26">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 2.6e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p32">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -3.2e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p32">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 3.2e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -5e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 5e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -7e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 7e-13 # orig: 0.0 </weight>
+<weight id="ft2_m0p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -9e-13 # orig: 0.0 </weight>
+<weight id="ft2_0p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 9e-13 # orig: 0.0 </weight>
+<weight id="ft2_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft2_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft2_m1p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -1.7e-12 # orig: 0.0 </weight>
+<weight id="ft2_1p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 1.7e-12 # orig: 0.0 </weight>
+<weight id="ft2_m2p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -2.5e-12 # orig: 0.0 </weight>
+<weight id="ft2_2p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 2.5e-12 # orig: 0.0 </weight>
+<weight id="ft2_m2p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -2.9e-12 # orig: 0.0 </weight>
+<weight id="ft2_2p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 2.9e-12 # orig: 0.0 </weight>
+<weight id="ft2_m3p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -3.4e-12 # orig: 0.0 </weight>
+<weight id="ft2_3p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 3.4e-12 # orig: 0.0 </weight>
+<weight id="ft2_m3p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -3.9e-12 # orig: 0.0 </weight>
+<weight id="ft2_3p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 3.9e-12 # orig: 0.0 </weight>
+<weight id="ft2_m4p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 -4.5e-12 # orig: 0.0 </weight>
+<weight id="ft2_4p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 13 4.5e-12 # orig: 0.0 </weight>
+<weight id="ft5_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft5_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -2e-13 # orig: 0.0 </weight>
+<weight id="ft5_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 2e-13 # orig: 0.0 </weight>
+<weight id="ft5_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -5e-13 # orig: 0.0 </weight>
+<weight id="ft5_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 5e-13 # orig: 0.0 </weight>
+<weight id="ft5_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -7e-13 # orig: 0.0 </weight>
+<weight id="ft5_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 7e-13 # orig: 0.0 </weight>
+<weight id="ft5_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1e-12 # orig: 0.0 </weight>
+<weight id="ft5_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1e-12 # orig: 0.0 </weight>
+<weight id="ft5_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft5_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft5_m1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.4e-12 # orig: 0.0 </weight>
+<weight id="ft5_1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.4e-12 # orig: 0.0 </weight>
+<weight id="ft5_m1p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.6e-12 # orig: 0.0 </weight>
+<weight id="ft5_1p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.6e-12 # orig: 0.0 </weight>
+<weight id="ft5_m1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.8e-12 # orig: 0.0 </weight>
+<weight id="ft5_1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.8e-12 # orig: 0.0 </weight>
+<weight id="ft5_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -2e-12 # orig: 0.0 </weight>
+<weight id="ft5_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 2e-12 # orig: 0.0 </weight>
+<weight id="ft5_m3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -3e-12 # orig: 0.0 </weight>
+<weight id="ft5_3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 3e-12 # orig: 0.0 </weight>
+<weight id="ft5_m5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -5e-12 # orig: 0.0 </weight>
+<weight id="ft5_5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 5e-12 # orig: 0.0 </weight>
+<weight id="ft5_m7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -7e-12 # orig: 0.0 </weight>
+<weight id="ft5_7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 7e-12 # orig: 0.0 </weight>
+<weight id="ft5_m10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1e-11 # orig: 0.0 </weight>
+<weight id="ft5_10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1e-11 # orig: 0.0 </weight>
+<weight id="ft5_m12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.2e-11 # orig: 0.0 </weight>
+<weight id="ft5_12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.2e-11 # orig: 0.0 </weight>
+<weight id="ft5_m15">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.5e-11 # orig: 0.0 </weight>
+<weight id="ft5_15">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.5e-11 # orig: 0.0 </weight>
+<weight id="ft5_m18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -1.8e-11 # orig: 0.0 </weight>
+<weight id="ft5_18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 1.8e-11 # orig: 0.0 </weight>
+<weight id="ft5_m20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -2e-11 # orig: 0.0 </weight>
+<weight id="ft5_20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 2e-11 # orig: 0.0 </weight>
+<weight id="ft5_m22">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -2.2e-11 # orig: 0.0 </weight>
+<weight id="ft5_22">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 2.2e-11 # orig: 0.0 </weight>
+<weight id="ft5_m25">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 -2.5e-11 # orig: 0.0 </weight>
+<weight id="ft5_25">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 16 2.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_0p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft7_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -2e-13 # orig: 0.0 </weight>
+<weight id="ft7_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 2e-13 # orig: 0.0 </weight>
+<weight id="ft7_m0p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -4e-13 # orig: 0.0 </weight>
+<weight id="ft7_0p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 4e-13 # orig: 0.0 </weight>
+<weight id="ft7_m0p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -6e-13 # orig: 0.0 </weight>
+<weight id="ft7_0p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 6e-13 # orig: 0.0 </weight>
+<weight id="ft7_m0p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -8e-13 # orig: 0.0 </weight>
+<weight id="ft7_0p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 8e-13 # orig: 0.0 </weight>
+<weight id="ft7_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -1e-12 # orig: 0.0 </weight>
+<weight id="ft7_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 1e-12 # orig: 0.0 </weight>
+<weight id="ft7_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft7_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft7_m1p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -1.5e-12 # orig: 0.0 </weight>
+<weight id="ft7_1p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 1.5e-12 # orig: 0.0 </weight>
+<weight id="ft7_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -2e-12 # orig: 0.0 </weight>
+<weight id="ft7_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 2e-12 # orig: 0.0 </weight>
+<weight id="ft7_m2p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -2.5e-12 # orig: 0.0 </weight>
+<weight id="ft7_2p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 2.5e-12 # orig: 0.0 </weight>
+<weight id="ft7_m3p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -3e-12 # orig: 0.0 </weight>
+<weight id="ft7_3p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 3e-12 # orig: 0.0 </weight>
+<weight id="ft7_m4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -4e-12 # orig: 0.0 </weight>
+<weight id="ft7_4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 4e-12 # orig: 0.0 </weight>
+<weight id="ft7_m5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -5e-12 # orig: 0.0 </weight>
+<weight id="ft7_5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 5e-12 # orig: 0.0 </weight>
+<weight id="ft7_m6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -6e-12 # orig: 0.0 </weight>
+<weight id="ft7_6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 6e-12 # orig: 0.0 </weight>
+<weight id="ft7_m8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -8e-12 # orig: 0.0 </weight>
+<weight id="ft7_8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 8e-12 # orig: 0.0 </weight>
+<weight id="ft7_m10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -1e-11 # orig: 0.0 </weight>
+<weight id="ft7_10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 1e-11 # orig: 0.0 </weight>
+<weight id="ft7_m20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -2e-11 # orig: 0.0 </weight>
+<weight id="ft7_20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 2e-11 # orig: 0.0 </weight>
+<weight id="ft7_m30">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -3e-11 # orig: 0.0 </weight>
+<weight id="ft7_30">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 3e-11 # orig: 0.0 </weight>
+<weight id="ft7_m35">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -3.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_35">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 3.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_m40">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -4e-11 # orig: 0.0 </weight>
+<weight id="ft7_40">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 4e-11 # orig: 0.0 </weight>
+<weight id="ft7_m45">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -4.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_45">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 4.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_m50">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -5e-11 # orig: 0.0 </weight>
+<weight id="ft7_50">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 5e-11 # orig: 0.0 </weight>
+<weight id="ft7_m55">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -5.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_55">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 5.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_m60">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -6e-11 # orig: 0.0 </weight>
+<weight id="ft7_60">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 6e-11 # orig: 0.0 </weight>
+<weight id="ft7_m65">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -6.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_65">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 6.5e-11 # orig: 0.0 </weight>
+<weight id="ft7_m70">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 -7e-11 # orig: 0.0 </weight>
+<weight id="ft7_70">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 18 7e-11 # orig: 0.0 </weight>
+<weight id="ft6_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft6_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2e-13 # orig: 0.0 </weight>
+<weight id="ft6_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2e-13 # orig: 0.0 </weight>
+<weight id="ft6_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -5e-13 # orig: 0.0 </weight>
+<weight id="ft6_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 5e-13 # orig: 0.0 </weight>
+<weight id="ft6_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -7e-13 # orig: 0.0 </weight>
+<weight id="ft6_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 7e-13 # orig: 0.0 </weight>
+<weight id="ft6_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1e-12 # orig: 0.0 </weight>
+<weight id="ft6_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1e-12 # orig: 0.0 </weight>
+<weight id="ft6_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft6_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft6_m1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.4e-12 # orig: 0.0 </weight>
+<weight id="ft6_1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.4e-12 # orig: 0.0 </weight>
+<weight id="ft6_m1p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.6e-12 # orig: 0.0 </weight>
+<weight id="ft6_1p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.6e-12 # orig: 0.0 </weight>
+<weight id="ft6_m1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.8e-12 # orig: 0.0 </weight>
+<weight id="ft6_1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.8e-12 # orig: 0.0 </weight>
+<weight id="ft6_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2e-12 # orig: 0.0 </weight>
+<weight id="ft6_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2e-12 # orig: 0.0 </weight>
+<weight id="ft6_m3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -3e-12 # orig: 0.0 </weight>
+<weight id="ft6_3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 3e-12 # orig: 0.0 </weight>
+<weight id="ft6_m5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -5e-12 # orig: 0.0 </weight>
+<weight id="ft6_5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 5e-12 # orig: 0.0 </weight>
+<weight id="ft6_m7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -7e-12 # orig: 0.0 </weight>
+<weight id="ft6_7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 7e-12 # orig: 0.0 </weight>
+<weight id="ft6_m10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1e-11 # orig: 0.0 </weight>
+<weight id="ft6_10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1e-11 # orig: 0.0 </weight>
+<weight id="ft6_m12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.2e-11 # orig: 0.0 </weight>
+<weight id="ft6_12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.2e-11 # orig: 0.0 </weight>
+<weight id="ft6_m15">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.5e-11 # orig: 0.0 </weight>
+<weight id="ft6_15">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.5e-11 # orig: 0.0 </weight>
+<weight id="ft6_m18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -1.8e-11 # orig: 0.0 </weight>
+<weight id="ft6_18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 1.8e-11 # orig: 0.0 </weight>
+<weight id="ft6_m20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2e-11 # orig: 0.0 </weight>
+<weight id="ft6_20">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2e-11 # orig: 0.0 </weight>
+<weight id="ft6_m22">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2.2e-11 # orig: 0.0 </weight>
+<weight id="ft6_22">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2.2e-11 # orig: 0.0 </weight>
+<weight id="ft6_m25">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2.5e-11 # orig: 0.0 </weight>
+<weight id="ft6_25">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2.5e-11 # orig: 0.0 </weight>
+<weight id="ft6_m27">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2.7e-11 # orig: 0.0 </weight>
+<weight id="ft6_27">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2.7e-11 # orig: 0.0 </weight>
+<weight id="ft6_m29">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 -2.9e-11 # orig: 0.0 </weight>
+<weight id="ft6_29">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 17 2.9e-11 # orig: 0.0 </weight>
+<weight id="fm6_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m0p2">set param_card anoinputs 9 -2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_0p2">set param_card anoinputs 9 2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m0p5">set param_card anoinputs 9 -5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_0p5">set param_card anoinputs 9 5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m0p7">set param_card anoinputs 9 -7e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_0p7">set param_card anoinputs 9 7e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m1p0">set param_card anoinputs 9 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_1p0">set param_card anoinputs 9 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m1p2">set param_card anoinputs 9 -1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_1p2">set param_card anoinputs 9 1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m1p4">set param_card anoinputs 9 -1.4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_1p4">set param_card anoinputs 9 1.4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m1p6">set param_card anoinputs 9 -1.6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_1p6">set param_card anoinputs 9 1.6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m1p8">set param_card anoinputs 9 -1.8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_1p8">set param_card anoinputs 9 1.8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m2p0">set param_card anoinputs 9 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_2p0">set param_card anoinputs 9 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m3">set param_card anoinputs 9 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_3">set param_card anoinputs 9 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m5">set param_card anoinputs 9 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_5">set param_card anoinputs 9 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m7">set param_card anoinputs 9 -7e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_7">set param_card anoinputs 9 7e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m10">set param_card anoinputs 9 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_10">set param_card anoinputs 9 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m12">set param_card anoinputs 9 -1.2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_12">set param_card anoinputs 9 1.2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m15">set param_card anoinputs 9 -1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_15">set param_card anoinputs 9 1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m18">set param_card anoinputs 9 -1.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_18">set param_card anoinputs 9 1.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_m20">set param_card anoinputs 9 -2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm6_20">set param_card anoinputs 9 2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m0p5">set param_card anoinputs 10 -5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_0p5">set param_card anoinputs 10 5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m1p0">set param_card anoinputs 10 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_1p0">set param_card anoinputs 10 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m1p5">set param_card anoinputs 10 -1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_1p5">set param_card anoinputs 10 1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m2p0">set param_card anoinputs 10 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_2p0">set param_card anoinputs 10 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m2p5">set param_card anoinputs 10 -2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_2p5">set param_card anoinputs 10 2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m3p0">set param_card anoinputs 10 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_3p0">set param_card anoinputs 10 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m3p5">set param_card anoinputs 10 -3.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_3p5">set param_card anoinputs 10 3.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m5p0">set param_card anoinputs 10 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_5p0">set param_card anoinputs 10 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m10">set param_card anoinputs 10 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_10">set param_card anoinputs 10 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m15">set param_card anoinputs 10 -1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_15">set param_card anoinputs 10 1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m20">set param_card anoinputs 10 -2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_20">set param_card anoinputs 10 2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m25">set param_card anoinputs 10 -2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_25">set param_card anoinputs 10 2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m30">set param_card anoinputs 10 -3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_30">set param_card anoinputs 10 3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m35">set param_card anoinputs 10 -3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_35">set param_card anoinputs 10 3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_m40">set param_card anoinputs 10 -4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm7_40">set param_card anoinputs 10 4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m1">set param_card anoinputs 7 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_1">set param_card anoinputs 7 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m2">set param_card anoinputs 7 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_2">set param_card anoinputs 7 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m3">set param_card anoinputs 7 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_3">set param_card anoinputs 7 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m5">set param_card anoinputs 7 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_5">set param_card anoinputs 7 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m8">set param_card anoinputs 7 -8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_8">set param_card anoinputs 7 8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m13">set param_card anoinputs 7 -1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_13">set param_card anoinputs 7 1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m21">set param_card anoinputs 7 -2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_21">set param_card anoinputs 7 2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m31">set param_card anoinputs 7 -3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_31">set param_card anoinputs 7 3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m44">set param_card anoinputs 7 -4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_44">set param_card anoinputs 7 4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m55">set param_card anoinputs 7 -5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_55">set param_card anoinputs 7 5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m65">set param_card anoinputs 7 -6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_65">set param_card anoinputs 7 6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m75">set param_card anoinputs 7 -7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_75">set param_card anoinputs 7 7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m85">set param_card anoinputs 7 -8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_85">set param_card anoinputs 7 8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m95">set param_card anoinputs 7 -9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_95">set param_card anoinputs 7 9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m105">set param_card anoinputs 7 -1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_105">set param_card anoinputs 7 1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m115">set param_card anoinputs 7 -1.15e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_115">set param_card anoinputs 7 1.15e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m121">set param_card anoinputs 7 -1.21e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_121">set param_card anoinputs 7 1.21e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_m130">set param_card anoinputs 7 -1.3e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm4_130">set param_card anoinputs 7 1.3e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m1">set param_card anoinputs 8 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_1">set param_card anoinputs 8 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m2">set param_card anoinputs 8 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_2">set param_card anoinputs 8 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m3">set param_card anoinputs 8 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_3">set param_card anoinputs 8 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m5">set param_card anoinputs 8 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_5">set param_card anoinputs 8 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m8">set param_card anoinputs 8 -8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_8">set param_card anoinputs 8 8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m13">set param_card anoinputs 8 -1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_13">set param_card anoinputs 8 1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m21">set param_card anoinputs 8 -2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_21">set param_card anoinputs 8 2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m31">set param_card anoinputs 8 -3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_31">set param_card anoinputs 8 3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m44">set param_card anoinputs 8 -4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_44">set param_card anoinputs 8 4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m55">set param_card anoinputs 8 -5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_55">set param_card anoinputs 8 5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m65">set param_card anoinputs 8 -6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_65">set param_card anoinputs 8 6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m75">set param_card anoinputs 8 -7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_75">set param_card anoinputs 8 7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m85">set param_card anoinputs 8 -8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_85">set param_card anoinputs 8 8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m95">set param_card anoinputs 8 -9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_95">set param_card anoinputs 8 9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m105">set param_card anoinputs 8 -1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_105">set param_card anoinputs 8 1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m115">set param_card anoinputs 8 -1.15e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_115">set param_card anoinputs 8 1.15e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m121">set param_card anoinputs 8 -1.21e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_121">set param_card anoinputs 8 1.21e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m130">set param_card anoinputs 8 -1.3e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_130">set param_card anoinputs 8 1.3e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m150">set param_card anoinputs 8 -1.5e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_150">set param_card anoinputs 8 1.5e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m170">set param_card anoinputs 8 -1.7e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_170">set param_card anoinputs 8 1.7e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m190">set param_card anoinputs 8 -1.9e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_190">set param_card anoinputs 8 1.9e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_m200">set param_card anoinputs 8 -2e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm5_200">set param_card anoinputs 8 2e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m1">set param_card anoinputs 5 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_1">set param_card anoinputs 5 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m2">set param_card anoinputs 5 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_2">set param_card anoinputs 5 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m3">set param_card anoinputs 5 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_3">set param_card anoinputs 5 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m6">set param_card anoinputs 5 -6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_6">set param_card anoinputs 5 6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m10">set param_card anoinputs 5 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_10">set param_card anoinputs 5 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m15">set param_card anoinputs 5 -1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_15">set param_card anoinputs 5 1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m20">set param_card anoinputs 5 -2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_20">set param_card anoinputs 5 2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m25">set param_card anoinputs 5 -2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_25">set param_card anoinputs 5 2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m30">set param_card anoinputs 5 -3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_30">set param_card anoinputs 5 3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m35">set param_card anoinputs 5 -3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_35">set param_card anoinputs 5 3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m40">set param_card anoinputs 5 -4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_40">set param_card anoinputs 5 4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m45">set param_card anoinputs 5 -4.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_45">set param_card anoinputs 5 4.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m50">set param_card anoinputs 5 -5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_50">set param_card anoinputs 5 5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m55">set param_card anoinputs 5 -5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_55">set param_card anoinputs 5 5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_m60">set param_card anoinputs 5 -6e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm2_60">set param_card anoinputs 5 6e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m1">set param_card anoinputs 6 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_1">set param_card anoinputs 6 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m2">set param_card anoinputs 6 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_2">set param_card anoinputs 6 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m3">set param_card anoinputs 6 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_3">set param_card anoinputs 6 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m5">set param_card anoinputs 6 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_5">set param_card anoinputs 6 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m8">set param_card anoinputs 6 -8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_8">set param_card anoinputs 6 8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m13">set param_card anoinputs 6 -1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_13">set param_card anoinputs 6 1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m21">set param_card anoinputs 6 -2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_21">set param_card anoinputs 6 2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m31">set param_card anoinputs 6 -3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_31">set param_card anoinputs 6 3.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m44">set param_card anoinputs 6 -4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_44">set param_card anoinputs 6 4.4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m55">set param_card anoinputs 6 -5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_55">set param_card anoinputs 6 5.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m65">set param_card anoinputs 6 -6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_65">set param_card anoinputs 6 6.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m75">set param_card anoinputs 6 -7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_75">set param_card anoinputs 6 7.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m85">set param_card anoinputs 6 -8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_85">set param_card anoinputs 6 8.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m95">set param_card anoinputs 6 -9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_95">set param_card anoinputs 6 9.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_m105">set param_card anoinputs 6 -1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm3_105">set param_card anoinputs 6 1.05e-10 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p1">set param_card anoinputs 3 -1e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p1">set param_card anoinputs 3 1e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p2">set param_card anoinputs 3 -2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p2">set param_card anoinputs 3 2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p3">set param_card anoinputs 3 -3e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p3">set param_card anoinputs 3 3e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p4">set param_card anoinputs 3 -4e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p4">set param_card anoinputs 3 4e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p5">set param_card anoinputs 3 -5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p5">set param_card anoinputs 3 5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p6">set param_card anoinputs 3 -6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p6">set param_card anoinputs 3 6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p7">set param_card anoinputs 3 -7e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p7">set param_card anoinputs 3 7e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p8">set param_card anoinputs 3 -8e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p8">set param_card anoinputs 3 8e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m0p9">set param_card anoinputs 3 -9e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_0p9">set param_card anoinputs 3 9e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m1p0">set param_card anoinputs 3 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_1p0">set param_card anoinputs 3 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m1p5">set param_card anoinputs 3 -1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_1p5">set param_card anoinputs 3 1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m2p0">set param_card anoinputs 3 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_2p0">set param_card anoinputs 3 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m3">set param_card anoinputs 3 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_3">set param_card anoinputs 3 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m4">set param_card anoinputs 3 -4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_4">set param_card anoinputs 3 4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m5">set param_card anoinputs 3 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_5">set param_card anoinputs 3 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m6">set param_card anoinputs 3 -6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_6">set param_card anoinputs 3 6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m7">set param_card anoinputs 3 -7e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_7">set param_card anoinputs 3 7e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m8">set param_card anoinputs 3 -8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_8">set param_card anoinputs 3 8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m9">set param_card anoinputs 3 -9e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_9">set param_card anoinputs 3 9e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_m10">set param_card anoinputs 3 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm0_10">set param_card anoinputs 3 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m0p3">set param_card anoinputs 4 -3e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_0p3">set param_card anoinputs 4 3e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m0p6">set param_card anoinputs 4 -6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_0p6">set param_card anoinputs 4 6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m0p9">set param_card anoinputs 4 -9e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_0p9">set param_card anoinputs 4 9e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m1p2">set param_card anoinputs 4 -1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_1p2">set param_card anoinputs 4 1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m1p5">set param_card anoinputs 4 -1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_1p5">set param_card anoinputs 4 1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m1p8">set param_card anoinputs 4 -1.8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_1p8">set param_card anoinputs 4 1.8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m2p1">set param_card anoinputs 4 -2.1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_2p1">set param_card anoinputs 4 2.1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m2p5">set param_card anoinputs 4 -2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_2p5">set param_card anoinputs 4 2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m3p0">set param_card anoinputs 4 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_3p0">set param_card anoinputs 4 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m5p0">set param_card anoinputs 4 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_5p0">set param_card anoinputs 4 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m10">set param_card anoinputs 4 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_10">set param_card anoinputs 4 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m13">set param_card anoinputs 4 -1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_13">set param_card anoinputs 4 1.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m15">set param_card anoinputs 4 -1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_15">set param_card anoinputs 4 1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m18">set param_card anoinputs 4 -1.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_18">set param_card anoinputs 4 1.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m21">set param_card anoinputs 4 -2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_21">set param_card anoinputs 4 2.1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m23p0">set param_card anoinputs 4 -2.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_23p0">set param_card anoinputs 4 2.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m28">set param_card anoinputs 4 -2.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_28">set param_card anoinputs 4 2.8e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_m30">set param_card anoinputs 4 -3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fm1_30">set param_card anoinputs 4 3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_0p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m0p2">set param_card anoinputs 1 -2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_0p2">set param_card anoinputs 1 2e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m0p4">set param_card anoinputs 1 -4e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_0p4">set param_card anoinputs 1 4e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m0p6">set param_card anoinputs 1 -6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_0p6">set param_card anoinputs 1 6e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m0p8">set param_card anoinputs 1 -8e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_0p8">set param_card anoinputs 1 8e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m1p0">set param_card anoinputs 1 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_1p0">set param_card anoinputs 1 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m1p2">set param_card anoinputs 1 -1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_1p2">set param_card anoinputs 1 1.2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m1p5">set param_card anoinputs 1 -1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_1p5">set param_card anoinputs 1 1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m2p0">set param_card anoinputs 1 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_2p0">set param_card anoinputs 1 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m2p5">set param_card anoinputs 1 -2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_2p5">set param_card anoinputs 1 2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m3p0">set param_card anoinputs 1 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_3p0">set param_card anoinputs 1 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m4">set param_card anoinputs 1 -4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_4">set param_card anoinputs 1 4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m5">set param_card anoinputs 1 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_5">set param_card anoinputs 1 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m6">set param_card anoinputs 1 -6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_6">set param_card anoinputs 1 6e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m8">set param_card anoinputs 1 -8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_8">set param_card anoinputs 1 8e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m10">set param_card anoinputs 1 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_10">set param_card anoinputs 1 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m20">set param_card anoinputs 1 -2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_20">set param_card anoinputs 1 2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m30">set param_card anoinputs 1 -3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_30">set param_card anoinputs 1 3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m35">set param_card anoinputs 1 -3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_35">set param_card anoinputs 1 3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m40">set param_card anoinputs 1 -4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_40">set param_card anoinputs 1 4e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m45">set param_card anoinputs 1 -4.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_45">set param_card anoinputs 1 4.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_m50">set param_card anoinputs 1 -5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs0_50">set param_card anoinputs 1 5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m0p5">set param_card anoinputs 2 -5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_0p5">set param_card anoinputs 2 5e-13 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m1p0">set param_card anoinputs 2 -1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_1p0">set param_card anoinputs 2 1e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m1p5">set param_card anoinputs 2 -1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_1p5">set param_card anoinputs 2 1.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m2p0">set param_card anoinputs 2 -2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_2p0">set param_card anoinputs 2 2e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m2p5">set param_card anoinputs 2 -2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_2p5">set param_card anoinputs 2 2.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m3p0">set param_card anoinputs 2 -3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_3p0">set param_card anoinputs 2 3e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m4p0">set param_card anoinputs 2 -4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_4p0">set param_card anoinputs 2 4e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m5p0">set param_card anoinputs 2 -5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_5p0">set param_card anoinputs 2 5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m7p5">set param_card anoinputs 2 -7.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_7p5">set param_card anoinputs 2 7.5e-12 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m10">set param_card anoinputs 2 -1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_10">set param_card anoinputs 2 1e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m15">set param_card anoinputs 2 -1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_15">set param_card anoinputs 2 1.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m20">set param_card anoinputs 2 -2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_20">set param_card anoinputs 2 2e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m25">set param_card anoinputs 2 -2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_25">set param_card anoinputs 2 2.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m30">set param_card anoinputs 2 -3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_30">set param_card anoinputs 2 3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m33">set param_card anoinputs 2 -3.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_33">set param_card anoinputs 2 3.3e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_m35">set param_card anoinputs 2 -3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="fs1_35">set param_card anoinputs 2 3.5e-11 # orig: 0.0 set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft8_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft8_m0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -2e-14 # orig: 0.0 </weight>
+<weight id="ft8_0p02">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 2e-14 # orig: 0.0 </weight>
+<weight id="ft8_m0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -4e-14 # orig: 0.0 </weight>
+<weight id="ft8_0p04">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 4e-14 # orig: 0.0 </weight>
+<weight id="ft8_m0p06">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -6e-14 # orig: 0.0 </weight>
+<weight id="ft8_0p06">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 6e-14 # orig: 0.0 </weight>
+<weight id="ft8_m0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -8e-14 # orig: 0.0 </weight>
+<weight id="ft8_0p08">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 8e-14 # orig: 0.0 </weight>
+<weight id="ft8_m0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.2e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p12">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.2e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.4e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p14">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.4e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.8e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p18">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.8e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -2e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 2e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -3e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 3e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -5e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 5e-13 # orig: 0.0 </weight>
+<weight id="ft8_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -7e-13 # orig: 0.0 </weight>
+<weight id="ft8_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 7e-13 # orig: 0.0 </weight>
+<weight id="ft8_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1e-12 # orig: 0.0 </weight>
+<weight id="ft8_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1e-12 # orig: 0.0 </weight>
+<weight id="ft8_m1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.2e-12 # orig: 0.0 </weight>
+<weight id="ft8_1p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.2e-12 # orig: 0.0 </weight>
+<weight id="ft8_m1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.4e-12 # orig: 0.0 </weight>
+<weight id="ft8_1p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.4e-12 # orig: 0.0 </weight>
+<weight id="ft8_m1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -1.8e-12 # orig: 0.0 </weight>
+<weight id="ft8_1p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 1.8e-12 # orig: 0.0 </weight>
+<weight id="ft8_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 -2e-12 # orig: 0.0 </weight>
+<weight id="ft8_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 19 2e-12 # orig: 0.0 </weight>
+<weight id="ft9_0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 </weight>
+<weight id="ft9_m0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -1e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p1">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 1e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -2e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p2">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 2e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -3e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 3e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -4e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 4e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -5e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 5e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -6e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 6e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -7e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 7e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -8e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 8e-13 # orig: 0.0 </weight>
+<weight id="ft9_m0p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -9e-13 # orig: 0.0 </weight>
+<weight id="ft9_0p9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 9e-13 # orig: 0.0 </weight>
+<weight id="ft9_m1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -1e-12 # orig: 0.0 </weight>
+<weight id="ft9_1p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 1e-12 # orig: 0.0 </weight>
+<weight id="ft9_m1p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -1.5e-12 # orig: 0.0 </weight>
+<weight id="ft9_1p5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 1.5e-12 # orig: 0.0 </weight>
+<weight id="ft9_m2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -2e-12 # orig: 0.0 </weight>
+<weight id="ft9_2p0">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 2e-12 # orig: 0.0 </weight>
+<weight id="ft9_m3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -3e-12 # orig: 0.0 </weight>
+<weight id="ft9_3">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 3e-12 # orig: 0.0 </weight>
+<weight id="ft9_m4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -4e-12 # orig: 0.0 </weight>
+<weight id="ft9_4">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 4e-12 # orig: 0.0 </weight>
+<weight id="ft9_m5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -5e-12 # orig: 0.0 </weight>
+<weight id="ft9_5">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 5e-12 # orig: 0.0 </weight>
+<weight id="ft9_m6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -6e-12 # orig: 0.0 </weight>
+<weight id="ft9_6">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 6e-12 # orig: 0.0 </weight>
+<weight id="ft9_m7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -7e-12 # orig: 0.0 </weight>
+<weight id="ft9_7">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 7e-12 # orig: 0.0 </weight>
+<weight id="ft9_m8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -8e-12 # orig: 0.0 </weight>
+<weight id="ft9_8">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 8e-12 # orig: 0.0 </weight>
+<weight id="ft9_m9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -9e-12 # orig: 0.0 </weight>
+<weight id="ft9_9">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 9e-12 # orig: 0.0 </weight>
+<weight id="ft9_m10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 -1e-11 # orig: 0.0 </weight>
+<weight id="ft9_10">set param_card anoinputs 11 0.0 # orig: 6.5e-12 set param_card anoinputs 20 1e-11 # orig: 0.0 </weight>
+</weightgroup>
+<weightgroup combine="envelope" name="Central scale variation">
+<weight MUF="1.0" MUR="1.0" PDF="320900" id="1001">  </weight>
+<weight DYN_SCALE="1" MUF="1.0" MUR="1.0" PDF="320900" id="1002"> dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="1.0" MUR="1.0" PDF="320900" id="1003"> dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="1.0" MUR="1.0" PDF="320900" id="1004"> dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="1.0" MUR="1.0" PDF="320900" id="1005"> dyn_scale_choice=sqrts  </weight>
+<weight MUF="1.0" MUR="2.0" PDF="320900" id="1006"> MUR=2.0  </weight>
+<weight DYN_SCALE="1" MUF="1.0" MUR="2.0" PDF="320900" id="1007"> MUR=2.0 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="1.0" MUR="2.0" PDF="320900" id="1008"> MUR=2.0 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="1.0" MUR="2.0" PDF="320900" id="1009"> MUR=2.0 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="1.0" MUR="2.0" PDF="320900" id="1010"> MUR=2.0 dyn_scale_choice=sqrts  </weight>
+<weight MUF="1.0" MUR="0.5" PDF="320900" id="1011"> MUR=0.5  </weight>
+<weight DYN_SCALE="1" MUF="1.0" MUR="0.5" PDF="320900" id="1012"> MUR=0.5 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="1.0" MUR="0.5" PDF="320900" id="1013"> MUR=0.5 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="1.0" MUR="0.5" PDF="320900" id="1014"> MUR=0.5 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="1.0" MUR="0.5" PDF="320900" id="1015"> MUR=0.5 dyn_scale_choice=sqrts  </weight>
+<weight MUF="2.0" MUR="1.0" PDF="320900" id="1016"> MUF=2.0  </weight>
+<weight DYN_SCALE="1" MUF="2.0" MUR="1.0" PDF="320900" id="1017"> MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="2.0" MUR="1.0" PDF="320900" id="1018"> MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="2.0" MUR="1.0" PDF="320900" id="1019"> MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="2.0" MUR="1.0" PDF="320900" id="1020"> MUF=2.0 dyn_scale_choice=sqrts  </weight>
+<weight MUF="2.0" MUR="2.0" PDF="320900" id="1021"> MUR=2.0 MUF=2.0  </weight>
+<weight DYN_SCALE="1" MUF="2.0" MUR="2.0" PDF="320900" id="1022"> MUR=2.0 MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="2.0" MUR="2.0" PDF="320900" id="1023"> MUR=2.0 MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="2.0" MUR="2.0" PDF="320900" id="1024"> MUR=2.0 MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="2.0" MUR="2.0" PDF="320900" id="1025"> MUR=2.0 MUF=2.0 dyn_scale_choice=sqrts  </weight>
+<weight MUF="2.0" MUR="0.5" PDF="320900" id="1026"> MUR=0.5 MUF=2.0  </weight>
+<weight DYN_SCALE="1" MUF="2.0" MUR="0.5" PDF="320900" id="1027"> MUR=0.5 MUF=2.0 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="2.0" MUR="0.5" PDF="320900" id="1028"> MUR=0.5 MUF=2.0 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="2.0" MUR="0.5" PDF="320900" id="1029"> MUR=0.5 MUF=2.0 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="2.0" MUR="0.5" PDF="320900" id="1030"> MUR=0.5 MUF=2.0 dyn_scale_choice=sqrts  </weight>
+<weight MUF="0.5" MUR="1.0" PDF="320900" id="1031"> MUF=0.5  </weight>
+<weight DYN_SCALE="1" MUF="0.5" MUR="1.0" PDF="320900" id="1032"> MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="0.5" MUR="1.0" PDF="320900" id="1033"> MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="0.5" MUR="1.0" PDF="320900" id="1034"> MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="0.5" MUR="1.0" PDF="320900" id="1035"> MUF=0.5 dyn_scale_choice=sqrts  </weight>
+<weight MUF="0.5" MUR="2.0" PDF="320900" id="1036"> MUR=2.0 MUF=0.5  </weight>
+<weight DYN_SCALE="1" MUF="0.5" MUR="2.0" PDF="320900" id="1037"> MUR=2.0 MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="0.5" MUR="2.0" PDF="320900" id="1038"> MUR=2.0 MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="0.5" MUR="2.0" PDF="320900" id="1039"> MUR=2.0 MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="0.5" MUR="2.0" PDF="320900" id="1040"> MUR=2.0 MUF=0.5 dyn_scale_choice=sqrts  </weight>
+<weight MUF="0.5" MUR="0.5" PDF="320900" id="1041"> MUR=0.5 MUF=0.5  </weight>
+<weight DYN_SCALE="1" MUF="0.5" MUR="0.5" PDF="320900" id="1042"> MUR=0.5 MUF=0.5 dyn_scale_choice=sum pt  </weight>
+<weight DYN_SCALE="2" MUF="0.5" MUR="0.5" PDF="320900" id="1043"> MUR=0.5 MUF=0.5 dyn_scale_choice=HT  </weight>
+<weight DYN_SCALE="3" MUF="0.5" MUR="0.5" PDF="320900" id="1044"> MUR=0.5 MUF=0.5 dyn_scale_choice=HT/2  </weight>
+<weight DYN_SCALE="4" MUF="0.5" MUR="0.5" PDF="320900" id="1045"> MUR=0.5 MUF=0.5 dyn_scale_choice=sqrts  </weight>
+</weightgroup> # scale
+<weightgroup combine="replicas" name="NNPDF31_nnlo_as_0118_nf_4"> # 320900: NNPDF3.1 NNLO global fit, nf=4. mem=0 ; average on replicas; mem=1-100 ; PDF replicas
+<weight MUF="1.0" MUR="1.0" PDF="320900" id="1046">  </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320901" id="1047"> PDF=320900 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320902" id="1048"> PDF=320900 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320903" id="1049"> PDF=320900 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320904" id="1050"> PDF=320900 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320905" id="1051"> PDF=320900 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320906" id="1052"> PDF=320900 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320907" id="1053"> PDF=320900 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320908" id="1054"> PDF=320900 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320909" id="1055"> PDF=320900 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320910" id="1056"> PDF=320900 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320911" id="1057"> PDF=320900 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320912" id="1058"> PDF=320900 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320913" id="1059"> PDF=320900 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320914" id="1060"> PDF=320900 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320915" id="1061"> PDF=320900 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320916" id="1062"> PDF=320900 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320917" id="1063"> PDF=320900 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320918" id="1064"> PDF=320900 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320919" id="1065"> PDF=320900 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320920" id="1066"> PDF=320900 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320921" id="1067"> PDF=320900 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320922" id="1068"> PDF=320900 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320923" id="1069"> PDF=320900 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320924" id="1070"> PDF=320900 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320925" id="1071"> PDF=320900 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320926" id="1072"> PDF=320900 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320927" id="1073"> PDF=320900 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320928" id="1074"> PDF=320900 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320929" id="1075"> PDF=320900 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320930" id="1076"> PDF=320900 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320931" id="1077"> PDF=320900 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320932" id="1078"> PDF=320900 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320933" id="1079"> PDF=320900 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320934" id="1080"> PDF=320900 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320935" id="1081"> PDF=320900 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320936" id="1082"> PDF=320900 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320937" id="1083"> PDF=320900 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320938" id="1084"> PDF=320900 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320939" id="1085"> PDF=320900 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320940" id="1086"> PDF=320900 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320941" id="1087"> PDF=320900 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320942" id="1088"> PDF=320900 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320943" id="1089"> PDF=320900 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320944" id="1090"> PDF=320900 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320945" id="1091"> PDF=320900 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320946" id="1092"> PDF=320900 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320947" id="1093"> PDF=320900 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320948" id="1094"> PDF=320900 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320949" id="1095"> PDF=320900 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320950" id="1096"> PDF=320900 MemberID=50 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320951" id="1097"> PDF=320900 MemberID=51 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320952" id="1098"> PDF=320900 MemberID=52 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320953" id="1099"> PDF=320900 MemberID=53 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320954" id="1100"> PDF=320900 MemberID=54 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320955" id="1101"> PDF=320900 MemberID=55 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320956" id="1102"> PDF=320900 MemberID=56 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320957" id="1103"> PDF=320900 MemberID=57 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320958" id="1104"> PDF=320900 MemberID=58 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320959" id="1105"> PDF=320900 MemberID=59 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320960" id="1106"> PDF=320900 MemberID=60 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320961" id="1107"> PDF=320900 MemberID=61 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320962" id="1108"> PDF=320900 MemberID=62 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320963" id="1109"> PDF=320900 MemberID=63 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320964" id="1110"> PDF=320900 MemberID=64 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320965" id="1111"> PDF=320900 MemberID=65 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320966" id="1112"> PDF=320900 MemberID=66 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320967" id="1113"> PDF=320900 MemberID=67 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320968" id="1114"> PDF=320900 MemberID=68 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320969" id="1115"> PDF=320900 MemberID=69 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320970" id="1116"> PDF=320900 MemberID=70 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320971" id="1117"> PDF=320900 MemberID=71 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320972" id="1118"> PDF=320900 MemberID=72 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320973" id="1119"> PDF=320900 MemberID=73 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320974" id="1120"> PDF=320900 MemberID=74 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320975" id="1121"> PDF=320900 MemberID=75 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320976" id="1122"> PDF=320900 MemberID=76 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320977" id="1123"> PDF=320900 MemberID=77 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320978" id="1124"> PDF=320900 MemberID=78 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320979" id="1125"> PDF=320900 MemberID=79 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320980" id="1126"> PDF=320900 MemberID=80 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320981" id="1127"> PDF=320900 MemberID=81 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320982" id="1128"> PDF=320900 MemberID=82 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320983" id="1129"> PDF=320900 MemberID=83 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320984" id="1130"> PDF=320900 MemberID=84 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320985" id="1131"> PDF=320900 MemberID=85 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320986" id="1132"> PDF=320900 MemberID=86 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320987" id="1133"> PDF=320900 MemberID=87 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320988" id="1134"> PDF=320900 MemberID=88 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320989" id="1135"> PDF=320900 MemberID=89 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320990" id="1136"> PDF=320900 MemberID=90 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320991" id="1137"> PDF=320900 MemberID=91 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320992" id="1138"> PDF=320900 MemberID=92 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320993" id="1139"> PDF=320900 MemberID=93 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320994" id="1140"> PDF=320900 MemberID=94 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320995" id="1141"> PDF=320900 MemberID=95 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320996" id="1142"> PDF=320900 MemberID=96 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320997" id="1143"> PDF=320900 MemberID=97 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320998" id="1144"> PDF=320900 MemberID=98 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320999" id="1145"> PDF=320900 MemberID=99 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="321000" id="1146"> PDF=320900 MemberID=100 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="CT10nlo_nf4"> # 11082: CT10 NLO PDF fixed 4-flavour fits using the standard CTEQ PDF evolution but using the HOPPET alphas_s running solution. NEW CT12 grid type. Excluding the D0 Run-II W asymmetry data. mem=0 ; mem=0 ; NF4 high scale Q=m_Z=91.190 GeV; mem=1 ; NF4 low scale  Q=m_tau=1.778 GeV
+<weight MUF="1.0" MUR="1.0" PDF="11082" id="1147"> PDF=11082 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="11083" id="1148"> PDF=11082 MemberID=1 </weight>
+</weightgroup> # PDFSET -&gt; PDF
+<weight MUF="1.0" MUR="1.0" PDF="13091" id="1149"> PDF=13091 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="13191" id="1150"> PDF=13191 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="13202" id="1151"> PDF=13202 MemberID=0 </weight>
+<weightgroup combine="hessian" name="MSTW2008lo68cl_nf4"> # 23100: MSTW 2008 LO (68% C.L.) evolved with 4 flavours maximum.  This set has 41 member PDFs.  mem=0 ; central value; mem=1-40 ; 20 eigenvectors (+/- directions).  http://mstwpdf.hepforge.org
+<weight MUF="1.0" MUR="1.0" PDF="23100" id="1152"> PDF=23100 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23101" id="1153"> PDF=23100 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23102" id="1154"> PDF=23100 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23103" id="1155"> PDF=23100 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23104" id="1156"> PDF=23100 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23105" id="1157"> PDF=23100 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23106" id="1158"> PDF=23100 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23107" id="1159"> PDF=23100 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23108" id="1160"> PDF=23100 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23109" id="1161"> PDF=23100 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23110" id="1162"> PDF=23100 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23111" id="1163"> PDF=23100 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23112" id="1164"> PDF=23100 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23113" id="1165"> PDF=23100 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23114" id="1166"> PDF=23100 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23115" id="1167"> PDF=23100 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23116" id="1168"> PDF=23100 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23117" id="1169"> PDF=23100 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23118" id="1170"> PDF=23100 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23119" id="1171"> PDF=23100 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23120" id="1172"> PDF=23100 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23121" id="1173"> PDF=23100 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23122" id="1174"> PDF=23100 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23123" id="1175"> PDF=23100 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23124" id="1176"> PDF=23100 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23125" id="1177"> PDF=23100 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23126" id="1178"> PDF=23100 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23127" id="1179"> PDF=23100 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23128" id="1180"> PDF=23100 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23129" id="1181"> PDF=23100 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23130" id="1182"> PDF=23100 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23131" id="1183"> PDF=23100 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23132" id="1184"> PDF=23100 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23133" id="1185"> PDF=23100 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23134" id="1186"> PDF=23100 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23135" id="1187"> PDF=23100 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23136" id="1188"> PDF=23100 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23137" id="1189"> PDF=23100 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23138" id="1190"> PDF=23100 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23139" id="1191"> PDF=23100 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23140" id="1192"> PDF=23100 MemberID=40 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="hessian" name="MSTW2008nlo68cl_nf4"> # 23300: MSTW 2008 NLO (68% C.L.) evolved with 4 flavours maximum.  This set has 41 member PDFs.  mem=0 ; central value; mem=1-40 ; 20 eigenvectors (+/- directions).  http://mstwpdf.hepforge.org
+<weight MUF="1.0" MUR="1.0" PDF="23300" id="1193"> PDF=23300 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23301" id="1194"> PDF=23300 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23302" id="1195"> PDF=23300 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23303" id="1196"> PDF=23300 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23304" id="1197"> PDF=23300 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23305" id="1198"> PDF=23300 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23306" id="1199"> PDF=23300 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23307" id="1200"> PDF=23300 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23308" id="1201"> PDF=23300 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23309" id="1202"> PDF=23300 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23310" id="1203"> PDF=23300 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23311" id="1204"> PDF=23300 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23312" id="1205"> PDF=23300 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23313" id="1206"> PDF=23300 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23314" id="1207"> PDF=23300 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23315" id="1208"> PDF=23300 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23316" id="1209"> PDF=23300 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23317" id="1210"> PDF=23300 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23318" id="1211"> PDF=23300 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23319" id="1212"> PDF=23300 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23320" id="1213"> PDF=23300 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23321" id="1214"> PDF=23300 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23322" id="1215"> PDF=23300 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23323" id="1216"> PDF=23300 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23324" id="1217"> PDF=23300 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23325" id="1218"> PDF=23300 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23326" id="1219"> PDF=23300 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23327" id="1220"> PDF=23300 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23328" id="1221"> PDF=23300 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23329" id="1222"> PDF=23300 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23330" id="1223"> PDF=23300 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23331" id="1224"> PDF=23300 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23332" id="1225"> PDF=23300 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23333" id="1226"> PDF=23300 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23334" id="1227"> PDF=23300 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23335" id="1228"> PDF=23300 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23336" id="1229"> PDF=23300 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23337" id="1230"> PDF=23300 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23338" id="1231"> PDF=23300 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23339" id="1232"> PDF=23300 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23340" id="1233"> PDF=23300 MemberID=40 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MSTW2008nlo_mbrange_nf4"> # 23490: MSTW 2008 NLO (fits for range of m_b values, evolve with 4 flavours maximum).  This set has 7 member PDFs.  mem=0 ; default m_b = 4.75 GeV; mem=1-6 ; m_b = 4.00, 4.25, 4.50, 5.00, 5.25, 5.50 GeV.  http://mstwpdf.hepforge.org
+<weight MUF="1.0" MUR="1.0" PDF="23490" id="1234"> PDF=23490 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23491" id="1235"> PDF=23490 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23492" id="1236"> PDF=23490 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23493" id="1237"> PDF=23490 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23494" id="1238"> PDF=23490 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23495" id="1239"> PDF=23490 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23496" id="1240"> PDF=23490 MemberID=6 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="hessian" name="MSTW2008nnlo68cl_nf4"> # 23600: MSTW 2008 NNLO (68% C.L.) evolved with 4 flavours maximum.  This set has 41 member PDFs.  mem=0 ; central value; mem=1-40 ; 20 eigenvectors (+/- directions).  http://mstwpdf.hepforge.org
+<weight MUF="1.0" MUR="1.0" PDF="23600" id="1241"> PDF=23600 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23601" id="1242"> PDF=23600 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23602" id="1243"> PDF=23600 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23603" id="1244"> PDF=23600 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23604" id="1245"> PDF=23600 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23605" id="1246"> PDF=23600 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23606" id="1247"> PDF=23600 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23607" id="1248"> PDF=23600 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23608" id="1249"> PDF=23600 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23609" id="1250"> PDF=23600 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23610" id="1251"> PDF=23600 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23611" id="1252"> PDF=23600 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23612" id="1253"> PDF=23600 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23613" id="1254"> PDF=23600 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23614" id="1255"> PDF=23600 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23615" id="1256"> PDF=23600 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23616" id="1257"> PDF=23600 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23617" id="1258"> PDF=23600 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23618" id="1259"> PDF=23600 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23619" id="1260"> PDF=23600 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23620" id="1261"> PDF=23600 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23621" id="1262"> PDF=23600 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23622" id="1263"> PDF=23600 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23623" id="1264"> PDF=23600 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23624" id="1265"> PDF=23600 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23625" id="1266"> PDF=23600 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23626" id="1267"> PDF=23600 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23627" id="1268"> PDF=23600 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23628" id="1269"> PDF=23600 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23629" id="1270"> PDF=23600 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23630" id="1271"> PDF=23600 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23631" id="1272"> PDF=23600 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23632" id="1273"> PDF=23600 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23633" id="1274"> PDF=23600 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23634" id="1275"> PDF=23600 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23635" id="1276"> PDF=23600 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23636" id="1277"> PDF=23600 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23637" id="1278"> PDF=23600 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23638" id="1279"> PDF=23600 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23639" id="1280"> PDF=23600 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23640" id="1281"> PDF=23600 MemberID=40 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MSTW2008nnlo_mbrange_nf4"> # 23790: MSTW 2008 NNLO (fits for range of m_b values, evolve with 4 flavours maximum).  This set has 7 member PDFs.  mem=0 ; default m_b = 4.75 GeV; mem=1-6 ; m_b = 4.00, 4.25, 4.50, 5.00, 5.25, 5.50 GeV.  http://mstwpdf.hepforge.org
+<weight MUF="1.0" MUR="1.0" PDF="23790" id="1282"> PDF=23790 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23791" id="1283"> PDF=23790 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23792" id="1284"> PDF=23790 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23793" id="1285"> PDF=23790 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23794" id="1286"> PDF=23790 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23795" id="1287"> PDF=23790 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="23796" id="1288"> PDF=23790 MemberID=6 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="hessian" name="MMHT2014nlo68cl_nf4"> # 25410: MMHT 2014 NLO (68% C.L.): evolve with 4 flavours maximum. This set has 51 member PDFs. mem=0 --.gt. central value; mem=1-50 --.gt. 20 eigenvector sets (+/- directions). Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25410" id="1289"> PDF=25410 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25411" id="1290"> PDF=25410 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25412" id="1291"> PDF=25410 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25413" id="1292"> PDF=25410 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25414" id="1293"> PDF=25410 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25415" id="1294"> PDF=25410 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25416" id="1295"> PDF=25410 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25417" id="1296"> PDF=25410 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25418" id="1297"> PDF=25410 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25419" id="1298"> PDF=25410 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25420" id="1299"> PDF=25410 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25421" id="1300"> PDF=25410 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25422" id="1301"> PDF=25410 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25423" id="1302"> PDF=25410 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25424" id="1303"> PDF=25410 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25425" id="1304"> PDF=25410 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25426" id="1305"> PDF=25410 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25427" id="1306"> PDF=25410 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25428" id="1307"> PDF=25410 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25429" id="1308"> PDF=25410 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25430" id="1309"> PDF=25410 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25431" id="1310"> PDF=25410 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25432" id="1311"> PDF=25410 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25433" id="1312"> PDF=25410 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25434" id="1313"> PDF=25410 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25435" id="1314"> PDF=25410 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25436" id="1315"> PDF=25410 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25437" id="1316"> PDF=25410 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25438" id="1317"> PDF=25410 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25439" id="1318"> PDF=25410 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25440" id="1319"> PDF=25410 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25441" id="1320"> PDF=25410 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25442" id="1321"> PDF=25410 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25443" id="1322"> PDF=25410 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25444" id="1323"> PDF=25410 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25445" id="1324"> PDF=25410 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25446" id="1325"> PDF=25410 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25447" id="1326"> PDF=25410 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25448" id="1327"> PDF=25410 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25449" id="1328"> PDF=25410 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25450" id="1329"> PDF=25410 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25451" id="1330"> PDF=25410 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25452" id="1331"> PDF=25410 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25453" id="1332"> PDF=25410 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25454" id="1333"> PDF=25410 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25455" id="1334"> PDF=25410 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25456" id="1335"> PDF=25410 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25457" id="1336"> PDF=25410 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25458" id="1337"> PDF=25410 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25459" id="1338"> PDF=25410 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25460" id="1339"> PDF=25410 MemberID=50 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="hessian" name="MMHT2014nlo68clas118_nf4"> # 25510: MMHT 2014 NLO (68% C.L.): evolve with 4 flavours maximum. This set has 51 member PDFs. mem=0 --.gt. central value; mem=1-50 --.gt. 20 eigenvector sets (+/- directions). Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25510" id="1340"> PDF=25510 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25511" id="1341"> PDF=25510 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25512" id="1342"> PDF=25510 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25513" id="1343"> PDF=25510 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25514" id="1344"> PDF=25510 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25515" id="1345"> PDF=25510 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25516" id="1346"> PDF=25510 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25517" id="1347"> PDF=25510 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25518" id="1348"> PDF=25510 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25519" id="1349"> PDF=25510 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25520" id="1350"> PDF=25510 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25521" id="1351"> PDF=25510 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25522" id="1352"> PDF=25510 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25523" id="1353"> PDF=25510 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25524" id="1354"> PDF=25510 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25525" id="1355"> PDF=25510 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25526" id="1356"> PDF=25510 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25527" id="1357"> PDF=25510 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25528" id="1358"> PDF=25510 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25529" id="1359"> PDF=25510 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25530" id="1360"> PDF=25510 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25531" id="1361"> PDF=25510 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25532" id="1362"> PDF=25510 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25533" id="1363"> PDF=25510 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25534" id="1364"> PDF=25510 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25535" id="1365"> PDF=25510 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25536" id="1366"> PDF=25510 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25537" id="1367"> PDF=25510 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25538" id="1368"> PDF=25510 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25539" id="1369"> PDF=25510 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25540" id="1370"> PDF=25510 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25541" id="1371"> PDF=25510 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25542" id="1372"> PDF=25510 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25543" id="1373"> PDF=25510 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25544" id="1374"> PDF=25510 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25545" id="1375"> PDF=25510 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25546" id="1376"> PDF=25510 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25547" id="1377"> PDF=25510 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25548" id="1378"> PDF=25510 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25549" id="1379"> PDF=25510 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25550" id="1380"> PDF=25510 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25551" id="1381"> PDF=25510 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25552" id="1382"> PDF=25510 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25553" id="1383"> PDF=25510 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25554" id="1384"> PDF=25510 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25555" id="1385"> PDF=25510 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25556" id="1386"> PDF=25510 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25557" id="1387"> PDF=25510 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25558" id="1388"> PDF=25510 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25559" id="1389"> PDF=25510 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25560" id="1390"> PDF=25510 MemberID=50 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nlo_asmzsmallrange_nf4"> # 25570: MMHT 2014 NLO (fits for range of alpha_S values, evolve with 4 flavours maximum). This set has 5 member PDFs. mem=0 --.gt. best-fit alpha_S(M_Z) = 0.120; mem=1-4 --.gt. alpha_S(M_Z) = 0.117,...,0.121. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25570" id="1391"> PDF=25570 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25571" id="1392"> PDF=25570 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25572" id="1393"> PDF=25570 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25573" id="1394"> PDF=25570 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25574" id="1395"> PDF=25570 MemberID=4 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nlo_mcrange_nf4"> # 25605: MMHT 2014 NLO (range of mc, evolve with 4 flavours maximum). This set has 9 member PDFs. mem=0 --.gt. default mc = 1.40 GeV; mem=1-8 --.gt. mc = 1.15 - 1.55 GeV in steps of 0.05 GeV. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25605" id="1396"> PDF=25605 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25606" id="1397"> PDF=25605 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25607" id="1398"> PDF=25605 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25608" id="1399"> PDF=25605 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25609" id="1400"> PDF=25605 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25610" id="1401"> PDF=25605 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25611" id="1402"> PDF=25605 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25612" id="1403"> PDF=25605 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25613" id="1404"> PDF=25605 MemberID=8 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nlo_mbrange_nf4"> # 25620: MMHT 2014 NLO (range of mb, evolve with 4 flavours maximum). This set has 5 member PDFs. mem=0 --.gt. default mb = 4.75 GeV; mem=1-4 --.gt. mb = 4.25 - 5.25 GeV in steps of 0.25 GeV. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25620" id="1405"> PDF=25620 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25621" id="1406"> PDF=25620 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25622" id="1407"> PDF=25620 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25623" id="1408"> PDF=25620 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25624" id="1409"> PDF=25620 MemberID=4 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="hessian" name="MMHT2014nnlo68cl_nf4"> # 25710: MMHT 2014 NNLO (68% C.L.): evolve with 4 flavours maximum. This set has 51 member PDFs. mem=0 --.gt. central value; mem=1-50 --.gt. 20 eigenvector sets (+/- directions). Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25710" id="1410"> PDF=25710 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25711" id="1411"> PDF=25710 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25712" id="1412"> PDF=25710 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25713" id="1413"> PDF=25710 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25714" id="1414"> PDF=25710 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25715" id="1415"> PDF=25710 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25716" id="1416"> PDF=25710 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25717" id="1417"> PDF=25710 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25718" id="1418"> PDF=25710 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25719" id="1419"> PDF=25710 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25720" id="1420"> PDF=25710 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25721" id="1421"> PDF=25710 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25722" id="1422"> PDF=25710 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25723" id="1423"> PDF=25710 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25724" id="1424"> PDF=25710 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25725" id="1425"> PDF=25710 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25726" id="1426"> PDF=25710 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25727" id="1427"> PDF=25710 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25728" id="1428"> PDF=25710 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25729" id="1429"> PDF=25710 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25730" id="1430"> PDF=25710 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25731" id="1431"> PDF=25710 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25732" id="1432"> PDF=25710 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25733" id="1433"> PDF=25710 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25734" id="1434"> PDF=25710 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25735" id="1435"> PDF=25710 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25736" id="1436"> PDF=25710 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25737" id="1437"> PDF=25710 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25738" id="1438"> PDF=25710 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25739" id="1439"> PDF=25710 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25740" id="1440"> PDF=25710 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25741" id="1441"> PDF=25710 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25742" id="1442"> PDF=25710 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25743" id="1443"> PDF=25710 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25744" id="1444"> PDF=25710 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25745" id="1445"> PDF=25710 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25746" id="1446"> PDF=25710 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25747" id="1447"> PDF=25710 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25748" id="1448"> PDF=25710 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25749" id="1449"> PDF=25710 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25750" id="1450"> PDF=25710 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25751" id="1451"> PDF=25710 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25752" id="1452"> PDF=25710 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25753" id="1453"> PDF=25710 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25754" id="1454"> PDF=25710 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25755" id="1455"> PDF=25710 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25756" id="1456"> PDF=25710 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25757" id="1457"> PDF=25710 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25758" id="1458"> PDF=25710 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25759" id="1459"> PDF=25710 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25760" id="1460"> PDF=25710 MemberID=50 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nnlo_asmzsmallrange_nf4"> # 25770: MMHT 2014 NNLO (fits for range of alpha_S values, evolve with 4 flavours maximum). This set has 3 member PDFs. mem=0 --.gt. best-fit alpha_S(M_Z) = 0.118; mem=1-2 --.gt. alpha_S(M_Z) = 0.117, 0.119. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25770" id="1461"> PDF=25770 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25771" id="1462"> PDF=25770 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25772" id="1463"> PDF=25770 MemberID=2 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nnlo_mcrange_nf4"> # 25805: MMHT 2014 NNLO (range of mc, evolve with 4 flavours maximum). This set has 9 member PDFs. mem=0 --.gt. default mc = 1.40 GeV; mem=1-8 --.gt. mc = 1.15 - 1.55 GeV in steps of 0.05 GeV. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25805" id="1464"> PDF=25805 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25806" id="1465"> PDF=25805 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25807" id="1466"> PDF=25805 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25808" id="1467"> PDF=25805 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25809" id="1468"> PDF=25805 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25810" id="1469"> PDF=25805 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25811" id="1470"> PDF=25805 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25812" id="1471"> PDF=25805 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25813" id="1472"> PDF=25805 MemberID=8 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="unknown" name="MMHT2014nnlo_mbrange_nf4"> # 25840: MMHT 2014 NNLO (range of mb, evolve with 4 flavours maximum). This set has 5 member PDFs. mem=0 --.gt. default mb = 4.75 GeV; mem=1-4 --.gt. mb = 4.25 - 5.25 GeV in steps of 0.25 GeV. Website: www.hep.ucl.ac.uk/mmht
+<weight MUF="1.0" MUR="1.0" PDF="25840" id="1473"> PDF=25840 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25841" id="1474"> PDF=25840 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25842" id="1475"> PDF=25840 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25843" id="1476"> PDF=25840 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="25844" id="1477"> PDF=25840 MemberID=4 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="symmhessian" name="PDF4LHC15_nlo_nf4_30"> # 92000: PDF4LHC15_nlo_nf4_30, alphas(MZ)=0.1126, mem=0 ; central value; mem=1-30 ; PDF symmetric eigenvectors
+<weight MUF="1.0" MUR="1.0" PDF="92000" id="1478"> PDF=92000 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92001" id="1479"> PDF=92000 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92002" id="1480"> PDF=92000 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92003" id="1481"> PDF=92000 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92004" id="1482"> PDF=92000 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92005" id="1483"> PDF=92000 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92006" id="1484"> PDF=92000 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92007" id="1485"> PDF=92000 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92008" id="1486"> PDF=92000 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92009" id="1487"> PDF=92000 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92010" id="1488"> PDF=92000 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92011" id="1489"> PDF=92000 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92012" id="1490"> PDF=92000 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92013" id="1491"> PDF=92000 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92014" id="1492"> PDF=92000 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92015" id="1493"> PDF=92000 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92016" id="1494"> PDF=92000 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92017" id="1495"> PDF=92000 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92018" id="1496"> PDF=92000 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92019" id="1497"> PDF=92000 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92020" id="1498"> PDF=92000 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92021" id="1499"> PDF=92000 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92022" id="1500"> PDF=92000 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92023" id="1501"> PDF=92000 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92024" id="1502"> PDF=92000 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92025" id="1503"> PDF=92000 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92026" id="1504"> PDF=92000 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92027" id="1505"> PDF=92000 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92028" id="1506"> PDF=92000 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92029" id="1507"> PDF=92000 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="92030" id="1508"> PDF=92000 MemberID=30 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="symmhessian+as" name="NNPDF31_nnlo_hessian_pdfas"> # 306000: Hessian conversion of NNPDF31_nnlo_as_0118_1000, mem=0 central value ; Alphas(MZ)=0.118; mem=1-100 ; PDF eig.; mem=101 ; central value Alphas(MZ)=0.116; mem=102 ; central value Alphas(MZ)=0.120
+<weight MUF="1.0" MUR="1.0" PDF="306000" id="1509"> PDF=306000 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306001" id="1510"> PDF=306000 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306002" id="1511"> PDF=306000 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306003" id="1512"> PDF=306000 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306004" id="1513"> PDF=306000 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306005" id="1514"> PDF=306000 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306006" id="1515"> PDF=306000 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306007" id="1516"> PDF=306000 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306008" id="1517"> PDF=306000 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306009" id="1518"> PDF=306000 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306010" id="1519"> PDF=306000 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306011" id="1520"> PDF=306000 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306012" id="1521"> PDF=306000 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306013" id="1522"> PDF=306000 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306014" id="1523"> PDF=306000 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306015" id="1524"> PDF=306000 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306016" id="1525"> PDF=306000 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306017" id="1526"> PDF=306000 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306018" id="1527"> PDF=306000 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306019" id="1528"> PDF=306000 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306020" id="1529"> PDF=306000 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306021" id="1530"> PDF=306000 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306022" id="1531"> PDF=306000 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306023" id="1532"> PDF=306000 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306024" id="1533"> PDF=306000 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306025" id="1534"> PDF=306000 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306026" id="1535"> PDF=306000 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306027" id="1536"> PDF=306000 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306028" id="1537"> PDF=306000 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306029" id="1538"> PDF=306000 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306030" id="1539"> PDF=306000 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306031" id="1540"> PDF=306000 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306032" id="1541"> PDF=306000 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306033" id="1542"> PDF=306000 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306034" id="1543"> PDF=306000 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306035" id="1544"> PDF=306000 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306036" id="1545"> PDF=306000 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306037" id="1546"> PDF=306000 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306038" id="1547"> PDF=306000 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306039" id="1548"> PDF=306000 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306040" id="1549"> PDF=306000 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306041" id="1550"> PDF=306000 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306042" id="1551"> PDF=306000 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306043" id="1552"> PDF=306000 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306044" id="1553"> PDF=306000 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306045" id="1554"> PDF=306000 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306046" id="1555"> PDF=306000 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306047" id="1556"> PDF=306000 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306048" id="1557"> PDF=306000 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306049" id="1558"> PDF=306000 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306050" id="1559"> PDF=306000 MemberID=50 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306051" id="1560"> PDF=306000 MemberID=51 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306052" id="1561"> PDF=306000 MemberID=52 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306053" id="1562"> PDF=306000 MemberID=53 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306054" id="1563"> PDF=306000 MemberID=54 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306055" id="1564"> PDF=306000 MemberID=55 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306056" id="1565"> PDF=306000 MemberID=56 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306057" id="1566"> PDF=306000 MemberID=57 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306058" id="1567"> PDF=306000 MemberID=58 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306059" id="1568"> PDF=306000 MemberID=59 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306060" id="1569"> PDF=306000 MemberID=60 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306061" id="1570"> PDF=306000 MemberID=61 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306062" id="1571"> PDF=306000 MemberID=62 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306063" id="1572"> PDF=306000 MemberID=63 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306064" id="1573"> PDF=306000 MemberID=64 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306065" id="1574"> PDF=306000 MemberID=65 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306066" id="1575"> PDF=306000 MemberID=66 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306067" id="1576"> PDF=306000 MemberID=67 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306068" id="1577"> PDF=306000 MemberID=68 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306069" id="1578"> PDF=306000 MemberID=69 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306070" id="1579"> PDF=306000 MemberID=70 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306071" id="1580"> PDF=306000 MemberID=71 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306072" id="1581"> PDF=306000 MemberID=72 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306073" id="1582"> PDF=306000 MemberID=73 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306074" id="1583"> PDF=306000 MemberID=74 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306075" id="1584"> PDF=306000 MemberID=75 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306076" id="1585"> PDF=306000 MemberID=76 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306077" id="1586"> PDF=306000 MemberID=77 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306078" id="1587"> PDF=306000 MemberID=78 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306079" id="1588"> PDF=306000 MemberID=79 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306080" id="1589"> PDF=306000 MemberID=80 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306081" id="1590"> PDF=306000 MemberID=81 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306082" id="1591"> PDF=306000 MemberID=82 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306083" id="1592"> PDF=306000 MemberID=83 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306084" id="1593"> PDF=306000 MemberID=84 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306085" id="1594"> PDF=306000 MemberID=85 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306086" id="1595"> PDF=306000 MemberID=86 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306087" id="1596"> PDF=306000 MemberID=87 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306088" id="1597"> PDF=306000 MemberID=88 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306089" id="1598"> PDF=306000 MemberID=89 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306090" id="1599"> PDF=306000 MemberID=90 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306091" id="1600"> PDF=306000 MemberID=91 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306092" id="1601"> PDF=306000 MemberID=92 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306093" id="1602"> PDF=306000 MemberID=93 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306094" id="1603"> PDF=306000 MemberID=94 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306095" id="1604"> PDF=306000 MemberID=95 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306096" id="1605"> PDF=306000 MemberID=96 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306097" id="1606"> PDF=306000 MemberID=97 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306098" id="1607"> PDF=306000 MemberID=98 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306099" id="1608"> PDF=306000 MemberID=99 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306100" id="1609"> PDF=306000 MemberID=100 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306101" id="1610"> PDF=306000 MemberID=101 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="306102" id="1611"> PDF=306000 MemberID=102 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="replicas" name="NNPDF31_nlo_as_0118_nf_4"> # 320500: NNPDF3.1 NLO global fit, nf=4. mem=0 ; average on replicas; mem=1-100 ; PDF replicas
+<weight MUF="1.0" MUR="1.0" PDF="320500" id="1612"> PDF=320500 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320501" id="1613"> PDF=320500 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320502" id="1614"> PDF=320500 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320503" id="1615"> PDF=320500 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320504" id="1616"> PDF=320500 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320505" id="1617"> PDF=320500 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320506" id="1618"> PDF=320500 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320507" id="1619"> PDF=320500 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320508" id="1620"> PDF=320500 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320509" id="1621"> PDF=320500 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320510" id="1622"> PDF=320500 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320511" id="1623"> PDF=320500 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320512" id="1624"> PDF=320500 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320513" id="1625"> PDF=320500 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320514" id="1626"> PDF=320500 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320515" id="1627"> PDF=320500 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320516" id="1628"> PDF=320500 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320517" id="1629"> PDF=320500 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320518" id="1630"> PDF=320500 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320519" id="1631"> PDF=320500 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320520" id="1632"> PDF=320500 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320521" id="1633"> PDF=320500 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320522" id="1634"> PDF=320500 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320523" id="1635"> PDF=320500 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320524" id="1636"> PDF=320500 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320525" id="1637"> PDF=320500 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320526" id="1638"> PDF=320500 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320527" id="1639"> PDF=320500 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320528" id="1640"> PDF=320500 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320529" id="1641"> PDF=320500 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320530" id="1642"> PDF=320500 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320531" id="1643"> PDF=320500 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320532" id="1644"> PDF=320500 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320533" id="1645"> PDF=320500 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320534" id="1646"> PDF=320500 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320535" id="1647"> PDF=320500 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320536" id="1648"> PDF=320500 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320537" id="1649"> PDF=320500 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320538" id="1650"> PDF=320500 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320539" id="1651"> PDF=320500 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320540" id="1652"> PDF=320500 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320541" id="1653"> PDF=320500 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320542" id="1654"> PDF=320500 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320543" id="1655"> PDF=320500 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320544" id="1656"> PDF=320500 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320545" id="1657"> PDF=320500 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320546" id="1658"> PDF=320500 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320547" id="1659"> PDF=320500 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320548" id="1660"> PDF=320500 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320549" id="1661"> PDF=320500 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320550" id="1662"> PDF=320500 MemberID=50 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320551" id="1663"> PDF=320500 MemberID=51 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320552" id="1664"> PDF=320500 MemberID=52 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320553" id="1665"> PDF=320500 MemberID=53 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320554" id="1666"> PDF=320500 MemberID=54 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320555" id="1667"> PDF=320500 MemberID=55 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320556" id="1668"> PDF=320500 MemberID=56 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320557" id="1669"> PDF=320500 MemberID=57 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320558" id="1670"> PDF=320500 MemberID=58 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320559" id="1671"> PDF=320500 MemberID=59 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320560" id="1672"> PDF=320500 MemberID=60 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320561" id="1673"> PDF=320500 MemberID=61 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320562" id="1674"> PDF=320500 MemberID=62 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320563" id="1675"> PDF=320500 MemberID=63 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320564" id="1676"> PDF=320500 MemberID=64 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320565" id="1677"> PDF=320500 MemberID=65 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320566" id="1678"> PDF=320500 MemberID=66 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320567" id="1679"> PDF=320500 MemberID=67 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320568" id="1680"> PDF=320500 MemberID=68 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320569" id="1681"> PDF=320500 MemberID=69 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320570" id="1682"> PDF=320500 MemberID=70 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320571" id="1683"> PDF=320500 MemberID=71 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320572" id="1684"> PDF=320500 MemberID=72 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320573" id="1685"> PDF=320500 MemberID=73 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320574" id="1686"> PDF=320500 MemberID=74 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320575" id="1687"> PDF=320500 MemberID=75 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320576" id="1688"> PDF=320500 MemberID=76 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320577" id="1689"> PDF=320500 MemberID=77 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320578" id="1690"> PDF=320500 MemberID=78 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320579" id="1691"> PDF=320500 MemberID=79 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320580" id="1692"> PDF=320500 MemberID=80 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320581" id="1693"> PDF=320500 MemberID=81 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320582" id="1694"> PDF=320500 MemberID=82 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320583" id="1695"> PDF=320500 MemberID=83 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320584" id="1696"> PDF=320500 MemberID=84 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320585" id="1697"> PDF=320500 MemberID=85 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320586" id="1698"> PDF=320500 MemberID=86 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320587" id="1699"> PDF=320500 MemberID=87 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320588" id="1700"> PDF=320500 MemberID=88 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320589" id="1701"> PDF=320500 MemberID=89 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320590" id="1702"> PDF=320500 MemberID=90 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320591" id="1703"> PDF=320500 MemberID=91 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320592" id="1704"> PDF=320500 MemberID=92 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320593" id="1705"> PDF=320500 MemberID=93 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320594" id="1706"> PDF=320500 MemberID=94 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320595" id="1707"> PDF=320500 MemberID=95 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320596" id="1708"> PDF=320500 MemberID=96 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320597" id="1709"> PDF=320500 MemberID=97 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320598" id="1710"> PDF=320500 MemberID=98 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320599" id="1711"> PDF=320500 MemberID=99 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="320600" id="1712"> PDF=320500 MemberID=100 </weight>
+</weightgroup> # PDFSET -&gt; PDFSET
+<weightgroup combine="replicas" name="NNPDF30_nlo_as_0118_nf_4"> # 260400: NNPDF3.0 NLO global fit, alphas(mb)=0.22278. mem=0 ; average on replicas; mem=1-100 ; PDF replicas
+<weight MUF="1.0" MUR="1.0" PDF="260400" id="1713"> PDF=260400 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260401" id="1714"> PDF=260400 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260402" id="1715"> PDF=260400 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260403" id="1716"> PDF=260400 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260404" id="1717"> PDF=260400 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260405" id="1718"> PDF=260400 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260406" id="1719"> PDF=260400 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260407" id="1720"> PDF=260400 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260408" id="1721"> PDF=260400 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260409" id="1722"> PDF=260400 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260410" id="1723"> PDF=260400 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260411" id="1724"> PDF=260400 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260412" id="1725"> PDF=260400 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260413" id="1726"> PDF=260400 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260414" id="1727"> PDF=260400 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260415" id="1728"> PDF=260400 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260416" id="1729"> PDF=260400 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260417" id="1730"> PDF=260400 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260418" id="1731"> PDF=260400 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260419" id="1732"> PDF=260400 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260420" id="1733"> PDF=260400 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260421" id="1734"> PDF=260400 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260422" id="1735"> PDF=260400 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260423" id="1736"> PDF=260400 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260424" id="1737"> PDF=260400 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260425" id="1738"> PDF=260400 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260426" id="1739"> PDF=260400 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260427" id="1740"> PDF=260400 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260428" id="1741"> PDF=260400 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260429" id="1742"> PDF=260400 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260430" id="1743"> PDF=260400 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260431" id="1744"> PDF=260400 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260432" id="1745"> PDF=260400 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260433" id="1746"> PDF=260400 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260434" id="1747"> PDF=260400 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260435" id="1748"> PDF=260400 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260436" id="1749"> PDF=260400 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260437" id="1750"> PDF=260400 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260438" id="1751"> PDF=260400 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260439" id="1752"> PDF=260400 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260440" id="1753"> PDF=260400 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260441" id="1754"> PDF=260400 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260442" id="1755"> PDF=260400 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260443" id="1756"> PDF=260400 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260444" id="1757"> PDF=260400 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260445" id="1758"> PDF=260400 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260446" id="1759"> PDF=260400 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260447" id="1760"> PDF=260400 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260448" id="1761"> PDF=260400 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260449" id="1762"> PDF=260400 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260450" id="1763"> PDF=260400 MemberID=50 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260451" id="1764"> PDF=260400 MemberID=51 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260452" id="1765"> PDF=260400 MemberID=52 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260453" id="1766"> PDF=260400 MemberID=53 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260454" id="1767"> PDF=260400 MemberID=54 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260455" id="1768"> PDF=260400 MemberID=55 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260456" id="1769"> PDF=260400 MemberID=56 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260457" id="1770"> PDF=260400 MemberID=57 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260458" id="1771"> PDF=260400 MemberID=58 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260459" id="1772"> PDF=260400 MemberID=59 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260460" id="1773"> PDF=260400 MemberID=60 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260461" id="1774"> PDF=260400 MemberID=61 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260462" id="1775"> PDF=260400 MemberID=62 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260463" id="1776"> PDF=260400 MemberID=63 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260464" id="1777"> PDF=260400 MemberID=64 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260465" id="1778"> PDF=260400 MemberID=65 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260466" id="1779"> PDF=260400 MemberID=66 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260467" id="1780"> PDF=260400 MemberID=67 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260468" id="1781"> PDF=260400 MemberID=68 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260469" id="1782"> PDF=260400 MemberID=69 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260470" id="1783"> PDF=260400 MemberID=70 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260471" id="1784"> PDF=260400 MemberID=71 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260472" id="1785"> PDF=260400 MemberID=72 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260473" id="1786"> PDF=260400 MemberID=73 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260474" id="1787"> PDF=260400 MemberID=74 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260475" id="1788"> PDF=260400 MemberID=75 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260476" id="1789"> PDF=260400 MemberID=76 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260477" id="1790"> PDF=260400 MemberID=77 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260478" id="1791"> PDF=260400 MemberID=78 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260479" id="1792"> PDF=260400 MemberID=79 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260480" id="1793"> PDF=260400 MemberID=80 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260481" id="1794"> PDF=260400 MemberID=81 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260482" id="1795"> PDF=260400 MemberID=82 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260483" id="1796"> PDF=260400 MemberID=83 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260484" id="1797"> PDF=260400 MemberID=84 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260485" id="1798"> PDF=260400 MemberID=85 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260486" id="1799"> PDF=260400 MemberID=86 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260487" id="1800"> PDF=260400 MemberID=87 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260488" id="1801"> PDF=260400 MemberID=88 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260489" id="1802"> PDF=260400 MemberID=89 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260490" id="1803"> PDF=260400 MemberID=90 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260491" id="1804"> PDF=260400 MemberID=91 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260492" id="1805"> PDF=260400 MemberID=92 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260493" id="1806"> PDF=260400 MemberID=93 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260494" id="1807"> PDF=260400 MemberID=94 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260495" id="1808"> PDF=260400 MemberID=95 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260496" id="1809"> PDF=260400 MemberID=96 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260497" id="1810"> PDF=260400 MemberID=97 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260498" id="1811"> PDF=260400 MemberID=98 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260499" id="1812"> PDF=260400 MemberID=99 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="260500" id="1813"> PDF=260400 MemberID=100 </weight>
+</weightgroup> # PDFSET -&gt; PDF
+<weight MUF="1.0" MUR="1.0" PDF="262400" id="1814"> PDF=262400 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="263400" id="1815"> PDF=263400 MemberID=0 </weight>
+<weightgroup combine="replicas+as" name="NNPDF30_nlo_nf_4_pdfas"> # 292000: NNPDF3.0 NLO global fit; mem=0 to mem=100 with alphas(MZ)=0.118, mem=0 ; average on replicas 1-100; mem=1-100 ; PDF replicas with  alphas(MZ)=0.118; mem=101 ; central value for alphas=0.117; mem=102 ; central value for alphas=0.119; maximum number of active flavors NF=4
+<weight MUF="1.0" MUR="1.0" PDF="292000" id="1816"> PDF=292000 MemberID=0 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292001" id="1817"> PDF=292000 MemberID=1 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292002" id="1818"> PDF=292000 MemberID=2 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292003" id="1819"> PDF=292000 MemberID=3 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292004" id="1820"> PDF=292000 MemberID=4 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292005" id="1821"> PDF=292000 MemberID=5 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292006" id="1822"> PDF=292000 MemberID=6 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292007" id="1823"> PDF=292000 MemberID=7 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292008" id="1824"> PDF=292000 MemberID=8 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292009" id="1825"> PDF=292000 MemberID=9 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292010" id="1826"> PDF=292000 MemberID=10 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292011" id="1827"> PDF=292000 MemberID=11 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292012" id="1828"> PDF=292000 MemberID=12 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292013" id="1829"> PDF=292000 MemberID=13 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292014" id="1830"> PDF=292000 MemberID=14 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292015" id="1831"> PDF=292000 MemberID=15 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292016" id="1832"> PDF=292000 MemberID=16 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292017" id="1833"> PDF=292000 MemberID=17 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292018" id="1834"> PDF=292000 MemberID=18 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292019" id="1835"> PDF=292000 MemberID=19 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292020" id="1836"> PDF=292000 MemberID=20 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292021" id="1837"> PDF=292000 MemberID=21 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292022" id="1838"> PDF=292000 MemberID=22 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292023" id="1839"> PDF=292000 MemberID=23 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292024" id="1840"> PDF=292000 MemberID=24 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292025" id="1841"> PDF=292000 MemberID=25 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292026" id="1842"> PDF=292000 MemberID=26 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292027" id="1843"> PDF=292000 MemberID=27 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292028" id="1844"> PDF=292000 MemberID=28 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292029" id="1845"> PDF=292000 MemberID=29 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292030" id="1846"> PDF=292000 MemberID=30 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292031" id="1847"> PDF=292000 MemberID=31 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292032" id="1848"> PDF=292000 MemberID=32 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292033" id="1849"> PDF=292000 MemberID=33 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292034" id="1850"> PDF=292000 MemberID=34 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292035" id="1851"> PDF=292000 MemberID=35 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292036" id="1852"> PDF=292000 MemberID=36 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292037" id="1853"> PDF=292000 MemberID=37 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292038" id="1854"> PDF=292000 MemberID=38 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292039" id="1855"> PDF=292000 MemberID=39 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292040" id="1856"> PDF=292000 MemberID=40 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292041" id="1857"> PDF=292000 MemberID=41 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292042" id="1858"> PDF=292000 MemberID=42 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292043" id="1859"> PDF=292000 MemberID=43 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292044" id="1860"> PDF=292000 MemberID=44 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292045" id="1861"> PDF=292000 MemberID=45 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292046" id="1862"> PDF=292000 MemberID=46 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292047" id="1863"> PDF=292000 MemberID=47 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292048" id="1864"> PDF=292000 MemberID=48 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292049" id="1865"> PDF=292000 MemberID=49 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292050" id="1866"> PDF=292000 MemberID=50 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292051" id="1867"> PDF=292000 MemberID=51 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292052" id="1868"> PDF=292000 MemberID=52 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292053" id="1869"> PDF=292000 MemberID=53 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292054" id="1870"> PDF=292000 MemberID=54 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292055" id="1871"> PDF=292000 MemberID=55 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292056" id="1872"> PDF=292000 MemberID=56 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292057" id="1873"> PDF=292000 MemberID=57 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292058" id="1874"> PDF=292000 MemberID=58 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292059" id="1875"> PDF=292000 MemberID=59 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292060" id="1876"> PDF=292000 MemberID=60 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292061" id="1877"> PDF=292000 MemberID=61 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292062" id="1878"> PDF=292000 MemberID=62 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292063" id="1879"> PDF=292000 MemberID=63 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292064" id="1880"> PDF=292000 MemberID=64 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292065" id="1881"> PDF=292000 MemberID=65 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292066" id="1882"> PDF=292000 MemberID=66 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292067" id="1883"> PDF=292000 MemberID=67 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292068" id="1884"> PDF=292000 MemberID=68 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292069" id="1885"> PDF=292000 MemberID=69 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292070" id="1886"> PDF=292000 MemberID=70 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292071" id="1887"> PDF=292000 MemberID=71 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292072" id="1888"> PDF=292000 MemberID=72 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292073" id="1889"> PDF=292000 MemberID=73 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292074" id="1890"> PDF=292000 MemberID=74 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292075" id="1891"> PDF=292000 MemberID=75 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292076" id="1892"> PDF=292000 MemberID=76 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292077" id="1893"> PDF=292000 MemberID=77 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292078" id="1894"> PDF=292000 MemberID=78 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292079" id="1895"> PDF=292000 MemberID=79 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292080" id="1896"> PDF=292000 MemberID=80 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292081" id="1897"> PDF=292000 MemberID=81 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292082" id="1898"> PDF=292000 MemberID=82 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292083" id="1899"> PDF=292000 MemberID=83 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292084" id="1900"> PDF=292000 MemberID=84 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292085" id="1901"> PDF=292000 MemberID=85 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292086" id="1902"> PDF=292000 MemberID=86 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292087" id="1903"> PDF=292000 MemberID=87 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292088" id="1904"> PDF=292000 MemberID=88 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292089" id="1905"> PDF=292000 MemberID=89 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292090" id="1906"> PDF=292000 MemberID=90 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292091" id="1907"> PDF=292000 MemberID=91 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292092" id="1908"> PDF=292000 MemberID=92 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292093" id="1909"> PDF=292000 MemberID=93 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292094" id="1910"> PDF=292000 MemberID=94 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292095" id="1911"> PDF=292000 MemberID=95 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292096" id="1912"> PDF=292000 MemberID=96 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292097" id="1913"> PDF=292000 MemberID=97 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292098" id="1914"> PDF=292000 MemberID=98 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292099" id="1915"> PDF=292000 MemberID=99 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292100" id="1916"> PDF=292000 MemberID=100 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292101" id="1917"> PDF=292000 MemberID=101 </weight>
+<weight MUF="1.0" MUR="1.0" PDF="292102" id="1918"> PDF=292000 MemberID=102 </weight>
+</weightgroup> # PDFSET -&gt; PDF
+<weight MUF="1.0" MUR="1.0" PDF="292400" id="1919"> PDF=292400 MemberID=0 </weight>
