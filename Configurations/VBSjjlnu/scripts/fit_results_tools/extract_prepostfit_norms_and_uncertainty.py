@@ -28,7 +28,7 @@ for y in args.years:
             for fl in ['ele','mu']:
                 phase_spaces.append('{}_sig_{}_{}'.format(cat, fl, y))
 
-samples = ["VBS_dipoleRecoil", "top","DY","VV","VVV","Vg","VgS","VBF-V_dipole","Fake"]
+samples = ["VBS_dipoleRecoil", "top","DY","VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ","VVV","Vg","VgS","VBF-V_dipole","Fake","ggWW","sm","quad_cT0","sm_lin_quad_cT0"]
 wjets_bins = {'res':[], 'boost':[]}
 for ir in range(1,22):
     wjets_bins['res'].append("Wjets_res_"+str(ir))
