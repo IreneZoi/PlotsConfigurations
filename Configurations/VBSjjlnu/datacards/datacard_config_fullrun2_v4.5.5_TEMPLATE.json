@@ -172,7 +172,104 @@
               "cut": "boost_wjetcr_ele"
           }
         ]
-      },  
+      },
+      { 
+        "datacard_name": "2016_boost_notop",
+        "folders": [
+          {
+            "basedir": "Full2016v7/{DATACARD2016}/", 
+            "name": 2016
+          }
+        ], 
+        "phase_spaces": [
+          {
+              "name": "boost_sig_mu",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          }
+        ]
+      }, 
+      { 
+        "datacard_name": "2017_boost_notop",
+        "folders": [
+          {
+            "basedir": "Full2017v7/{DATACARD2017}/", 
+            "name": 2017
+          }
+        ], 
+        "phase_spaces": [
+          {
+              "name": "boost_sig_mu",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          }
+        ]
+      }, 
+      { 
+        "datacard_name": "2018_boost_notop",
+        "folders": [
+          {
+            "basedir": "Full2018v7/{DATACARD2018}/", 
+            "name": 2018
+          }
+        ], 
+        "phase_spaces": [
+          {
+              "name": "boost_sig_mu",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_mu"
+          },
+          {
+              "name": "boost_sig_ele",
+              "var": "{BOOST_VAR}", 
+              "cut": "boost_sig_ele"
+          },
+
+          {
+              "name": "boost_wjet_mu",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_mu"
+          },
+          {
+              "name": "boost_wjet_ele",
+              "var": "fit_bins_boost", 
+              "cut": "boost_wjetcr_ele"
+          }
+        ]
+      },
+    
 { 
   "datacard_name": "2016_boost",
   "folders": [
