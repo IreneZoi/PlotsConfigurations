@@ -18,20 +18,21 @@ SRVAR=$5
 DOFIT=$6
 operator=$7
 
-LABEL=testDY
+LABEL=cT0sm
 
 EXTRALABEL=""
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost boost_wjetcr_mu events 2017 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_noJet.log
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost boost_topcr_mu fit_bins_boost 2017 Mww_binzv true cT0 2>&1 | tee logs/boost_only_official_Mww_binzv_testDY.log
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost_notop boost_topcr_mu fit_bins_boost 2017 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_run2.log
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost_notop boost_sig_mu Mww_binzv 2017 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_run2.log
+# source postfit_loop_Run2_EFT_WV_env.sh 2018_boost_notop boost_sig_mu mjj_vbs 2018 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_2018_SMP18006.log
 
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_DNN
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_full_MwwDav
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR} # eboliv2
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_official_full_${SRVAR}
 # datacardDir=2017_fit_v4.5.5_aQGC_cT0_eboliv2_official_noJet_${SRVAR}
-datacardDir=fullrun2_fit_v4.5.5_aQGC_${operator}_eboliv2_official_${LABEL}_${SRVAR}_testpath # NOpdfPSqcdMinorBkg
+datacardDir=fullrun2_fit_v4.5.5_aQGC_${operator}_eboliv2_official_${LABEL}_${SRVAR} #_testpath # NOpdfPSqcdMinorBkg
 # datacardDir=fullrun2_fit_v4.5.5_aQGC_cT0_DNN #MwwDav/ #vbsmjj/ #DNN/
 # datacardDir2=Full2081v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ #Mww20/
 #datacardDir2=Full2016v7/datacards_fit_v4.5_2016_split_aQGC_cT0/ #Mww20/
@@ -66,18 +67,22 @@ DATACARD_FIT=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigur
 # source postfit_loop_Run2_EFT_WV_env.sh run2_all boost_wjetcr_ele fit_bins_boost 2018 DNN false
 # source postfit_loop_Run2_EFT_WV_env.sh run2_all boost_wjetcr_ele deltaeta_vbs 2018 DNN false cT0
 # source postfit_loop_Run2_EFT_WV_env.sh 2018_all boost_wjetcr_ele events 2018 DNN true cT0
-# source postfit_loop_Run2_EFT_WV_env.sh 2018_all boost_wjetcr_ele events 2018 Mww true cT0
+# source postfit_loop_Run2_EFT_WV_env.sh 2018_boost_notop boost_wjetcr_ele events 2018 Mww_binzv true cT0
+DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/${datacardDir2}/${CUT}/${PLOTVAR}/
 
 PLOTDATACARD=${DatacardPATHpartial}/datacard.txt 
 PLOTWORKSPACE=${DatacardPATHpartial}/datacard.root
+
+echo ${PLOTDATACARD}
+echo ${PLOTWORKSPACE}
 
 LUMI=0
 echo year "$YEAR"
 if [[ $YEAR -eq Run2 ]]
 then
   LUMI='138/fb'
-  PLOTDATACARD=${DATACARD_FIT}.txt
-  PLOTWORKSPACE=${DATACARD_FIT}.root
+  PLOTDATACARD=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_cT0_eboliv2_official_testDY/${CUT}/${PLOTVAR}/datacard.txt
+  PLOTWORKSPACE=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_cT0_eboliv2_official_testDY/${CUT}/${PLOTVAR}/datacard.root
 elif [[ $YEAR -eq 2018 ]]
 then
   LUMI='59.7/fb'
@@ -151,7 +156,6 @@ DatacardPATH=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigur
 #     #
 
 
-DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/${datacardDir2}/${CUT}/${PLOTVAR}/
 
 # # # ->->->->->->->    step - 2a: make fit (done in datacard setup)
 
@@ -253,7 +257,7 @@ mkPostFitCombinedPlot.py \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
   --structureFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/structure_split.py \
-  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_bins.py \
+  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split.py \
   --lumiText ${LUMI} 
  
 # # ->->->->->->->    step - 2d: make the postfit plot (done in analysis setup)
@@ -275,7 +279,7 @@ mkPostFitCombinedPlot.py \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
   --structureFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/structure_split.py \
-  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_bins.py \
+  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_bins.py \
   --lumiText ${LUMI}
 
 #     # clean up local plotter folder
@@ -300,3 +304,7 @@ mv output_postfit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root $outdir
 mv output_histograms_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root $outdir
 mv higgsCombine${Category}_${SRVAR}.FitDiagnostics.mH120.root $outdir
 mv $outdir Postfits/
+
+
+cd 
+source run_VBS_SM_datacard.sh

@@ -1,34 +1,17 @@
-#!bin/bash 
+#!/bin/bash 
 startdir=$(pwd)
 basedir=/afs/cern.ch/work/i/izoi/VBSanalysis/logs/jobs/
-jobsname=mkShapes__fit_v4.5_2018_split_qglnuis_aQGC_cT0_eboliv2__ALL/
+jobsname=mkShapes__fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators_XSonly__ALL/
 missingsamples=(
+# 3
+sm_lin_quad_cT0.15
+sm_lin_quad_cT0.87
+sm_cT8.20
 
-DY.43 
-DATA.35 
-Wjets_res_4.3 
-Wjets_res_1.3 
-top.81 
-top.93 
-quad_cT0.12 
-quad_cT0.82 
-quad_cT0.107 
-quad_cT0.190 
-quad_cT0.280 
-quad_cT0.313 
-quad_cT0.325 
-quad_cT0.330 
-quad_cT0.393 
-quad_cT0.396 
-quad_cT0.586 
-sm_lin_quad_cT0.65 
-sm_lin_quad_cT0.68 
-sm_lin_quad_cT0.258 
-sm_lin_quad_cT0.315 
-sm.88 
 
-)
- 
+
+
+) 
 
 
 
@@ -46,4 +29,4 @@ for sample in ${missingsamples[*]}; do
     cd ${jobsdir}
 done
 
-cd ${startdir}
+cd ${startdir}/Full2018v7/
