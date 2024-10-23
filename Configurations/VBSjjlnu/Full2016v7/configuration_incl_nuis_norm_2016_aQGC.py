@@ -2,7 +2,7 @@
 treeName= 'Events'
 
 
-tag = 'incl_nuis_norm_2016_aQGC_cT0_eboliv2'
+tag = 'incl_nuis_norm_2016_aQGC_Aug2024'
 direc = "conf_incl_nuis_norm_aQGC"
 
 # used by mkShape to define output directory for root files
@@ -25,7 +25,7 @@ samplesFile = direc+'/samples.py'
 plotFile = direc+'/plot.py' 
 
 # luminosity to normalize to (in 1/fb)
-lumi = 59.74
+lumi = 36.33
 
 # used by mkPlot to define output directory for plots
 # different from "outputDir" to do things more tidy
