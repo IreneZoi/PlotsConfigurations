@@ -12,22 +12,28 @@ Rat_up = dict()
 Rat_down = dict()
 
 # year=2018
-# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_oldbasis_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_oldbasis_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_eboliv2_official_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_eboliv2_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
+# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_cT0_eboliv2_official/plots_fit_v4.5_2018_split_aQGC_cT0_eboliv2_official.root' #IRENEchanged
+# file_Hin_up = '/eos/cms/store/group/phys_smp/VJets_NLO_VBSanalyses/WV_analysis/histograms/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators/plots_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
+# file_Hin_down = '/eos/cms/store/group/phys_smp/VJets_NLO_VBSanalyses/WV_analysis/histograms/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators/plots_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
 
 year=2017
-file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_oldbasis_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_oldbasis_allOperators_smDipole.root' #IRENEchanged
-file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators_smDipole.root' #IRENEchanged
-file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_eboliv2_allOperators_smDipole.root' #IRENEchanged
+file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_official/plots_fit_v4.5_2017_split_aQGC_cT0_eboliv2_official_withBKG_GiacomoTest2_addingNuis.root' #IRENEchanged
+file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators/screwed/plots_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
+file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators/screwed/plots_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
 
 # year=2016
-# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_oldbasis_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_oldbasis_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_eboliv2_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
+# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_cT0_eboliv2_official/plots_fit_v4.5_2016_split_aQGC_cT0_eboliv2_official_withBKG_GiacomoTest2_addingNuis.root' #IRENEchanged
+# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators/plots_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
+# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators/plots_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators.root' #IRENEchanged
 
 
-outputPath='/eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/EFTplots/compare_quad/'+str(year)+'/' #IRENEchanged
+outputPath='/eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/EFTplots/Aug2024/'+str(year)+'/' #IRENEchanged
+operator1="cS0"
+operator2="cS1"
+
+samples_Hin = ['sm_dipole']  ## this is the name of the histogram for SM_DIPOLE IRENEchanged
+samples_Hin_up = ['sm_'+operator1] ## this is the name for the histogram for SM prediction coming fom reweighting cT8 operator weights IRENEsame
+samples_Hin_down = ['sm_'+operator2] ## this is the name for the histogram for SM prediction coming fom reweighting cM3 operator weights IRENEsame
  
 #suffixUp = '_QCDscale_ZVUp'
 #samples_Hin_up = [s + suffixUp for s in samples_HinUp]
@@ -94,13 +100,8 @@ def Getting_histograms(sample_Hin, sample_Hin_up, sample_Hin_down, cut, variable
     Hin_up[sample_Hin_up].Draw("Ehist same")
     Hin_down[sample_Hin_down].Draw("Ehist same")
 
-    ymax = Hin[sample_Hin].GetBinContent(Hin[sample_Hin].GetMaximumBin())
-    if (Hin_up[sample_Hin_up].GetBinContent(Hin_up[sample_Hin_up].GetMaximumBin())>ymax):
-        ymax = Hin_up[sample_Hin_up].GetBinContent(Hin_up[sample_Hin_up].GetMaximumBin())
-    if (Hin_down[sample_Hin_down].GetBinContent(Hin_down[sample_Hin_down].GetMaximumBin())>ymax):
-        ymax = Hin_down[sample_Hin_down].GetBinContent(Hin_down[sample_Hin_down].GetMaximumBin())
     yaxis = Hin[sample_Hin].GetYaxis()
-    yaxis.SetRangeUser(0, ymax*1.2)
+    yaxis.SetRangeUser(-5, 10)
 
     # Create and draw legend
     legend = ROOT.TLegend(0.1, 0.7, 0.38, .9)
@@ -113,10 +114,9 @@ def Getting_histograms(sample_Hin, sample_Hin_up, sample_Hin_down, cut, variable
     integral_Hin_down = Hin_down[sample_Hin_down].Integral()
 
     # Add the integral to the labels
-    legend.AddEntry(Hin[sample_Hin],sample_Hin, "") 
-    legend.AddEntry(Hin[sample_Hin], "old, Int.: {:.2f}".format(integral_Hin), "l")                      ### if you wish, update legend IRENEsame
-    legend.AddEntry(Hin_up[sample_Hin_up],"central, Int.: {:.2f}".format(integral_Hin_up), "l")                ### if you wish, update legend IRENEsame
-    legend.AddEntry(Hin_down[sample_Hin_down],"private, Int.: {:.2f}".format(integral_Hin_down), "l")          ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin[sample_Hin], "dipole, Int.: {:.2f}".format(integral_Hin), "l")                      ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin_up[sample_Hin_up], operator1+", Int.: {:.2f}".format(integral_Hin_up), "l")                ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin_down[sample_Hin_down], operator2+", Int.: {:.2f}".format(integral_Hin_down), "l")          ### if you wish, update legend IRENEsame
 
     legend.Draw("same")
     canvas.Update()
@@ -170,31 +170,13 @@ def Getting_histograms(sample_Hin, sample_Hin_up, sample_Hin_down, cut, variable
     canvas.Update()
 
     ROOT.objs.append([canvas, Hin_up[sample_Hin_up], Hin[sample_Hin], Hin_down[sample_Hin_down], Rat_up[sample_Hin], Rat_down[sample_Hin], legend, legend_ratio])
-    canvas.SaveAs(outputPath+cut+'_'+sample_Hin+'_'+variable+'.png')  ## IRENEsame
-    canvas.SaveAs(outputPath+cut+'_'+sample_Hin+'_'+variable+'.pdf')   ## IRENEsame
+    canvas.SaveAs(outputPath+'SM_'+operator1+'_'+operator2+'_'+cut+'_'+sample_Hin+'_'+variable+'.png')  ## IRENEsame
+    canvas.SaveAs(outputPath+'SM_'+operator1+'_'+operator2+'_'+cut+'_'+sample_Hin+'_'+variable+'.pdf')   ## IRENEsame
 
 if __name__ == '__main__':
     import sys
     cuts = [ 'boost_sig_ele','boost_sig_mu']                      ### update here the name of your regions IRENE
 
-    # operator1="cT0"
-
-    # samples_Hin = ['quad_'+operator1]  ## this is the name of the histogram for SM_DIPOLE IRENEchanged
-    # samples_Hin_up = ['quad_'+operator1] ## this is the name for the histogram for SM prediction coming fom reweighting cT8 operator weights IRENEsame
-    # samples_Hin_down = ['quad_'+operator1] ## this is the name for the histogram for SM prediction coming fom reweighting cM3 operator weights IRENEsame
-    theOperators = ["cT0", "cT2", "cT1", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM7"]
-    quad_name = []
-    sm_name = []
-    sm_lin_quad_name = []
-    for op in theOperators:   
-        quad_name.append("quad_"+op)
-        sm_name.append("sm_"+op)
-        sm_lin_quad_name.append("sm_lin_quad_"+op)
-    
-    samples_Hin      = quad_name
-    samples_Hin_up   = quad_name 
-    samples_Hin_down = quad_name
-    
     for sample_Hin, sample_Hin_up, sample_Hin_down in zip(samples_Hin, samples_Hin_up, samples_Hin_down):
         for cut in cuts:
             for variable in variables:

@@ -1,38 +1,35 @@
 import ROOT
 import math
 import os
+# import argparse
+
+# parser = argparse.ArgumentParser()
+# parser.add_argument("-o", help="operator", type=str, )
+# args = parser.parse_args()
 
 ROOT.gROOT.SetBatch(True)  # Enable batch mode
 ROOT.objs = []
 
-Hin = dict()
-Hin_up = dict()
-Hin_down = dict()
+Hin = dict()      # 2016
+Hin_up = dict()   # 2017
+Hin_down = dict() # 2018
 Rat_up = dict()
 Rat_down = dict()
 
-# year=2018
-# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_oldbasis_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_oldbasis_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_eboliv2_official_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_eboliv2_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
 
-year=2017
-file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_oldbasis_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_oldbasis_allOperators_smDipole.root' #IRENEchanged
-file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators_smDipole.root' #IRENEchanged
-file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_eboliv2_allOperators_smDipole.root' #IRENEchanged
-
-# year=2016
-# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_oldbasis_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_oldbasis_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_eboliv2_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
-
-
-outputPath='/eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/EFTplots/compare_quad/'+str(year)+'/' #IRENEchanged
+# Aug2024
+# file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_Aug2024_allOperators/plots_fit_v4.5_2016_split_aQGC_Aug2024_allOperators.root' #IRENEchanged
+# file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_Aug2024_allOperators/plots_fit_v4.5_2017_split_aQGC_Aug2024_allOperators.root' #IRENEchanged
+# file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_Aug2024_allOperators/plots_fit_v4.5_2018_split_aQGC_Aug2024_allOperators.root' #IRENEchanged
+# outputPath='/eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/EFTplots/Aug2024/operators/' #IRENEchanged
  
-#suffixUp = '_QCDscale_ZVUp'
-#samples_Hin_up = [s + suffixUp for s in samples_HinUp]
-#suffixDown = '_QCDscale_ZVDown'
-#samples_Hin_down = [s + suffixDown for s in samples_HinDown]
+ 
+file_Hin = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2016_split_aQGC_eboliv2_official_allOperators_smDipole_ALL_INPUTS.root' #IRENEchanged
+file_Hin_up = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2017_split_aQGC_cT0_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2017_split_aQGC_eboliv2_official_allOperators_smDipole.root' #IRENEchanged
+file_Hin_down = '/eos/user/i/izoi/VBS_SM_WV_semilep_aQGC/rootFile_fit_v4.5_2018_split_aQGC_eboliv2_official_allOperators_smDipole/plots_fit_v4.5_2018_split_aQGC_eboliv2_official_ALL_INPUTS.root' #IRENEchanged
+outputPath='/eos/user/i/izoi/www/VBS_SM_WV_semilep_aQGC/EFTplots/eboliv2_official/operators/' #IRENEchanged
+ 
+
 
 colors = ['kBlue+1', 'kGreen+1', 'kRed+1']
 
@@ -114,9 +111,9 @@ def Getting_histograms(sample_Hin, sample_Hin_up, sample_Hin_down, cut, variable
 
     # Add the integral to the labels
     legend.AddEntry(Hin[sample_Hin],sample_Hin, "") 
-    legend.AddEntry(Hin[sample_Hin], "old, Int.: {:.2f}".format(integral_Hin), "l")                      ### if you wish, update legend IRENEsame
-    legend.AddEntry(Hin_up[sample_Hin_up],"central, Int.: {:.2f}".format(integral_Hin_up), "l")                ### if you wish, update legend IRENEsame
-    legend.AddEntry(Hin_down[sample_Hin_down],"private, Int.: {:.2f}".format(integral_Hin_down), "l")          ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin[sample_Hin], "2016, Int.: {:.2f}".format(integral_Hin), "l")                      ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin_up[sample_Hin_up],"2017, Int.: {:.2f}".format(integral_Hin_up), "l")                ### if you wish, update legend IRENEsame
+    legend.AddEntry(Hin_down[sample_Hin_down],"2018, Int.: {:.2f}".format(integral_Hin_down), "l")          ### if you wish, update legend IRENEsame
 
     legend.Draw("same")
     canvas.Update()
