@@ -278,6 +278,7 @@ print " (observed) data at minimum:   ", data_min_x, "\n"
 #   print " significance MC   at 0:   ", sqrt(graphScan    .Eval(0)), "\n"
 fulloperator =   str(operator)
 if (isEboli == "true" ): fulloperator = fulloperator+"_eboliv2"
+if (isEboli == "Aug2024" ): fulloperator = fulloperator+"_eboliv2_Aug2024"
 pngName = "CIplots/LS_" + str(fulloperator) + "_" +str(region)+ "_" + str(year) + "_" + str(var)
 cc.SaveAs( pngName+ ".png")
 
