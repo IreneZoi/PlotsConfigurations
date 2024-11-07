@@ -33,12 +33,14 @@ elif  'cern' in SITE :
   treeBaseDir_SMP = '/eos/cms/store/group/phys_smp/VJets_NLO_VBSanalyses/'
   treeBaseDir_FNAL = '/store/group/lnujj/aQGC_VVJJ_Private_Production_PreProcessing/'
   xrootdPath='root://cmseos.fnal.gov/'
+  treeBaseDir_signals = '/eos/cms/store/group/phys_smp/ec/Latinos/HWWNano/'
 
 
 directory_bkg    = treeBaseDir + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 directory_mc    = treeBaseDir + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 directory_signal = treeBaseDir_SMP + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
-directory_signalIZ =  xrootdPath + treeBaseDir_FNAL + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
+# directory_signalIZ =  xrootdPath + treeBaseDir_FNAL + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
+directory_signalIZ =  treeBaseDir_signals + 'Summer16_102X_nAODv7_Full2016v7/' + mcSteps
 
 ################################################
 ############ NUMBER OF LEPTONS #################
@@ -479,11 +481,11 @@ for operator, expressions in operators.items():
     addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
 
     
-theOperators = ["cT0", "cT1", "cT2", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cS1", "S2", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
+theOperators = ["cT0", "cT1", "cT2", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cS2", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
 full_operators_name = []
 for op in theOperators:
     #  full_operators_name.append("sm_"+op)
      full_operators_name.append("quad_"+op)
      full_operators_name.append("sm_lin_quad_"+op)
 full_operators_name.append("sm")
-samples = {   key:v for key,v in samples.items() if key in full_operators_name}
+# samples = {   key:v for key,v in samples.items() if key in full_operators_name}

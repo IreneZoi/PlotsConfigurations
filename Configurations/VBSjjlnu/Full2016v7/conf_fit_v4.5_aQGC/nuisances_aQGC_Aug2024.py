@@ -1,11 +1,17 @@
 # # nuisances
 from pprint import pprint
-# # name of samples here must match keys in samples.py 
-# VBS_aQGC_samples = ['sm','quad_cT0','sm_lin_quad_cT0'] #,'quad_cT2','sm_lin_quad_cT2']
+
+theOperators = ["cT0", "cT2", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cS0", "cS1", "cS2", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM7"] #, "cM8", "cM9"]
+VBS_aQGC_samples = []
+for op in theOperators: 
+    # full_operators_name.append("sm_"+op)
+    VBS_aQGC_samples.append("quad_"+op)
+    VBS_aQGC_samples.append("sm_lin_quad_"+op)
+VBS_aQGC_samples.append("sm")
+
 mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS", "sm_dipole","VBF-V", "VBF-V_dipole", "ggWW","Wjets_boost"] + VV_samples + VBS_aQGC_samples + wjets_res_bins
 #mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 #mc_sep =  ["VBS", "VV"]
-signals = ['quad_cT0','sm_lin_quad_cT0'] #,'sm']
 
 phasespaces = ["boost_wjetcr_ele" ,"boost_wjetcr_mu",
         "boost_topcr_ele" ,"boost_topcr_mu",
@@ -690,7 +696,7 @@ nuisances['PS_ISR']  = {
                 'type'  : 'shape',
                 'samples'  : {   
                     s : ['PSWeight[2] * {}'.format(nuis_factors[s]["PS_ISR"][0]),
-                         'PSWeight[0] * {}'.format(nuis_factors[s]["PS_ISR"][1]) ] for s in signals }
+                         'PSWeight[0] * {}'.format(nuis_factors[s]["PS_ISR"][1]) ] for s in VBS_aQGC_samples }
             }
 
 nuisances['PS_FSR']  = {
@@ -699,7 +705,7 @@ nuisances['PS_FSR']  = {
                 'type'  : 'shape',
                 'samples'  : {   
                     s : ['PSWeight[3] * {}'.format(nuis_factors[s]["PS_FSR"][0]),
-                         'PSWeight[1] * {}'.format(nuis_factors[s]["PS_FSR"][1]) ] for s in signals}
+                         'PSWeight[1] * {}'.format(nuis_factors[s]["PS_FSR"][1]) ] for s in VBS_aQGC_samples}
             }
 
 # An overall 1.5% UE uncertainty will cover all the UEup/UEdo variations

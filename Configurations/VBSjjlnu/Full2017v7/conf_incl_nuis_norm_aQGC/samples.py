@@ -42,11 +42,13 @@ elif  'cern' in SITE :
   treeBaseDir_SMP = '/eos/cms/store/group/phys_smp/VJets_NLO_VBSanalyses/'
   treeBaseDir_FNAL = '/store/group/lnujj/aQGC_VVJJ_Private_Production_PreProcessing/'
   xrootdPath='root://cmseos.fnal.gov/'
+  treeBaseDir_signals = '/eos/cms/store/group/phys_smp/ec/Latinos/HWWNano/'
   
 directory_bkg    = treeBaseDir + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
 directory_mc    = treeBaseDir +  'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
 directory_signal = treeBaseDir_SMP + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
-directory_signalIZ = os.path.join(xrootdPath + treeBaseDir_FNAL ,  'Fall2017_102X_nAODv7_Full2017v7/' , mcSteps)
+# directory_signalIZ = os.path.join(xrootdPath + treeBaseDir_FNAL ,  'Fall2017_102X_nAODv7_Full2017v7/' , mcSteps)
+directory_signalIZ = os.path.join(treeBaseDir_signals,  'Fall2017_102X_nAODv7_Full2017v7/' , mcSteps)
 
 
 ################################################
@@ -113,6 +115,7 @@ DataTrig = {
             'SingleMuon' : 'Trigger_sngMu' ,
             'SingleElectron' : '!Trigger_sngMu && ele_passHLT' 
 }
+
 ###########################################
 #############  BACKGROUNDS  ###############
 ##########################################
@@ -440,7 +443,5 @@ for op in VBS_aQGC_samples_labels:
    VBS_aQGC_samples.append("quad_"+op)
    VBS_aQGC_samples.append("sm_lin_quad_"+op)
 VBS_aQGC_samples.append("sm")
-# VBS_aQGC_samples = ["quad_cT1","sm_lin_quad_cT1"]
-# VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2"] #,"sm"]
 
-samples = {   key:v for key,v in samples.items() if key  in VBS_aQGC_samples}
+# samples = {   key:v for key,v in samples.items() if key  in VBS_aQGC_samples}

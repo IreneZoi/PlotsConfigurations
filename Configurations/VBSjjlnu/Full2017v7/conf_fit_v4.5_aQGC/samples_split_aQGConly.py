@@ -122,13 +122,33 @@ samples['sm']  = { 'name' :
 
 #************          EFT samples       ************#
 # new development from Matteo calulating all reweights in another input file
-#++++++ these are the centrally produced samples ++++#
-
 # Import the operators dictionary from EFT_dict.py
 # Execute the contents of EFT_dim8_dictionary.py, please update the path according to your exigency 
 with open('/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/EFTcoefficients/EFT_dim8_dictionary_v2.py') as f:
     code = compile(f.read(), 'EFT_dim8_dictionary_v2.py', 'exec')
     exec(code)
+
+#++++++++ sm from EWK sample ++++++++#
+smReweight = operators['cS0']['sm']
+samples['sm'] = {
+    'name': nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ, 'WpTo2J_WmToLNu_aQGC_Aug2024') #VBS_osWW
+            +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WpTo2J_aQGC_Aug2024') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_WmTo2J_aQGC_Aug2024') #VBS_ssWW
+            +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
+            +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
+    'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+    # 'EventsPerJob': 100000,
+    'FilesPerJob': 2
+}
+addSampleWeight(samples, 'sm', 'WpToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+addSampleWeight(samples, 'sm', 'WpTo2J_WmToLNu_aQGC_Aug2024', smReweight)
+addSampleWeight(samples, 'sm', 'WpToLNu_WpTo2J_aQGC_Aug2024', smReweight)
+addSampleWeight(samples, 'sm', 'WmToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+addSampleWeight(samples, 'sm', 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
+addSampleWeight(samples, 'sm', 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
+
+
 
 for operator, expressions in operators.items():
     # Adding the quadratic sample for each operator:
@@ -141,7 +161,7 @@ for operator, expressions in operators.items():
             +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
  
         'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-        'FilesPerJob': 10
+        'FilesPerJob': 2
     }
     
     quadReweight = expressions['quadReweight']
@@ -163,7 +183,7 @@ for operator, expressions in operators.items():
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
             +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
         'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-        'FilesPerJob': 10
+        'FilesPerJob': 2
     }
     addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', smLinQuadReweight)
     addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', smLinQuadReweight)
@@ -172,32 +192,31 @@ for operator, expressions in operators.items():
     addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smLinQuadReweight)
     addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smLinQuadReweight)
 
-    smReweight = expressions['sm']
-    samples['sm_'+operator] = { 'name':
-             nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
-            +nanoGetSampleFiles(directory_signalIZ, 'WpTo2J_WmToLNu_aQGC_Aug2024') #VBS_osWW
-            +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WpTo2J_aQGC_Aug2024') #VBS_ssWW
-            +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_WmTo2J_aQGC_Aug2024') #VBS_ssWW
-            +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
-            +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
-        'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
-        'FilesPerJob': 10
-    }
-    addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', smReweight)
-    addSampleWeight(samples, 'sm_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', smReweight)
-    addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_WpTo2J_aQGC_Aug2024', smReweight)
-    addSampleWeight(samples, 'sm_'+operator, 'WmToLNu_WmTo2J_aQGC_Aug2024', smReweight)
-    addSampleWeight(samples, 'sm_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
-    addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
+    # smReweight = expressions['sm']
+    # samples['sm_'+operator] = { 'name':
+    #          nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
+    #         +nanoGetSampleFiles(directory_signalIZ, 'WpTo2J_WmToLNu_aQGC_Aug2024') #VBS_osWW
+    #         +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WpTo2J_aQGC_Aug2024') #VBS_ssWW
+    #         +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_WmTo2J_aQGC_Aug2024') #VBS_ssWW
+    #         +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
+    #         +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
+    #     'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+    #     'FilesPerJob': 10
+    # }
+    # addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+    # addSampleWeight(samples, 'sm_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', smReweight)
+    # addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_WpTo2J_aQGC_Aug2024', smReweight)
+    # addSampleWeight(samples, 'sm_'+operator, 'WmToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+    # addSampleWeight(samples, 'sm_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
+    # addSampleWeight(samples, 'sm_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
 
 
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
-VBS_aQGC_samples = ["quad_cT2","sm_lin_quad_cT2","sm"]
 VV_VVV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ","VVV","ggWW"]
 ################################################                                                                                                                     
 # ---------->        to make datacard you need to skip VBS samples and other operators!!                                                                             
-operators_to_exclude = ["cT0", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
+operators_to_exclude = ["cT0", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM7"] #, "cM8", "cM9"]
 full_operators_name_to_exclude = []
 for op in operators_to_exclude:
    full_operators_name_to_exclude.append("quad_"+op)
@@ -210,11 +229,12 @@ for op in operators_to_exclude:
 # samples = {key:v for key,v in samples.items() if key == "DY"}
 # samples = {key:v for key,v in samples.items() if key in  VBS_aQGC_samples}
 
-theOperators = ["cT0", "cT2", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
-full_operators_name = []
+theOperators = ["cT0", "cT2", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cS0", "cS1","cS2", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7"]
+VBS_aQGC_samples = []
 for op in theOperators: 
-    full_operators_name.append("sm_"+op)
-    full_operators_name.append("quad_"+op)
-    full_operators_name.append("sm_lin_quad_"+op)
-full_operators_name.append("sm")
-samples = {   key:v for key,v in samples.items() if key in full_operators_name}
+    # full_operators_name.append("sm_"+op)
+    VBS_aQGC_samples.append("quad_"+op)
+    VBS_aQGC_samples.append("sm_lin_quad_"+op)
+VBS_aQGC_samples.append("sm")
+# VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0","sm"]
+samples = {   key:v for key,v in samples.items() if key in VBS_aQGC_samples}
