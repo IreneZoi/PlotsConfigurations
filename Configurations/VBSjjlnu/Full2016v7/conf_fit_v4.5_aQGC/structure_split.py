@@ -133,23 +133,16 @@ structure['sm'] = {
               }
 
 #### EFT ###
-structure['quad_cT0'] = {
-                 'isSignal' : 1,
-                 'isData'   : 0
-                 }
-structure['sm_lin_quad_cT0'] = {
-                 'isSignal' : 1,
-                 'isData'   : 0
-                 }
-
-# structure['quad_cT2'] = {
-#                  'isSignal' : 1,
-#                  'isData'   : 0
-#                  }
-# structure['sm_lin_quad_cT2'] = {
-#                  'isSignal' : 1,
-#                  'isData'   : 0
-#                  }
+ops = ['cT0','cT1','cT2','cT3','cT4','cT5','cT6','cT7', 'cT8','cT9','cS0','cS1','cS2','cM0','cM1','cM2','cM3','cM4','cM5','cM7'] 
+for op in ops:
+    structure['quad_'+op] = {
+                      'isSignal' : 1,
+                      'isData'   : 0    
+                      }
+    structure['sm_lin_quad_'+op] = {
+                      'isSignal' : 1,
+                      'isData'   : 0    
+                      }
 
 
 # data
