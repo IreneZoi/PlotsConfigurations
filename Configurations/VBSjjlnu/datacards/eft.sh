@@ -29,6 +29,11 @@
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official_cT_Mww_binzv/2018_boost_notop/combined_2018_boost_notop.txt cT0 boost_notop_SMP18002_Mww_binzv 0.2 2018 Mww_binzv true
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_cT0_eboliv2_official_SMP18006_noratetop_Mww_binzv/2016_boost_notop/combined_2016_boost_notop.txt cT0 boost_notop_SMP18006_noratetop_Mww_binzv 0.2 2016 Mww_binzv true
     ### source eft.sh fullrun2_fit_v4.5.5_aQGC_eboliv2_official_cT0_smDipole_noSignalSyst_Mww_binzv/2018_boost_notop/combined_2018_boost_notop.txt cT0 boost_Mww_binzv_smDipole_noSignalSyst_centralProd 0.2 2018 Mww_binzv true
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_Aug2024_cT0_noStat_Mww_binzv/2016_boost_notop/combined_2016_boost_notop.txt cT0 boost_Mww_binzv_Aug2024_noStat 0.2 2016 Mww_binzv Aug2024
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_Aug2024_cT0_noStat_Mww_binzv/2018_boost_notop/combined_2018_boost_notop.txt cT0 boost_Mww_binzv_Aug2024_noStat 0.2 2018 Mww_binzv Aug2024
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_Aug2024_cT0_noStat_Mww_binzv/run2_boost_notop/combined_run2_boost_notop.txt cT0 boost_Mww_binzv_Aug2024_noStat 0.2 Run2 Mww_binzv Aug2024
+    ### source eft.sh fullrun2_fit_v4.5.5_aQGC_Aug2024_cT0_cT2_noStat_Mww_binzv/2016_boost_notop/combined_2016_boost_notop.txt cT0,cT2 boost_Mww_binzv_Aug2024_noStat 0.2 Run2 Mww_binzv Aug2024
+
 datacard=$1
 operator=$2
 region=$3
@@ -55,7 +60,7 @@ text2workspace.py  "${datacard}" \
    -P HiggsAnalysis.AnalyticAnomalousCoupling.AnomalousCouplingEFTNegative:analiticAnomalousCouplingEFTNegative \
    -o model_test_${operator}_${region}_${year}.root \
    --X-allow-no-signal \
-   --PO  addDim8 \
+   # --PO  addDim8 \
    --PO eftOperators=${operator}  #cT0,cT1,cT2,cT5,cT6,cT7,cT8,cT9
 
 
@@ -87,7 +92,7 @@ text2workspace.py  "${datacard}" \
    #1. fit 
    # ,k_cT1,k_cT5,k_cT6,k_cT7,k_cT8,k_cT9,  \
 
-   #step 2
+   #step 2 blind
 combine -M MultiDimFit model_test_${operator}_${region}_${year}.root \
    -m 125 -t -1 \
    --redefineSignalPOIs k_${operator} \
@@ -95,14 +100,47 @@ combine -M MultiDimFit model_test_${operator}_${region}_${year}.root \
    --setParameters r=1 \
    --setParameterRanges k_${operator}=-${range},${range}:'rgx{.*norm_.*}'=0.1,4 \
    --verbose 2 \
-   -n ${2}_${3} \
-   --algo=grid --points 50 --robustFit=1 \
+   -n ${2}_${3}_expected \
+   --algo=grid --points 120 --robustFit=1 \
    --alignEdges=1 --setRobustFitTolerance=0.1 \
    --cminDefaultMinimizerTolerance 0.1 --cminDefaultMinimizerStrategy=0 \
    --X-rtd=MINIMIZER_analytic --X-rtd MINIMIZER_MaxCalls=99999999999999 \
    --cminFallbackAlgo Minuit2,Migrad,0:1 --stepSize=0.1 --setRobustFitStrategy=1 \
    --maxFailedSteps 999999 --X-rtd FITTER_NEW_CROSSING_ALGO --X-rtd FITTER_NEVER_GIVE_UP \
    --X-rtd FITTER_BOUND --fastScan
+
+echo " DONE BLIND"
+# unblind
+combine -M MultiDimFit model_test_${operator}_${region}_${year}.root \
+   -m 125 \
+   --redefineSignalPOIs k_${operator} \
+   --freezeParameters r \
+   --setParameters r=1 \
+   --setParameterRanges k_${operator}=-${range},${range}:'rgx{.*norm_.*}'=0.1,4 \
+   --verbose 2 \
+   -n ${2}_${3}_observed \
+   --algo=grid --points 120 --robustFit=1 \
+   --alignEdges=1 --setRobustFitTolerance=0.1 \
+   --cminDefaultMinimizerTolerance 0.1 --cminDefaultMinimizerStrategy=0 \
+   --X-rtd=MINIMIZER_analytic --X-rtd MINIMIZER_MaxCalls=99999999999999 \
+   --cminFallbackAlgo Minuit2,Migrad,0:1 --stepSize=0.1 --setRobustFitStrategy=1 \
+   --maxFailedSteps 999999 --X-rtd FITTER_NEW_CROSSING_ALGO --X-rtd FITTER_NEVER_GIVE_UP \
+   --X-rtd FITTER_BOUND --fastScan
+
+
+
+
+   # --algo=grid --points 120 --robustFit=1 \
+   # --cminDefaultMinimizerStrategy=0 
+   # --alignEdges=1 --setRobustFitTolerance=0.1 \
+   # --cminDefaultMinimizerTolerance 0.1 \
+   # --X-rtd=MINIMIZER_analytic --X-rtd MINIMIZER_MaxCalls=99999999999999 \
+   # --cminFallbackAlgo Minuit2,Migrad,0:1 --stepSize=0.1 --setRobustFitStrategy=1 \
+   # --maxFailedSteps 999999 --X-rtd FITTER_NEW_CROSSING_ALGO --X-rtd FITTER_NEVER_GIVE_UP \
+   # --X-rtd FITTER_BOUND --fastScan
+
+echo " DONE UNBLIND"
+
 
 # --cminDefaultMinimizerStrategy=1 originally
 
@@ -116,10 +154,13 @@ combine -M MultiDimFit model_test_${operator}_${region}_${year}.root \
     ##2b. plot the profile likelihood obtained: do this with python plotter
 
    # step 3
-python drawLS.py \
-        higgsCombine${2}_${3}.MultiDimFit.mH125.root k_${operator} ${year} ${region} ${var} ${isEboli}
+python drawLS_withData.py \
+        higgsCombine${2}_${3}_expected.MultiDimFit.mH125.root k_${operator} ${year} ${region} higgsCombine${2}_${3}_observed.MultiDimFit.mH125.root test #${var} ${isEboli}
 
-mv higgsCombine${2}_${3}.MultiDimFit.mH125.root CIplots/combine/
+mv higgsCombine${2}_${3}_expected.MultiDimFit.mH125.root CIplots/combine/
+mv higgsCombine${2}_${3}_observed.MultiDimFit.mH125.root CIplots/combine/
+mv k_${2}_${3}_expected.root CIplots/
+mv k_${2}_${3}_observed.root CIplots/
 mv model_test_${operator}_${region}_${year}.root models/
     ##3. backup the plot to webpage
    # step 4
