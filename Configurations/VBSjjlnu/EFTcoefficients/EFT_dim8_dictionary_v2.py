@@ -44,16 +44,16 @@ operators = {
         'LinReweight': '( 0.5* (1/(5.25)) * ( LHEReweightingWeight[128] - LHEReweightingWeight[114] ))',
         'quadReweight': '( 0.5* (1/(5.25)) * (1/(5.25)) * ( LHEReweightingWeight[128] + LHEReweightingWeight[114] - 2 * LHEReweightingWeight[121]))',
     },
-    'cT8': {
-        'sm': '( LHEReweightingWeight[1498] )',
-        'LinReweight': '( 0.5* (1/(0.5)) * ( LHEReweightingWeight[1499] - LHEReweightingWeight[1497] ))',
-        'quadReweight': '( 0.5* (1/(0.5)) * (1/(0.5)) * ( LHEReweightingWeight[1499] + LHEReweightingWeight[1497] - 2 * LHEReweightingWeight[1498]))',
-    },
-    'cT9': {
-        'sm': '( LHEReweightingWeight[1579] )',
-        'LinReweight': '( 0.5* (1/(1.5)) * ( LHEReweightingWeight[1582] - LHEReweightingWeight[1576] ))',
-        'quadReweight': '( 0.5* (1/(1.5)) * (1/(1.5)) * ( LHEReweightingWeight[1582] + LHEReweightingWeight[1576] - 2 * LHEReweightingWeight[1579]))',
-    },
+    # 'cT8': {
+    #     'sm': '( LHEReweightingWeight[1498] )',
+    #     'LinReweight': '( 0.5* (1/(0.5)) * ( LHEReweightingWeight[1499] - LHEReweightingWeight[1497] ))',
+    #     'quadReweight': '( 0.5* (1/(0.5)) * (1/(0.5)) * ( LHEReweightingWeight[1499] + LHEReweightingWeight[1497] - 2 * LHEReweightingWeight[1498]))',
+    # },
+    # 'cT9': {
+    #     'sm': '( LHEReweightingWeight[1579] )',
+    #     'LinReweight': '( 0.5* (1/(1.5)) * ( LHEReweightingWeight[1582] - LHEReweightingWeight[1576] ))',
+    #     'quadReweight': '( 0.5* (1/(1.5)) * (1/(1.5)) * ( LHEReweightingWeight[1582] + LHEReweightingWeight[1576] - 2 * LHEReweightingWeight[1579]))',
+    # },
     'cS0': {
         'sm': '( LHEReweightingWeight[40] )',
         'LinReweight': '( 0.5* (1/(5.25)) * ( LHEReweightingWeight[47] - LHEReweightingWeight[33] ))',

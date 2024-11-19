@@ -37,7 +37,7 @@ def calculate_quadratic_function(filename, op, WC, result_dict):
     LHEwZERO = find_position(0, vector)
 
     if LHEwPLUS and LHEwMINUS != -1:
-        result_dict[op] = {
+        result_dict[op+'_'+str(WC)] = {
             'quadReweight': '( 0.5* (1/({0})) * (1/({0})) * ( LHEReweightingWeight[{1}] + LHEReweightingWeight[{2}] - 2 * LHEReweightingWeight[{3}]))'.format(WC, LHEwPLUS, LHEwMINUS, LHEwZERO, op),
             'LinReweight': '( 0.5* (1/({0})) * ( LHEReweightingWeight[{1}] - LHEReweightingWeight[{2}] ))'.format(WC, LHEwPLUS, LHEwMINUS, LHEwZERO, op),
             'sm': '( LHEReweightingWeight[{3}] )'.format(WC, LHEwPLUS, LHEwMINUS, LHEwZERO, op)
@@ -49,21 +49,63 @@ def calculate_quadratic_function(filename, op, WC, result_dict):
 
 
 filename = 'aQGC_WPlepWMhadJJ_EWK_LO_SM_mjj100_pTj10_reweight_card_eboliv2.dat'
-ops = ['FT0','FT1','FT2','FT3','FT4','FT5','FT6','FT7', 'FT8','FT9','FS0','FS1','FS2','FM0','FM1','FM2','FM3','FM4','FM5','FM7']  # List of operators
-WCs = [0.5, 0.5, 0.5, 0.5, 2, 1, 1, 2, 0.5, 1.5, 5.25, 5.25, 5.25, 1.8, 4.9, 3, 6, 4, 4, 10]  # List of Wilson Coefficients
+operator = 'FS0'
+WCs = [
+30,
+29.25,
+28.5,
+27.75, 
+27,
+26.25,
+25.50,
+24.75,
+24.00,
+23.25,
+22.50,
+21.75,
+21.00,
+20.25,
+19.50,
+18.75,
+18.00,
+17.25,
+16.50,
+15.75,
+15.00,
+14.25,
+13.50,
+12.75,
+12.00,
+11.25,
+10.50,
+9.75,
+9.00,
+8.25,
+7.50,
+6.75,
+6.00,
+5.25,
+4.50,
+3.75,
+3.00,
+2.25,
+1.50,
+0.75
+    
+    ]  # List of Wilson Coefficients
 
 results = {}  # Dictionary to store results
 
-for op, WC in zip(ops, WCs):
-    calculate_quadratic_function(filename, op, WC, results)
+for WC in WCs:
+    calculate_quadratic_function(filename, operator, WC, results)
 
 # Replace "F" with "c" in ops and results dictionary keys
-ops = [op.replace('F', 'c') for op in ops]
+operator = operator.replace('F', 'c')
 results = {op.replace('F', 'c'): values for op, values in results.items()}
 
 
 # Writing results to a Python file
-with open('EFT_dim8_dictionary_v2.py', 'w') as f:
+with open('EFT_dim8_dictionary_'+operator+'.py', 'w') as f:
     f.write('operators = {\n')
     for op, values in results.items():
         f.write("    '%s': {\n" % op)
