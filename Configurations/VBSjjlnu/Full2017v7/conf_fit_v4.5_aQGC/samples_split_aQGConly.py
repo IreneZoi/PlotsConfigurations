@@ -42,12 +42,14 @@ elif  'cern' in SITE :
   treeBaseDir_SMP = '/eos/cms/store/group/phys_smp/VJets_NLO_VBSanalyses/'
   treeBaseDir_FNAL = '/store/group/lnujj/aQGC_VVJJ_Private_Production_PreProcessing/'
   xrootdPath='root://cmseos.fnal.gov/'
+  treeBaseDir_signals = '/eos/cms/store/group/phys_smp/ec/Latinos/HWWNano/'
 
 
 directory_bkg    = treeBaseDir_SMP + 'Fall2017_102X_nAODv7_Full2017v7_skim/' + mcSteps
 directory_mc    = treeBaseDir_SMP +  'Fall2017_102X_nAODv7_Full2017v7_skim/' + mcSteps
 directory_signal = treeBaseDir_SMP + 'Fall2017_102X_nAODv7_Full2017v7_skim/' + mcSteps
-directory_signalIZ = xrootdPath + treeBaseDir_FNAL + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
+# directory_signalIZ = xrootdPath + treeBaseDir_FNAL + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
+directory_signalIZ = treeBaseDir_signals + 'Fall2017_102X_nAODv7_Full2017v7/' + mcSteps
 directory_fakes  = treeBaseDir_SMP + 'Run2017_102X_nAODv7_Full2017v7_skim/'  + fakeSteps
 directory_data   = treeBaseDir_SMP + 'Run2017_102X_nAODv7_Full2017v7_skim/'  + dataSteps
 
@@ -137,21 +139,21 @@ samples['sm'] = {
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_WmTo2J_aQGC_Aug2024') #VBS_ssWW
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
             +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
-    'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+    'weight': XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch +'*'+smReweight,
     # 'EventsPerJob': 100000,
     'FilesPerJob': 2
 }
-addSampleWeight(samples, 'sm', 'WpToLNu_WmTo2J_aQGC_Aug2024', smReweight)
-addSampleWeight(samples, 'sm', 'WpTo2J_WmToLNu_aQGC_Aug2024', smReweight)
-addSampleWeight(samples, 'sm', 'WpToLNu_WpTo2J_aQGC_Aug2024', smReweight)
-addSampleWeight(samples, 'sm', 'WmToLNu_WmTo2J_aQGC_Aug2024', smReweight)
-addSampleWeight(samples, 'sm', 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
-addSampleWeight(samples, 'sm', 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
-
+# addSampleWeight(samples, 'sm', 'WpToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+# addSampleWeight(samples, 'sm', 'WpTo2J_WmToLNu_aQGC_Aug2024', smReweight)
+# addSampleWeight(samples, 'sm', 'WpToLNu_WpTo2J_aQGC_Aug2024', smReweight)
+# addSampleWeight(samples, 'sm', 'WmToLNu_WmTo2J_aQGC_Aug2024', smReweight)
+# addSampleWeight(samples, 'sm', 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
+# addSampleWeight(samples, 'sm', 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smReweight)
 
 
 for operator, expressions in operators.items():
     # Adding the quadratic sample for each operator:
+    quadReweight = expressions['quadReweight']
     samples['quad_'+operator] = { 'name':  
              nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
             +nanoGetSampleFiles(directory_signalIZ, 'WpTo2J_WmToLNu_aQGC_Aug2024') #VBS_osWW
@@ -160,21 +162,22 @@ for operator, expressions in operators.items():
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
             +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
  
-        'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+        'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch + '*'+ quadReweight,
         'FilesPerJob': 2
     }
     
-    quadReweight = expressions['quadReweight']
     
-    addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', quadReweight)
-    addSampleWeight(samples, 'quad_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', quadReweight)
-    addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_WpTo2J_aQGC_Aug2024', quadReweight)
-    addSampleWeight(samples, 'quad_'+operator, 'WmToLNu_WmTo2J_aQGC_Aug2024', quadReweight)
-    addSampleWeight(samples, 'quad_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ quadReweight)
-    addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ quadReweight)
+    
+    # addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', quadReweight)
+    # addSampleWeight(samples, 'quad_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', quadReweight)
+    # addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_WpTo2J_aQGC_Aug2024', quadReweight)
+    # addSampleWeight(samples, 'quad_'+operator, 'WmToLNu_WmTo2J_aQGC_Aug2024', quadReweight)
+    # addSampleWeight(samples, 'quad_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ quadReweight)
+    # addSampleWeight(samples, 'quad_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ quadReweight)
 
     # Adding sm_lin_quad sample for each operator:
-    smLinQuadReweight = expressions['sm'] + expressions['LinReweight'] + expressions['quadReweight']
+    linReweight = expressions['LinReweight']
+    smLinQuadReweight = '('+smReweight + '+' + linReweight + '+' + quadReweight + ')'
     samples['sm_lin_quad_'+operator] = { 'name':
              nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
             +nanoGetSampleFiles(directory_signalIZ, 'WpTo2J_WmToLNu_aQGC_Aug2024') #VBS_osWW
@@ -182,16 +185,9 @@ for operator, expressions in operators.items():
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_WmTo2J_aQGC_Aug2024') #VBS_ssWW
             +nanoGetSampleFiles(directory_signalIZ, 'WmToLNu_ZTo2J_aQGC_Aug2024')  #VBS_WZjj
             +nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_ZTo2J_aQGC_Aug2024'),  #VBS_WZjj
-        'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch,
+        'weight':  XSWeight+'*'+SFweight+'*'+METFilter_MC+'*'+GenLepMatch +'*'+smLinQuadReweight,
         'FilesPerJob': 2
     }
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpToLNu_WmTo2J_aQGC_Aug2024', smLinQuadReweight)
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpTo2J_WmToLNu_aQGC_Aug2024', smLinQuadReweight)
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpToLNu_WpTo2J_aQGC_Aug2024', smLinQuadReweight)
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WmToLNu_WmTo2J_aQGC_Aug2024', smLinQuadReweight)
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WmToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smLinQuadReweight)
-    addSampleWeight(samples, 'sm_lin_quad_'+operator, 'WpToLNu_ZTo2J_aQGC_Aug2024', '(Sum$(abs(GenPart_pdgId)==6)==0) *'+ smLinQuadReweight)
-
     # smReweight = expressions['sm']
     # samples['sm_'+operator] = { 'name':
     #          nanoGetSampleFiles(directory_signalIZ, 'WpToLNu_WmTo2J_aQGC_Aug2024') #VBS_osWW
