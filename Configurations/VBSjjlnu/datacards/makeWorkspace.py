@@ -8,10 +8,10 @@ def checkregion(region, datacard):
             sys.exit(" region {} not in datacard {}".format(region,datacard))
 
 # operator="cS0_eboliv2_official"
-operator="cS0_eboliv2_officialv2"
+operator="AllOperators_withNuis_noTopNorm"
 # years    = ["2016"] #,"2017","2018","run2"]
-LABEL="smDipole_noSignalSyst"
-full_label = operator+"_"+LABEL
+LABEL="Aug2024"
+full_label = LABEL+"_"+operator
 # LABEL="SMP18006_notopnorm_AutoMC0"
 DATACARD2016="datacards_fit_v4.5_2016_split_aQGC_"+full_label
 DATACARD2017="datacards_fit_v4.5_2017_split_aQGC_"+full_label
@@ -19,6 +19,12 @@ DATACARD2018="datacards_fit_v4.5_2018_split_aQGC_"+full_label
 
 RES_VAR="Mww_binzv" # DNNoutput_res_v1
 BOOST_VAR="Mww_binzv" # DNNoutput_boost
+
+# RES_VAR="Mww_rebinned_SplitLastTwo" # DNNoutput_res_v1
+# BOOST_VAR="Mww_rebinned_SplitLastTwo" # DNNoutput_boost
+
+# RES_VAR="mjj_vbs" # DNNoutput_res_v1
+# BOOST_VAR="mjj_vbs" # DNNoutput_boost
 
 # RES_VAR="Mww" # DNNoutput_res_v1
 # BOOST_VAR="Mww" # DNNoutput_boost
@@ -34,6 +40,37 @@ for line in filein:
 filein.close()
 fileout.close()
 
+
+region="2016_boost_notop"
+checkregion(region, datacardout)
+datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
+print (" creating datacard with command:")
+print(datacard_comand)
+os.system(datacard_comand)
+print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
+
+region="2017_boost_notop"
+checkregion(region, datacardout)
+datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
+print (" creating datacard with command:")
+print(datacard_comand)
+os.system(datacard_comand)
+print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
+
+region="2018_boost_notop"
+checkregion(region, datacardout)
+datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
+print (" creating datacard with command:")
+print(datacard_comand)
+os.system(datacard_comand)
+
+region="run2_boost_notop"
+checkregion(region, datacardout)
+datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
+print (" creating datacard with command:")
+print(datacard_comand)
+os.system(datacard_comand)
+print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
 
 
 # region="run2_all"
@@ -52,128 +89,3 @@ fileout.close()
 # os.system(datacard_comand)
 # print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
 
-# region="run2_boost_notop"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-# region="2016_boost_notop"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-# region="2017_boost_notop"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-region="2018_boost_notop"
-checkregion(region, datacardout)
-datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-print (" creating datacard with command:")
-print(datacard_comand)
-os.system(datacard_comand)
-
-# region="2018_boost_notop_merged"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-# region="2018_boost"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-# region="2017_boost"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-# region="2016_boost"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-# print("datacard directory fullrun2_fit_v4.5.5_aQGC_{}_{}/".format(full_label,BOOST_VAR))
-
-# region="2018_boost_sigonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2017_boost_sigonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2016_boost_sigonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2018_boost_wjetsonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2017_boost_wjetsonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2016_boost_wjetsonly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2018_boost_toponly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2017_boost_toponly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)
-
-# region="2016_boost_toponly"
-# checkregion(region, datacardout)
-# datacard_comand = "python ../scripts/prepare_datacard.py -c {} -b ../ -o fullrun2_fit_v4.5.5_aQGC_{}_{}/ -p workspace -d {} --redo-workspace".format(datacardout,full_label,BOOST_VAR,region)
-# print (" creating datacard with command:")
-# print(datacard_comand)
-# os.system(datacard_comand)

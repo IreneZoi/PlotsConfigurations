@@ -18,9 +18,9 @@ SRVAR=$5
 DOFIT=$6
 operator=$7
 
-LABEL=cT0sm
+LABEL="fits"
 
-EXTRALABEL=""
+EXTRALABEL="Aug2024"
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost boost_wjetcr_mu events 2017 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_noJet.log
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost boost_topcr_mu fit_bins_boost 2017 Mww_binzv true cT0 2>&1 | tee logs/boost_only_official_Mww_binzv_testDY.log
 # source postfit_loop_Run2_EFT_WV_env.sh run2_boost_notop boost_topcr_mu fit_bins_boost 2017 Mww_binzv true cT0 2>&1 | tee boost_only_official_Mww_binzv_run2.log
@@ -32,15 +32,20 @@ EXTRALABEL=""
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_full_${SRVAR} # eboliv2
 # datacardDir=2018_fit_v4.5.5_aQGC_cT0_eboliv2_official_full_${SRVAR}
 # datacardDir=2017_fit_v4.5.5_aQGC_cT0_eboliv2_official_noJet_${SRVAR}
-datacardDir=fullrun2_fit_v4.5.5_aQGC_${operator}_eboliv2_official_${LABEL}_${SRVAR} #_testpath # NOpdfPSqcdMinorBkg
+# datacardDir=fullrun2_fit_v4.5.5_aQGC_${operator}_eboliv2_official_${LABEL}_${SRVAR} #_testpath # NOpdfPSqcdMinorBkg
+datacardDir=fullrun2_fit_v4.5.5_aQGC_Aug2024_AllOperators_withNuis_noTopNorm_${SRVAR} #_testpath # NOpdfPSqcdMinorBkg
+echo datacardDir ${datacardDir}
+
 # datacardDir=fullrun2_fit_v4.5.5_aQGC_cT0_DNN #MwwDav/ #vbsmjj/ #DNN/
 # datacardDir2=Full2081v7/datacards_fit_v4.5_2018_split_aQGC_cT0_NoVBS_WithSignalNuis/ #Mww20/
 #datacardDir2=Full2016v7/datacards_fit_v4.5_2016_split_aQGC_cT0/ #Mww20/
 # datacardDir2=Full2017v7/datacards_fit_v4.5_2017_split_aQGC_cTO_fixSM/
-datacardDir2=Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_${operator}_eboliv2_official_${LABEL} #_NOpdfPSqcdMinorBkg # eboliv2
+datacardDir2=Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_Aug2024_AllOperators_withNuis_noTopNorm #${operator}_noStat #_NOpdfPSqcdMinorBkg # eboliv2
+echo datacardDir2 ${datacardDir2}
 #datacardDir2=datacards_fit_v4.5_2018_split_aQGC_cT0_DNN/ #Mww20/ 
 
-basis=eboliv2_official
+basis=eboliv2_Aug2024
+
 fulloperator=$operator
 if [[ $basis -eq eboliv2_official ]]
 then
@@ -73,16 +78,14 @@ DatacardPATHpartial=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsC
 PLOTDATACARD=${DatacardPATHpartial}/datacard.txt 
 PLOTWORKSPACE=${DatacardPATHpartial}/datacard.root
 
-echo ${PLOTDATACARD}
-echo ${PLOTWORKSPACE}
 
 LUMI=0
 echo year "$YEAR"
 if [[ $YEAR -eq Run2 ]]
 then
   LUMI='138/fb'
-  PLOTDATACARD=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_cT0_eboliv2_official_testDY/${CUT}/${PLOTVAR}/datacard.txt
-  PLOTWORKSPACE=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_cT0_eboliv2_official_testDY/${CUT}/${PLOTVAR}/datacard.root
+  PLOTDATACARD=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_Aug2024_AllOperators_withNuis_noTopNorm/${CUT}/${PLOTVAR}/datacard.txt
+  PLOTWORKSPACE=../Full${YEAR}v7/datacards_fit_v4.5_${YEAR}_split_aQGC_Aug2024_AllOperators_withNuis_noTopNorm/${CUT}/${PLOTVAR}/datacard.root
 elif [[ $YEAR -eq 2018 ]]
 then
   LUMI='59.7/fb'
@@ -95,6 +98,8 @@ then
 fi
 
 echo lumi is ${LUMI}
+echo PLOTDATACARD ${PLOTDATACARD}
+echo PLOTWORKSPACE ${PLOTWORKSPACE}
 
 
 cd 
@@ -149,26 +154,26 @@ fi
 
 DatacardPATH=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigurations/Configurations/VBSjjlnu/datacards/ #2018_fit_v4.5.5_aQGC_cT0/2018_all_split_Dipole_v4.5/
 
-#     #########################################################################
-#     #   make workspace for single category or 
-#     #   combine the datacards of the signal regions we want to plot & then make corresponding workspace
-#     #
-#     #
+    #########################################################################
+    #   make workspace for single category or 
+    #   combine the datacards of the signal regions we want to plot & then make corresponding workspace
+    #
+    #
 
 
 
-# # # ->->->->->->->    step - 2a: make fit (done in datacard setup)
+# # ->->->->->->->    step - 2a: make fit (done in datacard setup)
 
-# text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
+text2workspace.py ${DatacardPATHpartial}/datacard.txt -o ${DatacardPATHpartial}/datacard.root
 
-# # # # # # ##############################################
-# # # # # # ##                                           #
-# # # # # # ##         pre / post-fit      plotting      #
-# # # # # # ##         (mjj, DNN, any var.)              #
-# # # # # # ##                                           #
-# # # # # # ##############################################
-# # # # # # #
-# # # # # # # ->->->->->->->    step - 2b: as the description below says: get post fit shapes from workspace (done in datacard setup)
+# # # # # ##############################################
+# # # # # ##                                           #
+# # # # # ##         pre / post-fit      plotting      #
+# # # # # ##         (mjj, DNN, any var.)              #
+# # # # # ##                                           #
+# # # # # ##############################################
+# # # # # #
+# # # # # # ->->->->->->->    step - 2b: as the description below says: get post fit shapes from workspace (done in datacard setup)
 
 # # ########PostfitfromWorkspace - s+b 
  PostFitShapesFromWorkspace \
@@ -178,7 +183,7 @@ DatacardPATH=/afs/cern.ch/work/i/izoi/VBSanalysis/CMSSW_11_1_4/src/PlotsConfigur
     --postfit --sampling \
     -f ${datacardDir}/fitDiagnostics${Category}_${SRVAR}.root:fit_s \
     --total-shapes
-
+ echo PostFitShapesFromWorkspace DONE!
 # # # # ########PostfitfromWorkspace - b only 
 #  PostFitShapesFromWorkspace \
 #     -d ${DatacardPATHpartial}/datacard.txt \
@@ -217,36 +222,47 @@ cd datacards
 #    create the folders where to backup files
 
 fulllabel=${LABEL}${EXTRALABEL}
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
-# mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-# cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-#mkdir -p /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
-
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
-mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
-cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
-
-# mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-# cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
-#mkdir -p /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
+# mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+#mkdir -p /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
 
 
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
+cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}
+
+# mkdir -p /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+# cp       /eos/home-i/izoi/www/index.php /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}
+#mkdir -p /eos/home-i/izoi/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/PlotVar${PLOTVAR}/${LABEL}
+cp ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_OPERATOR.py ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_${operator}.py
+sed -i -e 's/OPERATOR/'${operator}'/g' ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_${operator}.py
 # # clean local folder
 rm -r plot_combined/* 
 
@@ -257,14 +273,15 @@ mkPostFitCombinedPlot.py \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
   --structureFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/structure_split.py \
-  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split.py \
+  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_${operator}.py \
   --lumiText ${LUMI} 
  
 # # ->->->->->->->    step - 2d: make the postfit plot (done in analysis setup)
-
+echo ---------    mkPlot  -----------------
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_postfit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
-
-cp -r plot_combined/*png /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
+echo ---------    mkPlot DONE -----------------
+echo /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
+cp -r plot_combined/*png /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/postfit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
 
 
 # ###################################################################
@@ -279,17 +296,17 @@ mkPostFitCombinedPlot.py \
   --cutName ${CUT} \
   --variable ${PLOTVAR} \
   --structureFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/structure_split.py \
-  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_bins.py \
+  --plotFile ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_${operator}.py \
   --lumiText ${LUMI}
 
 #     # clean up local plotter folder
 rm -r plot_combined/*
-
+rm ../Full${YEAR}v7/conf_fit_v4.5_aQGC/plot_split_${operator}.py
 # ->->->->->->->    step - 2f: make the prefit plot (done in analysis setup)
 
 mkPlot.py --pycfg=configuration_combined.py --inputFile=output_prefit_${YEAR}_EFT_WV_${fulloperator}_${CUT}.root --onlyPlot=cratio --logOnly --showIntegralLegend=1 --minLogCratio=0.1 --maxLogCratio=10000
 
-cp -r plot_combined/*png /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/${fulllabel}
+cp -r plot_combined/*png /eos/home-i/izoi/www/VBS_SM_WV_semilep_aQGC/${fulllabel}/prefit/WV_${YEAR}/${fulloperator}/${Category}/${CUT}/SRvar${SRVAR}/
 
 outdir=Postfit_${YEAR}_${fulloperator}_${Category}_${CUT}_SRvar${SRVAR}_PlotVar${PLOTVAR}_${fulllabel}/
 echo output directory: $outdir
