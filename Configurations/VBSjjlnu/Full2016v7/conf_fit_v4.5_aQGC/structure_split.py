@@ -133,7 +133,7 @@ structure['sm'] = {
               }
 
 #### EFT ###
-ops = ['cT0','cT1','cT2','cT3','cT4','cT5','cT6','cT7', 'cT8','cT9','cS0','cS1','cS2','cM0','cM1','cM2','cM3','cM4','cM5','cM7'] 
+ops = ['cT0','cT1','cT2','cT3','cT4','cT5','cT6','cT7','cS0','cS1','cS2','cM0','cM1','cM2','cM3','cM4','cM5','cM7'] 
 for op in ops:
     structure['quad_'+op] = {
                       'isSignal' : 1,

@@ -1,7 +1,7 @@
 # example of configuration file
 treeName= 'Events'
 
-tag = 'fit_v4.5_2016_split_aQGC_Aug2024_cT0'
+tag = 'fit_v4.5_2016_split_aQGC_Aug2024_cT2rehadded' #_cT0_noStat'
 direc = 'conf_fit_v4.5_aQGC'
 
 # used by mkShape to define output directory for root files
@@ -12,14 +12,19 @@ aliasesFile = direc+'/aliases_split.py'
 
 # file with list of variables
 variablesFile = direc+'/variables.py'
+# variablesFile = direc+'/variables_DNN.py'
 
 # file with list of cuts
 cutsFile = direc+'/cuts.py'
+# cutsFile = direc+'/cuts_SMP-18-006.py'
+# cutsFile = direc+'/cuts_DNN.py'
 
 # file with list of samples
+# samplesFile = direc+'/samples_split_aQGConly_testS0.py'
 # samplesFile = direc+'/samples_split_aQGConly.py'   # produce signals only
 samplesFile = direc+'/samples_split_aQGC_all.py'     # make datacard
 # samplesFile = direc+'/samples_split_aQGC_1file.py' # debug
+# samplesFile = direc+'/samples_split_aQGC_sameBKG_asSMP-18-006.py'
 
 # file with list of samples
 plotFile = direc+'/plot_split.py'

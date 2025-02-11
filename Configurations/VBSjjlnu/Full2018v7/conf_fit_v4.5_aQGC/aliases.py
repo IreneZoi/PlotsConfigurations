@@ -11,8 +11,8 @@ mc = [skey for skey in samples if skey not in ('Fake', 'DATA')]
 
 VBS_samples = ["VBS_osWW", "VBS_ssWW", "VBS_WZjj", "VBS_WZll", "VBS_ZZ"]
 VV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj", "VV_WZll", "VV_ZZ"]
-#VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
-VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
+# VBS_aQGC_samples = ["quad_cT0","sm_lin_quad_cT0",'sm']
+# VBS_aQGC_samples = ["quad_cM1","sm_lin_quad_cM1",'sm']
 ####################
 
 aliases['nJets30']= {
@@ -129,10 +129,16 @@ aliases['nJetsBtag']= {
     'expr' : 'Sum$(CleanJet_pt > 20 && abs(CleanJet_eta)<2.5)'
 }
 
-
+allOperators = ["cT0", "cT2", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cT8", "cT9", "cS0", "cS1", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM6", "cM7", "cM8", "cM9"]
+EFTsamples = []
+for op in allOperators:   
+    EFTsamples.append("sm_"+op)
+    EFTsamples.append("quad_"+op)
+    EFTsamples.append("sm_lin_quad_"+op)
+EFTsamples.append("sm")
 btagSF_corr_samples_groups = {
     'VBS': ['VBS','VBS_ZLL','sm'],
-    'VBS_dipoleRecoil': ['VBS_dipoleRecoil',"VBS_top","VBS_notop"] + VBS_samples,
+    'VBS_dipoleRecoil': ['VBS_dipoleRecoil',"VBS_top","VBS_notop"] + VBS_samples + EFTsamples,
     'Wjets_HT': wjets_res_bins  + wjets_boost_bins,
     'Vg_VgS_VBFV':['Vg','VgS','VBF-V','VBF-V_dipole'] ,
     'VV_VVV_ggWW':['VVV','VV','ggWW']+ VV_samples ,
