@@ -7,6 +7,17 @@ VBS_ZV_samples = ["VBS_WZll", "VBS_ZZ"]
 VV_WV_samples = ["VV_osWW", "VV_ssWW", "VV_WZjj"]
 VV_ZV_samples = ["VV_WZll", "VV_ZZ"]
 VV_samples = VV_WV_samples + VV_ZV_samples
+theOperators = ["cT0", "cT2", "cT1", "cT3", "cT4", "cT5", "cT6", "cT7", "cS0", "cS1", "cS2", "cM0", "cM1", "cM2", "cM3", "cM4", "cM5", "cM7"]
+# operators_to_exclude = [ op for op in theOperators if op != target_operator]   
+VBS_aQGC_samples = []
+for op in theOperators:   
+    # operators_name.append("sm_"+op)
+    VBS_aQGC_samples.append("quad_"+op)
+    VBS_aQGC_samples.append("sm_lin_quad_"+op)
+VBS_aQGC_samples.append("sm")
+
+# target_operator='cT0'
+# VBS_aQGC_samples = ['sm','quad_'+target_operator,'sm_lin_quad_'+target_operator]
 # VBS_aQGC_samples = ["sm",'quad_cT0','sm_lin_quad_cT0'] #,'quad_cT2','sm_lin_quad_cT2']
 # signals = ['quad_cT0','sm_lin_quad_cT0']
 # # name of samples here must match keys in samples.py 
@@ -14,7 +25,7 @@ mc =["DY", "top", "VV", "VVV", "Vg", "VgS", "VBS_dipoleRecoil", "VBF-V_dipole", 
 #mc_norm = [m for m in mc if m not in ["VBS", "VV"]]
 #mc_sep =  ["VBS", "VV"]
 phasespaces = ["boost_wjetcr_ele" ,"boost_wjetcr_mu",
-        "boost_topcr_ele" ,"boost_topcr_mu",
+        #"boost_topcr_ele" ,"boost_topcr_mu",
         "boost_sig_ele" ,"boost_sig_mu" ]
 
 
@@ -873,15 +884,15 @@ nuisances['UE']  = {
 #########################
 ## Top and W+jets normalizations
 
-for fl in ['ele','mu']:
-    nuisances['Top_norm_boost_'+fl]  = {
-                'name'  : 'CMS_Top_norm_{}_boost_2016'.format(fl),
-                'samples'  : {
-                    'top' : '1.00',
-                    },
-                'type'  : 'rateParam',
-                'cuts'  : [f for f in phase_spaces_dict["boost"] if fl in f ]
-                }
+# for fl in ['ele','mu']:
+#     nuisances['Top_norm_boost_'+fl]  = {
+#                 'name'  : 'CMS_Top_norm_{}_boost_2016'.format(fl),
+#                 'samples'  : {
+#                     'top' : '1.00',
+#                     },
+#                 'type'  : 'rateParam',
+#                 'cuts'  : [f for f in phase_spaces_dict["boost"] if fl in f ]
+#                 }
 
     # nuisances['Top_norm_res_'+fl]  = {
     #             'name'  : 'CMS_Top_norm_{}_res_2016'.format(fl),
@@ -892,6 +903,15 @@ for fl in ['ele','mu']:
     #             'cuts'  : [f for f in phase_spaces_dict["res"] if fl in f ]
     #             }
 
+
+# nuisances['Top_norm_boost']  = {
+#             'name'  : 'CMS_Top_norm_boost_2016',
+#             'samples'  : {
+#                 'top' : '1.00',
+#                 },
+#             'type'  : 'rateParam',
+#             'cuts'  : [f for f in phase_spaces_dict["boost"] ]
+#             }
 
 regrouped_Wjets = False
 for wjbin in wjets_bins:
